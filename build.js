@@ -79,12 +79,20 @@ function renderGameHtml(lang, game) {
   const body = renderGamePage({ lang, t, game });
   const schema = createGamePageSchemas({ lang, game, t });
 
+  const seoTitle =
+    t.seo?.[game.id]?.title ||
+    `${game.name} ${t.gamePage.statisticsTitleSuffix}`;
+
+  const seoDescription =
+    t.seo?.[game.id]?.description ||
+    `${t.gamePage.subtitlePrefix} ${game.name}`;
+
   return renderLayout({
     lang,
     dir: getDir(lang),
-    title: `${game.name} ${t.gamePage.statisticsTitleSuffix}`,
-    description: `${t.gamePage.subtitlePrefix} ${game.name}`,
-    canonical: `https://example.com${buildPath(lang, "game", game.id)}`,
+    title: seoTitle,
+    description: seoDescription,
+    canonical: `https://casinoscore.live${buildPath(lang, "game", game.id)}`,
     hreflangs: createHreflangs("game", game.id),
     body,
     schema

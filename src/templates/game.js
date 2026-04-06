@@ -1,5 +1,6 @@
 const { buildPath } = require("../utils/helpers");
 const { renderCrazyTimeReviewPanel } = require("./crazytime-review");
+const { renderMonopolyReviewPanel } = require("./monopoly-review");
 const { renderHeader, renderFooter, renderFloatingPlayButton } = require("./partials");
 const {
   generateSpinData,
@@ -12,76 +13,56 @@ const {
   generateCashHuntSymbolsStats,
   generateCashHuntRecentMultipliers,
   generateCrazyTimeBestBets,
-  generateCrazyTimeLatestMaxMultipliers
+  generateCrazyTimeLatestMaxMultipliers,
+  generateMonopolyDiceRollStats,
+  generateMonopolyBoardMoveStats,
+  generateMonopolyLandingStats,
+  generateMonopolyBestIndividualWins,
+  generateMonopolyLatestTopMultipliers
 } = require("../data/mock-data");
+const { renderMonopolyExtraStatsSection } = require("./monopoly-extra-stats");
 const { renderCrazyTimeExtraStatsSection } = require("./crazytime-extra-stats");
-
-
 const {
   renderTemperaturePanel,
   renderHistoryPanel,
   renderStatsPanel,
   renderBigWinsPanel
 } = require("./game-panels");
-
 const { GAMES, SUPPORTED_LANGS } = require("../data/site-data");
 
 function renderTabsRow(t, game) {
-  const isCrazyTime = game.id === "crazytime";
+  const hasReview = game.id === "crazytime" || game.id === "monopoly";
+  const hasStream = game.id === "crazytime";
 
   return `
     <div class="tabs-row">
       <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
         ${t.tabs.temperature}
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
         ${t.tabs.history}
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
         ${t.tabs.stats}
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
         ${t.tabs.bigwins}
       </button>
-      ${isCrazyTime ? `
+
+      ${hasReview ? `
         <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review">
           ${t.tabs.review}
         </button>
       ` : ""}
-      ${isCrazyTime ? `
+
+      ${hasStream ? `
         <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stream">
           ${t.tabs.stream}
         </button>
       ` : ""}
-    </div>
-  `;
-}
-
-function renderCrazyTimeReviewLite(t) {
-  if (!t.crazytimeReview) return "";
-
-  return `
-    <div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">
-      <div class="crazytime-review-section">
-        <div class="crazytime-review-card">
-          <div class="crazytime-review-block">
-            <h2 class="crazytime-review-title">${t.crazytimeReview.whatIsTitle || "What Is Crazy Time?"}</h2>
-            <p class="crazytime-review-intro">${t.crazytimeReview.whatIsText || ""}</p>
-          </div>
-
-          <div class="crazytime-review-block">
-            <h3 class="crazytime-review-subtitle">${t.crazytimeReview.faqTitle || "FAQ"}</h3>
-            <div class="crazytime-review-faq-list">
-              ${(t.crazytimeReview.faq || []).map((item) => `
-                <div class="crazytime-review-faq-item">
-                  <h4 class="crazytime-review-faq-question">${item.q}</h4>
-                  <p class="crazytime-review-faq-answer">${item.a}</p>
-                </div>
-              `).join("")}
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   `;
 }
@@ -146,16 +127,48 @@ function renderGamePage({ lang, t, game }) {
   const distribution = countDistribution(game, spinData);
   const summary = generateStatsSummary(game, spinData);
   const wins = generateBigWins(game);
-  const crazyTimeExtraData = game.id === "crazytime"
-  ? {
-      flapper: generateCrazyFlapperStats(t),
-      coinFlip: generateCrazyCoinFlipColorStats(t),
-      symbols: generateCashHuntSymbolsStats(),
-      recentMultipliers: generateCashHuntRecentMultipliers(),
-      bestBets: generateCrazyTimeBestBets(),
-      latestMax: generateCrazyTimeLatestMaxMultipliers()
-    }
-  : null;
+
+  const crazyTimeExtraData =
+    game.id === "crazytime"
+      ? {
+          flapper: generateCrazyFlapperStats(t),
+          coinFlip: generateCrazyCoinFlipColorStats(t),
+          symbols: generateCashHuntSymbolsStats(),
+          recentMultipliers: generateCashHuntRecentMultipliers(),
+          bestBets: generateCrazyTimeBestBets(),
+          latestMax: generateCrazyTimeLatestMaxMultipliers()
+        }
+      : null;
+
+  const monopolyExtraData =
+    game.id === "monopoly"
+      ? {
+          dice: generateMonopolyDiceRollStats(),
+          board: generateMonopolyBoardMoveStats(),
+          landing: generateMonopolyLandingStats(),
+          bestWins: generateMonopolyBestIndividualWins(),
+          topMultipliers: generateMonopolyLatestTopMultipliers()
+        }
+      : null;
+
+  const statsExtraHtml =
+    game.id === "crazytime" && crazyTimeExtraData
+      ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
+      : game.id === "monopoly" && monopolyExtraData
+        ? renderMonopolyExtraStatsSection(t, monopolyExtraData)
+        : "";
+
+  const reviewPanelHtml =
+    game.id === "crazytime"
+      ? renderCrazyTimeReviewPanel(t)
+      : game.id === "monopoly"
+        ? renderMonopolyReviewPanel(t)
+        : "";
+
+  const streamPanelHtml =
+    game.id === "crazytime"
+      ? renderCrazyTimeStreamLite(t)
+      : "";
 
   return `
   <div id="app" class="app">
@@ -196,17 +209,10 @@ function renderGamePage({ lang, t, game }) {
 
           ${renderTemperaturePanel(game, temperatureData)}
           ${renderHistoryPanel(game, spinData)}
-          ${renderStatsPanel(
-            game,
-            distribution,
-            summary,
-            game.id === "crazytime" && crazyTimeExtraData
-              ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
-              : ""
-          )}          ${renderBigWinsPanel(game, wins)}
-
-          ${game.id === "crazytime" ? renderCrazyTimeReviewPanel(t) : ""}
-          ${game.id === "crazytime" ? renderCrazyTimeStreamLite(t) : ""}
+          ${renderStatsPanel(game, distribution, summary, statsExtraHtml)}
+          ${renderBigWinsPanel(game, wins)}
+          ${reviewPanelHtml}
+          ${streamPanelHtml}
         </div>
       </div>
     </main>
@@ -216,7 +222,15 @@ function renderGamePage({ lang, t, game }) {
       lang,
       games: GAMES
     })}
+
     ${renderFloatingPlayButton(t)}
+
+    <script id="gamePageData" type="application/json">
+      ${JSON.stringify({
+        lang,
+        game
+      })}
+    </script>
   </div>
   `;
 }

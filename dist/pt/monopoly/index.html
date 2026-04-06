@@ -4,7 +4,7 @@
   <base href="/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>Monopoly Live Estatísticas</title>
   <meta name="description" content="Acompanhe resultados, histórico e estatísticas em tempo real de Monopoly Live" />
 
@@ -19,7 +19,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
   <link rel="stylesheet" href="/style.css" />
-  <link rel="canonical" href="https://example.com/pt/monopoly/" />
+  <link rel="canonical" href="https://casinoscore.live/pt/monopoly/" />
   <link rel="alternate" hreflang="en" href="https://casinoscore.live/monopoly/" />
 <link rel="alternate" hreflang="es" href="https://casinoscore.live/es/monopoly/" />
 <link rel="alternate" hreflang="it" href="https://casinoscore.live/it/monopoly/" />
@@ -249,16 +249,25 @@
       <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
         Temperatura
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
         Histórico
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
         Estatísticas
       </button>
+
       <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
         Maiores vitórias
       </button>
+
       
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review">
+          Análise
+        </button>
+      
+
       
     </div>
   
@@ -270,72 +279,100 @@
         <div class="temp-grid">
           
             <div class="temp-card">
-              <div class="temp-segment" style="background:#3b82f6;">1</div>
-              <div class="temp-value temp-hot">40.56%</div>
-              <div class="temp-diff positive">
-                (+1.67)
-              </div>
-              <div class="temp-spins">8 spins since</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#eab308;">2</div>
-              <div class="temp-value temp-hot">14.15%</div>
-              <div class="temp-diff positive">
-                (+1.19)
-              </div>
-              <div class="temp-spins">8 spins since</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#ec4899;">5</div>
-              <div class="temp-value temp-warm">5.9%</div>
-              <div class="temp-diff positive">
-                (+0.34)
-              </div>
-              <div class="temp-spins">0 spins since</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#8b5cf6;">10</div>
-              <div class="temp-value temp-hot">5.08%</div>
-              <div class="temp-diff positive">
-                (+1.38)
-              </div>
-              <div class="temp-spins">11 spins since</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#f97316;">2 R</div>
-              <div class="temp-value temp-cold">12.09%</div>
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">37.19%</div>
               <div class="temp-diff negative">
-                (-0.87)
+                (-1.7)
               </div>
-              <div class="temp-spins">26 spins since</div>
+              <div class="temp-spins">29 spins since</div>
               <i class="fas fa-snowflake temp-cold temp-icon"></i>
             </div>
           
             <div class="temp-card">
-              <div class="temp-segment" style="background:#22c55e;">4 R</div>
-              <div class="temp-value temp-warm">5.98%</div>
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">5.73%</div>
               <div class="temp-diff positive">
-                (+0.42)
+                (+0.17)
               </div>
-              <div class="temp-spins">19 spins since</div>
+              <div class="temp-spins">5 spins since</div>
               <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
             <div class="temp-card">
-              <div class="temp-segment" style="background:#ef4444;">Cha</div>
-              <div class="temp-value temp-warm">20.4%</div>
-              <div class="temp-diff positive">
-                (+0.03)
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">11.73%</div>
+              <div class="temp-diff negative">
+                (-1.23)
               </div>
-              <div class="temp-spins">16 spins since</div>
+              <div class="temp-spins">5 spins since</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">12.68%</div>
+              <div class="temp-diff negative">
+                (-0.28)
+              </div>
+              <div class="temp-spins">22 spins since</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">3.43%</div>
+              <div class="temp-diff negative">
+                (-0.27)
+              </div>
+              <div class="temp-spins">10 spins since</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/four-rolls.webp" alt="4 Rolls" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">5.43%</div>
+              <div class="temp-diff negative">
+                (-0.13)
+              </div>
+              <div class="temp-spins">20 spins since</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">20.52%</div>
+              <div class="temp-diff positive">
+                (+0.15)
+              </div>
+              <div class="temp-spins">7 spins since</div>
               <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
@@ -352,7 +389,7 @@
             <thead>
               <tr>
                 <th class="t-left">Occurred At</th>
-                <th class="t-center">Slot Result</th>
+                
                 <th class="t-center">Spin Result</th>
                 <th class="t-right">Multiplier</th>
                 <th class="t-right">Total Winners</th>
@@ -362,478 +399,378 @@
             <tbody>
               
                   <tr>
-                    <td class="t-left text-soft">12:39:06 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
+                    <td class="t-left text-soft">18:59:59 Apr 6</td>
+                    
                     <td class="t-center">
                       
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">500x</td>
-                    <td class="t-right text-soft">1,192</td>
-                    <td class="t-right text-green" style="font-weight:600;">$337,405</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:38:01 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#eab308;">
-        2
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">1,361</td>
-                    <td class="t-right text-green" style="font-weight:600;">$3,072</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:36:56 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#ef4444;">
-        Chance
-      </span>
-    
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">100x</td>
-                    <td class="t-right text-soft">2,374</td>
-                    <td class="t-right text-green" style="font-weight:600;">$360,172</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:35:51 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        10
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">1,498</td>
-                    <td class="t-right text-green" style="font-weight:600;">$3,251</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:34:46 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        10
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#ef4444;">
-        Chance
-      </span>
-    
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">100x</td>
-                    <td class="t-right text-soft">2,820</td>
-                    <td class="t-right text-green" style="font-weight:600;">$605,506</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:33:41 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">1,065</td>
-                    <td class="t-right text-green" style="font-weight:600;">$1,727</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:32:36 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">5,070</td>
-                    <td class="t-right text-green" style="font-weight:600;">$14,449</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:31:31 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        10
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#ef4444;">
-        Chance
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">10x</td>
-                    <td class="t-right text-soft">1,542</td>
-                    <td class="t-right text-green" style="font-weight:600;">$26,016</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:30:26 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">4,450</td>
-                    <td class="t-right text-green" style="font-weight:600;">$9,587</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:29:21 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">768</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,845</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:28:16 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#eab308;">
-        2
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">4,755</td>
-                    <td class="t-right text-green" style="font-weight:600;">$51,769</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:27:11 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#ef4444;">
-        Chance
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">20x</td>
-                    <td class="t-right text-soft">2,658</td>
-                    <td class="t-right text-green" style="font-weight:600;">$48,239</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:26:06 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
-        5
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">332</td>
-                    <td class="t-right text-green" style="font-weight:600;">$687</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:25:01 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">2,897</td>
-                    <td class="t-right text-green" style="font-weight:600;">$12,173</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:23:56 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#ef4444;">
-        Chance
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">15x</td>
-                    <td class="t-right text-soft">4,300</td>
-                    <td class="t-right text-green" style="font-weight:600;">$149,729</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:22:51 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">20x</td>
-                    <td class="t-right text-soft">1,973</td>
-                    <td class="t-right text-green" style="font-weight:600;">$34,039</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:21:46 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#eab308;">
-        2
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">781</td>
-                    <td class="t-right text-green" style="font-weight:600;">$3,352</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:20:41 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">4,674</td>
-                    <td class="t-right text-green" style="font-weight:600;">$12,872</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:19:36 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        5
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
                     </td>
                     <td class="t-right text-gold" style="font-weight:600;">200x</td>
-                    <td class="t-right text-soft">2,345</td>
-                    <td class="t-right text-green" style="font-weight:600;">$1,021,960</td>
+                    <td class="t-right text-soft">3,981</td>
+                    <td class="t-right text-green" style="font-weight:600;">$1,613,232</td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">12:18:31 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        10
-      </span>
-    </td>
+                    <td class="t-left text-soft">18:58:54 Apr 6</td>
+                    
                     <td class="t-center">
                       
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">4,844</td>
-                    <td class="t-right text-green" style="font-weight:600;">$8,807</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:17:26 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        10
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">521</td>
-                    <td class="t-right text-green" style="font-weight:600;">$2,239</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:16:21 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">20x</td>
-                    <td class="t-right text-soft">2,797</td>
-                    <td class="t-right text-green" style="font-weight:600;">$62,221</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:15:16 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">440</td>
-                    <td class="t-right text-green" style="font-weight:600;">$947</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:14:11 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">50x</td>
-                    <td class="t-right text-soft">4,802</td>
-                    <td class="t-right text-green" style="font-weight:600;">$240,035</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">12:13:06 Apr 6</td>
-                    <td class="t-center">
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1
-      </span>
-    </td>
-                    <td class="t-center">
-                      
-      <span class="result-badge result-badge-bonus-image" style="background:#f97316;">
-        2 Rolls
-      </span>
-    
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
                     </td>
                     <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">1,476</td>
-                    <td class="t-right text-green" style="font-weight:600;">$13,784</td>
+                    <td class="t-right text-soft">1,642</td>
+                    <td class="t-right text-green" style="font-weight:600;">$8,859</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:57:49 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">631</td>
+                    <td class="t-right text-green" style="font-weight:600;">$2,626</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:56:44 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">2,083</td>
+                    <td class="t-right text-green" style="font-weight:600;">$4,261</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:55:39 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">20x</td>
+                    <td class="t-right text-soft">487</td>
+                    <td class="t-right text-green" style="font-weight:600;">$11,030</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:54:34 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
+                    <td class="t-right text-soft">1,299</td>
+                    <td class="t-right text-green" style="font-weight:600;">$645,049</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:53:29 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">193</td>
+                    <td class="t-right text-green" style="font-weight:600;">$832</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:52:24 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">1,237</td>
+                    <td class="t-right text-green" style="font-weight:600;">$9,198</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:51:19 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">3,856</td>
+                    <td class="t-right text-green" style="font-weight:600;">$13,172</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:50:14 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">1,108</td>
+                    <td class="t-right text-green" style="font-weight:600;">$5,529</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:49:09 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">20x</td>
+                    <td class="t-right text-soft">4,159</td>
+                    <td class="t-right text-green" style="font-weight:600;">$128,162</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:48:04 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">116</td>
+                    <td class="t-right text-green" style="font-weight:600;">$1,210</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:46:59 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">50x</td>
+                    <td class="t-right text-soft">1,974</td>
+                    <td class="t-right text-green" style="font-weight:600;">$130,180</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:45:54 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">15x</td>
+                    <td class="t-right text-soft">1,374</td>
+                    <td class="t-right text-green" style="font-weight:600;">$16,360</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:44:49 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">936</td>
+                    <td class="t-right text-green" style="font-weight:600;">$867</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:43:44 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">4,862</td>
+                    <td class="t-right text-green" style="font-weight:600;">$7,345</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:42:39 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">1,858</td>
+                    <td class="t-right text-green" style="font-weight:600;">$13,077</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:41:34 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/four-rolls.webp" alt="4 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
+                    <td class="t-right text-soft">4,894</td>
+                    <td class="t-right text-green" style="font-weight:600;">$2,396,001</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:40:29 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">2,416</td>
+                    <td class="t-right text-green" style="font-weight:600;">$25,233</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:39:24 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">3,088</td>
+                    <td class="t-right text-green" style="font-weight:600;">$15,645</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:38:19 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">2,391</td>
+                    <td class="t-right text-green" style="font-weight:600;">$4,357</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:37:14 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">2,600</td>
+                    <td class="t-right text-green" style="font-weight:600;">$23,526</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:36:09 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">273</td>
+                    <td class="t-right text-green" style="font-weight:600;">$1,787</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:35:04 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">2,084</td>
+                    <td class="t-right text-green" style="font-weight:600;">$7,919</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">18:33:59 Apr 6</td>
+                    
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">2,610</td>
+                    <td class="t-right text-green" style="font-weight:600;">$14,547</td>
                   </tr>
                 
             </tbody>
@@ -850,59 +787,87 @@
               <div class="chart-box">
                 
                     <div class="chart-col">
-                      <span class="chart-percent">39%</span>
+                      <span class="chart-percent">43%</span>
                       <div class="chart-bar-wrap">
                         <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
                       </div>
-                      <span class="chart-label">1</span>
-                    </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">10%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:25.64102564102564%; background:#eab308;"></div>
-                      </div>
-                      <span class="chart-label">2</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
                     <div class="chart-col">
                       <span class="chart-percent">3%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:7.6923076923076925%; background:#ec4899;"></div>
+                        <div class="chart-bar" style="height:6.976744186046512%; background:#eab308;"></div>
                       </div>
-                      <span class="chart-label">5</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">11%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:25.581395348837212%; background:#ec4899;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
                     <div class="chart-col">
                       <span class="chart-percent">3%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:7.6923076923076925%; background:#8b5cf6;"></div>
+                        <div class="chart-bar" style="height:6.976744186046512%; background:#8b5cf6;"></div>
                       </div>
-                      <span class="chart-label">10</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">17%</span>
+                      <span class="chart-percent">14%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:43.58974358974359%; background:#f97316;"></div>
+                        <div class="chart-bar" style="height:32.55813953488372%; background:#f97316;"></div>
                       </div>
-                      <span class="chart-label">2 Rol</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">4%</span>
+                      <span class="chart-percent">3%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:10.256410256410255%; background:#22c55e;"></div>
+                        <div class="chart-bar" style="height:6.976744186046512%; background:#22c55e;"></div>
                       </div>
-                      <span class="chart-label">4 Rol</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/four-rolls.webp" alt="4 Rolls" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">24%</span>
+                      <span class="chart-percent">23%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:61.53846153846154%; background:#ef4444;"></div>
+                        <div class="chart-bar" style="height:53.48837209302325%; background:#ef4444;"></div>
                       </div>
-                      <span class="chart-label">Chanc</span>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="chart-label-img">
+        </span>
+      
                     </div>
                   
               </div>
@@ -913,7 +878,7 @@
             <h2 class="panel-title">Return to Player</h2>
             <div class="rtp-card-body">
               <div class="rtp-center">
-                <div class="rtp-value">95.91%</div>
+                <div class="rtp-value">96.31%</div>
                 <p class="rtp-text">Based on last 1,000 spins</p>
               </div>
             </div>
@@ -923,11 +888,11 @@
         <div class="stats-summary-grid">
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Total Spins Today</p>
-          <p class="summary-value">752</p>
+          <p class="summary-value">837</p>
         </div>
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Bonus Rounds</p>
-          <p class="summary-value purple">45</p>
+          <p class="summary-value purple">40</p>
         </div>
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Biggest Multiplier</p>
@@ -935,53 +900,1731 @@
         </div>
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Avg. Payout</p>
-          <p class="summary-value green">$169,001</p>
+          <p class="summary-value green">$150,169</p>
         </div>
       </div>
 
       
-    </div>
+      <section class="monopoly-extra-section">
+        <div class="monopoly-dice-grid">
+          
+      <div class="monopoly-stats-card monopoly-dice-card">
+        <div class="monopoly-stats-header">
+          <h3 class="monopoly-stats-title">Low Tier Dice Rolls</h3>
+          <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+        </div>
+  
+        <div class="monopoly-dice-list">
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot  pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot  pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+          
+      <div class="monopoly-stats-card monopoly-dice-card">
+        <div class="monopoly-stats-header">
+          <h3 class="monopoly-stats-title">Mid Tier Dice Rolls</h3>
+          <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+        </div>
+  
+        <div class="monopoly-dice-list">
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (0/73) <strong>0%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:0%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (0/73) <strong>0%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:0%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (5/73) <strong>6.85%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:6.85%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (3/73) <strong>4.11%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:4.11%;"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+          
+      <div class="monopoly-stats-card monopoly-dice-card">
+        <div class="monopoly-stats-header">
+          <h3 class="monopoly-stats-title">High Tier Dice Rolls</h3>
+          <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+        </div>
+  
+        <div class="monopoly-dice-list">
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot  pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot  pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (1/73) <strong>1.37%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:1.37%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (0/73) <strong>0%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:0%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (2/73) <strong>2.74%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:2.74%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot  pos-4"></span>
+        
+          <span class="monopoly-die-dot active pos-5"></span>
+        
+          <span class="monopoly-die-dot  pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (5/73) <strong>6.85%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:6.85%;"></div>
+              </div>
+            </div>
+          
+            <div class="monopoly-dice-item">
+              <div class="monopoly-dice-top">
+                <div class="monopoly-dice-pair">
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                  
+      <div class="monopoly-die">
+        
+          <span class="monopoly-die-dot active pos-1"></span>
+        
+          <span class="monopoly-die-dot  pos-2"></span>
+        
+          <span class="monopoly-die-dot active pos-3"></span>
+        
+          <span class="monopoly-die-dot active pos-4"></span>
+        
+          <span class="monopoly-die-dot  pos-5"></span>
+        
+          <span class="monopoly-die-dot active pos-6"></span>
+        
+          <span class="monopoly-die-dot active pos-7"></span>
+        
+          <span class="monopoly-die-dot  pos-8"></span>
+        
+          <span class="monopoly-die-dot active pos-9"></span>
+        
+      </div>
+    
+                </div>
+                <div class="monopoly-dice-text">
+                  Rolls (5/73) <strong>6.85%</strong>
+                </div>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:6.85%;"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+        </div>
+  
+        <div class="monopoly-stats-card">
+          <div class="monopoly-stats-header">
+            <h3 class="monopoly-stats-title">Board Moves Statistics</h3>
+            <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+          </div>
+  
+          <div class="monopoly-progress-list">
+            <div class="monopoly-progress-item">
+              <div class="monopoly-progress-label">
+                Bonus Game Stats (15/258)
+                <strong>5.81%</strong>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:5.81%;"></div>
+              </div>
+            </div>
+  
+            <div class="monopoly-progress-item">
+              <div class="monopoly-progress-label">
+                Doubles Rolled (16/73)
+                <strong>21.92%</strong>
+              </div>
+              <div class="monopoly-progress">
+                <div class="monopoly-progress-fill" style="width:21.92%;"></div>
+              </div>
+            </div>
+  
+            <div class="monopoly-avg-box-row">
+              <span>Avg Board Rolls per Bonus Game</span>
+              <span class="monopoly-avg-box">4.87</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="monopoly-stats-card">
+          <div class="monopoly-stats-header">
+            <h3 class="monopoly-stats-title">MONOPOLY Big Baller Landing Square Stats</h3>
+            <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+          </div>
+  
+          <div class="monopoly-progress-list">
             
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  Jail - (7/73)
+                  <strong>9.59%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:9.59%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  KingsCross - (6/73)
+                  <strong>8.22%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:8.22%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  CoventryStreet - (4/73)
+                  <strong>5.48%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:5.48%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  ElectricCompany - (4/73)
+                  <strong>5.48%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:5.48%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  TheStrand - (4/73)
+                  <strong>5.48%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:5.48%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  Marylebone - (3/73)
+                  <strong>4.11%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:4.11%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  WhitechapelRoad - (3/73)
+                  <strong>4.11%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:4.11%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  OrangeChest - (3/73)
+                  <strong>4.11%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:4.11%;"></div>
+                </div>
+              </div>
+            
+              <div class="monopoly-progress-item">
+                <div class="monopoly-progress-label">
+                  PentonvilleRoad - (3/73)
+                  <strong>4.11%</strong>
+                </div>
+                <div class="monopoly-progress">
+                  <div class="monopoly-progress-fill" style="width:4.11%;"></div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+  
+        <div class="monopoly-stats-card">
+          <div class="monopoly-stats-header">
+            <h3 class="monopoly-stats-title">Best Individual Wins</h3>
+            <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+          </div>
+  
+          <div class="table-wrap">
+            <table class="spin-table monopoly-stats-table">
+              <thead>
+                <tr>
+                  <th class="t-left">Finished</th>
+                  <th class="t-left">Player</th>
+                  <th class="t-left">Won Amount</th>
+                  <th class="t-left">Multiplier</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">11:08</span>
+                      <div><a href="/go/reg/" class="monopoly-watch-link" target="_blank" rel="noreferrer noopener nofollow">Watch →</a></div>
+                    </td>
+                    <td class="t-left">Pra...</td>
+                    <td class="t-left"><strong>€13,206</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">113x</span></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">14:11</span>
+                      <div><a href="/go/reg/" class="monopoly-watch-link" target="_blank" rel="noreferrer noopener nofollow">Watch →</a></div>
+                    </td>
+                    <td class="t-left">은비까...</td>
+                    <td class="t-left"><strong>€8,658</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">43x</span></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">09:31</span>
+                      <div><a href="/go/reg/" class="monopoly-watch-link" target="_blank" rel="noreferrer noopener nofollow">Watch →</a></div>
+                    </td>
+                    <td class="t-left">Dec...</td>
+                    <td class="t-left"><strong>€7,746</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">92x</span></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">10:01</span>
+                      <div><a href="/go/reg/" class="monopoly-watch-link" target="_blank" rel="noreferrer noopener nofollow">Watch →</a></div>
+                    </td>
+                    <td class="t-left">Iva...</td>
+                    <td class="t-left"><strong>€7,510</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">223x</span></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">08:52</span>
+                      
+                    </td>
+                    <td class="t-left">mad...</td>
+                    <td class="t-left"><strong>€5,515</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">116x</span></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div class="monopoly-stats-card">
+          <div class="monopoly-stats-header">
+            <h3 class="monopoly-stats-title">Latest Top Multipliers</h3>
+            <p class="monopoly-stats-meta">Past 6 hours • 258 Spins</p>
+          </div>
+  
+          <div class="table-wrap">
+            <table class="spin-table monopoly-stats-table">
+              <thead>
+                <tr>
+                  <th class="t-left">Finished</th>
+                  <th class="t-left">Bonus Round</th>
+                  <th class="t-left">Multiplier</th>
+                  <th class="t-left">Big Win Clip</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">10:01</span>
+                    </td>
+                    <td class="t-left">
+                      <img
+                        src="/img/monopoly/bonus-gold.webp"
+                        alt="Bonus round"
+                        class="monopoly-bonus-round-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </td>
+                    <td class="t-left">
+                      <span class="monopoly-multiplier-pill">223x</span>
+                    </td>
+                    <td class="t-left">
+                      <a
+                        href="/go/reg/"
+                        target="_blank"
+                        rel="noreferrer noopener nofollow"
+                        class="monopoly-watch-clip-btn"
+                      >
+                        <span class="monopoly-watch-clip-icon">▶</span>
+                        <span>Watch Clip</span>
+                      </a>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">09:53</span>
+                    </td>
+                    <td class="t-left">
+                      <img
+                        src="/img/monopoly/bonus-silver.webp"
+                        alt="Bonus round"
+                        class="monopoly-bonus-round-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </td>
+                    <td class="t-left">
+                      <span class="monopoly-multiplier-pill">135x</span>
+                    </td>
+                    <td class="t-left">
+                      <a
+                        href="/go/reg/"
+                        target="_blank"
+                        rel="noreferrer noopener nofollow"
+                        class="monopoly-watch-clip-btn"
+                      >
+                        <span class="monopoly-watch-clip-icon">▶</span>
+                        <span>Watch Clip</span>
+                      </a>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">11:08</span>
+                    </td>
+                    <td class="t-left">
+                      <img
+                        src="/img/monopoly/bonus-silver.webp"
+                        alt="Bonus round"
+                        class="monopoly-bonus-round-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </td>
+                    <td class="t-left">
+                      <span class="monopoly-multiplier-pill">113x</span>
+                    </td>
+                    <td class="t-left">
+                      <a
+                        href="/go/reg/"
+                        target="_blank"
+                        rel="noreferrer noopener nofollow"
+                        class="monopoly-watch-clip-btn"
+                      >
+                        <span class="monopoly-watch-clip-icon">▶</span>
+                        <span>Watch Clip</span>
+                      </a>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">09:31</span>
+                    </td>
+                    <td class="t-left">
+                      <img
+                        src="/img/monopoly/bonus-silver.webp"
+                        alt="Bonus round"
+                        class="monopoly-bonus-round-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </td>
+                    <td class="t-left">
+                      <span class="monopoly-multiplier-pill">92x</span>
+                    </td>
+                    <td class="t-left">
+                      <a
+                        href="/go/reg/"
+                        target="_blank"
+                        rel="noreferrer noopener nofollow"
+                        class="monopoly-watch-clip-btn"
+                      >
+                        <span class="monopoly-watch-clip-icon">▶</span>
+                        <span>Watch Clip</span>
+                      </a>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left">
+                      6 Apr<br>
+                      <span class="text-soft" style="font-size:0.75rem;">12:39</span>
+                    </td>
+                    <td class="t-left">
+                      <img
+                        src="/img/monopoly/bonus-gold.webp"
+                        alt="Bonus round"
+                        class="monopoly-bonus-round-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </td>
+                    <td class="t-left">
+                      <span class="monopoly-multiplier-pill">63x</span>
+                    </td>
+                    <td class="t-left">
+                      <a
+                        href="/go/reg/"
+                        target="_blank"
+                        rel="noreferrer noopener nofollow"
+                        class="monopoly-watch-clip-btn"
+                      >
+                        <span class="monopoly-watch-clip-icon">▶</span>
+                        <span>Watch Clip</span>
+                      </a>
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+  
+          <div class="monopoly-gallery-btn-wrap">
+            <a
+              href="/go/reg/"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              class="monopoly-gallery-btn"
+            >
+              Biggest Wins Gallery
+            </a>
+          </div>
+        </div>
+      </section>
+    
+    </div>
+  
+          
       <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Top Multiplier Wins</h2>
         <div class="bigwins-grid">
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 2, 2026</span>
+                <span class="bigwin-date">Apr 6, 2026</span>
                 <span class="bigwin-rank top">#1</span>
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  5
+                  <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
                   <div class="bigwin-multiplier">25,000x</div>
-                  <div class="bigwin-label">5</div>
+                  <div class="bigwin-label">1</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$294,047</span>
+                <span class="bigwin-payout">$307,810</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 2, 2026</span>
+                <span class="bigwin-date">Apr 1, 2026</span>
                 <span class="bigwin-rank top">#2</span>
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  2 Ro
+                  <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
                   <div class="bigwin-multiplier">10,000x</div>
-                  <div class="bigwin-label">2 Rolls</div>
+                  <div class="bigwin-label">10</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$155,457</span>
+                <span class="bigwin-payout">$64,573</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
@@ -993,55 +2636,15 @@
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  2 Ro
+                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
                   <div class="bigwin-multiplier">5,000x</div>
-                  <div class="bigwin-label">2 Rolls</div>
+                  <div class="bigwin-label">5</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$48,167</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 1, 2026</span>
-                <span class="bigwin-rank ">#4</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  Chan
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">2,500x</div>
-                  <div class="bigwin-label">Chance</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$86,384</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 5, 2026</span>
-                <span class="bigwin-rank ">#5</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  10
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">2,000x</div>
-                  <div class="bigwin-label">10</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$233,839</span>
+                <span class="bigwin-payout">$446,195</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
@@ -1049,39 +2652,19 @@
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
                 <span class="bigwin-date">Apr 6, 2026</span>
-                <span class="bigwin-rank ">#6</span>
+                <span class="bigwin-rank ">#4</span>
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  4 Ro
+                  <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
-                  <div class="bigwin-multiplier">1,000x</div>
-                  <div class="bigwin-label">4 Rolls</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$319,302</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 2, 2026</span>
-                <span class="bigwin-rank ">#7</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  Chan
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">500x</div>
+                  <div class="bigwin-multiplier">2,500x</div>
                   <div class="bigwin-label">Chance</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$48,021</span>
+                <span class="bigwin-payout">$176,116</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
@@ -1089,39 +2672,99 @@
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
                 <span class="bigwin-date">Apr 1, 2026</span>
-                <span class="bigwin-rank ">#8</span>
+                <span class="bigwin-rank ">#5</span>
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  2 Ro
+                  <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
-                  <div class="bigwin-multiplier">200x</div>
-                  <div class="bigwin-label">2 Rolls</div>
+                  <div class="bigwin-multiplier">2,000x</div>
+                  <div class="bigwin-label">2</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$280,419</span>
+                <span class="bigwin-payout">$216,674</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 3, 2026</span>
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank ">#6</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">1,000x</div>
+                  <div class="bigwin-label">10</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$206,436</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 4, 2026</span>
+                <span class="bigwin-rank ">#7</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">500x</div>
+                  <div class="bigwin-label">10</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$443,197</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 30, 2026</span>
+                <span class="bigwin-rank ">#8</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">200x</div>
+                  <div class="bigwin-label">1</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$412,763</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 30, 2026</span>
                 <span class="bigwin-rank ">#9</span>
               </div>
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  Chan
+                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
                 </span>
                 <div>
                   <div class="bigwin-multiplier">100x</div>
-                  <div class="bigwin-label">Chance</div>
+                  <div class="bigwin-label">5</div>
                 </div>
               </div>
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$474,038</span>
+                <span class="bigwin-payout">$103,224</span>
                 <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
               </div>
             </article>
@@ -1129,8 +2772,139 @@
         </div>
       </div>
     
-
           
+      <div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">
+        <div class="crazytime-review-section">
+          <div class="crazytime-review-card">
+            <div class="crazytime-review-block">
+              <h2 class="crazytime-review-title">
+                Monopoly Live Review: The Ultimate Live Casino Game Show Experience
+              </h2>
+              <p class="crazytime-review-intro">
+                
+              </p>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <div class="crazytime-review-specs">
+                <div class="crazytime-review-specs-head">
+                  <div>Feature</div>
+                  <div>Details</div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Game Name</div>
+                  <div class="crazytime-review-spec-value">Monopoly Live</div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Provider</div>
+                  <div class="crazytime-review-spec-value">Evolution Gaming</div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Game Type</div>
+                  <div class="crazytime-review-spec-value">
+                    Live Casino Game Show
+                  </div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">RTP</div>
+                  <div class="crazytime-review-spec-value">Up to 96.23%</div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Max Win</div>
+                  <div class="crazytime-review-spec-value">
+                    $500,000 (or multiplier equivalent)
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">
+                Key Monopoly Live Features
+              </h3>
+  
+              <div class="crazytime-review-bonus-grid">
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">
+                    The Money Wheel (Base Game)
+                  </h4>
+                  <p class="crazytime-review-text">
+                    
+                  </p>
+                </article>
+  
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">
+                    The 'Chance' Segment
+                  </h4>
+                  <p class="crazytime-review-text">
+                    
+                  </p>
+                </article>
+  
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">
+                    The 3D Bonus Round
+                  </h4>
+                  <p class="crazytime-review-text">
+                    
+                  </p>
+                </article>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">
+                How to Play Monopoly Live
+              </h3>
+              <p class="crazytime-review-text">
+                
+              </p>
+  
+              <ul class="crazytime-review-list">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">
+                Monopoly Live Stats, Results & Trackers
+              </h3>
+              <p class="crazytime-review-text"></p>
+              <p class="crazytime-review-text"></p>
+              <div class="crazytime-review-tip">
+                
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">
+                Can You Play for Free?
+              </h3>
+              <p class="crazytime-review-text">
+                
+              </p>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h2 class="crazytime-review-subtitle">
+                Frequently Asked Questions (FAQ)
+              </h2>
+              <div class="crazytime-review-faq-list">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
           
         </div>
       </div>
@@ -1201,6 +2975,7 @@
       </div>
     </footer>
   
+
     
     <a
       href="/go/reg/"
@@ -1212,8 +2987,12 @@
       Jogar 🎰
     </a>
   
+
+    <script id="gamePageData" type="application/json">
+      {"lang":"pt","game":{"id":"monopoly","name":"Monopoly Live","provider":"Evolution Gaming","color":"#22c55e","image":{"src":"img/monopoly-live-casino-logo.webp","alt":"Monopoly Live logo"},"segments":["1","2","5","10","2 Rolls","4 Rolls","Chance"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6","#f97316","#22c55e","#ef4444"],"segProbs":[38.89,12.96,5.56,3.7,12.96,5.56,20.37],"expectedRtp":95.72,"segmentImages":{"1":"img/monopoly/temperature/one.webp","2":"img/monopoly/temperature/two.webp","5":"img/monopoly/temperature/five.webp","10":"img/monopoly/temperature/ten.webp","2 Rolls":"img/monopoly/temperature/two-rolls.webp","4 Rolls":"img/monopoly/temperature/four-rolls.webp","Chance":"img/monopoly/temperature/chance.webp"}}}
+    </script>
   </div>
   
-  <script src="/script.js"></script>
+  <script src="/main-script.js"></script>
 </body>
 </html>

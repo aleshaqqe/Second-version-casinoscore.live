@@ -8,6 +8,17 @@ function renderCrazyTimeReviewPanel(t) {
             <div class="crazytime-review-block">
               <h2 class="crazytime-review-title">${tr.whatIsTitle || "What Is Crazy Time?"}</h2>
               <p class="crazytime-review-intro">${tr.whatIsText || ""}</p>
+              <div class="crazytime-review-hero-media">
+              <img
+                src="/img/crazytime-review/crazy-time-with-girl.webp"
+                alt="Crazy Time live game host with bonus wheel"
+                class="crazytime-review-hero-image"
+                loading="lazy"
+                decoding="async"
+                width="1171"
+                height="617"
+              />
+            </div>
             </div>
   
             <div class="crazytime-review-block">
@@ -155,11 +166,11 @@ function renderCrazyTimeReviewPanel(t) {
             </div>
   
             <div class="crazytime-review-block">
-              <h3 class="crazytime-review-subtitle">${tr.faqTitle || "FAQ"}</h3>
+              <h2 class="crazytime-review-subtitle">${tr.faqTitle || "FAQ"}</h2>
               <div class="crazytime-review-faq-list">
                 ${(tr.faq || []).map((item) => `
                   <div class="crazytime-review-faq-item">
-                    <h4 class="crazytime-review-faq-question">${item.q}</h4>
+                    <p class="crazytime-review-faq-question">${item.q}</p>
                     <p class="crazytime-review-faq-answer">${item.a}</p>
                   </div>
                 `).join("")}

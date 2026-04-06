@@ -3,6 +3,106 @@ const DEFAULT_LANG = "en";
 
 const UI_TRANSLATIONS = {
   en: {
+    monopolyReview: {
+      title: "Monopoly Live Review: The Ultimate Live Casino Game Show Experience",
+      intro: "Welcome to the ultimate guide to Monopoly Live, one of the most popular live dealer games ever created. Developed by the legendary Evolution Gaming, this title merges a massive money wheel with an incredible augmented reality 3D bonus round featuring Mr. Monopoly himself. Whether you want to play Monopoly Live online or just check the latest game statistics, we have all the information you need.",
+    
+      tableFeature: "Feature",
+      tableDetails: "Details",
+      gameNameLabel: "Game Name",
+      providerLabel: "Provider",
+      gameTypeLabel: "Game Type",
+      rtpLabel: "RTP",
+      maxWinLabel: "Max Win",
+    
+      gameTypeValue: "Live Casino Game Show",
+      rtpValue: "Up to 96.23%",
+      maxWinValue: "$500,000 (or multiplier equivalent)",
+    
+      sectionsTitle: "Key Monopoly Live Features",
+    
+      wheelTitle: "The Money Wheel (Base Game)",
+      wheelText: "The core of the live Monopoly casino experience. A real live host spins a massive vertical wheel featuring 54 segments. Players bet on numbers (1, 2, 5, 10) to win instant cash payouts based on the number landed.",
+    
+      chanceTitle: "The 'Chance' Segment",
+      chanceText: "Landing on a 'Chance' segment awards players either an instant cash prize or an exciting multiplier bonus. If a multiplier drops, the host spins the wheel again, and your next win is multiplied!",
+    
+      bonus3dTitle: "The 3D Bonus Round",
+      bonus3dText: "The highlight of the Monopoly live game. If you bet on '2 ROLLS' or '4 ROLLS' and the wheel stops there, Mr. Monopoly steps into a 3D board game world, collecting prizes, multipliers, and avoiding taxes.",
+    
+      howToPlayTitle: "How to Play Monopoly Live",
+      howToPlayIntro: "Getting started at an online casino with Monopoly Live is incredibly simple. Just follow these steps:",
+      step1: "Place your bets: You have a short betting window to place your chips on 1, 2, 5, 10, '2 Rolls', or '4 Rolls'.",
+      step2: "The spin: The live dealer spins the wheel. You can watch Monopoly live as the wheel slows down.",
+      step3: "The payout: If the wheel stops on your number, you win. If it lands on a bonus game and you placed a bet on it, you enter the 3D round!",
+    
+      statsTitle: "Monopoly Live Stats, Results & Trackers",
+      statsText1: "For many serious iGaming enthusiasts, tracking the game is just as important as playing. Because this is a game of probability, many players utilize a Monopoly Live tracker to follow the game's trends.",
+      statsText2: "By analyzing Monopoly Live stats, you can view the frequency of bonus rounds, average multipliers, and cold/hot numbers. Checking the Monopoly Live history allows you to see the Monopoly live results today. While past results do not guarantee future outcomes, looking at a casino score Monopoly Live board gives players insights into how the wheel is behaving during their session. Always remember to play responsibly, regardless of what the Monopoly live results show.",
+      statsNote: "Note: If you love this format, you might also want to check out Monopoly Big Baller live, a bingo-style spin-off that also features exciting Monopoly Big Baller results today live!",
+    
+      freePlayTitle: "Can You Play for Free?",
+      freePlayText: "Many players look for a Monopoly Live casino demo or Monopoly Live free play. Since this is a live studio game with real dealers, a playable demo with fake money isn't available. However, you can join any Monopoly live online casino, open the game, and simply watch the Monopoly live stream for free to learn the rules before placing real bets.",
+    
+      faqTitle: "Frequently Asked Questions (FAQ)",
+      faq: [
+        {
+          q: "Where can I find Monopoly Live results and statistics?",
+          a: "You can find Monopoly live stats directly inside the game interface, which shows the most recent winning segments. For deeper analytics, many third-party casino tracker websites provide comprehensive Monopoly live history."
+        },
+        {
+          q: "Is there a Monopoly Live casino app available?",
+          a: "There is no standalone Monopoly Live apk. However, you can play the game perfectly on mobile by downloading the official app of any licensed casino that features Evolution Gaming titles."
+        },
+        {
+          q: "What is the difference between this and Monopoly Big Baller?",
+          a: "While both feature Mr. Monopoly and 3D bonus rounds, the original game uses a spinning money wheel, whereas live casino Monopoly Big Baller uses a bingo-style ball drawing machine."
+        },
+        {
+          q: "How do I get into the 3D Bonus Game?",
+          a: "To participate in the 3D board game, you must place a bet on the '2 ROLLS' or '4 ROLLS' betting spots. If the wheel stops on one of these segments, the bonus round begins."
+        },
+        {
+          q: "Can I interact with the live dealer?",
+          a: "Yes! The game features a Monopoly casino live chat where you can talk to the host and other players, making the live Monopoly experience highly social and engaging."
+        },
+        {
+          q: "Are the game results rigged?",
+          a: "No. Monopoly Live Evolution Gaming is heavily tested and licensed by top gambling authorities. The wheel is completely physical and random, ensuring every Monopoly live score is 100% fair."
+        }
+      ]
+    },
+    monopolyStatsExtra: {
+      diceRollsLowTitle: "Low Tier Dice Rolls",
+      diceRollsMidTitle: "Mid Tier Dice Rolls",
+      diceRollsHighTitle: "High Tier Dice Rolls",
+      trackedMeta: "Past 6 hours • 258 Spins",
+    
+      boardMovesTitle: "Board Moves Statistics",
+      bonusGameStats: "Bonus Game Stats",
+      doublesRolled: "Doubles Rolled",
+      avgBoardRolls: "Avg Board Rolls per Bonus Game",
+    
+      landingStatsTitle: "MONOPOLY Big Baller Landing Square Stats",
+    
+      bestIndividualWinsTitle: "Best Individual Wins",
+      latestTopMultipliersTitle: "Latest Top Multipliers",
+    
+      finished: "Finished",
+      player: "Player",
+      wonAmount: "Won Amount",
+      multiplier: "Multiplier",
+      bigWinClip: "Big Win Clip",
+      bonusRound: "Bonus Round",
+      watchClip: "Watch Clip",
+      biggestWinsGallery: "Biggest Wins Gallery"
+    },
+    seo: {
+      crazytime: {
+        title: "Crazy Time Stats – Live Results & Multipliers Tracker",
+        description: "Crazy Time live stats updated in real time. Track wheel results, bonus rounds & multipliers up to 2000x. Use data to build your winning strategy. Check now!"
+      }
+    },
     crazytimeStream: {
       title: "Crazy Time Live Stream",
       subtitle: "Watch the live Crazy Time stream directly on this page.",
@@ -151,7 +251,7 @@ cashHunt: "Cash Hunt",
     },
    
     gamePage: {
-      statisticsTitleSuffix: "Statistics",
+      statisticsTitleSuffix: " Stats – Live Results & Multipliers Tracker",
       subtitlePrefix: "Track real-time spin results, history and statistics for",
 
     },
@@ -205,6 +305,106 @@ cashHunt: "Cash Hunt",
   },
 
   es: {
+    monopolyReview: {
+      title: "Reseña de Monopoly Live: la experiencia definitiva de casino en vivo tipo game show",
+      intro: "Bienvenido a la guía definitiva de Monopoly Live, uno de los juegos con crupier en vivo más populares jamás creados. Desarrollado por la legendaria Evolution Gaming, este título combina una enorme rueda de dinero con una increíble ronda de bonificación 3D en realidad aumentada protagonizada por el propio Sr. Monopoly. Tanto si quieres jugar a Monopoly Live online como si solo quieres consultar las estadísticas más recientes del juego, aquí encontrarás toda la información que necesitas.",
+    
+      tableFeature: "Característica",
+      tableDetails: "Detalles",
+      gameNameLabel: "Nombre del juego",
+      providerLabel: "Proveedor",
+      gameTypeLabel: "Tipo de juego",
+      rtpLabel: "RTP",
+      maxWinLabel: "Ganancia máxima",
+    
+      gameTypeValue: "Game Show de Casino en Vivo",
+      rtpValue: "Hasta 96.23%",
+      maxWinValue: "$500,000 (o el equivalente en multiplicador)",
+    
+      sectionsTitle: "Características principales de Monopoly Live",
+    
+      wheelTitle: "La rueda de dinero (juego base)",
+      wheelText: "Es el núcleo de la experiencia de Monopoly casino en vivo. Un presentador real gira una enorme rueda vertical con 54 segmentos. Los jugadores apuestan a los números (1, 2, 5, 10) para ganar pagos instantáneos según el número en el que se detenga la rueda.",
+    
+      chanceTitle: "El segmento 'Chance'",
+      chanceText: "Caer en un segmento 'Chance' otorga a los jugadores un premio instantáneo en efectivo o un emocionante bono multiplicador. Si cae un multiplicador, el presentador vuelve a girar la rueda y tu próxima ganancia se multiplica.",
+    
+      bonus3dTitle: "La ronda de bonificación 3D",
+      bonus3dText: "Es el punto culminante del juego Monopoly Live. Si apuestas a '2 ROLLS' o '4 ROLLS' y la rueda se detiene ahí, el Sr. Monopoly entra en un mundo 3D de juego de mesa, recogiendo premios, multiplicadores y evitando impuestos.",
+    
+      howToPlayTitle: "Cómo jugar a Monopoly Live",
+      howToPlayIntro: "Empezar en un casino online con Monopoly Live es muy sencillo. Solo tienes que seguir estos pasos:",
+      step1: "Haz tus apuestas: tienes una breve ventana de apuesta para colocar tus fichas en 1, 2, 5, 10, '2 Rolls' o '4 Rolls'.",
+      step2: "El giro: el crupier en vivo gira la rueda. Puedes ver Monopoly Live mientras la rueda se va frenando.",
+      step3: "El pago: si la rueda se detiene en tu número, ganas. Si cae en un juego bonus y habías apostado en él, entras en la ronda 3D.",
+    
+      statsTitle: "Estadísticas, resultados y trackers de Monopoly Live",
+      statsText1: "Para muchos entusiastas serios del iGaming, seguir el juego es tan importante como jugarlo. Como se trata de un juego de probabilidad, muchos usuarios utilizan un tracker de Monopoly Live para seguir sus tendencias.",
+      statsText2: "Al analizar las estadísticas de Monopoly Live, puedes ver la frecuencia de las rondas bonus, los multiplicadores medios y los números fríos y calientes. Consultar el historial de Monopoly Live te permite revisar los resultados de Monopoly Live de hoy. Aunque los resultados pasados no garantizan resultados futuros, observar un tablero tipo casino score de Monopoly Live puede dar a los jugadores una mejor idea de cómo se está comportando la rueda durante la sesión. Recuerda siempre jugar de forma responsable, independientemente de lo que muestren los resultados de Monopoly Live.",
+      statsNote: "Nota: si te gusta este formato, también puedes echar un vistazo a Monopoly Big Baller live, un spin-off estilo bingo que también ofrece emocionantes resultados de Monopoly Big Baller en vivo.",
+    
+      freePlayTitle: "¿Se puede jugar gratis?",
+      freePlayText: "Muchos jugadores buscan una demo de Monopoly Live o una opción de Monopoly Live gratis. Como se trata de un juego de estudio en vivo con crupieres reales, no existe una demo jugable con dinero ficticio. Sin embargo, puedes entrar en cualquier casino online con Monopoly Live, abrir el juego y simplemente ver el stream de Monopoly Live gratis para aprender las reglas antes de apostar dinero real.",
+    
+      faqTitle: "Preguntas frecuentes (FAQ)",
+      faq: [
+        {
+          q: "¿Dónde puedo encontrar resultados y estadísticas de Monopoly Live?",
+          a: "Puedes encontrar las estadísticas de Monopoly Live directamente dentro de la interfaz del juego, donde se muestran los segmentos ganadores más recientes. Para un análisis más profundo, muchos sitios externos de seguimiento de casino ofrecen un historial completo de Monopoly Live."
+        },
+        {
+          q: "¿Existe una app de casino para Monopoly Live?",
+          a: "No existe una app independiente de Monopoly Live apk. Sin embargo, puedes jugar perfectamente en móvil descargando la app oficial de cualquier casino con licencia que ofrezca títulos de Evolution Gaming."
+        },
+        {
+          q: "¿Cuál es la diferencia entre este juego y Monopoly Big Baller?",
+          a: "Aunque ambos cuentan con el Sr. Monopoly y rondas bonus en 3D, el juego original utiliza una rueda de dinero giratoria, mientras que live casino Monopoly Big Baller utiliza una máquina de extracción de bolas estilo bingo."
+        },
+        {
+          q: "¿Cómo entro en el juego bonus 3D?",
+          a: "Para participar en el juego de mesa 3D, debes apostar en las casillas de '2 ROLLS' o '4 ROLLS'. Si la rueda se detiene en uno de esos segmentos, comienza la ronda bonus."
+        },
+        {
+          q: "¿Puedo interactuar con el crupier en vivo?",
+          a: "Sí. El juego incluye un chat en vivo de Monopoly casino donde puedes hablar con el presentador y con otros jugadores, haciendo que la experiencia de Monopoly en vivo sea mucho más social y entretenida."
+        },
+        {
+          q: "¿Los resultados del juego están manipulados?",
+          a: "No. Monopoly Live de Evolution Gaming está fuertemente auditado y cuenta con licencias de las principales autoridades del juego. La rueda es completamente física y aleatoria, lo que garantiza que cada resultado de Monopoly Live sea 100% justo."
+        }
+      ]
+    },
+    monopolyStatsExtra: {
+      diceRollsLowTitle: "Tiradas de Dados de Nivel Bajo",
+      diceRollsMidTitle: "Tiradas de Dados de Nivel Medio",
+      diceRollsHighTitle: "Tiradas de Dados de Nivel Alto",
+      trackedMeta: "Últimas 6 horas • 258 tiradas",
+    
+      boardMovesTitle: "Estadísticas de Movimientos del Tablero",
+      bonusGameStats: "Estadísticas del Juego Bonus",
+      doublesRolled: "Dobles Obtenidos",
+      avgBoardRolls: "Prom. de Tiradas por Juego Bonus",
+    
+      landingStatsTitle: "Estadísticas de Casillas de MONOPOLY Big Baller",
+    
+      bestIndividualWinsTitle: "Mejores Ganancias Individuales",
+      latestTopMultipliersTitle: "Multiplicadores Máximos Recientes",
+    
+      finished: "Finalizado",
+      player: "Jugador",
+      wonAmount: "Cantidad Ganada",
+      multiplier: "Multiplicador",
+      bigWinClip: "Clip de Gran Premio",
+      bonusRound: "Ronda Bonus",
+      watchClip: "Ver Clip",
+      biggestWinsGallery: "Galería de Grandes Ganancias"
+    },
+    seo: {
+      crazytime: {
+        title: "Estadísticas de Crazy Time – Resultados en Vivo y Rastreador de Multiplicadores",
+        description: "Estadísticas en vivo de Crazy Time actualizadas en tiempo real. Sigue los resultados de la rueda, rondas bonus y multiplicadores de hasta 2000x. Usa los datos para construir tu estrategia ganadora. ¡Compruébalo ahora!"
+      }
+    },
     crazytimeStream: {
       title: "Transmisión en Vivo de Crazy Time",
       subtitle: "Mira la transmisión en vivo de Crazy Time directamente en esta página.",
@@ -401,6 +601,12 @@ cashHunt: "Cash Hunt",
   },
 
   it: {
+    seo: {
+      crazytime: {
+        title: "Statistiche Crazy Time – Risultati Live e Tracker dei Moltiplicatori",
+        description: "Statistiche live di Crazy Time aggiornate in tempo reale. Monitora risultati della ruota, round bonus e moltiplicatori fino a 2000x. Usa i dati per costruire la tua strategia vincente. Controlla ora!"
+      }
+    },
     crazytimeStream: {
       title: "Streaming Live di Crazy Time",
       subtitle: "Guarda lo streaming live di Crazy Time direttamente su questa pagina.",
@@ -594,6 +800,12 @@ cashHunt: "Cash Hunt",
   },
 
   de: {
+    seo: {
+      crazytime: {
+        title: "Crazy Time Statistiken – Live-Ergebnisse & Multiplikator-Tracker",
+        description: "Crazy Time Live-Statistiken in Echtzeit aktualisiert. Verfolge Radergebnisse, Bonusrunden und Multiplikatoren bis zu 2000x. Nutze Daten, um deine Gewinnstrategie aufzubauen. Jetzt ansehen!"
+      }
+    },
     crazytimeStream: {
       title: "Crazy Time Live-Stream",
       subtitle: "Sehen Sie den Live-Stream von Crazy Time direkt auf dieser Seite.",
@@ -787,6 +999,12 @@ cashHunt: "Cash Hunt",
   },
 
   nl: {
+    seo: {
+      crazytime: {
+        title: "Crazy Time Statistieken – Live Resultaten & Multiplier Tracker",
+        description: "Crazy Time live statistieken in realtime bijgewerkt. Volg wielresultaten, bonusrondes en multipliers tot 2000x. Gebruik data om je winnende strategie op te bouwen. Bekijk het nu!"
+      }
+    },
     crazytimeStream: {
       title: "Crazy Time Live Stream",
       subtitle: "Bekijk de live Crazy Time stream rechtstreeks op deze pagina.",
@@ -980,6 +1198,12 @@ cashHunt: "Cash Hunt",
   },
 
   fr: {
+    seo: {
+      crazytime: {
+        title: "Statistiques Crazy Time – Résultats en Direct et Suivi des Multiplicateurs",
+        description: "Statistiques Crazy Time en direct mises à jour en temps réel. Suivez les résultats de la roue, les tours bonus et les multiplicateurs jusqu'à 2000x. Utilisez les données pour construire votre stratégie gagnante. Consultez maintenant !"
+      }
+    },
     crazytimeStream: {
       title: "Diffusion en Direct de Crazy Time",
       subtitle: "Regardez la diffusion en direct de Crazy Time directement sur cette page.",
@@ -1173,6 +1397,12 @@ cashHunt: "Cash Hunt",
   },
 
   pt: {
+    seo: {
+      crazytime: {
+        title: "Estatísticas do Crazy Time – Resultados ao Vivo e Rastreador de Multiplicadores",
+        description: "Estatísticas ao vivo do Crazy Time atualizadas em tempo real. Acompanhe resultados da roda, rodadas de bônus e multiplicadores de até 2000x. Use os dados para construir sua estratégia vencedora. Confira agora!"
+      }
+    },
     crazytimeStream: {
       title: "Transmissão ao Vivo de Crazy Time",
       subtitle: "Assista à transmissão ao vivo de Crazy Time diretamente nesta página.",
@@ -1365,6 +1595,12 @@ cashHunt: "Cash Hunt",
   },
 
   ar: {
+    seo: {
+      crazytime: {
+        title: "إحصائيات Crazy Time – النتائج المباشرة ومتتبع المضاعفات",
+        description: "إحصائيات Crazy Time المباشرة يتم تحديثها في الوقت الفعلي. تتبع نتائج العجلة وجولات البونص والمضاعفات حتى 2000x. استخدم البيانات لبناء استراتيجيتك الرابحة. تحقق الآن!"
+      }
+    },
     crazytimeStream: {
       title: "البث المباشر لـ Crazy Time",
       subtitle: "شاهد البث المباشر لـ Crazy Time مباشرة على هذه الصفحة.",

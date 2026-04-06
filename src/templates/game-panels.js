@@ -6,12 +6,43 @@ const {
   } = require("../utils/render-helpers");
   
   function getSegmentImage(game, segmentName) {
-    if (!game || !game.segmentImages) return "";
-    return game.segmentImages[segmentName] || "";
+    if (!game) return "";
+  
+    if (game.id === "monopoly") {
+      const monopolySegmentImages = {
+        "1": "img/monopoly/temperature/one.webp",
+        "2": "img/monopoly/temperature/two.webp",
+        "5": "img/monopoly/temperature/five.webp",
+        "10": "img/monopoly/temperature/ten.webp",
+        "2 Rolls": "img/monopoly/temperature/two-rolls.webp",
+        "4 Rolls": "img/monopoly/temperature/four-rolls.webp",
+        "Chance": "img/monopoly/temperature/chance.webp"
+      };
+  
+      return monopolySegmentImages[segmentName] || "";
+    }
+  
+    if (game.spinResultImages && game.spinResultImages[segmentName]) {
+      return game.spinResultImages[segmentName];
+    }
+  
+    if (game.segmentImages && game.segmentImages[segmentName]) {
+      return game.segmentImages[segmentName];
+    }
+  
+    return "";
   }
   
-  function renderSegmentBadge(game, segmentName, color, extraClass = "") {
-    const image = getSegmentImage(game, segmentName);
+  function getSlotResultImage(game, segmentName) {
+    if (!game || !game.slotResultImages) return "";
+    return game.slotResultImages[segmentName] || "";
+  }
+  
+  function renderSegmentBadge(game, segmentName, color, extraClass = "", imageType = "spin") {
+    const image =
+      imageType === "slot"
+        ? getSlotResultImage(game, segmentName)
+        : getSegmentImage(game, segmentName);
   
     if (image) {
       return `
@@ -55,7 +86,6 @@ const {
   
     return `<div class="temp-segment" style="background:${color};">${shortLabel}</div>`;
   }
-  
   function renderTemperaturePanel(game, temperatureData) {
     return `
       <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
@@ -80,6 +110,7 @@ const {
   
   function renderHistoryPanel(game, spinData) {
     const pageData = spinData.slice(0, 25);
+    const isMonopoly = game.id === "monopoly";
   
     return `
       <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
@@ -91,7 +122,7 @@ const {
             <thead>
               <tr>
                 <th class="t-left">Occurred At</th>
-                <th class="t-center">Slot Result</th>
+                ${!isMonopoly ? `<th class="t-center">Slot Result</th>` : ""}
                 <th class="t-center">Spin Result</th>
                 <th class="t-right">Multiplier</th>
                 <th class="t-right">Total Winners</th>
@@ -108,11 +139,15 @@ const {
                 return `
                   <tr>
                     <td class="t-left text-soft">${formatTime(spin.time)}</td>
-                    <td class="t-center">${renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot")}</td>
+                    ${!isMonopoly ? `
+                      <td class="t-center">
+                        ${renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
+                      </td>
+                    ` : ""}
                     <td class="t-center">
                       ${spin.isBonus
-                        ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image")
-                        : renderSegmentBadge(game, spin.spinResult, spinColor)}
+                        ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
+                        : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")}
                     </td>
                     <td class="t-right ${spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">${spin.multiplier}x</td>
                     <td class="t-right text-soft">${numberWithCommas(spin.winners)}</td>
@@ -222,9 +257,9 @@ const {
       </div>
     `;
   }
-  
   module.exports = {
     getSegmentImage,
+    getSlotResultImage,
     renderSegmentBadge,
     renderChartLabel,
     renderTemperatureSegment,

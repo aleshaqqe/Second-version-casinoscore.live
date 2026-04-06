@@ -53,6 +53,11 @@ function jsonLdScript(schemaObject) {
       const faqSchema = createFaqSchema(t.crazytimeReview.faq);
       schemas.push(jsonLdScript(faqSchema));
     }
+    
+    if (game.id === "monopoly" && t.monopolyReview?.faq?.length) {
+      const faqSchema = createFaqSchema(t.monopolyReview.faq);
+      schemas.push(jsonLdScript(faqSchema));
+    }
   
     return schemas.join("\n");
   }

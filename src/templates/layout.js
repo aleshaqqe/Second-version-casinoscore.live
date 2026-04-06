@@ -14,7 +14,7 @@ function renderLayout({
   <base href="/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>${title}</title>
   <meta name="description" content="${description}" />
 
@@ -35,7 +35,7 @@ function renderLayout({
 </head>
 <body>
   ${body}
-  <script src="/script.js"></script>
+  <script src="/main-script.js"></script>
 </body>
 </html>`;
 }

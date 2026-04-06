@@ -34,7 +34,7 @@ const {
   }
   
   function generateTemperatureData(game) {
-    return (game.segments || []).map((segment, index) => {
+    const items = (game.segments || []).map((segment, index) => {
       const expected = game.segProbs?.[index] || 0;
       const diff = Number((Math.random() * 4 - 2).toFixed(2));
       const actual = Number(Math.max(0, expected + diff).toFixed(2));
@@ -62,6 +62,16 @@ const {
         iconClass
       };
     });
+  
+    if (game.id === "monopoly") {
+      const monopolyOrder = ["1", "5", "2 Rolls", "2", "10", "4 Rolls", "Chance"];
+  
+      return monopolyOrder
+        .map((name) => items.find((item) => item.segment === name))
+        .filter(Boolean);
+    }
+  
+    return items;
   }
   
   function countDistribution(game, spinData) {
@@ -203,6 +213,87 @@ const {
       { date: "5 Apr", time: "15:42", result: "Cash Hunt", multiplier: "100x" }
     ];
   }
+
+
+
+
+  function generateMonopolyDiceRollStats() {
+    return {
+      low: [
+        { left: 1, right: 1, hits: 1, total: 73, percent: 1.37 },
+        { left: 1, right: 2, hits: 2, total: 73, percent: 2.74 },
+        { left: 1, right: 3, hits: 1, total: 73, percent: 1.37 },
+        { left: 1, right: 4, hits: 2, total: 73, percent: 2.74 },
+        { left: 1, right: 5, hits: 1, total: 73, percent: 1.37 },
+        { left: 1, right: 6, hits: 1, total: 73, percent: 1.37 },
+        { left: 2, right: 2, hits: 2, total: 73, percent: 2.74 }
+      ],
+      mid: [
+        { left: 2, right: 3, hits: 0, total: 73, percent: 0 },
+        { left: 2, right: 4, hits: 2, total: 73, percent: 2.74 },
+        { left: 2, right: 5, hits: 2, total: 73, percent: 2.74 },
+        { left: 2, right: 6, hits: 0, total: 73, percent: 0 },
+        { left: 3, right: 3, hits: 5, total: 73, percent: 6.85 },
+        { left: 3, right: 4, hits: 2, total: 73, percent: 2.74 },
+        { left: 3, right: 5, hits: 3, total: 73, percent: 4.11 }
+      ],
+      high: [
+        { left: 3, right: 6, hits: 2, total: 73, percent: 2.74 },
+        { left: 4, right: 4, hits: 1, total: 73, percent: 1.37 },
+        { left: 4, right: 5, hits: 1, total: 73, percent: 1.37 },
+        { left: 4, right: 6, hits: 0, total: 73, percent: 0 },
+        { left: 5, right: 5, hits: 2, total: 73, percent: 2.74 },
+        { left: 5, right: 6, hits: 5, total: 73, percent: 6.85 },
+        { left: 6, right: 6, hits: 5, total: 73, percent: 6.85 }
+      ]
+    };
+  }
+  
+  function generateMonopolyBoardMoveStats() {
+    return {
+      bonusGameHits: 15,
+      totalSpins: 258,
+      bonusGamePercent: 5.81,
+      doublesHits: 16,
+      doublesTotal: 73,
+      doublesPercent: 21.92,
+      avgBoardRolls: 4.87
+    };
+  }
+  
+  function generateMonopolyLandingStats() {
+    return [
+      { label: "Jail", hits: 7, total: 73, percent: 9.59 },
+      { label: "KingsCross", hits: 6, total: 73, percent: 8.22 },
+      { label: "CoventryStreet", hits: 4, total: 73, percent: 5.48 },
+      { label: "ElectricCompany", hits: 4, total: 73, percent: 5.48 },
+      { label: "TheStrand", hits: 4, total: 73, percent: 5.48 },
+      { label: "Marylebone", hits: 3, total: 73, percent: 4.11 },
+      { label: "WhitechapelRoad", hits: 3, total: 73, percent: 4.11 },
+      { label: "OrangeChest", hits: 3, total: 73, percent: 4.11 },
+      { label: "PentonvilleRoad", hits: 3, total: 73, percent: 4.11 }
+    ];
+  }
+  
+  function generateMonopolyBestIndividualWins() {
+    return [
+      { date: "6 Apr", time: "11:08", player: "Pra...", amount: "€13,206", multiplier: "113x" },
+      { date: "6 Apr", time: "14:11", player: "은비까...", amount: "€8,658", multiplier: "43x" },
+      { date: "6 Apr", time: "09:31", player: "Dec...", amount: "€7,746", multiplier: "92x" },
+      { date: "6 Apr", time: "10:01", player: "Iva...", amount: "€7,510", multiplier: "223x" },
+      { date: "6 Apr", time: "08:52", player: "mad...", amount: "€5,515", multiplier: "116x" }
+    ];
+  }
+  
+  function generateMonopolyLatestTopMultipliers() {
+    return [
+      { date: "6 Apr", time: "10:01", bonusRoundImage: "img/monopoly/bonus-gold.webp", multiplier: "223x" },
+      { date: "6 Apr", time: "09:53", bonusRoundImage: "img/monopoly/bonus-silver.webp", multiplier: "135x" },
+      { date: "6 Apr", time: "11:08", bonusRoundImage: "img/monopoly/bonus-silver.webp", multiplier: "113x" },
+      { date: "6 Apr", time: "09:31", bonusRoundImage: "img/monopoly/bonus-silver.webp", multiplier: "92x" },
+      { date: "6 Apr", time: "12:39", bonusRoundImage: "img/monopoly/bonus-gold.webp", multiplier: "63x" }
+    ];
+  }
   
   module.exports = {
     generateSpinData,
@@ -215,5 +306,10 @@ const {
     generateCashHuntSymbolsStats,
     generateCashHuntRecentMultipliers,
     generateCrazyTimeBestBets,
-    generateCrazyTimeLatestMaxMultipliers
+    generateCrazyTimeLatestMaxMultipliers,
+    generateMonopolyDiceRollStats,
+    generateMonopolyBoardMoveStats,
+    generateMonopolyLandingStats,
+    generateMonopolyBestIndividualWins,
+    generateMonopolyLatestTopMultipliers
   };
