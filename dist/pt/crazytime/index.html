@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+  <base href="/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Crazy Time Estatísticas</title>
+  <meta name="description" content="Acompanhe resultados, histórico e estatísticas em tempo real de Crazy Time" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="canonical" href="https://example.com/pt/crazytime/" />
+  <link rel="alternate" hreflang="en" href="https://example.com/crazytime/" />
+<link rel="alternate" hreflang="es" href="https://example.com/es/crazytime/" />
+<link rel="alternate" hreflang="it" href="https://example.com/it/crazytime/" />
+<link rel="alternate" hreflang="de" href="https://example.com/de/crazytime/" />
+<link rel="alternate" hreflang="nl" href="https://example.com/nl/crazytime/" />
+<link rel="alternate" hreflang="fr" href="https://example.com/fr/crazytime/" />
+<link rel="alternate" hreflang="pt" href="https://example.com/pt/crazytime/" />
+<link rel="alternate" hreflang="ar" href="https://example.com/ar/crazytime/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/pt/"},{"@type":"ListItem","position":2,"name":"Crazy Time","item":"https://example.com/pt/crazytime/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Crazy Time é um jogo de habilidade ou sorte?","acceptedAnswer":{"@type":"Answer","text":"Crazy Time é principalmente um jogo de sorte. Embora os jogadores possam usar estatísticas e ferramentas de rastreamento para entender melhor os resultados recentes, cada rodada permanece independente."}},{"@type":"Question","name":"Qual é o multiplicador máximo no Crazy Time?","acceptedAnswer":{"@type":"Answer","text":"O potencial máximo anunciado no Crazy Time pode chegar até 20.000x durante a rodada de bônus principal do Crazy Time."}},{"@type":"Question","name":"Posso participar de rodadas de bônus se não apostei diretamente nelas?","acceptedAnswer":{"@type":"Answer","text":"Se as regras do jogo e a configuração atual permitirem através de mecânicas de bônus como entrada mínima ou efeitos Top Slot, os jogadores ainda podem entrar em certos resultados de bônus com um multiplicador reduzido."}},{"@type":"Question","name":"As estatísticas ao vivo do Crazy Time são preditivas?","acceptedAnswer":{"@type":"Answer","text":"Não. As estatísticas ao vivo ajudam a visualizar a atividade recente, mas não preveem resultados futuros. Cada giro é independente."}}]}</script>
+</head>
+<body>
+  
+  <div id="app" class="app">
+    
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="/pt/" class="nav-logo">
+          <i class="fas fa-chart-line nav-logo-icon"></i>
+          <span>Casino Score live</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="/pt/" class="nav-link ">
+            Início
+          </a>
+
+          
+    <div class="dropdown">
+      <button
+        class="nav-link dropdown-trigger"
+        type="button"
+        aria-expanded="false"
+        aria-controls="gamesDropdownMenu"
+      >
+        <span>Jogos ao vivo</span>
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </button>
+
+      <div class="dropdown-menu" id="gamesDropdownMenu" role="menu">
+        
+          <a href="/pt/crazytime/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/crazytime-live-logo.webp" alt="Crazy Time logo" loading="lazy" />
+            <span>Crazy Time</span>
+          </a>
+        
+          <a href="/pt/monopoly/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/monopoly-live-casino-logo.webp" alt="Monopoly Live logo" loading="lazy" />
+            <span>Monopoly Live</span>
+          </a>
+        
+          <a href="/pt/dreamcatcher/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/dream-catcher-logo.webp" alt="Dream Catcher logo" loading="lazy" />
+            <span>Dream Catcher</span>
+          </a>
+        
+          <a href="/pt/megaball/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/mega-ball-logo.webp" alt="Mega Ball logo" loading="lazy" />
+            <span>Mega Ball</span>
+          </a>
+        
+          <a href="/pt/lightningroulette/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/lightning-roulette-logo-casino.webp" alt="Lightning Roulette logo" loading="lazy" />
+            <span>Lightning Roulette</span>
+          </a>
+        
+          <a href="/pt/lightningdice/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/lightning-dice-logo.webp" alt="Lightning Dice logo" loading="lazy" />
+            <span>Lightning Dice</span>
+          </a>
+        
+          <a href="/pt/supersicbo/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/super-sic-bo-casino-logo.webp" alt="Super Sic Bo logo" loading="lazy" />
+            <span>Super Sic Bo</span>
+          </a>
+        
+          <a href="/pt/coinflip/" class="dropdown-item">
+            <img class="dropdown-thumb" src="/img/coin-flip-logo.webp" alt="Coin Flip logo" loading="lazy" />
+            <span>Coin Flip</span>
+          </a>
+        
+      </div>
+    </div>
+  
+        </nav>
+
+        
+    <div class="lang-switcher">
+      <select class="lang-switcher-select" onchange="window.location.href=this.value" aria-label="Language selector">
+        
+            <option value="/crazytime/" >
+              EN
+            </option>
+          
+            <option value="/es/crazytime/" >
+              ES
+            </option>
+          
+            <option value="/it/crazytime/" >
+              IT
+            </option>
+          
+            <option value="/de/crazytime/" >
+              DE
+            </option>
+          
+            <option value="/nl/crazytime/" >
+              NL
+            </option>
+          
+            <option value="/fr/crazytime/" >
+              FR
+            </option>
+          
+            <option value="/pt/crazytime/" selected>
+              PT
+            </option>
+          
+            <option value="/ar/crazytime/" >
+              AR
+            </option>
+          
+      </select>
+    </div>
+  
+
+        <button
+          class="burger"
+          id="burgerBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/pt/" class="nav-link">Início</a>
+      
+        <a href="/pt/crazytime/" class="nav-link">Crazy Time</a>
+      
+        <a href="/pt/monopoly/" class="nav-link">Monopoly Live</a>
+      
+        <a href="/pt/dreamcatcher/" class="nav-link">Dream Catcher</a>
+      
+        <a href="/pt/megaball/" class="nav-link">Mega Ball</a>
+      
+        <a href="/pt/lightningroulette/" class="nav-link">Lightning Roulette</a>
+      
+        <a href="/pt/lightningdice/" class="nav-link">Lightning Dice</a>
+      
+        <a href="/pt/supersicbo/" class="nav-link">Super Sic Bo</a>
+      
+        <a href="/pt/coinflip/" class="nav-link">Coin Flip</a>
+      
+      <div class="lang-switcher lang-switcher-mobile">
+        <select class="lang-switcher-select" onchange="window.location.href=this.value" aria-label="Language selector">
+          
+              <option value="/crazytime/" >
+                EN
+              </option>
+            
+              <option value="/es/crazytime/" >
+                ES
+              </option>
+            
+              <option value="/it/crazytime/" >
+                IT
+              </option>
+            
+              <option value="/de/crazytime/" >
+                DE
+              </option>
+            
+              <option value="/nl/crazytime/" >
+                NL
+              </option>
+            
+              <option value="/fr/crazytime/" >
+                FR
+              </option>
+            
+              <option value="/pt/crazytime/" selected>
+                PT
+              </option>
+            
+              <option value="/ar/crazytime/" >
+                AR
+              </option>
+            
+        </select>
+      </div>
+    </div>
+  
+      </div>
+    </header>
+  
+
+    <main class="page-container">
+      <div class="page game-page">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="/pt/">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Crazy Time</span>
+          </div>
+
+          <div class="game-header">
+            <div class="game-thumb">
+              <img src="/img/crazytime-live-logo.webp" alt="Crazy Time logo" loading="lazy" />
+            </div>
+
+            <div class="game-heading">
+              <h1>Crazy Time Estatísticas</h1>
+              <p>Acompanhe resultados, histórico e estatísticas em tempo real de Crazy Time</p>
+            </div>
+
+            <div class="live-pill">
+              <span class="live-dot"></span>
+              <span>Ao vivo</span>
+            </div>
+          </div>
+
+          
+    <div class="tabs-row">
+      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
+        Temperatura
+      </button>
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
+        Histórico
+      </button>
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
+        Estatísticas
+      </button>
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
+        Maiores vitórias
+      </button>
+      
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review">
+          Análise
+        </button>
+      
+      
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stream">
+          Stream
+        </button>
+      
+    </div>
+  
+
+          
+      <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">Segment Temperature</h2>
+        <p class="panel-subtitle">Showing how each segment is performing relative to its expected frequency.</p>
+        <div class="temp-grid">
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">36.83%</div>
+              <div class="temp-diff negative">
+                (-0.14)
+              </div>
+              <div class="temp-spins">0 spins since</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-warm">13.13%</div>
+              <div class="temp-diff negative">
+                (-0.01)
+              </div>
+              <div class="temp-spins">25 spins since</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">6.61%</div>
+              <div class="temp-diff negative">
+                (-0.8)
+              </div>
+              <div class="temp-spins">21 spins since</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-hot">4.79%</div>
+              <div class="temp-diff positive">
+                (+1.09)
+              </div>
+              <div class="temp-spins">0 spins since</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/pachinko.webp" alt="Pachinko" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">6.83%</div>
+              <div class="temp-diff negative">
+                (-0.58)
+              </div>
+              <div class="temp-spins">4 spins since</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-hot">8.85%</div>
+              <div class="temp-diff positive">
+                (+1.44)
+              </div>
+              <div class="temp-spins">1 spins since</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/coin-flip-bonus-card.webp" alt="Coin Flip" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">11.2%</div>
+              <div class="temp-diff negative">
+                (-1.76)
+              </div>
+              <div class="temp-spins">22 spins since</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+        <div class="temp-segment temp-segment-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="temp-segment-img">
+        </div>
+      
+              <div class="temp-value temp-cold">9.75%</div>
+              <div class="temp-diff negative">
+                (-1.25)
+              </div>
+              <div class="temp-spins">10 spins since</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+        </div>
+      </div>
+    
+          
+      <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">Recent Spin History</h2>
+        <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
+  
+        <div class="table-wrap">
+          <table class="spin-table">
+            <thead>
+              <tr>
+                <th class="t-left">Occurred At</th>
+                <th class="t-center">Slot Result</th>
+                <th class="t-center">Spin Result</th>
+                <th class="t-right">Multiplier</th>
+                <th class="t-right">Total Winners</th>
+                <th class="t-right">Total Payout</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                  <tr>
+                    <td class="t-left text-soft">12:25:36 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">198</td>
+                    <td class="t-right text-green" style="font-weight:600;">$263</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:24:31 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">4,078</td>
+                    <td class="t-right text-green" style="font-weight:600;">$26,622</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:23:26 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">2,714</td>
+                    <td class="t-right text-green" style="font-weight:600;">$8,947</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:22:21 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">1,346</td>
+                    <td class="t-right text-green" style="font-weight:600;">$2,716</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:21:16 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/coin-flip-bonus-card.webp" alt="Coin Flip" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
+                    <td class="t-right text-soft">4,825</td>
+                    <td class="t-right text-green" style="font-weight:600;">$1,121,401</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:20:11 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">4,131</td>
+                    <td class="t-right text-green" style="font-weight:600;">$44,386</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:19:06 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">368</td>
+                    <td class="t-right text-green" style="font-weight:600;">$485</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:18:01 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">3,285</td>
+                    <td class="t-right text-green" style="font-weight:600;">$10,478</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:16:56 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">50x</td>
+                    <td class="t-right text-soft">3,398</td>
+                    <td class="t-right text-green" style="font-weight:600;">$326,229</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:15:51 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">4,754</td>
+                    <td class="t-right text-green" style="font-weight:600;">$24,160</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:14:46 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">25x</td>
+                    <td class="t-right text-soft">127</td>
+                    <td class="t-right text-green" style="font-weight:600;">$7,144</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:13:41 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">4,223</td>
+                    <td class="t-right text-green" style="font-weight:600;">$16,243</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:12:36 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">4,735</td>
+                    <td class="t-right text-green" style="font-weight:600;">$41,259</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:11:31 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">2,376</td>
+                    <td class="t-right text-green" style="font-weight:600;">$3,728</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:10:26 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">4,816</td>
+                    <td class="t-right text-green" style="font-weight:600;">$7,363</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:09:21 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">5x</td>
+                    <td class="t-right text-soft">4,847</td>
+                    <td class="t-right text-green" style="font-weight:600;">$17,382</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:08:16 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">3,163</td>
+                    <td class="t-right text-green" style="font-weight:600;">$22,520</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:07:11 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">2x</td>
+                    <td class="t-right text-soft">3,680</td>
+                    <td class="t-right text-green" style="font-weight:600;">$5,493</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:06:06 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">3,672</td>
+                    <td class="t-right text-green" style="font-weight:600;">$8,408</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:05:01 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">100x</td>
+                    <td class="t-right text-soft">1,159</td>
+                    <td class="t-right text-green" style="font-weight:600;">$181,330</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:03:56 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">25x</td>
+                    <td class="t-right text-soft">1,769</td>
+                    <td class="t-right text-green" style="font-weight:600;">$96,471</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:02:51 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/pachinko.webp" alt="Pachinko" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right text-gold" style="font-weight:600;">100x</td>
+                    <td class="t-right text-soft">1,136</td>
+                    <td class="t-right text-green" style="font-weight:600;">$220,339</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:01:46 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">3x</td>
+                    <td class="t-right text-soft">4,861</td>
+                    <td class="t-right text-green" style="font-weight:600;">$23,666</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">12:00:41 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">1x</td>
+                    <td class="t-right text-soft">4,682</td>
+                    <td class="t-right text-green" style="font-weight:600;">$5,779</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">11:59:36 Apr 6</td>
+                    <td class="t-center">
+        <span class="result-badge result-badge-image result-badge-slot">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      </td>
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+                    <td class="t-right " style="font-weight:600;">10x</td>
+                    <td class="t-right text-soft">2,730</td>
+                    <td class="t-right text-green" style="font-weight:600;">$17,114</td>
+                  </tr>
+                
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+          
+      <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
+        <div class="stats-main-grid">
+          <div class="stats-grid-card">
+            <h2 class="panel-title">Result Distribution</h2>
+            <div class="chart-scroll">
+              <div class="chart-box">
+                
+                    <div class="chart-col">
+                      <span class="chart-percent">36%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">15%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:41.66666666666667%; background:#eab308;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">7%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:19.444444444444446%; background:#ec4899;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/number-five.webp" alt="5" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">6%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:16.666666666666664%; background:#8b5cf6;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">6%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:16.666666666666664%; background:#f97316;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/pachinko.webp" alt="Pachinko" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">9%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:25%; background:#22c55e;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">9%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:25%; background:#38bdf8;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/coin-flip-bonus-card.webp" alt="Coin Flip" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+                    <div class="chart-col">
+                      <span class="chart-percent">12%</span>
+                      <div class="chart-bar-wrap">
+                        <div class="chart-bar" style="height:33.33333333333333%; background:#ef4444;"></div>
+                      </div>
+                      
+        <span class="chart-label chart-label-image">
+          <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="chart-label-img">
+        </span>
+      
+                    </div>
+                  
+              </div>
+            </div>
+          </div>
+  
+          <div class="stats-grid-card">
+            <h2 class="panel-title">Return to Player</h2>
+            <div class="rtp-card-body">
+              <div class="rtp-center">
+                <div class="rtp-value">95.60%</div>
+                <p class="rtp-text">Based on last 1,000 spins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="stats-summary-grid">
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Total Spins Today</p>
+          <p class="summary-value">1,083</p>
+        </div>
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Bonus Rounds</p>
+          <p class="summary-value purple">36</p>
+        </div>
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Biggest Multiplier</p>
+          <p class="summary-value gold">500x</p>
+        </div>
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Avg. Payout</p>
+          <p class="summary-value green">$132,868</p>
+        </div>
+      </div>
+
+      
+      <section class="crazytime-bonus-section">
+        <div class="crazytime-bonus-card">
+          <div class="crazytime-bonus-header">
+            <h2 class="crazytime-bonus-title">Estatísticas Avançadas de Bônus do Crazy Time</h2>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Flapper de Bônus do Crazy Time</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Compare os multiplicadores médios das três cores do flapper do Crazy Time. Esses números oferecem uma visão rápida do desempenho de curto prazo em comparação com a média de longo prazo.</p>
+            </div>
+  
+            <div class="crazytime-bonus-list">
+              
+                  <div class="crazytime-bonus-item">
+                    <div class="crazytime-bonus-top">
+                      <div class="crazytime-bonus-label">
+                        <div class="crazytime-bonus-name">Amarelo</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-bar-wrap">
+                        <div class="crazytime-bonus-bar">
+                          <div class="crazytime-bonus-fill" style="width:33.58913813459268%; background:#facc15;"></div>
+                          <div class="crazytime-bonus-marker"></div>
+                        </div>
+                        <div class="crazytime-bonus-bar-meta">50.82x Média histórica</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-metric">
+                        <div class="crazytime-bonus-value">34.14x</div>
+                        <div class="crazytime-bonus-diff negative">
+                          -35.74%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="crazytime-bonus-item">
+                    <div class="crazytime-bonus-top">
+                      <div class="crazytime-bonus-label">
+                        <div class="crazytime-bonus-name">Azul</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-bar-wrap">
+                        <div class="crazytime-bonus-bar">
+                          <div class="crazytime-bonus-fill" style="width:23.19828593689131%; background:#38bdf8;"></div>
+                          <div class="crazytime-bonus-marker"></div>
+                        </div>
+                        <div class="crazytime-bonus-bar-meta">51.34x Média histórica</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-metric">
+                        <div class="crazytime-bonus-value">23.82x</div>
+                        <div class="crazytime-bonus-diff negative">
+                          -53.85%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="crazytime-bonus-item">
+                    <div class="crazytime-bonus-top">
+                      <div class="crazytime-bonus-label">
+                        <div class="crazytime-bonus-name">Verde</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-bar-wrap">
+                        <div class="crazytime-bonus-bar">
+                          <div class="crazytime-bonus-fill" style="width:33.11013391964821%; background:#10b981;"></div>
+                          <div class="crazytime-bonus-marker"></div>
+                        </div>
+                        <div class="crazytime-bonus-bar-meta">50.03x Média histórica</div>
+                      </div>
+  
+                      <div class="crazytime-bonus-metric">
+                        <div class="crazytime-bonus-value">33.13x</div>
+                        <div class="crazytime-bonus-diff negative">
+                          -37.19%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+  
+            <div class="crazytime-bonus-footnote">O marcador mostra a referência do multiplicador médio de longo prazo para a cor de flapper selecionada com base nos dados históricos rastreados.</div>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Coin Flip</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Compare os resultados vermelho e azul do Coin Flip com os multiplicadores médios e a frequência de acerto em relação às expectativas de longo prazo.</p>
+            </div>
+  
+            <div class="crazytime-coinflip-grid">
+              
+                  <div class="crazytime-coinflip-card">
+                    <div class="crazytime-coinflip-top">
+                      <div class="crazytime-coinflip-color" style="background:#ef4444;">Vermelho</div>
+                      <div class="crazytime-coinflip-metrics">
+                        <div class="crazytime-coinflip-label">Multiplicador méd.</div>
+                        <div class="crazytime-coinflip-value">15.09x</div>
+                        <div class="crazytime-coinflip-diff positive">
+                          +34.27% vs média
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="crazytime-coinflip-frequency">
+                      <div class="crazytime-coinflip-frequency-row">
+                        <span>Frequência</span>
+                        <strong>54.39%</strong>
+                      </div>
+                      <div class="crazytime-coinflip-frequency-diff positive">
+                        +8.25%
+                      </div>
+                      <div class="crazytime-coinflip-bar">
+                        <div class="crazytime-coinflip-bar-fill" style="width:54.39%; background:#ef4444;"></div>
+                        <div class="crazytime-coinflip-bar-marker" style="left:49.72%;"></div>
+                      </div>
+                      <div class="crazytime-coinflip-bar-meta">Média histórica: 49.72%</div>
+                    </div>
+                  </div>
+                
+                  <div class="crazytime-coinflip-card">
+                    <div class="crazytime-coinflip-top">
+                      <div class="crazytime-coinflip-color" style="background:#38bdf8;">Azul</div>
+                      <div class="crazytime-coinflip-metrics">
+                        <div class="crazytime-coinflip-label">Multiplicador méd.</div>
+                        <div class="crazytime-coinflip-value">15.2x</div>
+                        <div class="crazytime-coinflip-diff positive">
+                          +27.32% vs média
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="crazytime-coinflip-frequency">
+                      <div class="crazytime-coinflip-frequency-row">
+                        <span>Frequência</span>
+                        <strong>46.72%</strong>
+                      </div>
+                      <div class="crazytime-coinflip-frequency-diff negative">
+                        -8.53%
+                      </div>
+                      <div class="crazytime-coinflip-bar">
+                        <div class="crazytime-coinflip-bar-fill" style="width:46.72%; background:#38bdf8;"></div>
+                        <div class="crazytime-coinflip-bar-marker" style="left:50.28%;"></div>
+                      </div>
+                      <div class="crazytime-coinflip-bar-meta">Média histórica: 50.28%</div>
+                    </div>
+                  </div>
+                
+            </div>
+  
+            <div class="crazytime-bonus-footnote">O marcador mostra a referência da frequência média de longo prazo para a cor selecionada com base nos dados rastreados.</div>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Símbolos do Cash Hunt</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Este detalhamento mostra o multiplicador médio e a frequência de aparição de cada símbolo-alvo do Cash Hunt.</p>
+            </div>
+  
+            <div class="crazytime-symbols-grid">
+              
+                <div class="crazytime-symbol-card positive">
+                  <div class="crazytime-symbol-icon">🎁</div>
+                  <div class="crazytime-symbol-value">26.44x</div>
+                  <div class="crazytime-symbol-diff positive">
+                    +3.17%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.85x</strong></div>
+                  <div class="crazytime-symbol-meta">210 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card positive">
+                  <div class="crazytime-symbol-icon">🦆</div>
+                  <div class="crazytime-symbol-value">24.93x</div>
+                  <div class="crazytime-symbol-diff positive">
+                    +4.9%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.7x</strong></div>
+                  <div class="crazytime-symbol-meta">232 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card positive">
+                  <div class="crazytime-symbol-icon">🌵</div>
+                  <div class="crazytime-symbol-value">26.48x</div>
+                  <div class="crazytime-symbol-diff positive">
+                    +1.45%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.8x</strong></div>
+                  <div class="crazytime-symbol-meta">230 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card negative">
+                  <div class="crazytime-symbol-icon">🐇</div>
+                  <div class="crazytime-symbol-value">24.49x</div>
+                  <div class="crazytime-symbol-diff negative">
+                    -0.57%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.91x</strong></div>
+                  <div class="crazytime-symbol-meta">195 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card positive">
+                  <div class="crazytime-symbol-icon">🍎</div>
+                  <div class="crazytime-symbol-value">25.63x</div>
+                  <div class="crazytime-symbol-diff positive">
+                    +0.67%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.74x</strong></div>
+                  <div class="crazytime-symbol-meta">220 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card negative">
+                  <div class="crazytime-symbol-icon">⭐</div>
+                  <div class="crazytime-symbol-value">23.1x</div>
+                  <div class="crazytime-symbol-diff negative">
+                    -0.29%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.62x</strong></div>
+                  <div class="crazytime-symbol-meta">204 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card negative">
+                  <div class="crazytime-symbol-icon">🃏</div>
+                  <div class="crazytime-symbol-value">22.69x</div>
+                  <div class="crazytime-symbol-diff negative">
+                    -3.96%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.94x</strong></div>
+                  <div class="crazytime-symbol-meta">224 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card negative">
+                  <div class="crazytime-symbol-icon">🎯</div>
+                  <div class="crazytime-symbol-value">24.79x</div>
+                  <div class="crazytime-symbol-diff negative">
+                    -2.51%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.68x</strong></div>
+                  <div class="crazytime-symbol-meta">213 vezes</div>
+                </div>
+              
+                <div class="crazytime-symbol-card negative">
+                  <div class="crazytime-symbol-icon">🧁</div>
+                  <div class="crazytime-symbol-value">21.62x</div>
+                  <div class="crazytime-symbol-diff negative">
+                    -14.49%
+                  </div>
+                  <div class="crazytime-symbol-meta">Média histórica: <strong>24.79x</strong></div>
+                  <div class="crazytime-symbol-meta">219 vezes</div>
+                </div>
+              
+            </div>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Cash Hunt: Multiplicadores Recentes</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Acompanhe os multiplicadores recentes das rodadas de Cash Hunt. As células destacadas marcam os resultados recentes mais fortes e mais fracos.</p>
+            </div>
+  
+            <div class="crazytime-recent-grid">
+              <div class="crazytime-recent-cell high">50.2x</div><div class="crazytime-recent-cell ">16.8x</div><div class="crazytime-recent-cell ">23.5x</div><div class="crazytime-recent-cell ">34.2x</div><div class="crazytime-recent-cell ">23.9x</div><div class="crazytime-recent-cell ">18.1x</div><div class="crazytime-recent-cell ">31.2x</div><div class="crazytime-recent-cell ">34.3x</div><div class="crazytime-recent-cell ">18.5x</div><div class="crazytime-recent-cell ">31.2x</div><div class="crazytime-recent-cell ">33.7x</div><div class="crazytime-recent-cell ">27.8x</div><div class="crazytime-recent-cell ">20.8x</div><div class="crazytime-recent-cell ">17x</div><div class="crazytime-recent-cell ">29.1x</div><div class="crazytime-recent-cell ">26.1x</div><div class="crazytime-recent-cell ">24.6x</div><div class="crazytime-recent-cell ">25.4x</div><div class="crazytime-recent-cell ">26x</div><div class="crazytime-recent-cell ">29.1x</div><div class="crazytime-recent-cell ">18.3x</div><div class="crazytime-recent-cell ">28.9x</div><div class="crazytime-recent-cell ">28.8x</div><div class="crazytime-recent-cell ">19.4x</div><div class="crazytime-recent-cell ">24.9x</div><div class="crazytime-recent-cell ">20.3x</div><div class="crazytime-recent-cell ">20.7x</div><div class="crazytime-recent-cell ">30.6x</div><div class="crazytime-recent-cell ">21.3x</div><div class="crazytime-recent-cell ">26.3x</div><div class="crazytime-recent-cell ">28.9x</div><div class="crazytime-recent-cell ">32.7x</div><div class="crazytime-recent-cell ">16.9x</div><div class="crazytime-recent-cell ">31.1x</div><div class="crazytime-recent-cell ">22.2x</div><div class="crazytime-recent-cell ">29.7x</div><div class="crazytime-recent-cell ">17x</div><div class="crazytime-recent-cell ">27.9x</div><div class="crazytime-recent-cell ">30x</div><div class="crazytime-recent-cell ">23.6x</div><div class="crazytime-recent-cell ">22.3x</div><div class="crazytime-recent-cell ">21.1x</div><div class="crazytime-recent-cell ">19.9x</div><div class="crazytime-recent-cell ">34.8x</div><div class="crazytime-recent-cell ">20.8x</div><div class="crazytime-recent-cell ">33.2x</div><div class="crazytime-recent-cell ">34.1x</div><div class="crazytime-recent-cell low">15.3x</div><div class="crazytime-recent-cell ">26.4x</div><div class="crazytime-recent-cell ">24.1x</div><div class="crazytime-recent-cell ">20.1x</div><div class="crazytime-recent-cell ">27.3x</div><div class="crazytime-recent-cell ">24.3x</div><div class="crazytime-recent-cell ">23.2x</div><div class="crazytime-recent-cell ">22x</div><div class="crazytime-recent-cell ">22.1x</div><div class="crazytime-recent-cell ">30x</div><div class="crazytime-recent-cell ">29.1x</div><div class="crazytime-recent-cell ">24.6x</div><div class="crazytime-recent-cell ">23.7x</div><div class="crazytime-recent-cell ">20.3x</div><div class="crazytime-recent-cell ">27.4x</div><div class="crazytime-recent-cell ">20.9x</div><div class="crazytime-recent-cell ">25.4x</div><div class="crazytime-recent-cell ">28.1x</div><div class="crazytime-recent-cell ">33.2x</div><div class="crazytime-recent-cell ">23.3x</div><div class="crazytime-recent-cell ">33.3x</div><div class="crazytime-recent-cell ">31.4x</div><div class="crazytime-recent-cell ">17.6x</div><div class="crazytime-recent-cell ">28.2x</div><div class="crazytime-recent-cell ">31.5x</div><div class="crazytime-recent-cell ">25.3x</div><div class="crazytime-recent-cell ">18x</div><div class="crazytime-recent-cell ">28.4x</div><div class="crazytime-recent-cell ">25.6x</div><div class="crazytime-recent-cell ">34.5x</div><div class="crazytime-recent-cell ">25.3x</div><div class="crazytime-recent-cell ">17.1x</div><div class="crazytime-recent-cell ">33x</div><div class="crazytime-recent-cell ">34.6x</div><div class="crazytime-recent-cell ">17x</div><div class="crazytime-recent-cell ">25.1x</div><div class="crazytime-recent-cell ">21.1x</div><div class="crazytime-recent-cell ">17.3x</div><div class="crazytime-recent-cell ">24.8x</div><div class="crazytime-recent-cell ">16.1x</div><div class="crazytime-recent-cell ">26.2x</div><div class="crazytime-recent-cell ">23.1x</div><div class="crazytime-recent-cell ">24.7x</div><div class="crazytime-recent-cell ">16.8x</div><div class="crazytime-recent-cell ">24.3x</div><div class="crazytime-recent-cell ">15.1x</div><div class="crazytime-recent-cell ">17x</div><div class="crazytime-recent-cell ">33x</div><div class="crazytime-recent-cell ">17.1x</div><div class="crazytime-recent-cell ">34x</div><div class="crazytime-recent-cell ">15.4x</div><div class="crazytime-recent-cell ">26.2x</div>
+            </div>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Melhores Apostas Individuais</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Esta tabela destaca os ganhos individuais mais fortes no período selecionado, incluindo jogador, pagamento, resultado e multiplicador.</p>
+            </div>
+  
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Data</th>
+                    <th class="t-center">Resultado</th>
+                    <th class="t-left">Jogador</th>
+                    <th class="t-right">Pagamento</th>
+                    <th class="t-right">Multiplicador</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">12:40</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-left">Wai...</td>
+                      <td class="t-right text-green" style="font-weight:700;">€61,000</td>
+                      <td class="t-right"><span class="coinflip-pill">300x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">10:30</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-left">Pat...</td>
+                      <td class="t-right text-green" style="font-weight:700;">€50,500</td>
+                      <td class="t-right"><span class="coinflip-pill">100x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">13:21</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-left">Jun...</td>
+                      <td class="t-right text-green" style="font-weight:700;">€49,927</td>
+                      <td class="t-right"><span class="coinflip-pill">400x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">12:40</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-left">Han...</td>
+                      <td class="t-right text-green" style="font-weight:700;">€30,200</td>
+                      <td class="t-right"><span class="coinflip-pill">300x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">13:21</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-left">Pat...</td>
+                      <td class="t-right text-green" style="font-weight:700;">€20,500</td>
+                      <td class="t-right"><span class="coinflip-pill">400x</span></td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+  
+          <div class="crazytime-bonus-card">
+            <div class="crazytime-bonus-header">
+              <h3 class="crazytime-bonus-title">Últimos Multiplicadores Máximos</h3>
+              <p class="crazytime-bonus-subtitle">6 hours • 420 spins</p>
+              <p class="crazytime-bonus-subtitle">Esses resultados máximos recentes de bônus mostram os maiores multiplicadores alcançados durante o período selecionado.</p>
+            </div>
+  
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Data</th>
+                    <th class="t-center">Resultado</th>
+                    <th class="t-right">Multiplicador</th>
+                    <th class="t-center">Ver Clipe</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">15:23</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-right"><span class="coinflip-pill">500x</span></td>
+                      <td class="t-center">
+                        <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:40px; padding:0 16px; font-size:0.84rem; border-radius:10px;">
+                          Ver Clipe
+                        </a>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">13:21</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-right"><span class="coinflip-pill">400x</span></td>
+                      <td class="t-center">
+                        <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:40px; padding:0 16px; font-size:0.84rem; border-radius:10px;">
+                          Ver Clipe
+                        </a>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">12:40</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-right"><span class="coinflip-pill">300x</span></td>
+                      <td class="t-center">
+                        <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:40px; padding:0 16px; font-size:0.84rem; border-radius:10px;">
+                          Ver Clipe
+                        </a>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">15:46</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-right"><span class="coinflip-pill">100x</span></td>
+                      <td class="t-center">
+                        <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:40px; padding:0 16px; font-size:0.84rem; border-radius:10px;">
+                          Ver Clipe
+                        </a>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left text-soft">5 Apr<br><span class="text-soft" style="font-size:0.75rem;">15:42</span></td>
+                      <td class="t-center">Cash Hunt</td>
+                      <td class="t-right"><span class="coinflip-pill">100x</span></td>
+                      <td class="t-center">
+                        <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:40px; padding:0 16px; font-size:0.84rem; border-radius:10px;">
+                          Ver Clipe
+                        </a>
+                      </td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+  
+            <div style="margin-top:18px;">
+              <a href="/go/reg/" target="_blank" rel="noreferrer noopener nofollow" class="hero-play-btn" style="min-height:46px; padding:0 18px; border-radius:12px;">
+                Galeria das Maiores Vitórias
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </div>
+            
+      <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">Top Multiplier Wins</h2>
+        <div class="bigwins-grid">
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 6, 2026</span>
+                <span class="bigwin-rank top">#1</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">25,000x</div>
+                  <div class="bigwin-label">2</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$233,456</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank top">#2</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/pachinko.webp" alt="Pachinko" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">10,000x</div>
+                  <div class="bigwin-label">Pachinko</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$365,218</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank top">#3</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">5,000x</div>
+                  <div class="bigwin-label">1</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$466,817</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank ">#4</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">2,500x</div>
+                  <div class="bigwin-label">Cash Hunt</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$91,822</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank ">#5</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/number-one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">2,000x</div>
+                  <div class="bigwin-label">1</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$179,973</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 3, 2026</span>
+                <span class="bigwin-rank ">#6</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/number-ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">1,000x</div>
+                  <div class="bigwin-label">10</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$249,048</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 5, 2026</span>
+                <span class="bigwin-rank ">#7</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/number-two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">500x</div>
+                  <div class="bigwin-label">2</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$34,395</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 1, 2026</span>
+                <span class="bigwin-rank ">#8</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/cash-hunt-icon.webp" alt="Cash Hunt" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">200x</div>
+                  <div class="bigwin-label">Cash Hunt</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$394,296</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Mar 31, 2026</span>
+                <span class="bigwin-rank ">#9</span>
+              </div>
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/crazytime-icons/crazy-time-card.webp" alt="Crazy Time" loading="lazy" class="bigwin-segment-img">
+                </span>
+                <div>
+                  <div class="bigwin-multiplier">100x</div>
+                  <div class="bigwin-label">Crazy Time</div>
+                </div>
+              </div>
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$68,517</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+          
+      <div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">
+        <div class="crazytime-review-section">
+          <div class="crazytime-review-card">
+            <div class="crazytime-review-block">
+              <h2 class="crazytime-review-title">O Que é Crazy Time?</h2>
+              <p class="crazytime-review-intro">Crazy Time é um jogo de casino ao vivo desenvolvido pela Evolution Gaming, lançado em 2020. Combina um formato de roda de dinheiro com quatro rodadas de bônus interativas, oferecendo uma das experiências de casino ao vivo mais envolventes disponíveis hoje.</p>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <div class="crazytime-review-specs">
+                <div class="crazytime-review-specs-head">
+                  <div>Parâmetro</div>
+                  <div>Detalhes</div>
+                </div>
+  
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Nome do Jogo</div>
+                  <div class="crazytime-review-spec-value">Crazy Time</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Fornecedor</div>
+                  <div class="crazytime-review-spec-value">Evolution Gaming</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">RTP</div>
+                  <div class="crazytime-review-spec-value">96.08%</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Ano de Lançamento</div>
+                  <div class="crazytime-review-spec-value">2020</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Tipo de Jogo</div>
+                  <div class="crazytime-review-spec-value">Show de Jogo ao Vivo</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Aposta Mín.</div>
+                  <div class="crazytime-review-spec-value">$0.10</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Aposta Máx.</div>
+                  <div class="crazytime-review-spec-value">$5,000</div>
+                </div>
+                <div class="crazytime-review-specs-row">
+                  <div class="crazytime-review-spec-label">Volatilidade</div>
+                  <div class="crazytime-review-spec-value">Alta</div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Como Jogar Crazy Time</h3>
+              <p class="crazytime-review-text">O jogo ao vivo Crazy Time segue um formato simples:</p>
+              <ol class="crazytime-review-steps">
+                <li>Faça sua aposta em um ou mais segmentos da roda antes do tempo acabar</li>
+                <li>Assista a roda girar — um apresentador ao vivo gerencia toda a sessão em tempo real</li>
+                <li>Ganhe se a roda parar no segmento que você escolheu</li>
+                <li>Ative uma rodada de bônus se o indicador parar em um segmento de bônus</li>
+              </ol>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Divisão dos Segmentos da Roda</h3>
+              <div class="crazytime-review-wheel-table">
+                <div class="crazytime-review-wheel-head">
+                  <div>Segmento</div>
+                  <div>Ocorrências na Roda</div>
+                  <div>Multiplicador</div>
+                </div>
+  
+                <div class="crazytime-review-wheel-row"><div>1</div><div>21</div><div>1x</div></div>
+                <div class="crazytime-review-wheel-row"><div>2</div><div>13</div><div>2x</div></div>
+                <div class="crazytime-review-wheel-row"><div>5</div><div>7</div><div>5x</div></div>
+                <div class="crazytime-review-wheel-row"><div>10</div><div>4</div><div>10x</div></div>
+                <div class="crazytime-review-wheel-row"><div>Coin Flip</div><div>4</div><div>Até 2000x</div></div>
+                <div class="crazytime-review-wheel-row"><div>Cash Hunt</div><div>2</div><div>Até 10.000x</div></div>
+                <div class="crazytime-review-wheel-row"><div>Pachinko</div><div>2</div><div>Até 10.000x</div></div>
+                <div class="crazytime-review-wheel-row"><div>Crazy Time</div><div>1</div><div>Até 20.000x</div></div>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Rodadas de Bônus do Crazy Time</h3>
+              <div class="crazytime-review-bonus-grid">
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">🎯 Cash Hunt</h4>
+                  <p class="crazytime-review-text">Uma galeria de tiro com 108 multiplicadores aleatórios escondidos atrás de símbolos. Os jogadores escolhem um para revelar seu prêmio.</p>
+                </article>
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">🪙 Coin Flip</h4>
+                  <p class="crazytime-review-text">Uma moeda simples de dois lados é lançada. Cada lado exibe um multiplicador — vermelho ou azul. Rápido, limpo, emocionante.</p>
+                </article>
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">🎰 Pachinko</h4>
+                  <p class="crazytime-review-text">Uma parede física gigante de Pachinko solta um disco do topo. Ele quica através de pinos e cai em um multiplicador na parte inferior. Pode dobrar infinitamente até que um multiplicador não-duplo seja atingido.</p>
+                </article>
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">🎪 Crazy Time (Bônus)</h4>
+                  <p class="crazytime-review-text">O evento principal. Uma roda virtual massiva com três indicadores gira dentro de um mundo digital. Os jogadores escolhem um indicador antes do giro. A recompensa potencial mais alta atinge 20.000x.</p>
+                </article>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Regras do Jogo Crazy Time: Pontos-Chave</h3>
+              <ul class="crazytime-review-list">
+                <li>Você pode apostar em vários segmentos simultaneamente</li>
+                <li>O Top Slot acima da roda principal adiciona um multiplicador ou aciona a entrada de bônus com multiplicadores aumentados</li>
+                <li>Se você não apostou em um segmento de bônus mas ele cair, você ainda entra no bônus (com multiplicador mínimo)</li>
+                <li>Todos os multiplicadores de bônus são multiplicados pela sua aposta original, não apenas uma recompensa fixa</li>
+              </ul>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Estatísticas e Resultados ao Vivo do Crazy Time</h3>
+              <p class="crazytime-review-text">Compreender as estatísticas do Crazy Time ajuda a informar suas decisões de sessão. A maioria das plataformas exibe um rastreador de estatísticas ao vivo diretamente na interface do jogo.</p>
+              <h4 class="crazytime-review-mini-title">Estatísticas Típicas que Você Verá:</h4>
+              <ul class="crazytime-review-list">
+                <li>Resultados dos últimos 100 giros — distribuição de cada segmento que caiu</li>
+                <li>Frequência de bônus — com que frequência cada rodada de bônus foi acionada</li>
+                <li>Histórico de multiplicadores — melhores multiplicadores concedidos em rodadas recentes</li>
+                <li>Segmentos quentes e frios — indicadores visuais da frequência dos segmentos</li>
+              </ul>
+              <div class="crazytime-review-tip">
+                <strong>Dica profissional:</strong> O rastreador de estatísticas do Crazy Time não é uma ferramenta preditiva — resultados passados não influenciam giros futuros. O RNG e a roda ao vivo operam independentemente a cada rodada.
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Por Que Jogar Crazy Time Online?</h3>
+              <div class="crazytime-review-proscons-grid">
+                <div class="crazytime-review-proscons-card pros">
+                  <h4 class="crazytime-review-bonus-title">🏆 Prós:</h4>
+                  <ul class="crazytime-review-proscons-list pros">
+                    <li>Qualidade de produção excepcional da Evolution Gaming</li>
+                    <li>Quatro jogos de bônus distintos — nunca repetitivo</li>
+                    <li>Enorme potencial de multiplicador máximo (até 20.000x)</li>
+                    <li>Disponível 24 horas por dia, 7 dias por semana, em praticamente todos os principais casinos ao vivo online</li>
+                    <li>Rastreador de estatísticas ao vivo transparente integrado na interface</li>
+                  </ul>
+                </div>
+                <div class="crazytime-review-proscons-card cons">
+                  <h4 class="crazytime-review-bonus-title">⚠️ Contras:</h4>
+                  <ul class="crazytime-review-proscons-list cons">
+                    <li>Alta volatilidade — longas sequências de perdas são possíveis</li>
+                    <li>O verdadeiro jogo demo não está disponível (limitação do formato ao vivo)</li>
+                    <li>Multiplicadores máximos são raros por design</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div class="crazytime-review-block">
+              <h3 class="crazytime-review-subtitle">Perguntas Frequentes</h3>
+              <div class="crazytime-review-faq-list">
+                
+                  <div class="crazytime-review-faq-item">
+                    <h4 class="crazytime-review-faq-question">Crazy Time é um jogo de habilidade ou sorte?</h4>
+                    <p class="crazytime-review-faq-answer">Crazy Time é principalmente um jogo de sorte. Embora os jogadores possam usar estatísticas e ferramentas de rastreamento para entender melhor os resultados recentes, cada rodada permanece independente.</p>
+                  </div>
+                
+                  <div class="crazytime-review-faq-item">
+                    <h4 class="crazytime-review-faq-question">Qual é o multiplicador máximo no Crazy Time?</h4>
+                    <p class="crazytime-review-faq-answer">O potencial máximo anunciado no Crazy Time pode chegar até 20.000x durante a rodada de bônus principal do Crazy Time.</p>
+                  </div>
+                
+                  <div class="crazytime-review-faq-item">
+                    <h4 class="crazytime-review-faq-question">Posso participar de rodadas de bônus se não apostei diretamente nelas?</h4>
+                    <p class="crazytime-review-faq-answer">Se as regras do jogo e a configuração atual permitirem através de mecânicas de bônus como entrada mínima ou efeitos Top Slot, os jogadores ainda podem entrar em certos resultados de bônus com um multiplicador reduzido.</p>
+                  </div>
+                
+                  <div class="crazytime-review-faq-item">
+                    <h4 class="crazytime-review-faq-question">As estatísticas ao vivo do Crazy Time são preditivas?</h4>
+                    <p class="crazytime-review-faq-answer">Não. As estatísticas ao vivo ajudam a visualizar a atividade recente, mas não preveem resultados futuros. Cada giro é independente.</p>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+          
+    <div class="tab-panel" data-tab-panel="stream" data-tab-panel-group="game-tabs">
+      <div class="crazytime-stream-section">
+        <div class="crazytime-stream-card">
+          <div class="crazytime-stream-header">
+            <h2 class="crazytime-stream-title">Transmissão ao Vivo de Crazy Time</h2>
+            <p class="crazytime-stream-subtitle">Assista à transmissão ao vivo de Crazy Time diretamente nesta página.</p>
+          </div>
+
+          <div class="crazytime-stream-intro-player">
+            <div class="crazytime-stream-box">
+              <div class="crazytime-stream-overlay">
+                <img
+                  width="1090"
+                  height="640"
+                  src="https://crazytime.games/wp-content/uploads/2025/03/crazytime-live-steram-w1090.webp"
+                  alt="Crazy Time Home"
+                  class="crazytime-stream-overlay-image"
+                />
+                <button
+                  class="crazytime-live-stream-button js-stream-launch"
+                  data-stream-src="https://wwwcasinoscores.com/"
+                  type="button"
+                >
+                  Assistir Transmissão ao Vivo
+                </button>
+              </div>
+
+              <div class="crazytime-stream-frame-shell hidden">
+                <div class="crazytime-stream-badge">
+                  <span class="live-dot"></span>
+                  <span>Transmissão ao Vivo</span>
+                </div>
+
+                <iframe
+                  class="crazytime-stream-frame"
+                  title="Crazy Time Stream"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  loading="lazy"
+                  src=""
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </main>
+
+    
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="/pt/" class="nav-logo footer-logo">
+              <i class="fas fa-chart-line nav-logo-icon"></i>
+              <span>Casino Score</span>
+            </a>
+            <p class="footer-text">
+              Acompanhe jogos de cassino ao vivo em tempo real.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-title">Jogos</div>
+            <ul class="footer-list">
+              
+                <li><a href="/pt/crazytime/">Crazy Time</a></li>
+              
+                <li><a href="/pt/monopoly/">Monopoly Live</a></li>
+              
+                <li><a href="/pt/dreamcatcher/">Dream Catcher</a></li>
+              
+                <li><a href="/pt/megaball/">Mega Ball</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-title">Mais jogos</div>
+            <ul class="footer-list">
+              
+                <li><a href="/pt/lightningroulette/">Lightning Roulette</a></li>
+              
+                <li><a href="/pt/lightningdice/">Lightning Dice</a></li>
+              
+                <li><a href="/pt/supersicbo/">Super Sic Bo</a></li>
+              
+                <li><a href="/pt/coinflip/">Coin Flip</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-title">Recursos</div>
+            <ul class="footer-list">
+              <li><a href="#">Política de privacidade</a></li>
+              <li><a href="#">Termos de serviço</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Tracksino. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    
+    <a
+      href="/go/reg/"
+      class="floating-play-btn"
+      id="floatingPlayBtn"
+      target="_blank"
+      rel="noreferrer noopener nofollow"
+    >
+      Jogar 🎰
+    </a>
+  
+  </div>
+  
+  <script src="/script.js"></script>
+</body>
+</html>
