@@ -3,7 +3,7 @@ function jsonLdScript(schemaObject) {
   }
   
   function createBreadcrumbSchema({ lang, game }) {
-    const baseUrl = "https://example.com";
+    const baseUrl = "https://casinoscore.live";
     const homeUrl = lang === "en" ? `${baseUrl}/` : `${baseUrl}/${lang}/`;
     const gameUrl = lang === "en"
       ? `${baseUrl}/${game.id}/`

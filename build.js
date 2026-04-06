@@ -51,7 +51,7 @@ function writeFile(targetPath, content) {
 
 function createHreflangs(pageType, gameId = null) {
   return SUPPORTED_LANGS.map((lang) => {
-    const href = `https://example.com${buildPath(lang, pageType, gameId)}`;
+    const href = `https://casinoscore.live${buildPath(lang, pageType, gameId)}`;
     return `<link rel="alternate" hreflang="${lang}" href="${href}" />`;
   });
 }
@@ -69,7 +69,7 @@ function renderHomeHtml(lang) {
     dir: getDir(lang),
     title: "Casino Score live — Home",
     description: t.home.heroText,
-    canonical: `https://example.com${buildPath(lang, "home")}`,
+    canonical: `https://casinoscore.live${buildPath(lang, "home")}`,
     hreflangs: createHreflangs("home"),
     body
   });
