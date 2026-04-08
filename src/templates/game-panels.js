@@ -86,11 +86,19 @@ const {
   
     return `<div class="temp-segment" style="background:${color};">${shortLabel}</div>`;
   }
-  function renderTemperaturePanel(game, temperatureData) {
+  function renderTemperaturePanel(game, temperatureData, t) {
+    const tr = t?.gamePanels || {};
+    const subtitle =
+      tr.temperatureSubtitle ||
+      "Live segment temperature highlights hot and cold outcomes based on recent spins versus expected probability.";
+  
+    const spinsSinceTpl = tr.temperatureSpinsSince || "{n} spins since";
+  
     return `
       <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Segment Temperature</h2>
-        <p class="panel-subtitle">Showing how each segment is performing relative to its expected frequency.</p>
+        <p class="panel-subtitle">${subtitle}</p>
+  
         <div class="temp-grid">
           ${temperatureData.map((item) => `
             <div class="temp-card">
@@ -99,7 +107,7 @@ const {
               <div class="temp-diff ${item.diff >= 0 ? "positive" : "negative"}">
                 (${item.diff >= 0 ? "+" : ""}${item.diff})
               </div>
-              <div class="temp-spins">${item.spinsSince} spins since</div>
+              <div class="temp-spins">${spinsSinceTpl.replace("{n}", item.spinsSince)}</div>
               <i class="fas ${item.iconClass} ${item.tempClass} temp-icon"></i>
             </div>
           `).join("")}
@@ -108,50 +116,82 @@ const {
     `;
   }
   
-  function renderHistoryPanel(game, spinData) {
+  function renderHistoryPanel(game, spinData, t) {
+    const tr = t?.gamePanels || {};
     const pageData = spinData.slice(0, 25);
-    const isMonopoly = game.id === "monopoly";
+  
+    const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
+    const showSpecialResult = game.id === "dreamcatcher";
+  
+    const subtitle =
+      tr.historySubtitle ||
+      "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
   
     return `
       <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Recent Spin History</h2>
-        <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
+        <p class="panel-subtitle">${subtitle}</p>
   
         <div class="table-wrap">
           <table class="spin-table">
             <thead>
               <tr>
-                <th class="t-left">Occurred At</th>
-                ${!isMonopoly ? `<th class="t-center">Slot Result</th>` : ""}
-                <th class="t-center">Spin Result</th>
-                <th class="t-right">Multiplier</th>
-                <th class="t-right">Total Winners</th>
-                <th class="t-right">Total Payout</th>
+                <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
+                ${showSlotResult ? `<th class="t-center">${tr.slotResult || "Slot Result"}</th>` : ""}
+                <th class="t-center">${tr.spinResult || "Spin Result"}</th>
+                ${showSpecialResult ? `<th class="t-center">${tr.specialResult || "Special Result"}</th>` : ""}
+                <th class="t-right">${tr.multiplier || "Multiplier"}</th>
+                <th class="t-right">${tr.totalWinners || "Total Winners"}</th>
+                <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
               </tr>
             </thead>
+  
             <tbody>
               ${pageData.map((spin) => {
+                const isSpecial = showSpecialResult && (spin.spinResult === "2x" || spin.spinResult === "7x");
+  
                 const segmentIndex = game.segments.indexOf(spin.spinResult);
                 const slotIdx = game.segments.indexOf(spin.slotResult);
+  
                 const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
                 const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
   
                 return `
                   <tr>
                     <td class="t-left text-soft">${formatTime(spin.time)}</td>
-                    ${!isMonopoly ? `
+  
+                    ${showSlotResult ? `
                       <td class="t-center">
-                        ${renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
+                        ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
                       </td>
                     ` : ""}
+  
                     <td class="t-center">
-                      ${spin.isBonus
-                        ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
-                        : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")}
+                      ${
+                        // ВАЖНО: для 2x/7x тоже показываем картинку в Spin Result
+                        spin.isBonus
+                          ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
+                          : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
+                      }
                     </td>
-                    <td class="t-right ${spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">${spin.multiplier}x</td>
-                    <td class="t-right text-soft">${numberWithCommas(spin.winners)}</td>
-                    <td class="t-right text-green" style="font-weight:600;">$${numberWithCommas(spin.payout)}</td>
+  
+                    ${showSpecialResult ? `
+                      <td class="t-center">
+                        ${isSpecial ? `<span class="special-result-pill">${spin.spinResult}</span>` : ""}
+                      </td>
+                    ` : ""}
+  
+                    <td class="t-right ${!isSpecial && spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">
+                      ${isSpecial ? "" : `${spin.multiplier}x`}
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      ${isSpecial ? "" : numberWithCommas(spin.winners)}
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      ${isSpecial ? "" : `$${numberWithCommas(spin.payout)}`}
+                    </td>
                   </tr>
                 `;
               }).join("")}
@@ -162,8 +202,16 @@ const {
     `;
   }
   
-  function renderStatsPanel(game, distribution, summary, extraContent = "") {
+  function renderStatsPanel(game, distribution, summary, extraContent = "", t) {
+    const tr = t?.gamePanels || {};
     const highestPercent = Math.max(...distribution.map((item) => item.percent), 1);
+  
+    const rtpBasedOn = tr.rtpBasedOn || "Based on last 1,000 spins";
+  
+    const totalSpinsTodayLabel = tr.summaryTotalSpinsToday || "Total Spins Today";
+    const bonusRoundsLabel = tr.summaryBonusRounds || "Bonus Rounds";
+    const biggestMultiplierLabel = tr.summaryBiggestMultiplier || "Biggest Multiplier";
+    const avgPayoutLabel = tr.summaryAvgPayout || "Avg. Payout";
   
     return `
       <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
@@ -193,40 +241,48 @@ const {
             <div class="rtp-card-body">
               <div class="rtp-center">
                 <div class="rtp-value">${summary.rtp}</div>
-                <p class="rtp-text">Based on last 1,000 spins</p>
+                <p class="rtp-text">${rtpBasedOn}</p>
               </div>
             </div>
           </div>
         </div>
   
         <div class="stats-summary-grid">
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Total Spins Today</p>
-          <p class="summary-value">${numberWithCommas(summary.totalSpinsToday)}</p>
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">${totalSpinsTodayLabel}</p>
+            <p class="summary-value">${numberWithCommas(summary.totalSpinsToday)}</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">${bonusRoundsLabel}</p>
+            <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">${biggestMultiplierLabel}</p>
+            <p class="summary-value gold">${summary.biggestMultToday}</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">${avgPayoutLabel}</p>
+            <p class="summary-value green">${summary.avgPayoutToday}</p>
+          </div>
         </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Bonus Rounds</p>
-          <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Biggest Multiplier</p>
-          <p class="summary-value gold">${summary.biggestMultToday}</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Avg. Payout</p>
-          <p class="summary-value green">${summary.avgPayoutToday}</p>
-        </div>
+  
+        ${extraContent}
       </div>
-
-      ${extraContent}
-    </div>
-  `;
+    `;
   }
   
-  function renderBigWinsPanel(game, wins) {
+
+  function renderBigWinsPanel(game, wins, t) {
+    const tr = t?.gamePanels || {};
+    const watchLabel = tr.watch || "Watch";
+  
     return `
       <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Top Multiplier Wins</h2>
+  
         <div class="bigwins-grid">
           ${wins.map((win, index) => `
             <article class="stats-grid-card bigwin-card">
@@ -234,6 +290,7 @@ const {
                 <span class="bigwin-date">${formatDate(win.time)}</span>
                 <span class="bigwin-rank ${index < 3 ? "top" : ""}">#${index + 1}</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
                   ${
@@ -242,14 +299,16 @@ const {
                       : truncateLabel(win.segment, 4)
                   }
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">${numberWithCommas(win.multiplier)}x</div>
                   <div class="bigwin-label">${win.segment}</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
                 <span class="bigwin-payout">$${numberWithCommas(win.payout)}</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> ${watchLabel}</span>
               </div>
             </article>
           `).join("")}

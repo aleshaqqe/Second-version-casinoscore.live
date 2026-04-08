@@ -59,7 +59,28 @@ const GAMES = [
     segments: ["1", "2", "5", "10", "20", "40", "2x", "7x"],
     segColors: ["#3b82f6", "#eab308", "#ec4899", "#8b5cf6", "#f97316", "#ef4444", "#6b7280", "#22c55e"],
     segProbs: [42.59, 27.78, 12.96, 5.56, 3.7, 1.85, 3.7, 1.85],
-    expectedRtp: 96.58
+    expectedRtp: 96.58,
+    hideSlotResult: true,
+    segmentImages: {
+      "1": "img/dream-catcher/spin/dream-catcher-one.webp",
+      "2": "img/dream-catcher/spin/dream-catcher-two.webp",
+      "5": "img/dream-catcher/spin/dream-catcher-five.webp",
+      "10": "img/dream-catcher/spin/dream-catcher-ten.webp",
+      "20": "img/dream-catcher/spin/dream-catcher-twenty.webp",
+      "40": "img/dream-catcher/spin/dream-catcher-forty.webp",
+      "2x": "img/dream-catcher/spin/dream-catcher-2x.webp",
+      "7x": "img/dream-catcher/spin/dream-catcher-7x.webp"
+    },
+    spinResultImages: {
+      "1": "img/dream-catcher/spin/dream-catcher-one.webp",
+      "2": "img/dream-catcher/spin/dream-catcher-two.webp",
+      "5": "img/dream-catcher/spin/dream-catcher-five.webp",
+      "10": "img/dream-catcher/spin/dream-catcher-ten.webp",
+      "20": "img/dream-catcher/spin/dream-catcher-twenty.webp",
+      "40": "img/dream-catcher/spin/dream-catcher-forty.webp",
+      "2x": "img/dream-catcher/spin/dream-catcher-2x.webp",
+      "7x": "img/dream-catcher/spin/dream-catcher-7x.webp"
+    },
   },
   {
     id: "megaball",

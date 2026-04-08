@@ -3,6 +3,171 @@ const DEFAULT_LANG = "en";
 
 const UI_TRANSLATIONS = {
   en: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: Real-Time Stats, Results & Complete Game Guide",
+      intro:
+        "Dream Catcher is Evolution Gaming's flagship Money Wheel game that transformed live casino entertainment when it launched in 2017. This Wheel of Fortune-style experience combines the excitement of a TV game show with real money gambling, all streamed in ultra-HD from professional studios in Latvia.\n\nUnlike traditional table games, Dream Catcher requires zero prior gambling knowledge. You simply bet on a number, watch the wheel spin, and collect your winnings if it lands on your pick. The addition of multiplier segments creates opportunities for massive payouts up to 20,000x your stake.",
+      playbtn: "Play",
+      heroAlt: "Dream Catcher live money wheel game logo",
+    
+      quickOverviewTitle: "Quick Game Overview",
+      specFeature: "Specification",
+      specDetails: "Details",
+      specProvider: "Game Provider",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Release Year",
+      specYearValue: "2017",
+      specType: "Game Type",
+      specTypeValue: "Live Money Wheel",
+      specRtp: "RTP",
+      specRtpValue: "96.58% (optimal)",
+      specBetRange: "Bet Range",
+      specBetRangeValue: "€0.10 – €1,000",
+      specMaxWin: "Max Win",
+      specMaxWinValue: "20,000x stake",
+      specSegments: "Total Segments",
+      specSegmentsValue: "54",
+      specLocation: "Streaming Location",
+      specLocationValue: "Riga, Latvia",
+    
+      howWorksTitle: "How Dream Catcher Works",
+      howWorksText:
+        "The game features a massive vertically-mounted wheel with 54 coloured segments. A live host spins the wheel while interacting with players through chat, creating that authentic game show atmosphere.",
+    
+      wheelDistributionTitle: "Wheel Segment Distribution",
+      wheelColNumber: "Number",
+      wheelColSegments: "Segments",
+      wheelColPayout: "Payout",
+      wheelColProbability: "Probability",
+      wheelDistributionNote:
+        "The numbered segments pay exactly what they show—land on 5 and you get 5:1 on your bet. Simple as that.",
+      multiplier2xLabel: "2x Multiplier",
+      multiplier7xLabel: "7x Multiplier",
+    
+      multiplierTitle: "Multiplier Mechanics",
+      multiplierIntro:
+        "The two multiplier segments (silver 2x and gold 7x) are where things get interesting. You can't bet on these directly, but when the wheel stops on one:",
+      multiplierBullets: [
+        "All current bets stay active",
+        "The wheel spins again",
+        "Whatever number hits next gets multiplied"
+      ],
+      multiplierNote:
+        "Multipliers can chain. If the wheel lands on 7x, then 7x again, then finally 40—that's a 1,960x payout. The theoretical maximum involves multiple consecutive multipliers hitting before landing on 40, pushing wins up to 20,000x.",
+    
+      statsTrackingTitle: "Dream Catcher Live Stats & Results Tracking",
+      statsTrackingIntro:
+        "Tracking Dream Catcher stats helps you understand the game's behaviour over time. While each spin is independent, monitoring Dream Catcher results reveals whether the wheel is running close to expected probabilities.",
+      trackingBullets: [
+        "Current multiplier status (active or not)",
+        "Spins since last multiplier hit",
+        "Number frequency over various timeframes",
+        "Hot and cold segments based on recent Dream Catcher real-time results"
+      ],
+      statsTrackingNote:
+        "Many players use Dream Catcher live stats dashboards to spot patterns, though remember—past results don't influence future spins.",
+    
+      strategiesTitle: "Betting Strategies Worth Considering",
+      strategies: [
+        {
+          title: "Spread Your Bets",
+          text:
+            "Covering multiple segments increases hit frequency. Betting on 1, 2, and 5 simultaneously means you'll win on roughly 83% of spins (excluding multiplier segments)."
+        },
+        {
+          title: "Target High-Payout Numbers",
+          text:
+            "Concentrating on 10, 20, or 40 means fewer wins but larger payouts when they hit. One successful 40 bet recovers many losing rounds."
+        },
+        {
+          title: "Low Stakes, More Spins",
+          text:
+            "The €0.10 minimum lets you stretch smaller bankrolls across hundreds of spins. More spins means more chances to catch those multiplier chains."
+        }
+      ],
+    
+      rtpBreakdownTitle: "RTP Breakdown by Bet Type",
+      rtpBreakdownIntro:
+        "Not all bets carry equal theoretical returns.",
+      rtpColBet: "Bet",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "The lower numbers offer better long-term value, while 40 carries higher variance with its reduced RTP.",
+    
+      whyLoveTitle: "Why Players Love Dream Catcher",
+      whyLoveBullets: [
+        "Instant understanding – No complex rules or strategies to learn",
+        "Game show energy – Professional hosts keep the entertainment flowing",
+        "Multiplier excitement – Every spin could trigger a chain reaction",
+        "Accessible stakes – Play from €0.10 up to €1,000 per spin",
+        "Mobile-optimised – Full experience on any device"
+      ],
+    
+      faqTitle: "Frequently Asked Questions",
+      faq: [
+        {
+          q: "Can I see Dream Catcher live stats during gameplay?",
+          a: "Yes—the game interface displays recent Dream Catcher results and winning numbers. Third-party stat trackers offer deeper historical analysis of Dream Catcher stats across thousands of spins."
+        },
+        {
+          q: "What happens if the wheel lands on multipliers repeatedly?",
+          a: "Multipliers stack. Two consecutive 7x hits followed by a number means that number pays 49x its normal rate. Chains are rare but create the game's biggest wins."
+        },
+        {
+          q: "Is there a way to predict Dream Catcher real-time results?",
+          a: "No. Each spin uses a certified random mechanism. Tracking Dream Catcher live stats can inform your betting patterns, but cannot predict outcomes."
+        },
+        {
+          q: "Why does the 40 bet have lower RTP than other numbers?",
+          a: "With only one segment out of 54, the 40 appears roughly 1.9% of the time. The 40:1 payout doesn't fully compensate for this rarity, resulting in a higher house edge."
+        },
+        {
+          q: "How do Dream Catcher results compare to slot RTPs?",
+          a: "Dream Catcher's optimal 96.58% RTP sits comfortably within standard online slot territory (typically 94-97%), making it competitive for a live game format."
+        }
+      ]
+    },
+    gamePanels: {
+      temperatureSubtitle:
+        "Live segment temperature highlights hot and cold outcomes based on recent spins versus expected probability.",
+      temperatureSpinsSince: "{n} spins since",
+    
+      historySubtitle:
+        "Explore the latest spin history with real-time results, multipliers, winners, and payouts.",
+    
+      rtpBasedOn: "Based on last 1,000 spins",
+    
+      summaryTotalSpinsToday: "Total Spins Today",
+      summaryBonusRounds: "Bonus Rounds",
+      summaryBiggestMultiplier: "Biggest Multiplier",
+      summaryAvgPayout: "Avg. Payout",
+    
+      occurredAt: "Occurred At",
+      slotResult: "Slot Result",
+      spinResult: "Spin Result",
+      specialResult: "Special Result",
+      multiplier: "Multiplier",
+      totalWinners: "Total Winners",
+      totalPayout: "Total Payout",
+    
+      watch: "Watch"
+    },
+    dreamcatcherStatsExtra: {
+      trackedMetaPrefix: "Past 30 minutes",
+      bestWinsTitle: "Top Single-Spin Wins",
+      bestWinsText: "A quick look at the biggest payouts from the latest tracked spins.",
+      wheelStatsTitle: "Wheel Multipliers Stats",
+      wheelStatsText: "See how often the multiplier segments landed during the same tracked window.",
+      matchedTitle: "Wheel Multipliers Matched",
+      matchedText: "Compare multiplier hits against regular spins in the current sample.",
+      finished: "Finished",
+      outcome: "Outcome",
+      player: "Player",
+      wonAmount: "Won Amount",
+      multiplier: "Multiplier",
+      match: "Match",
+      noMatch: "No Match"
+    },
     homeSeo: {
       sectionTitle: "About Our Live Casino Statistics Platform",
       whoTitle: "Who We Are",
@@ -121,6 +286,10 @@ const UI_TRANSLATIONS = {
       monopoly: {
         title: "Monopoly Live Stats 2026 | Official Results Tracker",
         description: "Monopoly Live official statistics for 2026. Real-time results, verified history & Evolution Gaming data. Licensed casinos only. Track scores & play safe now."
+      },
+      dreamcatcher: {
+        title: "Dream Catcher Game Results & Live Stats 2026 - Scores in Real Time 🎰",
+        description: "Dream Catcher game results today, live stats & scores updated in real time. Track result history, winning statistics and trends for 2026. See every spin instantly."
       }
     },
     crazytimeStream: {
@@ -273,6 +442,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: " Stats – Live Results & Multipliers Tracker",
       subtitlePrefix: "Track real-time spin results, history and statistics for",
+      playCta: "Play Now"
 
     },
     nav: {
@@ -347,6 +517,181 @@ cashHunt: "Cash Hunt",
   },
 
   es: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: estadísticas en tiempo real, resultados y guía completa del juego",
+      intro:
+        "Dream Catcher es el juego insignia de Money Wheel de Evolution Gaming que transformó el entretenimiento de casino en vivo cuando se lanzó en 2017. Esta experiencia al estilo “Wheel of Fortune” combina la emoción de un programa de TV con apuestas de dinero real, todo transmitido en ultra HD desde estudios profesionales en Letonia.\n\nA diferencia de los juegos de mesa tradicionales, Dream Catcher no requiere conocimientos previos: solo apuestas a un número, ves girar la rueda y cobras si cae en tu elección. Además, los segmentos con multiplicadores pueden crear oportunidades de pagos enormes de hasta 20.000x tu apuesta.",
+      playbtn: "Jugar",
+      heroAlt: "Logo de Dream Catcher (rueda de dinero en vivo)",
+    
+      quickOverviewTitle: "Resumen rápido del juego",
+      specFeature: "Especificación",
+      specDetails: "Detalles",
+      specProvider: "Proveedor",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Año de lanzamiento",
+      specYearValue: "2017",
+      specType: "Tipo de juego",
+      specTypeValue: "Rueda de dinero en vivo",
+      specRtp: "RTP",
+      specRtpValue: "96,58% (óptimo)",
+      specBetRange: "Rango de apuesta",
+      specBetRangeValue: "€0,10 – €1.000",
+      specMaxWin: "Ganancia máxima",
+      specMaxWinValue: "20.000x la apuesta",
+      specSegments: "Segmentos totales",
+      specSegmentsValue: "54",
+      specLocation: "Ubicación del streaming",
+      specLocationValue: "Riga, Letonia",
+    
+      howWorksTitle: "Cómo funciona Dream Catcher",
+      howWorksText:
+        "El juego utiliza una rueda vertical enorme con 54 segmentos de colores. Un presentador en vivo la hace girar e interactúa con los jugadores a través del chat, creando una atmósfera auténtica de game show.",
+    
+      wheelDistributionTitle: "Distribución de segmentos de la rueda",
+      wheelColNumber: "Número",
+      wheelColSegments: "Segmentos",
+      wheelColPayout: "Pago",
+      wheelColProbability: "Probabilidad",
+      wheelDistributionNote:
+        "Los segmentos numerados pagan exactamente lo que muestran: si cae en 5, cobras 5:1 sobre tu apuesta. Así de simple.",
+      multiplier2xLabel: "Multiplicador 2x",
+      multiplier7xLabel: "Multiplicador 7x",
+    
+      multiplierTitle: "Mecánica de multiplicadores",
+      multiplierIntro:
+        "Los dos segmentos de multiplicador (plata 2x y oro 7x) son donde el juego se vuelve más interesante. No puedes apostar directamente a ellos, pero cuando la rueda cae en uno:",
+      multiplierBullets: [
+        "Todas las apuestas actuales siguen activas",
+        "La rueda vuelve a girar",
+        "El siguiente número que salga se multiplica"
+      ],
+      multiplierNote:
+        "Los multiplicadores pueden encadenarse. Si cae 7x, luego 7x otra vez y finalmente 40, el pago sería 1.960x. El máximo teórico implica varios multiplicadores consecutivos antes de caer en 40, llevando el potencial hasta 20.000x.",
+    
+      statsTrackingTitle: "Estadísticas y resultados de Dream Catcher en vivo",
+      statsTrackingIntro:
+        "Hacer seguimiento de las estadísticas de Dream Catcher ayuda a entender el comportamiento del juego a lo largo del tiempo. Aunque cada giro es independiente, analizar los resultados muestra si la rueda se mantiene cerca de las probabilidades esperadas.",
+      trackingBullets: [
+        "Estado actual del multiplicador (activo o no)",
+        "Giros desde el último multiplicador",
+        "Frecuencia de números en diferentes periodos",
+        "Segmentos calientes y fríos según los resultados recientes en tiempo real"
+      ],
+      statsTrackingNote:
+        "Muchos jugadores usan paneles de estadísticas en vivo para observar tendencias, pero recuerda: los resultados anteriores no influyen en los giros futuros.",
+    
+      strategiesTitle: "Estrategias de apuesta a considerar",
+      strategies: [
+        {
+          title: "Reparte tus apuestas",
+          text:
+            "Cubrir varios segmentos aumenta la frecuencia de aciertos. Apostar a 1, 2 y 5 al mismo tiempo significa ganar en alrededor del 83% de los giros (excluyendo multiplicadores)."
+        },
+        {
+          title: "Enfócate en pagos altos",
+          text:
+            "Apostar a 10, 20 o 40 implica menos aciertos, pero pagos mayores cuando salen. Un solo acierto en 40 puede compensar muchas rondas perdidas."
+        },
+        {
+          title: "Bajas apuestas, más giros",
+          text:
+            "El mínimo de €0,10 permite estirar un bankroll pequeño durante cientos de giros. Más giros = más oportunidades de atrapar cadenas de multiplicadores."
+        }
+      ],
+    
+      rtpBreakdownTitle: "RTP por tipo de apuesta",
+      rtpBreakdownIntro:
+        "No todas las apuestas tienen el mismo retorno teórico.",
+      rtpColBet: "Apuesta",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "Los números bajos ofrecen mejor valor a largo plazo, mientras que el 40 tiene mayor varianza y un RTP inferior.",
+    
+      whyLoveTitle: "Por qué a los jugadores les encanta Dream Catcher",
+      whyLoveBullets: [
+        "Fácil de entender – Sin reglas complejas",
+        "Energía de game show – Presentadores profesionales mantienen el ritmo",
+        "Emoción por multiplicadores – Cada giro puede activar una cadena",
+        "Apuestas accesibles – Desde €0,10 hasta €1.000 por giro",
+        "Optimizado para móvil – Experiencia completa en cualquier dispositivo"
+      ],
+    
+      faqTitle: "Preguntas frecuentes",
+      faq: [
+        {
+          q: "¿Puedo ver estadísticas en vivo de Dream Catcher durante la partida?",
+          a: "Sí. La interfaz del juego muestra resultados recientes y números ganadores. Los trackers de terceros ofrecen análisis histórico más profundo con miles de giros."
+        },
+        {
+          q: "¿Qué ocurre si la rueda cae en multiplicadores repetidamente?",
+          a: "Los multiplicadores se acumulan. Dos 7x seguidos y luego un número significan que ese número paga 49x su tasa normal. Las cadenas son raras, pero generan las mayores ganancias."
+        },
+        {
+          q: "¿Se pueden predecir los resultados en tiempo real de Dream Catcher?",
+          a: "No. Cada giro utiliza un mecanismo aleatorio certificado. Seguir estadísticas puede ayudarte a gestionar tus apuestas, pero no puede predecir el resultado."
+        },
+        {
+          q: "¿Por qué la apuesta al 40 tiene menor RTP que otros números?",
+          a: "Porque solo hay un segmento de 40 entre 54; aparece aproximadamente el 1,9% de las veces. El pago 40:1 no compensa completamente esa rareza, por eso el margen de la casa es mayor."
+        },
+        {
+          q: "¿Cómo se compara el RTP de Dream Catcher con el de las slots?",
+          a: "El RTP óptimo de 96,58% está dentro del rango típico de slots online (94–97%), lo que lo hace competitivo para un formato en vivo."
+        }
+      ]
+    },
+    dreamcatcherStatsExtra: {
+      sectionTitle: "Estadísticas de Dream Catcher",
+      trackedMetaPrefix: "Últimas 72 horas",
+      latestTopTitle: "Últimos Multiplicadores Máximos",
+      latestTopText: "Los últimos multiplicadores máximos destacan las mayores ganancias recientes.",
+      bestWinsTitle: "Mejores Ganancias Individuales",
+      bestWinsText: "Consulta las mejores ganancias de una sola tirada del periodo actual.",
+      wheelStatsTitle: "Estadísticas de Multiplicadores de la Rueda",
+      wheelStatsText: "Mira con qué frecuencia caen los multiplicadores de la rueda durante el periodo analizado.",
+      wheelMatchedTitle: "Multiplicadores de la Rueda Acertados",
+      wheelMatchedText: "Sigue la proporción de tiradas que coincidieron con un multiplicador de la rueda.",
+      spinHistoryTitle: "Historial de Tiradas",
+      spinHistoryText: "Revisa las tiradas recientes de Dream Catcher y su rendimiento.",
+      finished: "Finalizado",
+      spinResult: "Resultado",
+      outcome: "Resultado",
+      player: "Jugador",
+      wonAmount: "Cantidad Ganada",
+      multiplier: "Multiplicador",
+      optimalBet: "Apuesta Óptima",
+      bestBet: "Mejor Apuesta",
+      timesWon: "Veces Ganadas",
+      totalProfit: "Beneficio Total",
+      match: "Coincide",
+      noMatch: "No Coincide"
+    },
+    gamePanels: {
+      temperatureSubtitle:
+        "La temperatura de segmentos destaca resultados calientes y fríos en tiempo real según las tiradas recientes y la probabilidad esperada.",
+      temperatureSpinsSince: "hace {n} tiradas",
+    
+      historySubtitle:
+        "Consulta el historial de giros más reciente con resultados en tiempo real, multiplicadores, ganadores y pagos.",
+    
+      rtpBasedOn: "Basado en las últimas 1.000 tiradas",
+    
+      summaryTotalSpinsToday: "Total de giros hoy",
+      summaryBonusRounds: "Rondas bonus",
+      summaryBiggestMultiplier: "Multiplicador más alto",
+      summaryAvgPayout: "Pago prom.",
+    
+      occurredAt: "Ocurrió",
+      slotResult: "Resultado del slot",
+      spinResult: "Resultado del giro",
+      specialResult: "Resultado especial",
+      multiplier: "Multiplicador",
+      totalWinners: "Ganadores",
+      totalPayout: "Pago total",
+    
+      watch: "Ver"
+    },
     homeSeo: {
       sectionTitle: "Sobre Nuestra Plataforma de Estadísticas de Casino en Vivo",
       whoTitle: "Quiénes Somos",
@@ -458,13 +803,18 @@ cashHunt: "Cash Hunt",
         description: "Casino Score Live es tu centro definitivo de live stats y real-time results en 2026. Analiza RTP, sigue hot or cold streaks y toma decisiones de apuestas seguras."
       },
       crazytime: {
-        title: "Estadísticas de Crazy Time – Resultados en Vivo y Rastreador de Multiplicadores",
+        title: "Estadísticas de Crazy Time - Resultados en Vivo y Rastreador de Multiplicadores",
         description: "Estadísticas en vivo de Crazy Time actualizadas en tiempo real. Sigue los resultados de la rueda, rondas bonus y multiplicadores de hasta 2000x. Usa los datos para construir tu estrategia ganadora. ¡Compruébalo ahora!"
       },
       monopoly: {
         title: "Monopoly Live Estadísticas 2026 | Rastreador Oficial de Resultados",
-        description: "Monopoly Live estadísticas oficiales 2026. Resultados en tiempo real, historial verificado y datos de Evolution Gaming. Sigue resultados y juega seguro."      }
+        description: "Monopoly Live estadísticas oficiales 2026. Resultados en tiempo real, historial verificado y datos de Evolution Gaming. Sigue resultados y juega seguro." },
+        dreamcatcher: {
+          title: "Dream Catcher Resultados & Live Stats 2026 - Scores en Tiempo Real 🎰",
+          description: "Dream Catcher resultados de hoy, estadísticas en vivo y marcadores en tiempo real. Consulta historial, estadísticas ganadoras y tendencias 2026. Acceso a cada giro."
+        }
     },
+    
     crazytimeStream: {
       title: "Transmisión en Vivo de Crazy Time",
       subtitle: "Mira la transmisión en vivo de Crazy Time directamente en esta página.",
@@ -610,7 +960,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Estadísticas",
       subtitlePrefix: "Sigue resultados, historial y estadísticas en tiempo real de",
-
+      playCta: "Jugar ahora"
     },
     nav: {
       home: "Inicio",
@@ -683,6 +1033,171 @@ cashHunt: "Cash Hunt",
   },
 
   it: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: Statistiche in Tempo Reale, Risultati e Guida Completa al Gioco",
+      intro:
+        "Dream Catcher è il gioco Money Wheel di punta di Evolution Gaming che ha trasformato l'intrattenimento dei casinò live quando è stato lanciato nel 2017. Questa esperienza in stile Ruota della Fortuna combina l'emozione di un game show televisivo con il gioco d'azzardo per soldi reali, il tutto trasmesso in ultra-HD da studi professionali in Lettonia.\n\nA differenza dei giochi da tavolo tradizionali, Dream Catcher non richiede alcuna conoscenza preliminare del gioco d'azzardo. Devi semplicemente puntare su un numero, guardare la ruota girare e riscuotere le tue vincite se si ferma sulla tua scelta. L'aggiunta di segmenti moltiplicatori crea opportunità per pagamenti massicci fino a 20.000 volte la tua puntata.",
+      playbtn: "Gioca",
+      heroAlt: "Logo del gioco live con ruota dei soldi Dream Catcher",
+    
+      quickOverviewTitle: "Panoramica Rapida del Gioco",
+      specFeature: "Specifica",
+      specDetails: "Dettagli",
+      specProvider: "Fornitore del Gioco",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Anno di Lancio",
+      specYearValue: "2017",
+      specType: "Tipo di Gioco",
+      specTypeValue: "Ruota dei Soldi Live",
+      specRtp: "RTP",
+      specRtpValue: "96,58% (ottimale)",
+      specBetRange: "Intervallo di Puntata",
+      specBetRangeValue: "€0,10 – €1.000",
+      specMaxWin: "Vincita Massima",
+      specMaxWinValue: "20.000x la puntata",
+      specSegments: "Segmenti Totali",
+      specSegmentsValue: "54",
+      specLocation: "Posizione di Streaming",
+      specLocationValue: "Riga, Lettonia",
+    
+      howWorksTitle: "Come Funziona Dream Catcher",
+      howWorksText:
+        "Il gioco presenta una gigantesca ruota montata verticalmente con 54 segmenti colorati. Un presentatore live fa girare la ruota interagendo con i giocatori tramite chat, creando quell'autentica atmosfera da game show.",
+    
+      wheelDistributionTitle: "Distribuzione dei Segmenti della Ruota",
+      wheelColNumber: "Numero",
+      wheelColSegments: "Segmenti",
+      wheelColPayout: "Pagamento",
+      wheelColProbability: "Probabilità",
+      wheelDistributionNote:
+        "I segmenti numerati pagano esattamente quello che mostrano: atterra sul 5 e ottieni 5:1 sulla tua scommessa. Semplice come questo.",
+      multiplier2xLabel: "Moltiplicatore 2x",
+      multiplier7xLabel: "Moltiplicatore 7x",
+    
+      multiplierTitle: "Meccanica dei Moltiplicatori",
+      multiplierIntro:
+        "I due segmenti moltiplicatori (argento 2x e oro 7x) sono dove le cose si fanno interessanti. Non puoi puntarci direttamente, ma quando la ruota si ferma su uno di essi:",
+      multiplierBullets: [
+        "Tutte le scommesse attuali rimangono attive",
+        "La ruota gira di nuovo",
+        "Qualsiasi numero esca successivamente viene moltiplicato"
+      ],
+      multiplierNote:
+        "I moltiplicatori possono concatenarsi. Se la ruota atterra su 7x, poi ancora su 7x, e infine sul 40, il pagamento è di 1.960x. Il massimo teorico implica più moltiplicatori consecutivi prima di atterrare sul 40, portando le vincite fino a 20.000x.",
+    
+      statsTrackingTitle: "Statistiche Live e Tracciamento dei Risultati di Dream Catcher",
+      statsTrackingIntro:
+        "Monitorare le statistiche di Dream Catcher aiuta a capire il comportamento del gioco nel tempo. Sebbene ogni giro sia indipendente, monitorare i risultati di Dream Catcher rivela se la ruota si sta avvicinando alle probabilità attese.",
+      trackingBullets: [
+        "Stato attuale del moltiplicatore (attivo o no)",
+        "Giri dall'ultimo colpo del moltiplicatore",
+        "Frequenza dei numeri in vari intervalli di tempo",
+        "Segmenti caldi e freddi basati sui risultati recenti in tempo reale di Dream Catcher"
+      ],
+      statsTrackingNote:
+        "Molti giocatori utilizzano dashboard delle statistiche live di Dream Catcher per individuare schemi, anche se ricorda: i risultati passati non influenzano i giri futuri.",
+    
+      strategiesTitle: "Strategie di Puntata da Considerare",
+      strategies: [
+        {
+          title: "Distribuisci le Tue Scommesse",
+          text:
+            "Coprire più segmenti aumenta la frequenza dei colpi. Puntare su 1, 2 e 5 simultaneamente significa vincere su circa l'83% dei giri (escludendo i segmenti moltiplicatori)."
+        },
+        {
+          title: "Punta sui Numeri ad Alto Pagamento",
+          text:
+            "Concentrarsi su 10, 20 o 40 significa meno vittorie ma pagamenti più elevati quando si verificano. Una singola vincita sul 40 recupera molti round persi."
+        },
+        {
+          title: "Puntate Basse, Più Giri",
+          text:
+            "Il minimo di €0,10 ti permette di estendere bankroll più piccoli su centinaia di giri. Più giri significano più possibilità di catturare quelle catene di moltiplicatori."
+        }
+      ],
+    
+      rtpBreakdownTitle: "Analisi dell'RTP per Tipo di Scommessa",
+      rtpBreakdownIntro:
+        "Non tutte le scommesse hanno uguali rendimenti teorici.",
+      rtpColBet: "Scommessa",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "I numeri più bassi offrono un valore migliore a lungo termine, mentre il 40 comporta una varianza più elevata con il suo RTP ridotto.",
+    
+      whyLoveTitle: "Perché i Giocatori Amano Dream Catcher",
+      whyLoveBullets: [
+        "Comprensione immediata – Nessuna regola complessa o strategia da imparare",
+        "Energia da game show – I presentatori professionisti mantengono vivo l'intrattenimento",
+        "Emozione dei moltiplicatori – Ogni giro potrebbe innescare una reazione a catena",
+        "Puntate accessibili – Gioca da €0,10 fino a €1.000 per giro",
+        "Ottimizzato per mobile – Esperienza completa su qualsiasi dispositivo"
+      ],
+    
+      faqTitle: "Domande Frequenti",
+      faq: [
+        {
+          q: "Posso vedere le statistiche live di Dream Catcher durante il gioco?",
+          a: "Sì: l'interfaccia di gioco mostra i risultati recenti di Dream Catcher e i numeri vincenti. I tracker di statistiche di terze parti offrono un'analisi storica più approfondita delle statistiche di Dream Catcher su migliaia di giri."
+        },
+        {
+          q: "Cosa succede se la ruota atterra più volte sui moltiplicatori?",
+          a: "I moltiplicatori si accumulano. Due colpi consecutivi di 7x seguiti da un numero significano che quel numero paga 49 volte il suo tasso normale. Le catene sono rare ma creano le vincite più grandi del gioco."
+        },
+        {
+          q: "C'è un modo per prevedere i risultati in tempo reale di Dream Catcher?",
+          a: "No. Ogni giro utilizza un meccanismo certificato casuale. Monitorare le statistiche live di Dream Catcher può informare i tuoi schemi di puntata, ma non può prevedere i risultati."
+        },
+        {
+          q: "Perché la scommessa sul 40 ha un RTP inferiore rispetto agli altri numeri?",
+          a: "Con un solo segmento su 54, il 40 appare circa l'1,9% delle volte. Il pagamento di 40:1 non compensa pienamente questa rarità, risultando in un vantaggio della casa più elevato."
+        },
+        {
+          q: "Come si confrontano i risultati di Dream Catcher con gli RTP delle slot?",
+          a: "L'RTP ottimale del 96,58% di Dream Catcher si colloca comodamente nel territorio standard delle slot online (tipicamente 94-97%), rendendolo competitivo per un formato di gioco live."
+        }
+      ]
+    },
+    dreamcatcherStatsExtra: {
+      trackedMetaPrefix: "Ultimi 30 minuti",
+      bestWinsTitle: "Migliori vincite per singolo giro",
+      bestWinsText: "Uno sguardo rapido ai pagamenti più alti dagli ultimi giri tracciati.",
+      wheelStatsTitle: "Statistiche dei moltiplicatori della ruota",
+      wheelStatsText: "Scopri con quale frequenza sono usciti i segmenti moltiplicatori nello stesso intervallo analizzato.",
+      matchedTitle: "Moltiplicatori della ruota corrisposti",
+      matchedText: "Confronta le uscite dei moltiplicatori con i giri normali nel campione attuale.",
+      finished: "Completato",
+      outcome: "Risultato",
+      player: "Giocatore",
+      wonAmount: "Importo vinto",
+      multiplier: "Moltiplicatore",
+      match: "Corrispondenza",
+      noMatch: "Nessuna corrispondenza"
+    },
+    gamePanels: {
+      temperatureSubtitle:
+        "La temperatura dei segmenti evidenzia risultati caldi e freddi in tempo reale in base agli ultimi spin rispetto alla probabilità attesa.",
+      temperatureSpinsSince: "{n} spin fa",
+    
+      historySubtitle:
+        "Consulta la cronologia più recente con risultati in tempo reale, moltiplicatori, vincitori e payout.",
+    
+      rtpBasedOn: "Basato sugli ultimi 1.000 spin",
+    
+      summaryTotalSpinsToday: "Spin totali oggi",
+      summaryBonusRounds: "Round bonus",
+      summaryBiggestMultiplier: "Moltiplicatore più alto",
+      summaryAvgPayout: "Payout medio",
+    
+      occurredAt: "Avvenuto",
+      slotResult: "Risultato slot",
+      spinResult: "Risultato spin",
+      specialResult: "Risultato speciale",
+      multiplier: "Moltiplicatore",
+      totalWinners: "Vincitori",
+      totalPayout: "Payout totale",
+    
+      watch: "Guarda"
+    },
     homeSeo: {
       sectionTitle: "Informazioni sulla Nostra Piattaforma di Statistiche dei Casinò Live",
       whoTitle: "Chi Siamo",
@@ -802,6 +1317,10 @@ cashHunt: "Cash Hunt",
         title: "Monopoly Live Statistiche 2026 | Tracker Ufficiale dei Risultati",
         description: "Statistiche ufficiali di Monopoly Live per il 2026. Risultati in tempo reale, storico verificato e dati Evolution Gaming. Monitora i risultati e gioca in sicurezza."
       },
+      dreamcatcher: {
+        title: "Dream Catcher Risultati & Statistiche Live 2026 - Scores in Tempo Reale 🎰",
+        description: "Dream Catcher risultati di oggi, statistiche live e punteggi in tempo reale. Traccia cronologia, statistiche vincenti e trend 2026. Ogni giro subito."
+      }
     },
     crazytimeStream: {
       title: "Streaming Live di Crazy Time",
@@ -948,7 +1467,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Statistiche",
       subtitlePrefix: "Monitora risultati, storico e statistiche in tempo reale di",
-
+      playCta: "Gioca ora"
     },
     nav: { home: "Home", liveGames: "Giochi live" },
     home: {
@@ -1019,6 +1538,172 @@ cashHunt: "Cash Hunt",
   },
 
   de: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: Echtzeit-Statistiken, Ergebnisse & Vollständiger Spielleitfaden",
+      intro:
+        "Dream Catcher ist Evolution Gamings Flaggschiff-Money-Wheel-Spiel, das die Live-Casino-Unterhaltung seit seinem Start im Jahr 2017 revolutioniert hat. Dieses Glücksrad-Erlebnis verbindet die Aufregung einer TV-Spielshow mit echtem Glücksspiel, alles in Ultra-HD aus professionellen Studios in Lettland gestreamt.\n\nIm Gegensatz zu traditionellen Tischspielen sind bei Dream Catcher keine Vorkenntnisse im Glücksspiel erforderlich. Sie setzen einfach auf eine Zahl, sehen zu, wie sich das Rad dreht, und kassieren Ihre Gewinne, wenn es auf Ihrer Wahl landet. Die Multiplikatorsegmente eröffnen Möglichkeiten für massive Auszahlungen von bis zu 20.000-fachem Ihres Einsatzes.",
+      playbtn: "Spielen",
+      heroAlt: "Dream Catcher Live Money Wheel Spiellogo",
+    
+      quickOverviewTitle: "Kurze Spielübersicht",
+      specFeature: "Spezifikation",
+      specDetails: "Details",
+      specProvider: "Spielanbieter",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Erscheinungsjahr",
+      specYearValue: "2017",
+      specType: "Spieltyp",
+      specTypeValue: "Live Money Wheel",
+      specRtp: "RTP",
+      specRtpValue: "96,58% (optimal)",
+      specBetRange: "Einsatzbereich",
+      specBetRangeValue: "€0,10 – €1.000",
+      specMaxWin: "Maximaler Gewinn",
+      specMaxWinValue: "20.000-facher Einsatz",
+      specSegments: "Gesamtsegmente",
+      specSegmentsValue: "54",
+      specLocation: "Streaming-Standort",
+      specLocationValue: "Riga, Lettland",
+    
+      howWorksTitle: "Wie Dream Catcher Funktioniert",
+      howWorksText:
+        "Das Spiel verfügt über ein riesiges, vertikal montiertes Rad mit 54 farbigen Segmenten. Ein Live-Moderator dreht das Rad und interagiert dabei über den Chat mit den Spielern, was eine authentische Spielshow-Atmosphäre erzeugt.",
+    
+      wheelDistributionTitle: "Verteilung der Radsegmente",
+      wheelColNumber: "Zahl",
+      wheelColSegments: "Segmente",
+      wheelColPayout: "Auszahlung",
+      wheelColProbability: "Wahrscheinlichkeit",
+      wheelDistributionNote:
+        "Die nummerierten Segmente zahlen genau das, was sie zeigen – landet das Rad auf 5, erhalten Sie 5:1 auf Ihren Einsatz. So einfach ist das.",
+      multiplier2xLabel: "2x Multiplikator",
+      multiplier7xLabel: "7x Multiplikator",
+    
+      multiplierTitle: "Multiplikator-Mechanik",
+      multiplierIntro:
+        "Die zwei Multiplikatorsegmente (silber 2x und gold 7x) machen das Spiel besonders spannend. Sie können nicht direkt darauf setzen, aber wenn das Rad auf einem davon stoppt:",
+      multiplierBullets: [
+        "Alle aktuellen Einsätze bleiben aktiv",
+        "Das Rad dreht sich erneut",
+        "Welche Zahl als nächstes erscheint, wird multipliziert"
+      ],
+      multiplierNote:
+        "Multiplikatoren können sich verketten. Wenn das Rad auf 7x, dann wieder auf 7x und schließlich auf 40 landet, beträgt die Auszahlung 1.960-fach. Das theoretische Maximum beinhaltet mehrere aufeinanderfolgende Multiplikatoren vor einer Landung auf 40, wodurch Gewinne bis zu 20.000-fach möglich sind.",
+    
+      statsTrackingTitle: "Dream Catcher Live-Statistiken & Ergebnisverfolgung",
+      statsTrackingIntro:
+        "Die Verfolgung von Dream Catcher-Statistiken hilft Ihnen, das Verhalten des Spiels im Laufe der Zeit zu verstehen. Obwohl jede Drehung unabhängig ist, zeigt die Überwachung der Dream Catcher-Ergebnisse, ob das Rad nahe an den erwarteten Wahrscheinlichkeiten läuft.",
+      trackingBullets: [
+        "Aktueller Multiplikatorstatus (aktiv oder nicht)",
+        "Drehungen seit dem letzten Multiplikatortreffer",
+        "Zahlenhäufigkeit über verschiedene Zeiträume",
+        "Heiße und kalte Segmente basierend auf aktuellen Dream Catcher-Echtzeitergebnissen"
+      ],
+      statsTrackingNote:
+        "Viele Spieler nutzen Dream Catcher Live-Statistik-Dashboards, um Muster zu erkennen. Denken Sie jedoch daran: Vergangene Ergebnisse beeinflussen zukünftige Drehungen nicht.",
+    
+      strategiesTitle: "Erwägenswerte Wettstrategien",
+      strategies: [
+        {
+          title: "Verteilen Sie Ihre Einsätze",
+          text:
+            "Das Abdecken mehrerer Segmente erhöht die Trefferfrequenz. Gleichzeitig auf 1, 2 und 5 zu setzen bedeutet, bei etwa 83% der Drehungen zu gewinnen (ohne Multiplikatorsegmente)."
+        },
+        {
+          title: "Auf Hochzahlende Zahlen Abzielen",
+          text:
+            "Die Konzentration auf 10, 20 oder 40 bedeutet weniger Gewinne, aber größere Auszahlungen, wenn sie treffen. Ein erfolgreicher 40er-Einsatz macht viele verlorene Runden wett."
+        },
+        {
+          title: "Niedrige Einsätze, Mehr Drehungen",
+          text:
+            "Das Minimum von €0,10 ermöglicht es Ihnen, kleinere Bankrolls auf Hunderte von Drehungen auszudehnen. Mehr Drehungen bedeuten mehr Chancen, diese Multiplikatorketten zu erwischen."
+        }
+      ],
+    
+      rtpBreakdownTitle: "RTP-Aufschlüsselung nach Wetttyp",
+      rtpBreakdownIntro:
+        "Nicht alle Wetten bieten gleiche theoretische Renditen.",
+      rtpColBet: "Wette",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "Die niedrigeren Zahlen bieten besseren langfristigen Wert, während die 40 mit ihrem reduzierten RTP eine höhere Varianz aufweist.",
+    
+      whyLoveTitle: "Warum Spieler Dream Catcher Lieben",
+      whyLoveBullets: [
+        "Sofortiges Verständnis – Keine komplexen Regeln oder Strategien zu erlernen",
+        "Spielshow-Energie – Professionelle Moderatoren sorgen für anhaltende Unterhaltung",
+        "Multiplikator-Spannung – Jede Drehung könnte eine Kettenreaktion auslösen",
+        "Zugängliche Einsätze – Spielen Sie von €0,10 bis zu €1.000 pro Drehung",
+        "Mobiloptimiert – Volles Erlebnis auf jedem Gerät"
+      ],
+    
+      faqTitle: "Häufig Gestellte Fragen",
+      faq: [
+        {
+          q: "Kann ich während des Spiels Dream Catcher Live-Statistiken sehen?",
+          a: "Ja – die Spieloberfläche zeigt aktuelle Dream Catcher-Ergebnisse und Gewinnzahlen. Drittanbieter-Stat-Tracker bieten tiefere historische Analysen der Dream Catcher-Statistiken über Tausende von Drehungen."
+        },
+        {
+          q: "Was passiert, wenn das Rad mehrfach auf Multiplikatoren landet?",
+          a: "Multiplikatoren stapeln sich. Zwei aufeinanderfolgende 7x-Treffer gefolgt von einer Zahl bedeuten, dass diese Zahl das 49-fache ihres normalen Satzes auszahlt. Ketten sind selten, erzeugen aber die größten Gewinne des Spiels."
+        },
+        {
+          q: "Gibt es eine Möglichkeit, Dream Catcher-Echtzeitergebnisse vorherzusagen?",
+          a: "Nein. Jede Drehung nutzt einen zertifizierten Zufallsmechanismus. Die Verfolgung von Dream Catcher Live-Statistiken kann Ihre Wettmluster informieren, aber keine Ergebnisse vorhersagen."
+        },
+        {
+          q: "Warum hat die 40er-Wette einen niedrigeren RTP als andere Zahlen?",
+          a: "Mit nur einem Segment von 54 erscheint die 40 etwa 1,9% der Zeit. Die 40:1-Auszahlung kompensiert diese Seltenheit nicht vollständig, was zu einem höheren Hausvorteil führt."
+        },
+        {
+          q: "Wie vergleichen sich Dream Catcher-Ergebnisse mit Slot-RTPs?",
+          a: "Dream Catchers optimaler RTP von 96,58% liegt bequem im Standardbereich von Online-Slots (typischerweise 94-97%), was es für ein Live-Spielformat wettbewerbsfähig macht."
+        }
+      ]
+    },
+
+dreamcatcherStatsExtra: {
+  trackedMetaPrefix: "Letzte 30 Minuten",
+  bestWinsTitle: "Top Gewinne pro Dreh",
+  bestWinsText: "Ein schneller Überblick über die höchsten Auszahlungen der zuletzt erfassten Drehungen.",
+  wheelStatsTitle: "Multiplikator-Statistiken des Rades",
+  wheelStatsText: "Sieh, wie oft die Multiplikator-Felder im gleichen Zeitraum gefallen sind.",
+  matchedTitle: "Übereinstimmende Multiplikatoren",
+  matchedText: "Vergleiche Multiplikator-Treffer mit normalen Drehungen im aktuellen Datensatz.",
+  finished: "Abgeschlossen",
+  outcome: "Ergebnis",
+  player: "Spieler",
+  wonAmount: "Gewinnbetrag",
+  multiplier: "Multiplikator",
+  match: "Übereinstimmung",
+  noMatch: "Keine Übereinstimmung"
+},
+    gamePanels: {
+      temperatureSubtitle:
+        "Die Segment-Temperatur zeigt heiße und kalte Ergebnisse in Echtzeit basierend auf aktuellen Spins im Vergleich zur erwarteten Wahrscheinlichkeit.",
+      temperatureSpinsSince: "seit {n} Drehungen",
+    
+      historySubtitle:
+        "Sieh dir die neuesten Spins mit Echtzeit-Ergebnissen, Multiplikatoren, Gewinnern und Auszahlungen an.",
+    
+      rtpBasedOn: "Basierend auf den letzten 1.000 Spins",
+    
+      summaryTotalSpinsToday: "Spins heute",
+      summaryBonusRounds: "Bonusrunden",
+      summaryBiggestMultiplier: "Größter Multiplikator",
+      summaryAvgPayout: "Ø Auszahlung",
+    
+      occurredAt: "Zeitpunkt",
+      slotResult: "Slot-Ergebnis",
+      spinResult: "Spin-Ergebnis",
+      specialResult: "Spezial-Ergebnis",
+      multiplier: "Multiplikator",
+      totalWinners: "Gewinner",
+      totalPayout: "Gesamtauszahlung",
+    
+      watch: "Ansehen"
+    },
     homeSeo: {
       sectionTitle: "Über Unsere Plattform für Live-Casino-Statistiken",
       whoTitle: "Wer Wir Sind",
@@ -1136,6 +1821,10 @@ cashHunt: "Cash Hunt",
       monopoly: {
         title: "Monopoly Live Statistiken 2026 | Offizieller Ergebnis-Tracker",
         description: "Offizielle Monopoly Live Statistiken für 2026. Echtzeit-Ergebnisse, verifizierter Verlauf und Evolution Gaming Daten. Verfolge Resultate und spiele sicher."
+      },
+      dreamcatcher: {
+        title: "Dream Catcher Ergebnisse & Live-Statistiken 2026 - Scores in Echtzeit 🎰",
+        description: "Dream Catcher Ergebnisse heute, Live-Stats und Scores in Echtzeit. Verfolge Verlauf, Gewinn-Statistiken und Trends 2026. Sofort Zugriff auf jeden Spin."
       },
     },
     crazytimeStream: {
@@ -1283,7 +1972,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Statistiken",
       subtitlePrefix: "Verfolge Echtzeit-Ergebnisse, Verlauf und Statistiken für",
-
+      playCta: "Jetzt spielen"
     },
     nav: { home: "Start", liveGames: "Live-Spiele" },
     home: {
@@ -1354,6 +2043,171 @@ cashHunt: "Cash Hunt",
   },
 
   nl: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: Realtime Statistieken, Resultaten & Complete Spelgids",
+      intro:
+        "Dream Catcher is Evolution Gaming's vlaggenschip Money Wheel-spel dat de live casino-entertainment transformeerde toen het in 2017 werd gelanceerd. Deze Wheel of Fortune-achtige ervaring combineert de spanning van een tv-spelshow met echt gokken om geld, allemaal gestreamd in ultra-HD vanuit professionele studio's in Letland.\n\nIn tegenstelling tot traditionele tafelspellen vereist Dream Catcher geen voorafgaande gokkennis. U plaatst gewoon een inzet op een getal, kijkt hoe het wiel draait en int uw winst als het op uw keuze landt. De toevoeging van multiplicatorsegmenten creëert kansen op enorme uitbetalingen tot 20.000 keer uw inzet.",
+      playbtn: "Speel",
+      heroAlt: "Dream Catcher live geldwiel spellogo",
+    
+      quickOverviewTitle: "Snel Speloverzicht",
+      specFeature: "Specificatie",
+      specDetails: "Details",
+      specProvider: "Spelaanbieder",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Uitgifte Jaar",
+      specYearValue: "2017",
+      specType: "Speltype",
+      specTypeValue: "Live Geldwiel",
+      specRtp: "RTP",
+      specRtpValue: "96,58% (optimaal)",
+      specBetRange: "Inzetbereik",
+      specBetRangeValue: "€0,10 – €1.000",
+      specMaxWin: "Maximale Winst",
+      specMaxWinValue: "20.000x inzet",
+      specSegments: "Totale Segmenten",
+      specSegmentsValue: "54",
+      specLocation: "Streaminglocatie",
+      specLocationValue: "Riga, Letland",
+    
+      howWorksTitle: "Hoe Dream Catcher Werkt",
+      howWorksText:
+        "Het spel beschikt over een gigantisch verticaal gemonteerd wiel met 54 gekleurde segmenten. Een live presentator draait het wiel terwijl hij via chat met spelers communiceert, wat voor een authentieke spelshowsfeer zorgt.",
+    
+      wheelDistributionTitle: "Verdeling van Wielsegmenten",
+      wheelColNumber: "Getal",
+      wheelColSegments: "Segmenten",
+      wheelColPayout: "Uitbetaling",
+      wheelColProbability: "Kans",
+      wheelDistributionNote:
+        "De genummerde segmenten betalen precies wat ze tonen – land op 5 en u krijgt 5:1 op uw inzet. Zo eenvoudig is het.",
+      multiplier2xLabel: "2x Multiplicator",
+      multiplier7xLabel: "7x Multiplicator",
+    
+      multiplierTitle: "Multiplicator Mechanismen",
+      multiplierIntro:
+        "De twee multiplicatorsegmenten (zilver 2x en goud 7x) zijn waar het interessant wordt. U kunt er niet direct op inzetten, maar wanneer het wiel op een ervan stopt:",
+      multiplierBullets: [
+        "Alle huidige inzetten blijven actief",
+        "Het wiel draait opnieuw",
+        "Welk getal er hierna ook valt, wordt vermenigvuldigd"
+      ],
+      multiplierNote:
+        "Multiplicatoren kunnen aaneengeschakeld worden. Als het wiel op 7x landt, dan opnieuw op 7x, en vervolgens op 40 – dat is een uitbetaling van 1.960x. Het theoretische maximum behelst meerdere opeenvolgende multiplicatoren vóór landing op 40, waarbij winsten oplopen tot 20.000x.",
+    
+      statsTrackingTitle: "Dream Catcher Live Statistieken & Resultaten Bijhouden",
+      statsTrackingIntro:
+        "Het bijhouden van Dream Catcher-statistieken helpt u het gedrag van het spel in de loop van de tijd te begrijpen. Hoewel elke draai onafhankelijk is, onthult het monitoren van Dream Catcher-resultaten of het wiel dicht bij de verwachte kansen loopt.",
+      trackingBullets: [
+        "Huidige multiplicatorstatus (actief of niet)",
+        "Draaien sinds de laatste multiplicatortreffer",
+        "Getalfrequentie over verschillende tijdsperioden",
+        "Hete en koude segmenten op basis van recente Dream Catcher realtimeresultaten"
+      ],
+      statsTrackingNote:
+        "Veel spelers gebruiken Dream Catcher live statistieken dashboards om patronen te herkennen, maar onthoud: vroegere resultaten beïnvloeden toekomstige draaien niet.",
+    
+      strategiesTitle: "Inzetstrategieën om te Overwegen",
+      strategies: [
+        {
+          title: "Spreid Uw Inzetten",
+          text:
+            "Het dekken van meerdere segmenten verhoogt de treffrequentie. Gelijktijdig inzetten op 1, 2 en 5 betekent dat u bij ongeveer 83% van de draaien wint (exclusief multiplicatorsegmenten)."
+        },
+        {
+          title: "Richt op Hoog Uitbetalende Getallen",
+          text:
+            "Concentreren op 10, 20 of 40 betekent minder winsten maar grotere uitbetalingen wanneer ze vallen. Eén succesvolle inzet op 40 compenseert vele verliesronden."
+        },
+        {
+          title: "Lage Inzetten, Meer Draaien",
+          text:
+            "Het minimum van €0,10 stelt u in staat kleinere bankrolls over honderden draaien te verspreiden. Meer draaien betekent meer kansen om die multiplicatorkettingen te vangen."
+        }
+      ],
+    
+      rtpBreakdownTitle: "RTP Uitsplitsing per Inzettype",
+      rtpBreakdownIntro:
+        "Niet alle inzetten dragen gelijke theoretische rendementen.",
+      rtpColBet: "Inzet",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "De lagere getallen bieden betere langetermijnwaarde, terwijl 40 een hogere variantie kent met zijn verminderde RTP.",
+    
+      whyLoveTitle: "Waarom Spelers Dream Catcher Geweldig Vinden",
+      whyLoveBullets: [
+        "Direct begrip – Geen complexe regels of strategieën om te leren",
+        "Spelshow-energie – Professionele presentatoren houden het entertainment gaande",
+        "Multiplicator-spanning – Elke draai kan een kettingreactie veroorzaken",
+        "Toegankelijke inzetten – Speel van €0,10 tot €1.000 per draai",
+        "Mobielvriendelijk – Volledige ervaring op elk apparaat"
+      ],
+    
+      faqTitle: "Veelgestelde Vragen",
+      faq: [
+        {
+          q: "Kan ik Dream Catcher live statistieken zien tijdens het spelen?",
+          a: "Ja – de spelinterface toont recente Dream Catcher-resultaten en winnende getallen. Statistiekentrackers van derden bieden diepgaandere historische analyse van Dream Catcher-statistieken over duizenden draaien."
+        },
+        {
+          q: "Wat gebeurt er als het wiel herhaaldelijk op multiplicatoren landt?",
+          a: "Multiplicatoren stapelen zich op. Twee opeenvolgende treffers van 7x gevolgd door een getal betekenen dat dit getal 49x zijn normale tarief uitbetaalt. Kettingen zijn zeldzaam maar creëren de grootste winsten van het spel."
+        },
+        {
+          q: "Is er een manier om Dream Catcher realtimeresultaten te voorspellen?",
+          a: "Nee. Elke draai maakt gebruik van een gecertificeerd willekeurig mechanisme. Het bijhouden van Dream Catcher live statistieken kan uw inzetpatronen informeren, maar kan uitkomsten niet voorspellen."
+        },
+        {
+          q: "Waarom heeft de inzet op 40 een lagere RTP dan andere getallen?",
+          a: "Met slechts één segment van 54 verschijnt de 40 ongeveer 1,9% van de tijd. De uitbetaling van 40:1 compenseert deze zeldzaamheid niet volledig, wat resulteert in een hoger huisvoordeel."
+        },
+        {
+          q: "Hoe vergelijken Dream Catcher-resultaten zich met slot-RTP's?",
+          a: "Dream Catchers optimale RTP van 96,58% ligt comfortabel binnen het standaard online slot-gebied (doorgaans 94-97%), waardoor het competitief is voor een live spelformaat."
+        }
+      ]
+    },
+dreamcatcherStatsExtra: {
+  trackedMetaPrefix: "Laatste 30 minuten",
+  bestWinsTitle: "Beste winsten per spin",
+  bestWinsText: "Een snel overzicht van de hoogste uitbetalingen van de recent bijgehouden spins.",
+  wheelStatsTitle: "Wiel multiplier statistieken",
+  wheelStatsText: "Bekijk hoe vaak multiplier-segmenten vielen in dezelfde periode.",
+  matchedTitle: "Overeenkomende multipliers",
+  matchedText: "Vergelijk multiplier-hits met normale spins in de huidige dataset.",
+  finished: "Voltooid",
+  outcome: "Resultaat",
+  player: "Speler",
+  wonAmount: "Gewonnen bedrag",
+  multiplier: "Multiplier",
+  match: "Overeenkomst",
+  noMatch: "Geen overeenkomst"
+},
+    gamePanels: {
+      temperatureSubtitle:
+        "Segmenttemperatuur toont hot en cold resultaten in realtime op basis van recente spins versus de verwachte kans.",
+      temperatureSpinsSince: "{n} spins geleden",
+    
+      historySubtitle:
+        "Bekijk de nieuwste spin history met realtime resultaten, multipliers, winnaars en uitbetalingen.",
+    
+      rtpBasedOn: "Gebaseerd op de laatste 1.000 spins",
+    
+      summaryTotalSpinsToday: "Totaal spins vandaag",
+      summaryBonusRounds: "Bonus rondes",
+      summaryBiggestMultiplier: "Grootste multiplier",
+      summaryAvgPayout: "Gem. uitbetaling",
+    
+      occurredAt: "Tijdstip",
+      slotResult: "Slot resultaat",
+      spinResult: "Spin resultaat",
+      specialResult: "Special result",
+      multiplier: "Multiplier",
+      totalWinners: "Winnaars",
+      totalPayout: "Totale payout",
+    
+      watch: "Kijken"
+    },
     homeSeo: {
       sectionTitle: "Over Ons Platform voor Live Casino Statistieken",
       whoTitle: "Wie Wij Zijn",
@@ -1472,6 +2326,10 @@ cashHunt: "Cash Hunt",
       monopoly: {
         title: "Monopoly Live Statistieken 2026 | Officiële Resultaten Tracker",
         description: "Officiële Monopoly Live statistieken voor 2026. Realtime resultaten, geverifieerde historie en Evolution Gaming data. Volg resultaten en speel veilig."
+      },
+      dreamcatcher: {
+        title: "Dream Catcher Resultaten & Live Statistieken 2026 - Scores in Realtime 🎰",
+        description: "Dream Catcher resultaten vandaag, live stats en scores in realtime. Volg geschiedenis, winnende statistieken en trends voor 2026. Direct elke spin zien."
       },
     },
     crazytimeStream: {
@@ -1619,7 +2477,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Statistieken",
       subtitlePrefix: "Volg realtime resultaten, geschiedenis en statistieken van",
-
+      playCta: "Speel nu"
     },
     nav: { home: "Home", liveGames: "Live spellen" },
     home: {
@@ -1689,6 +2547,171 @@ cashHunt: "Cash Hunt",
   },
 
   fr: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live : Statistiques en Temps Réel, Résultats & Guide Complet du Jeu",
+      intro:
+        "Dream Catcher est le jeu Money Wheel phare d'Evolution Gaming qui a transformé le divertissement des casinos en direct lors de son lancement en 2017. Cette expérience à la Roue de la Fortune combine l'excitation d'un jeu télévisé avec les jeux d'argent réels, le tout diffusé en ultra-HD depuis des studios professionnels en Lettonie.\n\nContrairement aux jeux de table traditionnels, Dream Catcher ne nécessite aucune connaissance préalable du jeu. Il vous suffit de parier sur un numéro, de regarder la roue tourner et de collecter vos gains si elle s'arrête sur votre choix. L'ajout de segments multiplicateurs crée des opportunités de gains massifs allant jusqu'à 20 000 fois votre mise.",
+      playbtn: "Jouer",
+      heroAlt: "Logo du jeu de roue à argent live Dream Catcher",
+    
+      quickOverviewTitle: "Aperçu Rapide du Jeu",
+      specFeature: "Spécification",
+      specDetails: "Détails",
+      specProvider: "Fournisseur de Jeu",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Année de Sortie",
+      specYearValue: "2017",
+      specType: "Type de Jeu",
+      specTypeValue: "Roue à Argent en Direct",
+      specRtp: "RTP",
+      specRtpValue: "96,58 % (optimal)",
+      specBetRange: "Plage de Mise",
+      specBetRangeValue: "€0,10 – €1 000",
+      specMaxWin: "Gain Maximum",
+      specMaxWinValue: "20 000x la mise",
+      specSegments: "Segments Totaux",
+      specSegmentsValue: "54",
+      specLocation: "Lieu de Diffusion",
+      specLocationValue: "Riga, Lettonie",
+    
+      howWorksTitle: "Comment Fonctionne Dream Catcher",
+      howWorksText:
+        "Le jeu présente une immense roue montée verticalement avec 54 segments colorés. Un animateur en direct fait tourner la roue tout en interagissant avec les joueurs via le chat, créant cette authentique atmosphère de jeu télévisé.",
+    
+      wheelDistributionTitle: "Répartition des Segments de la Roue",
+      wheelColNumber: "Numéro",
+      wheelColSegments: "Segments",
+      wheelColPayout: "Paiement",
+      wheelColProbability: "Probabilité",
+      wheelDistributionNote:
+        "Les segments numérotés paient exactement ce qu'ils indiquent – tombez sur 5 et vous obtenez 5:1 sur votre mise. C'est aussi simple que ça.",
+      multiplier2xLabel: "Multiplicateur 2x",
+      multiplier7xLabel: "Multiplicateur 7x",
+    
+      multiplierTitle: "Mécaniques des Multiplicateurs",
+      multiplierIntro:
+        "Les deux segments multiplicateurs (argent 2x et or 7x) sont là où les choses deviennent intéressantes. Vous ne pouvez pas parier dessus directement, mais lorsque la roue s'arrête sur l'un d'eux :",
+      multiplierBullets: [
+        "Toutes les mises actuelles restent actives",
+        "La roue tourne à nouveau",
+        "Quel que soit le numéro qui sort ensuite, il est multiplié"
+      ],
+      multiplierNote:
+        "Les multiplicateurs peuvent se chaîner. Si la roue atterrit sur 7x, puis encore sur 7x, et enfin sur 40 – c'est un gain de 1 960x. Le maximum théorique implique plusieurs multiplicateurs consécutifs avant d'atterrir sur 40, portant les gains jusqu'à 20 000x.",
+    
+      statsTrackingTitle: "Statistiques Live & Suivi des Résultats de Dream Catcher",
+      statsTrackingIntro:
+        "Suivre les statistiques de Dream Catcher vous aide à comprendre le comportement du jeu dans le temps. Bien que chaque tour soit indépendant, surveiller les résultats de Dream Catcher révèle si la roue tourne près des probabilités attendues.",
+      trackingBullets: [
+        "Statut actuel du multiplicateur (actif ou non)",
+        "Tours depuis le dernier déclenchement d'un multiplicateur",
+        "Fréquence des numéros sur différentes périodes",
+        "Segments chauds et froids basés sur les résultats récents en temps réel de Dream Catcher"
+      ],
+      statsTrackingNote:
+        "De nombreux joueurs utilisent des tableaux de bord de statistiques live de Dream Catcher pour repérer des tendances, mais rappelez-vous : les résultats passés n'influencent pas les tours futurs.",
+    
+      strategiesTitle: "Stratégies de Paris à Considérer",
+      strategies: [
+        {
+          title: "Répartissez Vos Mises",
+          text:
+            "Couvrir plusieurs segments augmente la fréquence des gains. Parier simultanément sur 1, 2 et 5 signifie gagner sur environ 83 % des tours (en excluant les segments multiplicateurs)."
+        },
+        {
+          title: "Ciblez les Numéros à Fort Gain",
+          text:
+            "Se concentrer sur 10, 20 ou 40 signifie moins de gains mais des paiements plus importants lorsqu'ils sortent. Un pari gagnant sur 40 compense de nombreux tours perdants."
+        },
+        {
+          title: "Petites Mises, Plus de Tours",
+          text:
+            "Le minimum de €0,10 vous permet d'étirer de petites bankrolls sur des centaines de tours. Plus de tours signifie plus de chances d'attraper ces chaînes de multiplicateurs."
+        }
+      ],
+    
+      rtpBreakdownTitle: "Détail du RTP par Type de Pari",
+      rtpBreakdownIntro:
+        "Tous les paris ne comportent pas les mêmes retours théoriques.",
+      rtpColBet: "Pari",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "Les numéros plus bas offrent une meilleure valeur à long terme, tandis que le 40 présente une variance plus élevée avec son RTP réduit.",
+    
+      whyLoveTitle: "Pourquoi les Joueurs Adorent Dream Catcher",
+      whyLoveBullets: [
+        "Compréhension instantanée – Aucune règle complexe ni stratégie à apprendre",
+        "Énergie de jeu télévisé – Les animateurs professionnels maintiennent l'ambiance",
+        "Excitation des multiplicateurs – Chaque tour pourrait déclencher une réaction en chaîne",
+        "Mises accessibles – Jouez de €0,10 à €1 000 par tour",
+        "Optimisé pour mobile – Expérience complète sur n'importe quel appareil"
+      ],
+    
+      faqTitle: "Questions Fréquemment Posées",
+      faq: [
+        {
+          q: "Puis-je voir les statistiques live de Dream Catcher pendant le jeu ?",
+          a: "Oui – l'interface de jeu affiche les résultats récents de Dream Catcher et les numéros gagnants. Les trackers de statistiques tiers offrent une analyse historique plus approfondie des statistiques de Dream Catcher sur des milliers de tours."
+        },
+        {
+          q: "Que se passe-t-il si la roue atterrit plusieurs fois sur des multiplicateurs ?",
+          a: "Les multiplicateurs s'accumulent. Deux déclenchements consécutifs de 7x suivis d'un numéro signifient que ce numéro paie 49 fois son taux normal. Les chaînes sont rares mais génèrent les plus grands gains du jeu."
+        },
+        {
+          q: "Existe-t-il un moyen de prédire les résultats en temps réel de Dream Catcher ?",
+          a: "Non. Chaque tour utilise un mécanisme aléatoire certifié. Suivre les statistiques live de Dream Catcher peut informer vos habitudes de paris, mais ne peut pas prédire les résultats."
+        },
+        {
+          q: "Pourquoi le pari sur 40 a-t-il un RTP inférieur aux autres numéros ?",
+          a: "Avec un seul segment sur 54, le 40 apparaît environ 1,9 % du temps. Le paiement de 40:1 ne compense pas entièrement cette rareté, ce qui entraîne un avantage de la maison plus élevé."
+        },
+        {
+          q: "Comment les résultats de Dream Catcher se comparent-ils aux RTP des machines à sous ?",
+          a: "Le RTP optimal de 96,58 % de Dream Catcher se situe confortablement dans la plage standard des machines à sous en ligne (généralement 94-97 %), ce qui le rend compétitif pour un format de jeu en direct."
+        }
+      ]
+    },
+dreamcatcherStatsExtra: {
+  trackedMetaPrefix: "30 dernières minutes",
+  bestWinsTitle: "Meilleurs gains par tour",
+  bestWinsText: "Un aperçu rapide des plus gros gains des derniers tours suivis.",
+  wheelStatsTitle: "Statistiques des multiplicateurs de la roue",
+  wheelStatsText: "Découvrez à quelle fréquence les segments multiplicateurs sont sortis sur la même période.",
+  matchedTitle: "Multiplicateurs correspondants",
+  matchedText: "Comparez les apparitions des multiplicateurs avec les tours classiques dans l’échantillon actuel.",
+  finished: "Terminé",
+  outcome: "Résultat",
+  player: "Joueur",
+  wonAmount: "Montant gagné",
+  multiplier: "Multiplicateur",
+  match: "Correspondance",
+  noMatch: "Aucune correspondance"
+},
+    gamePanels: {
+      temperatureSubtitle:
+        "La température des segments met en évidence les résultats chauds et froids en temps réel selon les derniers spins par rapport à la probabilité attendue.",
+      temperatureSpinsSince: "il y a {n} spins",
+    
+      historySubtitle:
+        "Consultez l’historique récent avec résultats en temps réel, multiplicateurs, gagnants et paiements.",
+    
+      rtpBasedOn: "Basé sur les 1 000 derniers spins",
+    
+      summaryTotalSpinsToday: "Spins totaux aujourd’hui",
+      summaryBonusRounds: "Tours bonus",
+      summaryBiggestMultiplier: "Plus gros multiplicateur",
+      summaryAvgPayout: "Paiement moyen",
+    
+      occurredAt: "Date/heure",
+      slotResult: "Résultat slot",
+      spinResult: "Résultat du spin",
+      specialResult: "Résultat spécial",
+      multiplier: "Multiplicateur",
+      totalWinners: "Gagnants",
+      totalPayout: "Paiement total",
+    
+      watch: "Voir"
+    },
     homeSeo: {
       sectionTitle: "À Propos de Notre Plateforme de Statistiques de Casino en Direct",
       whoTitle: "Qui Nous Sommes",
@@ -1806,6 +2829,10 @@ cashHunt: "Cash Hunt",
       monopoly: {
         title: "Monopoly Live Statistiques 2026 | Suivi Officiel des Résultats",
         description: "Statistiques officielles Monopoly Live pour 2026. Résultats en temps réel, historique vérifié et données Evolution Gaming. Suivez les résultats et jouez prudemment."
+      },
+      dreamcatcher: {
+        title: "Dream Catcher Résultats & Stats en Direct 2026 - Scores en Temps Réel 🎰",
+        description: "Dream Catcher résultats du jour, stats live et scores en temps réel. Suivez l’historique, les stats gagnantes et les tendances 2026. Accès instantané à chaque spin."
       },
     },
     crazytimeStream: {
@@ -1953,7 +2980,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Statistiques",
       subtitlePrefix: "Suivez les résultats, l’historique et les statistiques en temps réel de",
-
+      playCta: "Jouer maintenant"
     },
     nav: { home: "Accueil", liveGames: "Jeux en direct" },
     home: {
@@ -2023,6 +3050,171 @@ cashHunt: "Cash Hunt",
   },
 
   pt: {
+    dreamcatcherReview: {
+      title: "Dream Catcher Live: Estatísticas em Tempo Real, Resultados & Guia Completo do Jogo",
+      intro:
+        "Dream Catcher é o principal jogo Money Wheel da Evolution Gaming que transformou o entretenimento de cassino ao vivo desde seu lançamento em 2017. Esta experiência de roda da fortuna combina a emoção de um programa de TV com apostas reais, tudo transmitido em ultra-HD a partir de estúdios profissionais na Letônia.\n\nAo contrário dos jogos de mesa tradicionais, Dream Catcher não exige conhecimento prévio. Basta apostar em um número, assistir a roda girar e coletar seus ganhos se ela parar na sua escolha. A adição de segmentos multiplicadores cria oportunidades de ganhos massivos de até 20.000x a sua aposta.",
+      playbtn: "Jogar",
+      heroAlt: "Logo do jogo ao vivo Dream Catcher Money Wheel",
+    
+      quickOverviewTitle: "Visão Geral Rápida do Jogo",
+      specFeature: "Especificação",
+      specDetails: "Detalhes",
+      specProvider: "Provedor do Jogo",
+      specProviderValue: "Evolution Gaming",
+      specYear: "Ano de Lançamento",
+      specYearValue: "2017",
+      specType: "Tipo de Jogo",
+      specTypeValue: "Roda de Dinheiro ao Vivo",
+      specRtp: "RTP",
+      specRtpValue: "96,58% (ótimo)",
+      specBetRange: "Faixa de Aposta",
+      specBetRangeValue: "€0,10 – €1.000",
+      specMaxWin: "Ganho Máximo",
+      specMaxWinValue: "até 20.000x",
+      specSegments: "Total de Segmentos",
+      specSegmentsValue: "54",
+      specLocation: "Local de Transmissão",
+      specLocationValue: "Riga, Letônia",
+    
+      howWorksTitle: "Como Funciona o Dream Catcher",
+      howWorksText:
+        "O jogo apresenta uma grande roda vertical com 54 segmentos coloridos. Um apresentador ao vivo gira a roda enquanto interage com os jogadores via chat, criando uma autêntica atmosfera de programa de TV.",
+    
+      wheelDistributionTitle: "Distribuição dos Segmentos da Roda",
+      wheelColNumber: "Número",
+      wheelColSegments: "Segmentos",
+      wheelColPayout: "Pagamento",
+      wheelColProbability: "Probabilidade",
+      wheelDistributionNote:
+        "Os números pagam exatamente o que mostram — acerte o 5 e você recebe 5:1 sobre a aposta. Simples assim.",
+      multiplier2xLabel: "Multiplicador 2x",
+      multiplier7xLabel: "Multiplicador 7x",
+    
+      multiplierTitle: "Mecânica dos Multiplicadores",
+      multiplierIntro:
+        "Os dois segmentos multiplicadores (prata 2x e ouro 7x) são onde a ação fica interessante. Você não pode apostar neles diretamente, mas quando a roda para em um deles:",
+      multiplierBullets: [
+        "Todas as apostas permanecem ativas",
+        "A roda gira novamente",
+        "O número sorteado depois é multiplicado"
+      ],
+      multiplierNote:
+        "Os multiplicadores podem se acumular. Se cair 7x, depois 7x novamente e então 40 — isso resulta em um ganho de 1.960x. O máximo teórico pode chegar a 20.000x.",
+    
+      statsTrackingTitle: "Estatísticas ao Vivo & Resultados do Dream Catcher",
+      statsTrackingIntro:
+        "Acompanhar estatísticas do Dream Catcher ajuda a entender o comportamento do jogo ao longo do tempo. Embora cada rodada seja independente, os resultados mostram se a roda está próxima das probabilidades esperadas.",
+      trackingBullets: [
+        "Status atual do multiplicador",
+        "Rodadas desde o último multiplicador",
+        "Frequência dos números",
+        "Segmentos quentes e frios em tempo real"
+      ],
+      statsTrackingNote:
+        "Muitos jogadores usam trackers de estatísticas, mas lembre-se: resultados passados não influenciam o futuro.",
+    
+      strategiesTitle: "Estratégias de Aposta",
+      strategies: [
+        {
+          title: "Distribuir Apostas",
+          text:
+            "Cobrir vários segmentos aumenta a frequência de ganhos. Apostar em 1, 2 e 5 cobre cerca de 83% das rodadas."
+        },
+        {
+          title: "Focar em Altos Pagamentos",
+          text:
+            "Apostar em 10, 20 ou 40 traz menos vitórias, mas maiores ganhos."
+        },
+        {
+          title: "Apostas Pequenas",
+          text:
+            "Apostar valores baixos permite jogar mais rodadas e capturar multiplicadores."
+        }
+      ],
+    
+      rtpBreakdownTitle: "RTP por Tipo de Aposta",
+      rtpBreakdownIntro:
+        "Nem todas as apostas têm o mesmo retorno teórico.",
+      rtpColBet: "Aposta",
+      rtpColRtp: "RTP",
+      rtpBreakdownNote:
+        "Números baixos têm melhor valor, enquanto 40 tem maior risco.",
+    
+      whyLoveTitle: "Por Que os Jogadores Gostam",
+      whyLoveBullets: [
+        "Fácil de entender",
+        "Atmosfera de programa ao vivo",
+        "Multiplicadores emocionantes",
+        "Apostas acessíveis",
+        "Totalmente otimizado para mobile"
+      ],
+    
+      faqTitle: "Perguntas Frequentes",
+      faq: [
+        {
+          q: "Posso ver estatísticas ao vivo?",
+          a: "Sim, o jogo mostra resultados recentes e históricos."
+        },
+        {
+          q: "Multiplicadores acumulam?",
+          a: "Sim, podem multiplicar várias vezes seguidas."
+        },
+        {
+          q: "Posso prever resultados?",
+          a: "Não, cada rodada é aleatória."
+        },
+        {
+          q: "Por que o 40 tem RTP menor?",
+          a: "Porque aparece raramente (1 em 54)."
+        },
+        {
+          q: "Comparação com slots?",
+          a: "RTP de 96,58% é competitivo."
+        }
+      ]
+    },
+dreamcatcherStatsExtra: {
+  trackedMetaPrefix: "Últimos 30 minutos",
+  bestWinsTitle: "Maiores ganhos por rodada",
+  bestWinsText: "Uma visão rápida dos maiores pagamentos das rodadas mais recentes monitoradas.",
+  wheelStatsTitle: "Estatísticas dos multiplicadores da roda",
+  wheelStatsText: "Veja com que frequência os segmentos multiplicadores apareceram no mesmo período.",
+  matchedTitle: "Multiplicadores correspondentes",
+  matchedText: "Compare os acertos de multiplicadores com rodadas normais na amostra atual.",
+  finished: "Finalizado",
+  outcome: "Resultado",
+  player: "Jogador",
+  wonAmount: "Valor ganho",
+  multiplier: "Multiplicador",
+  match: "Correspondência",
+  noMatch: "Sem correspondência"
+},
+    gamePanels: {
+      temperatureSubtitle:
+        "A temperatura dos segmentos destaca resultados quentes e frios em tempo real com base nos giros recentes versus a probabilidade esperada.",
+      temperatureSpinsSince: "há {n} giros",
+    
+      historySubtitle:
+        "Veja o histórico mais recente com resultados em tempo real, multiplicadores, vencedores e pagamentos.",
+    
+      rtpBasedOn: "Baseado nos últimos 1.000 giros",
+    
+      summaryTotalSpinsToday: "Total de giros hoje",
+      summaryBonusRounds: "Rodadas bônus",
+      summaryBiggestMultiplier: "Maior multiplicador",
+      summaryAvgPayout: "Pagamento méd.",
+    
+      occurredAt: "Ocorrido em",
+      slotResult: "Resultado do slot",
+      spinResult: "Resultado do giro",
+      specialResult: "Resultado especial",
+      multiplier: "Multiplicador",
+      totalWinners: "Vencedores",
+      totalPayout: "Pagamento total",
+    
+      watch: "Assistir"
+    },
     homeSeo: {
       sectionTitle: "Sobre Nossa Plataforma de Estatísticas de Cassino ao Vivo",
       whoTitle: "Quem Somos",
@@ -2141,6 +3333,10 @@ cashHunt: "Cash Hunt",
         title: "Monopoly Live Estatísticas 2026 | Rastreador Oficial de Resultados",
         description: "Estatísticas oficiais do Monopoly Live para 2026. Resultados em tempo real, histórico verificado e dados da Evolution Gaming. Acompanhe resultados e jogue com segurança."
       },
+      dreamcatcher: {
+        title: "Dream Catcher Resultados & Estatísticas ao Vivo 2026 - Scores em Tempo Real🎰",
+        description: "Dream Catcher resultados de hoje, estatísticas ao vivo e placares em tempo real. Acompanhe histórico, estatísticas vencedoras e tendências 2026. Veja cada giro."
+      }
     },
     crazytimeStream: {
       title: "Transmissão ao Vivo de Crazy Time",
@@ -2287,6 +3483,7 @@ cashHunt: "Cash Hunt",
     gamePage: {
       statisticsTitleSuffix: "Estatísticas",
       subtitlePrefix: "Acompanhe resultados, histórico e estatísticas em tempo real de",
+      playCta: "Jogar agora"
     },
     nav: { home: "Início", liveGames: "Jogos ao vivo" },
     home: {
@@ -2356,338 +3553,516 @@ cashHunt: "Cash Hunt",
   },
 
   ar: {
+    dreamcatcherReview: {
+    title: "Dream Catcher Live: إحصائيات مباشرة ونتائج ودليل كامل للعبة",
+    intro:
+    "تُعد لعبة Dream Catcher من أشهر ألعاب عجلة المال من Evolution Gaming، وقد غيّرت تجربة الكازينوهات المباشرة منذ إطلاقها في عام 2017. تجمع هذه اللعبة بين أجواء البرامج التلفزيونية والإثارة الحقيقية للمراهنات، مع بث مباشر بجودة عالية من استوديوهات احترافية في لاتفيا.\n\nعلى عكس ألعاب الطاولة التقليدية، لا تتطلب Dream Catcher أي خبرة مسبقة. كل ما عليك هو اختيار رقم، مشاهدة العجلة وهي تدور، والحصول على أرباحك إذا توقفت على اختيارك. تضيف قطاعات المضاعفات فرصًا لتحقيق مدفوعات ضخمة تصل إلى 20,000 ضعف رهانك.",
+    playbtn: "العب الآن",
+    heroAlt: "شعار لعبة Dream Catcher المباشرة لعجلة المال",
+    
+    quickOverviewTitle: "نظرة سريعة على اللعبة",
+    specFeature: "المواصفة",
+    specDetails: "التفاصيل",
+    specProvider: "مزود اللعبة",
+    specProviderValue: "Evolution Gaming",
+    specYear: "سنة الإصدار",
+    specYearValue: "2017",
+    specType: "نوع اللعبة",
+    specTypeValue: "عجلة مال مباشرة",
+    specRtp: "RTP",
+    specRtpValue: "96.58% (الأمثل)",
+    specBetRange: "نطاق الرهان",
+    specBetRangeValue: "€0.10 – €1,000",
+    specMaxWin: "أقصى ربح",
+    specMaxWinValue: "20,000x من الرهان",
+    specSegments: "إجمالي القطاعات",
+    specSegmentsValue: "54",
+    specLocation: "موقع البث",
+    specLocationValue: "ريغا، لاتفيا",
+    
+    howWorksTitle: "كيف تعمل لعبة Dream Catcher",
+    howWorksText:
+    "تحتوي اللعبة على عجلة ضخمة مثبتة عموديًا بها 54 قطاعًا ملونًا. يقوم مقدم مباشر بتدوير العجلة والتفاعل مع اللاعبين عبر الدردشة، مما يخلق أجواءً أصيلة تشبه البرامج التلفزيونية.",
+    
+    wheelDistributionTitle: "توزيع قطاعات العجلة",
+    wheelColNumber: "الرقم",
+    wheelColSegments: "القطاعات",
+    wheelColPayout: "الدفع",
+    wheelColProbability: "الاحتمال",
+    wheelDistributionNote:
+    "تدفع القطاعات المرقّمة بالضبط ما تعرضه — إذا توقفت العجلة على 5 فستحصل على 5:1 من رهانك. بهذه البساطة.",
+    multiplier2xLabel: "مضاعف 2x",
+    multiplier7xLabel: "مضاعف 7x",
+    
+    multiplierTitle: "آلية المضاعفات",
+    multiplierIntro:
+    "قطاعا المضاعف (الفضي 2x والذهبي 7x) هما ما يُضفيان الإثارة الحقيقية. لا يمكنك المراهنة عليهما مباشرةً، ولكن حين تتوقف العجلة على أحدهما:",
+    multiplierBullets: [
+    "تبقى جميع الرهانات الحالية نشطة",
+    "تدور العجلة مرة أخرى",
+    "يُضاعَف الرقم التالي الذي تظهره العجلة"
+    ],
+    multiplierNote:
+    "يمكن أن تتسلسل المضاعفات. إذا توقفت العجلة على 7x ثم 7x مرة أخرى ثم أخيرًا على 40 — فهذا يعني ربحًا بمقدار 1,960x. يتضمن الحد النظري الأقصى عدة مضاعفات متتالية قبل الوصول إلى 40، مما يرفع الأرباح إلى 20,000x.",
+    
+    statsTrackingTitle: "إحصائيات Dream Catcher المباشرة ومتابعة النتائج",
+    statsTrackingIntro:
+    "تساعدك متابعة إحصائيات Dream Catcher على فهم سلوك اللعبة بمرور الوقت. وعلى الرغم من أن كل لفة مستقلة، فإن رصد نتائج Dream Catcher يكشف ما إذا كانت العجلة تسير قريبًا من الاحتمالات المتوقعة.",
+    trackingBullets: [
+    "حالة المضاعف الحالية (نشط أم لا)",
+    "عدد اللفات منذ آخر مضاعف",
+    "تكرار الأرقام عبر فترات زمنية مختلفة",
+    "القطاعات الساخنة والباردة بناءً على نتائج Dream Catcher الفورية الأخيرة"
+    ],
+    statsTrackingNote:
+    "يستخدم كثير من اللاعبين لوحات إحصائيات Dream Catcher المباشرة لرصد الأنماط، غير أن النتائج السابقة لا تؤثر على اللفات المستقبلية.",
+    
+    strategiesTitle: "استراتيجيات مراهنة تستحق الاهتمام",
+    strategies: [
+    {
+    title: "توزيع رهاناتك",
+    text:
+    "تغطية قطاعات متعددة يرفع معدل الفوز. المراهنة على 1 و2 و5 في آنٍ واحد تعني الفوز في نحو 83% من اللفات (باستثناء قطاعات المضاعفات)."
+    },
+    {
+    title: "استهداف الأرقام ذات الدفع العالي",
+    text:
+    "التركيز على 10 أو 20 أو 40 يعني فوزًا أقل تكرارًا لكن أرباحًا أكبر عند حدوثه. فوز واحد على الرقم 40 يعوّض جولات الخسارة الكثيرة."
+    },
+    {
+    title: "رهانات صغيرة ولفات أكثر",
+    text:
+    "الحد الأدنى €0.10 يتيح لك مد رأس مال صغير عبر مئات اللفات. كلما زادت اللفات، زادت فرصك في اصطياد تسلسلات المضاعفات."
+    }
+    ],
+    
+    rtpBreakdownTitle: "تفصيل RTP حسب نوع الرهان",
+    rtpBreakdownIntro:
+    "ليست جميع الرهانات متكافئة من حيث العائد النظري.",
+    rtpColBet: "الرهان",
+    rtpColRtp: "RTP",
+    rtpBreakdownNote:
+    "الأرقام الصغيرة توفر قيمة أفضل على المدى البعيد، بينما يحمل الرقم 40 تذبذبًا أعلى مع انخفاض في نسبة RTP.",
+    
+    whyLoveTitle: "لماذا يعشق اللاعبون Dream Catcher",
+    whyLoveBullets: [
+    "سهولة الفهم الفورية – لا قواعد معقدة ولا استراتيجيات يلزم تعلّمها",
+    "أجواء البرنامج التلفزيوني – مقدمون محترفون يبقون الترفيه متواصلًا",
+    "إثارة المضاعفات – كل لفة قد تطلق سلسلة من الأرباح المتضاعفة",
+    "رهانات في متناول الجميع – من €0.10 حتى €1,000 لكل لفة",
+    "مُحسَّنة للجوال – تجربة كاملة على أي جهاز"
+    ],
+    
+    faqTitle: "الأسئلة الشائعة",
+    faq: [
+    {
+    q: "هل يمكنني رؤية إحصائيات Dream Catcher المباشرة أثناء اللعب؟",
+    a: "نعم — تعرض واجهة اللعبة نتائج Dream Catcher الأخيرة والأرقام الفائزة. كما تتيح أدوات تتبع الإحصائيات من أطراف ثالثة تحليلًا تاريخيًا أعمق لإحصائيات Dream Catcher عبر آلاف اللفات."
+    },
+    {
+    q: "ماذا يحدث إذا توقفت العجلة على المضاعفات مرات متكررة؟",
+    a: "تتراكم المضاعفات. ضربتا 7x متتاليتان تليهما رقم تعني أن ذلك الرقم يدفع 49x معدله الطبيعي. التسلسلات نادرة لكنها تُنتج أضخم أرباح اللعبة."
+    },
+    {
+    q: "هل يمكن التنبؤ بنتائج Dream Catcher الفورية؟",
+    a: "لا. تستخدم كل لفة آلية عشوائية معتمدة. متابعة إحصائيات Dream Catcher المباشرة قد تساعدك في إدارة رهاناتك، لكنها لا تستطيع التنبؤ بالنتائج."
+    },
+    {
+    q: "لماذا يمتلك الرهان على 40 نسبة RTP أقل من الأرقام الأخرى؟",
+    a: "بوجود قطاع واحد فقط من أصل 54، يظهر الرقم 40 بنسبة 1.9% تقريبًا من الوقت. لا يعوّض الدفع بنسبة 40:1 هذه الندرة بالكامل، مما ينتج عنه هامش ربح أعلى للمنزل."
+    },
+    {
+    q: "كيف تُقارَن نتائج Dream Catcher بنسب RTP في السلوت؟",
+    a: "تقع نسبة RTP الأمثل البالغة 96.58% لـ Dream Catcher بشكل مريح ضمن النطاق المعياري للسلوت الإلكترونية (94-97% عادةً)، مما يجعلها تنافسية لصيغة لعبة مباشرة."
+    }
+    ]
+    },
+    dreamcatcherStatsExtra: {
+    trackedMetaPrefix: "آخر 30 دقيقة",
+    bestWinsTitle: "أفضل الأرباح لكل لفة",
+    bestWinsText: "نظرة سريعة على أعلى المدفوعات من أحدث اللفات التي تم تتبعها.",
+    wheelStatsTitle: "إحصائيات مضاعفات العجلة",
+    wheelStatsText: "اكتشف مدى تكرار ظهور قطاعات المضاعف خلال نفس الفترة المرصودة.",
+    matchedTitle: "تطابق مضاعفات العجلة",
+    matchedText: "قارن بين ظهور المضاعفات واللفات العادية في العينة الحالية.",
+    finished: "مكتمل",
+    outcome: "النتيجة",
+    player: "اللاعب",
+    wonAmount: "المبلغ المربوح",
+    multiplier: "المضاعف",
+    match: "مطابقة",
+    noMatch: "بدون مطابقة"
+    },
+    gamePanels: {
+    temperatureSubtitle:
+    "تعرض حرارة القطاعات النتائج الساخنة والباردة في الوقت الفعلي اعتمادًا على أحدث اللفات مقارنةً بالاحتمال المتوقع.",
+    temperatureSpinsSince: "منذ {n} لفات",
+    
+    historySubtitle:
+    "استعرض أحدث سجل اللفات مع النتائج الفورية والمضاعفات وعدد الفائزين وإجمالي المدفوعات.",
+    
+    rtpBasedOn: "استنادًا إلى آخر 1,000 لفة",
+    
+    summaryTotalSpinsToday: "إجمالي اللفات اليوم",
+    summaryBonusRounds: "جولات البونص",
+    summaryBiggestMultiplier: "أكبر مضاعف",
+    summaryAvgPayout: "متوسط الدفع",
+    
+    occurredAt: "وقت الحدث",
+    slotResult: "نتيجة السلوت",
+    spinResult: "نتيجة اللفة",
+    specialResult: "نتيجة خاصة",
+    multiplier: "المضاعف",
+    totalWinners: "إجمالي الفائزين",
+    totalPayout: "إجمالي الدفع",
+    
+    watch: "مشاهدة"
+    },
     homeSeo: {
-      sectionTitle: "حول منصتنا لإحصائيات الكازينو المباشر",
-      whoTitle: "من نحن",
-      whoText1: "نحن منصة مستقلة لتحليلات ألعاب الكازينو المباشر تقوم بجمع البيانات ومعالجتها وعرض الإحصائيات في الوقت الفعلي.",
-      whoText2: "هدفنا هو تزويد اللاعبين ببيانات شفافة مبنية على نتائج الألعاب الفعلية، لمساعدتهم على فهم إحصائيات الكازينو المباشر والنتائج الأخيرة بشكل أفضل.",
-      howTitle: "كيف نجمع المعلومات",
-      howText1: "نستخدم أنظمة آلية لجمع البيانات تتابع نتائج ألعاب الكازينو المباشر في الوقت الفعلي.",
-      howText2: "تأتي البيانات من مصادر بث مفتوحة وتدفقات الألعاب المباشرة والواجهات العامة لمزودي الألعاب، مما يسمح لنا بمتابعة نتائج الألعاب والنتائج الفورية بشكل مستمر.",
-      howText3: "تمر جميع النتائج بمرحلة معالجة إضافية وتحقق خوارزمي لتقليل التأخير والحفاظ على دقة إحصائية عالية. تعتمد المنصة على تقنيات حديثة لمعالجة البيانات، بما في ذلك مزامنة التدفقات والتحليل الآلي والنماذج التحليلية."
+    sectionTitle: "حول منصتنا لإحصائيات الكازينو المباشر",
+    whoTitle: "من نحن",
+    whoText1: "نحن منصة مستقلة لتحليلات ألعاب الكازينو المباشر تقوم بجمع البيانات ومعالجتها وعرض الإحصائيات في الوقت الفعلي.",
+    whoText2: "هدفنا تزويد اللاعبين ببيانات شفافة مبنية على نتائج الألعاب الفعلية، لمساعدتهم على فهم إحصائيات الكازينو المباشر والنتائج الأخيرة بصورة أفضل.",
+    howTitle: "كيف نجمع المعلومات",
+    howText1: "نستخدم أنظمة آلية لجمع البيانات تتابع نتائج ألعاب الكازينو المباشر في الوقت الفعلي.",
+    howText2: "تأتي البيانات من مصادر بث مفتوحة وتدفقات الألعاب المباشرة والواجهات العامة لمزودي الألعاب، مما يتيح لنا متابعة نتائج الألعاب والنتائج الفورية بشكل مستمر.",
+    howText3: "تمر جميع النتائج بمرحلة معالجة إضافية وتحقق خوارزمي لتقليل التأخير والحفاظ على دقة إحصائية عالية. تعتمد المنصة على تقنيات حديثة لمعالجة البيانات، تشمل مزامنة التدفقات والتحليل الآلي والنماذج التحليلية."
     },
     monopolyReview: {
-      title: "Monopoly Live مراجعة: تجربة برنامج ألعاب الكازينو المباشر المثالية",
-      intro: "مرحبًا بك في الدليل الشامل للعبة Monopoly Live، واحدة من أشهر ألعاب الموزع المباشر التي تم ابتكارها على الإطلاق. تم تطوير هذه اللعبة بواسطة الشركة الأسطورية Evolution Gaming، وهي تجمع بين عجلة أموال ضخمة وجولة بونص ثلاثية الأبعاد مذهلة بتقنية الواقع المعزز يظهر فيها Mr. Monopoly بنفسه. سواء كنت تريد لعب Monopoly Live أونلاين أو مجرد التحقق من أحدث إحصائيات اللعبة، فستجد هنا كل المعلومات التي تحتاجها.",
-      playbtn: "العب",
-      heroAlt: "عجلة Monopoly Live مع مقدمة مباشرة واستوديو برنامج الألعاب",
-      tableFeature: "الميزة",
-      tableDetails: "التفاصيل",
-      gameNameLabel: "اسم اللعبة",
-      providerLabel: "المزوّد",
-      gameTypeLabel: "نوع اللعبة",
-      rtpLabel: "نسبة RTP",
-      maxWinLabel: "أقصى ربح",
+    title: "Monopoly Live مراجعة: تجربة برنامج ألعاب الكازينو المباشر المثالية",
+    intro: "مرحبًا بك في الدليل الشامل للعبة Monopoly Live، إحدى أشهر ألعاب الموزع المباشر على الإطلاق. طوّرتها شركة Evolution Gaming الأسطورية، وتجمع بين عجلة أموال ضخمة وجولة بونص ثلاثية الأبعاد مذهلة بتقنية الواقع المعزز يظهر فيها Mr. Monopoly بشخصه. سواء أردت لعب Monopoly Live أونلاين أو الاطلاع على أحدث إحصائيات اللعبة، ستجد هنا كل ما تحتاجه.",
+    playbtn: "العب",
+    heroAlt: "عجلة Monopoly Live مع مقدمة مباشرة واستوديو برنامج الألعاب",
+    tableFeature: "الميزة",
+    tableDetails: "التفاصيل",
+    gameNameLabel: "اسم اللعبة",
+    providerLabel: "المزوّد",
+    gameTypeLabel: "نوع اللعبة",
+    rtpLabel: "نسبة RTP",
+    maxWinLabel: "أقصى ربح",
     
-      gameTypeValue: "برنامج ألعاب كازينو مباشر",
-      rtpValue: "حتى 96.23%",
-      maxWinValue: "$500,000 (أو ما يعادله بالمضاعِف)",
+    gameTypeValue: "برنامج ألعاب كازينو مباشر",
+    rtpValue: "حتى 96.23%",
+    maxWinValue: "$500,000 (أو ما يعادله بالمضاعف)",
     
-      sectionsTitle: "أهم ميزات Monopoly Live",
+    sectionsTitle: "أبرز مميزات Monopoly Live",
     
-      wheelTitle: "Monopoly Live عجلة المال (اللعبة الأساسية)",
-      wheelText: "جوهر تجربة كازينو Monopoly Live المباشر. يقوم مقدم مباشر حقيقي بتدوير عجلة عمودية ضخمة تحتوي على 54 خانة. يراهن اللاعبون على الأرقام (1 و2 و5 و10) للفوز بدفعات نقدية فورية بحسب الرقم الذي تتوقف عليه العجلة.",
+    wheelTitle: "عجلة المال (اللعبة الأساسية)",
+    wheelText: "قلب تجربة كازينو Monopoly Live المباشر. يدير مقدّم مباشر حقيقي عجلة عمودية ضخمة تضم 54 قطاعًا. يراهن اللاعبون على الأرقام (1، 2، 5، 10) للفوز بمدفوعات نقدية فورية بناءً على الرقم الذي تتوقف عنده العجلة.",
     
-      chanceTitle: "Monopoly Live خانة 'Chance'",
-      chanceText: "عند توقف العجلة على خانة 'Chance' يحصل اللاعبون إما على جائزة نقدية فورية أو بونص مضاعِف مثير. وإذا ظهر مضاعِف، يقوم المقدم بتدوير العجلة مرة أخرى، ويتم مضاعفة ربحك التالي.",
+    chanceTitle: "قطاع 'Chance'",
+    chanceText: "عند توقف العجلة على قطاع 'Chance' يحصل اللاعبون إما على جائزة نقدية فورية وإما على بونص مضاعف مثير. إذا ظهر مضاعف، يعيد المقدم تدوير العجلة وتُضاعَف فوزك التالي.",
     
-      bonus3dTitle: "Monopoly Live جولة البونص ثلاثية الأبعاد",
-      bonus3dText: "أبرز ما يميز لعبة Monopoly Live. إذا راهنت على '2 ROLLS' أو '4 ROLLS' وتوقفت العجلة على إحدى هاتين الخانتين، يدخل Mr. Monopoly إلى عالم لعبة لوحية ثلاثي الأبعاد، ويجمع الجوائز والمضاعِفات ويتجنب الضرائب.",
+    bonus3dTitle: "جولة البونص ثلاثية الأبعاد",
+    bonus3dText: "الحدث الأبرز في لعبة Monopoly Live. إذا راهنت على '2 ROLLS' أو '4 ROLLS' وتوقفت العجلة هناك، ينطلق Mr. Monopoly إلى عالم لوحة اللعبة ثلاثي الأبعاد ليجمع الجوائز والمضاعفات ويتفادى الضرائب.",
     
-      howToPlayTitle: "كيفية لعب Monopoly Live",
-      howToPlayIntro: "البدء في كازينو أونلاين مع Monopoly Live سهل للغاية. فقط اتبع هذه الخطوات:",
-      step1: "ضع رهاناتك: لديك نافذة مراهنة قصيرة لوضع رقاقاتك على 1 أو 2 أو 5 أو 10 أو '2 Rolls' أو '4 Rolls'.",
-      step2: "الدوران: يقوم الموزع المباشر بتدوير العجلة. يمكنك مشاهدة Monopoly Live بينما تبدأ العجلة بالتباطؤ.",
-      step3: "الدفع: إذا توقفت العجلة على رقمك، فإنك تفوز. وإذا توقفت على لعبة بونص وكنت قد راهنت عليها، فستدخل الجولة ثلاثية الأبعاد.",
+    howToPlayTitle: "كيف تلعب Monopoly Live",
+    howToPlayIntro: "البدء في كازينو أونلاين مع Monopoly Live أمر في غاية البساطة. اتبع هذه الخطوات:",
+    step1: "ضع رهاناتك: لديك نافذة رهان قصيرة لوضع رقائقك على 1، 2، 5، 10، '2 Rolls' أو '4 Rolls'.",
+    step2: "الدوران: يدوّر الموزع المباشر العجلة. يمكنك مشاهدة Monopoly Live بينما تتباطأ العجلة.",
+    step3: "الدفع: إذا توقفت العجلة على رقمك فزت. وإذا توقفت على لعبة بونص وكنت قد راهنت عليها، دخلت الجولة ثلاثية الأبعاد.",
     
-      statsTitle: "Monopoly Live الإحصائيات والنتائج وأدوات التتبع",
-      statsText1: "بالنسبة للعديد من عشاق ألعاب iGaming الجادين، فإن تتبع اللعبة لا يقل أهمية عن اللعب نفسه. وبما أن هذه لعبة احتمالات، يستخدم العديد من اللاعبين أداة تتبع Monopoly Live لمراقبة اتجاهات اللعبة.",
-      statsText2: "من خلال تحليل إحصائيات Monopoly Live، يمكنك معرفة معدل ظهور جولات البونص، ومتوسط المضاعفات، والأرقام الباردة/الساخنة. كما أن التحقق من سجل Monopoly Live يتيح لك رؤية نتائج Monopoly Live اليوم. ورغم أن النتائج السابقة لا تضمن النتائج المستقبلية، فإن الاطلاع على لوحة نتائج الكازينو الخاصة بـ Monopoly Live يمنح اللاعبين فكرة عن كيفية تصرف العجلة خلال جلستهم. تذكر دائمًا أن تلعب بمسؤولية بغض النظر عما تظهره نتائج Monopoly Live.",
-      statsNote: "ملاحظة: إذا كنت تحب هذا النوع، فقد ترغب أيضًا في تجربة Monopoly Big Baller live، وهي نسخة فرعية بأسلوب البنغو وتقدم أيضًا نتائج Monopoly Big Baller اليوم مباشرة.",
+    statsTitle: "إحصائيات Monopoly Live ونتائجها وأدوات التتبع",
+    statsText1: "بالنسبة لكثير من عشاق iGaming الجادين، متابعة اللعبة لا تقل أهمية عن اللعب نفسه. ولأنها لعبة احتمالات، يلجأ كثير من اللاعبين إلى أداة تتبع Monopoly Live لمواكبة اتجاهات اللعبة.",
+    statsText2: "من خلال تحليل إحصائيات Monopoly Live يمكنك الاطلاع على تكرار جولات البونص ومتوسط المضاعفات والأرقام الباردة والساخنة. يتيح لك سجل Monopoly Live رؤية نتائج Monopoly Live اليوم. ورغم أن النتائج السابقة لا تضمن نتائج مستقبلية، إلا أن متابعة لوحة نتائج Monopoly Live تمنح اللاعبين فكرة عن سلوك العجلة خلال جلستهم. تذكر دائمًا اللعب بمسؤولية.",
+    statsNote: "ملاحظة: إذا أعجبك هذا النمط، قد تودّ تجربة Monopoly Big Baller live أيضًا، وهو إصدار بأسلوب البينغو يتضمن نتائج مثيرة لـ Monopoly Big Baller مباشرةً.",
     
-      freePlayTitle: "Monopoly Live هل يمكنك اللعب مجانًا؟",
-      freePlayText: "يبحث الكثير من اللاعبين عن نسخة تجريبية من كازينو Monopoly Live أو Monopoly Live مجانًا. وبما أن هذه لعبة بث مباشر من الاستوديو مع موزعين حقيقيين، فلا توجد نسخة تجريبية قابلة للعب بأموال وهمية. ومع ذلك، يمكنك الدخول إلى أي كازينو أونلاين يوفّر Monopoly Live، وفتح اللعبة، ومشاهدة بث Monopoly Live مجانًا فقط لتعلّم القواعد قبل المراهنة بأموال حقيقية.",
+    freePlayTitle: "هل يمكن اللعب مجانًا؟",
+    freePlayText: "يبحث كثيرون عن نسخة تجريبية من كازينو Monopoly Live أو لعب Monopoly Live مجانًا. بما أنها لعبة استوديو مباشر مع موزعين حقيقيين، لا تتوفر نسخة تجريبية قابلة للعب بأموال وهمية. غير أنك تستطيع الدخول إلى أي كازينو أونلاين يوفر Monopoly Live، وفتح اللعبة ومشاهدة بث Monopoly Live مجانًا لتعلّم القواعد قبل المراهنة بأموال حقيقية.",
     
-      faqTitle: "الأسئلة الشائعة (FAQ)",
-      faq: [
-        {
-          q: "Monopoly Live أين يمكنني العثور على النتائج والإحصائيات؟",
-          a: "يمكنك العثور على إحصائيات Monopoly Live مباشرة داخل واجهة اللعبة، حيث تعرض أحدث الخانات الفائزة. وللحصول على تحليلات أعمق، توفر العديد من مواقع تتبع الكازينو الخارجية سجلًا شاملاً لـ Monopoly Live."
-        },
-        {
-          q: "Monopoly Live هل يوجد تطبيق كازينو متاح؟",
-          a: "لا يوجد ملف apk مستقل للعبة Monopoly Live. ومع ذلك، يمكنك اللعب بسهولة على الهاتف المحمول عبر تنزيل التطبيق الرسمي لأي كازينو مرخّص يوفّر ألعاب Evolution Gaming."
-        },
-        {
-          q: "Monopoly Live ما الفرق بين هذه اللعبة وMonopoly Big Baller؟",
-          a: "على الرغم من أن كلتا اللعبتين تضمان Mr. Monopoly وجولات بونص ثلاثية الأبعاد، فإن اللعبة الأصلية تستخدم عجلة أموال دوّارة، بينما يستخدم Monopoly Big Baller live casino آلة سحب كرات بأسلوب البنغو."
-        },
-        {
-          q: "Monopoly Live كيف أدخل إلى لعبة البونص ثلاثية الأبعاد؟",
-          a: "للمشاركة في لعبة اللوح ثلاثية الأبعاد، يجب أن تضع رهانًا على خانات '2 ROLLS' أو '4 ROLLS'. وإذا توقفت العجلة على إحدى هذه الخانات، تبدأ جولة البونص."
-        },
-        {
-          q: "Monopoly Live هل يمكنني التفاعل مع الموزع المباشر؟",
-          a: "نعم. تحتوي اللعبة على دردشة كازينو مباشرة خاصة بـ Monopoly Live حيث يمكنك التحدث مع المقدم واللاعبين الآخرين، مما يجعل تجربة Monopoly Live اجتماعية وتفاعلية للغاية."
-        },
-        {
-          q: "Monopoly Live هل نتائج اللعبة مزوّرة؟",
-          a: "لا. تخضع Monopoly Live من Evolution Gaming لاختبارات صارمة وتحمل تراخيص من أبرز هيئات تنظيم المقامرة. العجلة مادية بالكامل وعشوائية، مما يضمن أن كل نتيجة في Monopoly Live عادلة بنسبة 100%."
-        }
-      ]
+    faqTitle: "الأسئلة الشائعة (FAQ)",
+    faq: [
+    {
+    q: "أين يمكنني العثور على نتائج Monopoly Live وإحصائياتها؟",
+    a: "يمكنك العثور على إحصائيات Monopoly Live مباشرةً داخل واجهة اللعبة التي تعرض أحدث القطاعات الفائزة. وللتحليل الأعمق، توفر مواقع تتبع الكازينو من أطراف ثالثة سجلًا شاملًا لتاريخ Monopoly Live."
+    },
+    {
+    q: "هل توجد تطبيق كازينو Monopoly Live؟",
+    a: "لا يوجد تطبيق apk مستقل لـ Monopoly Live. بيد أنك تستطيع اللعب بشكل مثالي على الجوال عبر تنزيل التطبيق الرسمي لأي كازينو مرخّص يقدم ألعاب Evolution Gaming."
+    },
+    {
+    q: "ما الفرق بين هذه اللعبة وMonopoly Big Baller؟",
+    a: "كلتا اللعبتين تضمّان Mr. Monopoly وجولات بونص ثلاثية الأبعاد، لكن اللعبة الأصلية تستخدم عجلة مال دوّارة، في حين تعتمد Monopoly Big Baller live كازينو على آلة سحب كرات بأسلوب البينغو."
+    },
+    {
+    q: "كيف أدخل جولة البونص ثلاثية الأبعاد؟",
+    a: "للمشاركة في لعبة لوحة البونص ثلاثية الأبعاد يجب عليك وضع رهانك على مربعي '2 ROLLS' أو '4 ROLLS'. إذا توقفت العجلة على أحد هذين القطاعين بدأت جولة البونص."
+    },
+    {
+    q: "هل يمكنني التفاعل مع الموزع المباشر؟",
+    a: "نعم! تتضمن اللعبة دردشة مباشرة في كازينو Monopoly Live حيث يمكنك التحدث مع المقدم وبقية اللاعبين، مما يجعل تجربة Monopoly Live المباشر اجتماعية وممتعة للغاية."
+    },
+    {
+    q: "هل نتائج اللعبة مزوّرة؟",
+    a: "لا. تخضع Monopoly Live من Evolution Gaming لاختبارات صارمة وحاصلة على ترخيص من أكبر هيئات التنظيم في قطاع القمار. العجلة فيزيائية كليًا وعشوائية تمامًا، مما يضمن أن كل نتيجة في Monopoly Live عادلة 100%."
+    }
+    ]
     },
     monopolyStatsExtra: {
-      diceRollsLowTitle: "Monopoly Live رميات النرد منخفضة المستوى",
-      diceRollsMidTitle: "Monopoly Live رميات النرد متو��طة المستوى",
-      diceRollsHighTitle: "Monopoly Live رميات النرد عالية المستوى",
-      trackedMeta: "آخر 6 ساعات • 258 دورة",
+    diceRollsLowTitle: "رميات النرد - المستوى المنخفض",
+    diceRollsMidTitle: "رميات النرد - المستوى المتوسط",
+    diceRollsHighTitle: "رميات النرد - المستوى العالي",
+    trackedMeta: "آخر 6 ساعات • 258 لفة",
     
-      boardMovesTitle: "Monopoly Live إحصائيات التحرك على اللوحة",
-      bonusGameStats: "إحصائيات لعبة البونص",
-      doublesRolled: "الزوجيات التي تم رميها",
-      avgBoardRolls: "متوسط رميات اللوحة لكل لعبة بونص",
+    boardMovesTitle: "إحصائيات تحركات لوحة اللعبة",
+    bonusGameStats: "إحصائيات لعبة البونص",
+    doublesRolled: "الضعفيات المُرمَّاة",
+    avgBoardRolls: "متوسط رميات اللوحة لكل لعبة بونص",
     
-      landingStatsTitle: "Monopoly Big Baller إحصائيات خانات الهبوط",
+    landingStatsTitle: "إحصائيات مربعات الهبوط في Monopoly Big Baller",
     
-      bestIndividualWinsTitle: "Monopoly Live أفضل الأرباح الفردية",
-      latestTopMultipliersTitle: "Monopoly Live أحدث أعلى المضاعِفات",
+    bestIndividualWinsTitle: "أفضل الأرباح الفردية",
+    latestTopMultipliersTitle: "أحدث أعلى المضاعفات",
     
-      finished: "انتهى",
-      player: "اللاعب",
-      wonAmount: "المبلغ الذي تم ربحه",
-      multiplier: "المضاعِف",
-      bigWinClip: "مقطع ربح كبير",
-      bonusRound: "جولة البونص",
-      watchClip: "شاهد المقطع",
-      biggestWinsGallery: "معرض أكبر الأرباح"
+    finished: "مكتمل",
+    player: "اللاعب",
+    wonAmount: "المبلغ المربوح",
+    multiplier: "المضاعف",
+    bigWinClip: "مقطع الفوز الكبير",
+    bonusRound: "جولة البونص",
+    watchClip: "مشاهدة المقطع",
+    biggestWinsGallery: "معرض أكبر الأرباح"
     },
     seo: {
-      home: { 
-        title: "Casino Score Live 🔥 Live Stats و Real-Time Results [2026]",
-        description: "Casino Score Live هو مركزك النهائي لـ live stats و real-time results في 2026. حلّل RTP، وتابع hot or cold streaks، واتخذ قرارات مراهنة آمنة مبنية على البيانات."
-      },    
-      crazytime: {
-        title: "إحصائيات Crazy Time – النتائج المباشرة ومتتبع المضاعفات",
-        description: "إحصائيات Crazy Time المباشرة يتم تحديثها في الوقت الفعلي. تتبع نتائج العجلة وجولات البونص والمضاعفات حتى 2000x. استخدم البيانات لبناء استراتيجيتك الرابحة. تحقق الآن!"
-      },
-      monopoly: {
-        title: "إحصائيات Monopoly Live 2026 | المتتبع الرسمي للنتائج",
-        description: "إحصائيات Monopoly Live الرسمية لعام 2026. نتائج مباشرة وسجل موثّق وبيانات Evolution Gaming. تابع النتائج والعب بأمان."
-      },
+    home: {
+    title: "Casino Score Live 🔥 إحصائيات مباشرة ونتائج فورية [2026]",
+    description: "Casino Score Live — منصتك الأمثل لإحصائيات الكازينو المباشر والنتائج الفورية في 2026. حلّل نسبة RTP، وتابع الأرقام الساخنة والباردة، واتخذ قرارات رهان مبنية على البيانات."
+    },
+    crazytime: {
+    title: "إحصائيات Crazy Time – نتائج مباشرة ومتابع المضاعفات",
+    description: "إحصائيات Crazy Time المباشرة محدّثة في الوقت الفعلي. تابع نتائج العجلة وجولات البونص والمضاعفات التي تصل إلى 2000x. استخدم البيانات لبناء استراتيجيتك الرابحة. تحقق الآن!"
+    },
+    monopoly: {
+    title: "إحصائيات Monopoly Live 2026 | متابع النتائج الرسمي",
+    description: "إحصائيات Monopoly Live الرسمية لعام 2026. نتائج فورية وتاريخ موثّق وبيانات Evolution Gaming. تابع النتائج والعب بأمان الآن."
+    },
+    dreamcatcher: {
+    title: "نتائج Dream Catcher وإحصائيات مباشرة 2026 - النقاط في الوقت الفعلي 🎰",
+    description: "نتائج Dream Catcher اليوم، إحصائيات مباشرة ونقاط في الوقت الفعلي. تتبع سجل النتائج والإحصائيات الفائزة والاتجاهات لعام 2026. شاهد كل لفة فورًا."
+    }
     },
     crazytimeStream: {
-      title: "البث المباشر لـ Crazy Time",
-      subtitle: "شاهد البث المباشر لـ Crazy Time مباشرة على هذه الصفحة.",
-      liveLabel: "البث المباشر",
-      watchLivestream: "شاهد البث المباشر"
+    title: "بث Crazy Time المباشر",
+    subtitle: "شاهد بث Crazy Time المباشر مباشرةً على هذه الصفحة.",
+    liveLabel: "بث مباشر",
+    watchLivestream: "مشاهدة البث المباشر"
     },
     crazytimeReview: {
-      faqTitle: "الأسئلة الشائعة",
-      faq: [
-        {
-          q: "هل Crazy Time لعبة مهارة أم حظ؟",
-          a: "Crazy Time هي في المقام الأول لعبة حظ. بينما يمكن للاعبين استخدام الإحصائيات وأدوات التتبع لفهم النتائج الأخيرة بشكل أفضل، تظل كل جولة مستقلة."
-        },
-        {
-          q: "ما هو الحد الأقصى للمضاعف في Crazy Time؟",
-          a: "يمكن أن يصل الحد الأقصى المعلن عنه في Crazy Time إلى 20,000x خلال جولة المكافأة الرئيسية Crazy Time."
-        },
-        {
-          q: "هل يمكنني الانضمام إلى جولات المكافأة إذا لم أراهن عليها مباشرة؟",
-          a: "إذا سمحت قواعد اللعبة والإعداد الحالي بذلك من خلال آليات المكافأة مثل الحد الأدنى للدخول أو تأثيرات Top Slot، يمكن للاعبين لا يزالون الدخول في نتائج مكافأة معينة بمضاعف مخفض."
-        },
-        {
-          q: "هل إحصائيات Crazy Time المباشرة تنبؤية؟",
-          a: "لا. تساعد الإحصائيات المباشرة في تصور النشاط الأخير، لكنها لا تتنبأ بالنتائج المستقبلية. كل دورة مستقلة."
-        }
-      ],
-      whatIsTitle: "ما هي لعبة Crazy Time؟",
-      whatIsText: "Crazy Time هي لعبة كازينو مباشرة طورتها Evolution Gaming، تم إطلاقها في عام 2020. تجمع بين تنسيق عجلة المال وأربع جولات مكافأة تفاعلية، مما يوفر واحدة من أكثر تجارب الكازينو المباشر جاذبية المتاحة اليوم.",
-    
-      tableParameter: "المعامل",
-      tableDetails: "التفاصيل",
-      gameName: "اسم اللعبة",
-      provider: "المزود",
-      rtp: "نسبة العائد للاعب",
-      releaseYear: "سنة الإصدار",
-      gameType: "نوع اللعبة",
-      minBet: "الحد الأدنى للرهان",
-      maxBet: "الحد الأقصى للرهان",
-      volatility: "التقلب",
-      gameTypeValue: "عرض ألعاب مباشر",
-      volatilityValue: "عالي",
-    
-      howToPlayTitle: "كيفية لعب Crazy Time",
-      howToPlayText: "تتبع لعبة Crazy Time المباشرة تنسيقًا بسيطًا:",
-      step1: "ضع رهانك على قطاع واحد أو أكثر من قطاعات العجلة قبل انتهاء الوقت",
-      step2: "شاهد العجلة تدور — يدير مضيف مباشر الجلسة بأكملها في الوقت الفعلي",
-      step3: "اربح إذا توقفت العجلة على القطاع الذي اخترته",
-      step4: "فعّل جولة مكافأة إذا توقف المؤشر على قطاع مكافأة",
-    
-      wheelBreakdownTitle: "تفصيل قطاعات العجلة",
-      wheelSegment: "القطاع",
-      wheelOccurrences: "التكرارات على العجلة",
-      wheelMultiplier: "المضاعف",
-      upTo2000x: "حتى 2000x",
-      upTo10000x: "حتى 10,000x",
-      upTo20000x: "حتى 20,000x",
-    
-      bonusRoundsTitle: "جولات مكافأة Crazy Time",
-      cashHuntTitle: "🎯 Cash Hunt",
-      cashHuntText: "معرض تصويب مع 108 مضاعفًا عشوائيًا مخفيًا خلف الرموز. يختار اللاعبون واحدًا للكشف عن جائزتهم.",
-      coinFlipTitle: "🪙 Coin Flip",
-      coinFlipText: "يتم قلب عملة بسيطة ذات وجهين. يعرض كل جانب مضاعفًا — أحمر أو أزرق. سريع ونظيف ومثير.",
-      pachinkoTitle: "🎰 Pachinko",
-      pachinkoText: "جدار Pachinko المادي العملاق يسقط قرصًا من الأعلى. يرتد عبر الأوتاد ويهبط على مضاعف في الأسفل. يمكن أن يتضاعف بشكل لا نهائي حتى يتم الوصول إلى مضاعف غير مزدوج.",
-      crazyTimeBonusTitle: "🎪 Crazy Time (مكافأة)",
-      crazyTimeBonusText: "الحدث الرئيسي. عجلة افتراضية ضخمة بثلاثة مؤشرات تدور داخل عالم رقمي. يختار اللاعبون مؤشرًا قبل الدوران. تصل أعلى مكافأة محتملة إلى 20,000x.",
-    
-      rulesTitle: "قواعد لعبة Crazy Time: النقاط الرئيسية",
-      rule1: "يمكنك المراهنة على عدة قطاعات في وقت واحد",
-      rule2: "يضيف Top Slot فوق العجلة الرئيسية مضاعفًا أو يفعّل دخول المكافأة بمضاعفات معززة",
-      rule3: "إذا لم تراهن على قطاع مكافأة ولكنه هبط، فأنت لا تزال تدخل في المكافأة (بحد أدنى للمضاعف)",
-      rule4: "يتم ضرب جميع مضاعفات المكافأة برهانك الأصلي، وليس مجرد مكافأة ثابتة",
-    
-      statsTitle: "إحصائيات ونتائج Crazy Time المباشرة",
-      statsText: "يساعد فهم إحصائيات Crazy Time في توجيه قرارات جلستك. تعرض معظم المنصات متتبع إحصائيات مباشرًا مباشرة في واجهة اللعبة.",
-      typicalStatsTitle: "الإحصائيات النموذجية التي سترى:",
-      stat1: "نتائج آخر 100 دورة — توزيع كل قطاع يهبط",
-      stat2: "تكرار المكافأة — كم مرة تم تفعيل كل جولة مكافأة",
-      stat3: "تاريخ المضاعفات — أعلى المضاعفات الممنوحة في الجولات الأخيرة",
-      stat4: "القطاعات الساخنة والباردة — مؤشرات بصرية لتكرار القطاع",
-      tip: "نصيحة احترافية:",
-      tipText: "متتبع إحصائيات Crazy Time ليس أداة تنبؤية — النتائج السابقة لا تؤثر على الدورات المستقبلية. يعمل RNG والعجلة المباشرة بشكل مستقل في كل جولة.",
-    
-      whyPlayTitle: "لماذا تلعب Crazy Time عبر الإنترنت؟",
-      prosTitle: "🏆 الإيجابيات:",
-      pro1: "جودة إنتاج استثنائية من Evolution Gaming",
-      pro2: "أربع ألعاب مكافأة متميزة — غير متكررة أبدًا",
-      pro3: "إمكانات ضخمة للمضاعف الأقصى (حتى 20,000x)",
-      pro4: "متاح على مدار الساعة طوال أيام الأسبوع في كل كازينو مباشر كبير تقريبًا عبر الإنترنت",
-      pro5: "متتبع إحصائيات مباشر شفاف مدمج في الواجهة",
-    
-      consTitle: "⚠️ السلبيات:",
-      con1: "تقلب عالٍ — سلاسل خسارة طويلة ممكنة",
-      con2: "اللعب التجريبي الحقيقي غير متاح (قيد تنسيق مباشر)",
-      con3: "المضاعفات القصوى نادرة بالتصميم"
+    faqTitle: "الأسئلة الشائعة",
+    faq: [
+    {
+    q: "هل Crazy Time لعبة مهارة أم حظ؟",
+    a: "Crazy Time هي في المقام الأول لعبة حظ. وعلى الرغم من أن اللاعبين يستطيعون استخدام الإحصائيات وأدوات التتبع لفهم النتائج الأخيرة بشكل أفضل، إلا أن كل جولة تبقى مستقلة."
     },
-    crazytimeStatsExtra: {
-      sectionTitle: "إحصائيات بونص Crazy Time المتقدمة",
+    {
+    q: "ما الحد الأقصى للمضاعف في Crazy Time؟",
+    a: "يمكن أن يصل الحد الأقصى المُعلَن عنه في Crazy Time إلى 20,000x خلال جولة البونص الرئيسية للعبة Crazy Time."
+    },
+    {
+    q: "هل يمكنني المشاركة في جولات البونص إذا لم أراهن عليها مباشرةً؟",
+    a: "إذا سمحت قواعد اللعبة والإعداد الحالي بذلك من خلال ميكانيكيات البونص كالدخول الأدنى أو تأثيرات Top Slot، فقد يستطيع اللاعبون الدخول في نتائج بونص معينة بمضاعف مخفّض."
+    },
+    {
+    q: "هل إحصائيات Crazy Time المباشرة تنبؤية؟",
+    a: "لا. تساعد الإحصائيات المباشرة على تصوّر النشاط الأخير، لكنها لا تتنبأ بالنتائج المستقبلية. كل لفة مستقلة."
+    }
+    ],
+    whatIsTitle: "ما هي لعبة Crazy Time؟",
+    whatIsText: "Crazy Time لعبة كازينو مباشر طوّرتها Evolution Gaming وأُطلقت عام 2020. تجمع بين نمط عجلة المال وأربع جولات بونص تفاعلية، لتقدّم واحدة من أكثر تجارب الكازينو المباشر جاذبيةً اليوم.",
     
-      flapperTitle: "Flapper بونص Crazy Time",
-      flapperText: "قارن متوسط المضاعفات للألوان الثلاثة في Flapper الخاص بـ Crazy Time. تمنحك هذه الأرقام لمحة سريعة عن الأداء قصير المدى مقارنة بالمتوسط طويل المدى.",
-      avgAlways: "المتوسط التاريخي",
-      flapperFootnote: "يشير المؤشر إلى معيار متوسط المضاعف على المدى الطويل للون flapper المحدد بناءً على البيانات التاريخية المتعقبة.",
+    tableParameter: "المعامل",
+    tableDetails: "التفاصيل",
+    gameName: "اسم اللعبة",
+    provider: "المزوّد",
+    rtp: "RTP",
+    releaseYear: "سنة الإصدار",
+    gameType: "نوع اللعبة",
+    minBet: "أدنى رهان",
+    maxBet: "أعلى رهان",
+    volatility: "التذبذب",
+    gameTypeValue: "برنامج ألعاب مباشر",
+    volatilityValue: "مرتفع",
     
-      coinFlipTitle: "Coin Flip",
-      coinFlipText: "قارن نتائج Coin Flip الحمراء والزرقاء من حيث متوسط المضاعفات وتكرار الظهور مقارنة بالتوقعات طويلة المدى.",
-      avgMultiplier: "متوسط المضاعف",
-      frequency: "التكرار",
-      vsAvg: "مقارنة بالمتوسط",
-      coinFlipFootnote: "يشير المؤشر إلى معيار متوسط التكرار طويل المدى للون المحدد بناءً على البيانات المتعقبة.",
+    howToPlayTitle: "كيف تلعب Crazy Time",
+    howToPlayText: "تتبع لعبة Crazy Time المباشر تنسيقًا واضحًا:",
+    step1: "ضع رهانك على قطاع واحد أو أكثر من عجلة الدوران قبل انتهاء المؤقت",
+    step2: "شاهد العجلة تدور — يدير مقدّم مباشر الجلسة بأكملها في الوقت الفعلي",
+    step3: "تفوز إذا توقفت العجلة على القطاع الذي اخترته",
+    step4: "تُطلَق جولة بونص إذا توقف المؤشر على قطاع بونص",
     
-      cashHuntSymbolsTitle: "رموز Cash Hunt",
-      cashHuntSymbolsText: "يوضح هذا التقسيم متوسط المضاعف وتكرار الظهور لكل رمز هدف في Cash Hunt.",
-      times: "مرة",
+    wheelBreakdownTitle: "تفصيل قطاعات العجلة",
+    wheelSegment: "القطاع",
+    wheelOccurrences: "التكرارات على العجلة",
+    wheelMultiplier: "المضاعف",
+    upTo2000x: "حتى 2000x",
+    upTo10000x: "حتى 10,000x",
+    upTo20000x: "حتى 20,000x",
     
-      recentCashHuntTitle: "Cash Hunt: المضاعفات الأخيرة",
-      recentCashHuntText: "تابع المضاعفات الأخيرة من جولات Cash Hunt. الخلايا المميزة توضح أقوى وأضعف النتائج الأخيرة.",
+    bonusRoundsTitle: "جولات بونص Crazy Time",
+    cashHuntTitle: "🎯 Cash Hunt",
+    cashHuntText: "معرض رماية بـ 108 مضاعفات عشوائية مخفية خلف رموز. يختار اللاعبون رمزًا واحدًا للكشف عن جائزتهم.",
+    coinFlipTitle: "🪙 Coin Flip",
+    coinFlipText: "تُقلَب عملة معدنية بسيطة ذات وجهين. يعرض كل وجه مضاعفًا — أحمر أو أزرق. سريعة ونظيفة ومثيرة.",
+    pachinkoTitle: "🎰 Pachinko",
+    pachinkoText: "جدار Pachinko فيزيائي ضخم يُسقط قرصًا من الأعلى. يرتد عبر الأوتاد ويستقر على مضاعف في الأسفل. يمكن أن يتضاعف بشكل غير محدود حتى الوصول إلى مضاعف غير مزدوج.",
+    crazyTimeBonusTitle: "🎪 Crazy Time (بونص)",
+    crazyTimeBonusText: "الحدث الرئيسي. عجلة افتراضية ضخمة بثلاثة مؤشرات تدور داخل عالم رقمي. يختار اللاعبون مؤشرًا قبل الدوران. أعلى مكافأة محتملة تصل إلى 20,000x.",
     
-      bestBetsTitle: "أفضل الرهانات الفردية",
-      bestBetsText: "يسلط هذا الجدول الضوء على أقوى الأرباح الفردية خلال الفترة المحددة، بما في ذلك اللاعب والدفع والنتيجة والمضاعف.",
-      date: "التاريخ",
-      result: "النتيجة",
-      player: "اللاعب",
-      payout: "الدفع",
-      multiplier: "المضاعف",
-      view: "عرض",
+    rulesTitle: "قواعد لعبة Crazy Time: النقاط الجوهرية",
+    rule1: "يمكنك المراهنة على قطاعات متعددة في آنٍ واحد",
+    rule2: "يضيف Top Slot فوق العجلة الرئيسية مضاعفًا أو يُطلق دخول البونص بمضاعفات معزّزة",
+    rule3: "إذا لم تراهن على قطاع بونص لكنه ظهر، ستُدخَل في البونص تلقائيًا (بالحد الأدنى للمضاعف)",
+    rule4: "جميع مضاعفات البونص تُضرب في رهانك الأصلي وليس مجرد مكافأة ثابتة",
     
-      latestMaxTitle: "أحدث أقصى المضاعفات",
-      latestMaxText: "تُظهر هذه النتائج الأعلى الأخيرة في جولات البونص أعلى المضاعفات التي تم الوصول إليها خلال الفترة المحددة.",
-      clip: "مشاهدة المقطع",
-      biggestWinsGallery: "معرض أكبر الأرباح",
+    statsTitle: "إحصائيات Crazy Time المباشرة ونتائجها",
+    statsText: "فهم إحصائيات Crazy Time يساعدك في اتخاذ قرارات أفضل خلال جلستك. تعرض معظم المنصات متابع إحصائيات مباشر مباشرةً داخل واجهة اللعبة.",
+    typicalStatsTitle: "إحصائيات تراها عادةً:",
+    stat1: "نتائج آخر 100 لفة — توزيع توقف كل قطاع",
+    stat2: "تكرار البونص — كم مرة أُطلقت كل جولة بونص",
+    stat3: "تاريخ المضاعفات — أعلى المضاعفات المُمنوحة في الجولات الأخيرة",
+    stat4: "القطاعات الساخنة والباردة — مؤشرات بصرية لتكرار القطاعات",
+    tip: "نصيحة احترافية:",
+    tipText: "متابع إحصائيات Crazy Time ليس أداة تنبؤية — النتائج السابقة لا تؤثر على اللفات المستقبلية. يعمل نظام RNG والعجلة المباشرة بشكل مستقل في كل جولة.",
     
-      yellow: "أصفر",
-      blue: "أزرق",
-      green: "أخضر",
-      red: "أحمر",
-      cashHunt: "Cash Hunt"
+    whyPlayTitle: "لماذا تلعب Crazy Time أونلاين؟",
+    prosTitle: "🏆 المميزات:",
+    pro1: "جودة إنتاج استثنائية من Evolution Gaming",
+    pro2: "أربع جولات بونص مختلفة — لا تكرار ممل أبدًا",
+    pro3: "إمكانية مضاعف أقصى هائلة (حتى 20,000x)",
+    pro4: "متاحة 24/7 في تقريبًا كل كازينو مباشر كبير أونلاين",
+    pro5: "متابع إحصائيات مباشر شفاف مدمج في الواجهة",
+    
+    consTitle: "⚠️ العيوب:",
+    con1: "تذبذب عالٍ — سلاسل خسائر طويلة ممكنة",
+    con2: "اللعب التجريبي الحقيقي غير متاح (قيد النمط المباشر)",
+    con3: "المضاعفات القصوى نادرة بطبيعتها"
     },
     cta: {
-      playNow: "العب 🎰"
+    playNow: "العب 🎰"
+    },
+    crazytimeStatsExtra: {
+    yellow: "أصفر",
+    blue: "أزرق",
+    green: "أخضر",
+    red: "أحمر",
+    cashHunt: "Cash Hunt",
+    sectionTitle: "إحصائيات بونص Crazy Time المتقدمة",
+    
+    flapperTitle: "مؤشر بونص Crazy Time",
+    flapperMeta: "6 ساعات • 420 لفة",
+    flapperText: "قارن متوسطات المضاعفات للألوان الثلاثة لمؤشر Crazy Time. تُقدّم هذه الأرقام لمحة سريعة عن الأداء قصير المدى مقارنةً بالمتوسط على المدى البعيد.",
+    avgAlways: "المتوسط التاريخي",
+    flapperFootnote: "يُظهر المؤشر معيار متوسط المضاعف طويل المدى للون المؤشر المختار بناءً على البيانات التاريخية المرصودة.",
+    
+    coinFlipTitle: "Coin Flip",
+    coinFlipMeta: "6 ساعات • 420 لفة",
+    coinFlipText: "قارن نتائج Coin Flip الحمراء والزرقاء مع متوسطات المضاعفات وتكرار الظهور مقارنةً بالتوقعات طويلة المدى.",
+    avgMultiplier: "متوسط المضاعف",
+    frequency: "التكرار",
+    vsAvg: "مقابل المتوسط",
+    coinFlipFootnote: "يُظهر المؤشر معيار تكرار المتوسط طويل المدى للون المختار بناءً على البيانات المرصودة.",
+    
+    cashHuntSymbolsTitle: "رموز Cash Hunt",
+    cashHuntSymbolsMeta: "6 ساعات • 420 لفة",
+    cashHuntSymbolsText: "يعرض هذا التفصيل متوسط المضاعف وتكرار الظهور لكل رمز هدف في Cash Hunt.",
+    times: "مرات",
+    
+    recentCashHuntTitle: "Cash Hunt: أحدث المضاعفات",
+    recentCashHuntMeta: "6 ساعات • 420 لفة",
+    recentCashHuntText: "تابع أحدث المضاعفات من جولات Cash Hunt. الخلايا المظلّلة تُشير إلى أقوى وأضعف النتائج الأخيرة.",
+    
+    bestBetsTitle: "أفضل الرهانات الفردية",
+    bestBetsMeta: "6 ساعات • 420 لفة",
+    bestBetsText: "تُبرز هذه الجدول أقوى الفوزات المنفردة في الفترة المختارة، تشمل اللاعب والمدفوع والنتيجة والمضاعف.",
+    date: "التاريخ",
+    result: "النتيجة",
+    player: "اللاعب",
+    payout: "المدفوع",
+    multiplier: "المضاعف",
+    view: "عرض",
+    
+    latestMaxTitle: "أحدث المضاعفات القصوى",
+    latestMaxMeta: "6 ساعات • 420 لفة",
+    latestMaxText: "تعرض هذه النتائج البونص الأخيرة الأعلى المضاعفات المحققة خلال الفترة المختارة.",
+    clip: "مشاهدة المقطع",
+    biggestWinsGallery: "معرض أكبر الأرباح"
     },
     
     gamePage: {
-      statisticsTitleSuffix: "الإحصائيات",
-      subtitlePrefix: "تتبع النتائج والسجل والإحصائيات في الوقت الحقيقي للعبة",
+    statisticsTitleSuffix: " إحصائيات – نتائج مباشرة ومتابع المضاعفات",
+    subtitlePrefix: "تابع نتائج اللفات والسجل والإحصائيات في الوقت الفعلي لـ",
+    playCta: "العب الآن"
     },
-    nav: { home: "الرئيسية", liveGames: "الألعاب المباشرة" },
+    nav: {
+    home: "الرئيسية",
+    liveGames: "الألعاب المباشرة"
+    },
     home: {
-      heroTitleBefore: "إحصائيات",
-      heroTitleAccent: "الكازينو المباشر",
-      heroTitleAfter: "والنتائج الفورية",
-      heroText: "إحصائيات الكازينو المباشر ونتائج الألعاب والنتائج الفورية لألعاب الكازينو المباشر المفضلة لديك. تابع RTP، وسلاسل الربح أو الخسارة، وأكبر الأرباح — مجاني 100%، ولا حاجة إلى حساب.",
-      liveGames: "الألعاب المباشرة",
-      featuresTitle: "مميزاتنا",
-      testimonialsTitle: "آراء المستخدمين"
+    heroTitleBefore: "كازينو مباشر",
+    heroTitleAccent: "إحصائيات",
+    heroTitleAfter: "ونتائج في الوقت الفعلي",
+    heroText: "إحصائيات الكازينو المباشر ونتائج الألعاب والنتائج الفورية لبرامج الألعاب المباشرة المفضلة لديك. تابع RTP والأرقام الساخنة والباردة وأكبر الأرباح — مجانًا 100%، لا حاجة لحساب.",
+    liveGames: "الألعاب المباشرة",
+    featuresTitle: "مميزاتنا",
+    testimonialsTitle: "آراء مستخدمينا"
     },
     features: {
-      noDownloadTitle: "بدون تحميل",
-      noDownloadText: "اعرض جميع البيانات مباشرة من المتصفح.",
-      accurateDataTitle: "بيانات دقيقة",
-      accurateDataText: "تتبع آلي لكل لفة في الوقت الحقيقي.",
-      freeTitle: "مجاني 100%",
-      freeText: "Tracksino مجاني بالكامل."
+    noDownloadTitle: "بدون تنزيل",
+    noDownloadText: "استعرض جميع البيانات فورًا من متصفحك على الكمبيوتر أو الجهاز اللوحي أو الهاتف. لا تنزيلات ولا حساب مطلوب.",
+    accurateDataTitle: "بيانات دقيقة",
+    accurateDataText: "تتبع آلي لكل لفة في الوقت الفعلي حتى تتمكن من مراقبة النتائج بثقة.",
+    freeTitle: "مجاني 100%",
+    freeText: "المنصة مجانية كليًا. افتح أي لعبة مباشرة وتصفح النتائج الأخيرة والإحصائيات الرئيسية فورًا."
     },
     footer: {
-      games: "الألعاب",
-      moreGames: "المزيد من الألعاب",
-      resources: "الموارد",
-      faq: "الأسئلة الشائعة",
-      privacy: "سياسة الخصوصية",
-      terms: "شروط الخدمة",
-      contact: "اتصل بنا",
-      description: "تتبع ألعاب الكازينو المباشرة في الوقت الحقيقي."
+    games: "الألعاب",
+    moreGames: "ألعاب أخرى",
+    resources: "الموارد",
+    faq: "الأسئلة الشائعة",
+    privacy: "سياسة الخصوصية",
+    terms: "شروط الخدمة",
+    contact: "تواصل معنا",
+    description: "تابع برامج ألعاب الكازينو المباشر في الوقت الفعلي. سجل اللفات والإحصائيات وأكبر الأرباح."
     },
     homeFaq: {
-      faqTitle: "الأسئلة الشائعة حول إحصائيات الكازينو المباشر",
-      faqIntro: "إجابات حول live casino statistics و game results و real-time results على منصتنا.",
-      faq: [
-        {
-          q: "ما هي إحصائيات الكازينو المباشر؟",
-          a: "هي بيانات مبنية على نتائج الألعاب الحقيقية والنتائج الفورية من بثوط الموزعين المباشرين."
-        },
-        {
-          q: "كيف تجمعون نتائج الألعاب؟",
-          a: "نراقب البثوط العامة وواجهات مزودي الألعاب ومصادر البث باستخدام أنظمة آلية."
-        },
-        {
-          q: "كم مرة يتم تحديث النتائج الفورية؟",
-          a: "يتم تحديث النتائج الفورية بشكل مستمر والتحقق منها قبل عرضها على الموقع."
-        },
-        {
-          q: "هل تستطيع الإحصائيات التنبؤ بالنتيجة التالية؟",
-          a: "لا. تساعد الإحصائيات في فهم النتائج والاتجاهات الأخيرة، لكنها لا تتنبأ بالمستقبل."
-        }
-      ]
+    faqTitle: "الأسئلة الشائعة حول إحصائيات الكازينو المباشر",
+    faqIntro: "إجابات حول إحصائيات الكازينو المباشر ونتائج الألعاب والنتائج الفورية على منصتنا.",
+    faq: [
+    {
+    q: "ما هي إحصائيات الكازينو المباشر؟",
+    a: "إحصائيات الكازينو المباشر هي نقاط بيانات مبنية على نتائج الألعاب الفعلية والنتائج الفورية من جلسات الموزع المباشر."
+    },
+    {
+    q: "كيف تجمعون نتائج الألعاب؟",
+    a: "نراقب البث العام وواجهات المزودين ومصادر الإذاعة بأنظمة آلية لالتقاط نتائج الألعاب فور حدوثها."
+    },
+    {
+    q: "كم مرة تُحدَّث النتائج الفورية؟",
+    a: "تُحدَّث النتائج الفورية باستمرار ويجري التحقق منها قبل عرضها على الموقع."
+    },
+    {
+    q: "هل يمكن لإحصائيات الكازينو المباشر التنبؤ بالنتيجة التالية؟",
+    a: "لا. تساعدك إحصائيات الكازينو المباشر على فهم نتائج الألعاب والاتجاهات الأخيرة، لكنها لا تتنبأ بالنتائج المستقبلية."
+    }
+    ]
     },
     common: {
-      player: "لاعب",
-      verifiedUser: "مستخدم موثّق",
-      liveNow: "مباشر الآن",
-      hour: "ساعة",
-      hours: "ساعات",
-      spins: "لفات"
+    player: "اللاعب",
+    verifiedUser: "مستخدم موثّق",
+    liveNow: "مباشر الآن",
+    hour: "ساعة",
+    hours: "ساعات",
+    spins: "لفات"
     },
     tabs: {
-      temperature: "الحرارة",
-      history: "السجل",
-      stats: "الإحصائيات",
-      bigwins: "أكبر الأرباح",
-      review: "مراجعة",
-      stream: "البث",
+    temperature: "الحرارة",
+    history: "السجل",
+    stats: "الإحصائيات",
+    bigwins: "أكبر الأرباح",
+    review: "المراجعة",
+    stream: "البث"
     }
-  }
+    },
 };
 
 

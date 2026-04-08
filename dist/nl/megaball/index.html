@@ -23,7 +23,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/main.css" />
   <link rel="canonical" href="https://casinoscore.live/nl/megaball/" />
   <link rel="alternate" hreflang="en" href="https://casinoscore.live/megaball/" />
 <link rel="alternate" hreflang="es" href="https://casinoscore.live/es/megaball/" />
@@ -243,10 +243,21 @@
               <p>Volg realtime resultaten, geschiedenis en statistieken van Mega Ball</p>
             </div>
 
+            <div class="game-header-actions">
             <div class="live-pill">
               <span class="live-dot"></span>
               <span>Nu live</span>
             </div>
+          
+            <a
+              href="/go/reg/"
+              class="live-now-cta-btn"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
+              Speel nu
+            </a>
+          </div>
           </div>
 
           
@@ -276,46 +287,47 @@
           
       <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Segment Temperature</h2>
-        <p class="panel-subtitle">Showing how each segment is performing relative to its expected frequency.</p>
+        <p class="panel-subtitle">Segmenttemperatuur toont hot en cold resultaten in realtime op basis van recente spins versus de verwachte kans.</p>
+  
         <div class="temp-grid">
           
             <div class="temp-card">
               <div class="temp-segment" style="background:#3b82f6;">1 L</div>
-              <div class="temp-value temp-cold">43.6%</div>
-              <div class="temp-diff negative">
-                (-1.4)
-              </div>
-              <div class="temp-spins">1 spins since</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#eab308;">2 L</div>
-              <div class="temp-value temp-cold">29.07%</div>
-              <div class="temp-diff negative">
-                (-0.93)
-              </div>
-              <div class="temp-spins">9 spins since</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              <div class="temp-segment" style="background:#ec4899;">3+ </div>
-              <div class="temp-value temp-hot">16.98%</div>
+              <div class="temp-value temp-hot">46.86%</div>
               <div class="temp-diff positive">
-                (+1.98)
+                (+1.86)
               </div>
-              <div class="temp-spins">26 spins since</div>
+              <div class="temp-spins">3 spins geleden</div>
               <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
-              <div class="temp-segment" style="background:#8b5cf6;">Meg</div>
-              <div class="temp-value temp-hot">10.57%</div>
+              <div class="temp-segment" style="background:#eab308;">2 L</div>
+              <div class="temp-value temp-hot">31.29%</div>
               <div class="temp-diff positive">
-                (+0.57)
+                (+1.29)
               </div>
-              <div class="temp-spins">3 spins since</div>
+              <div class="temp-spins">27 spins geleden</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              <div class="temp-segment" style="background:#ec4899;">3+ </div>
+              <div class="temp-value temp-warm">14.52%</div>
+              <div class="temp-diff negative">
+                (-0.48)
+              </div>
+              <div class="temp-spins">24 spins geleden</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              <div class="temp-segment" style="background:#8b5cf6;">Meg</div>
+              <div class="temp-value temp-hot">11.86%</div>
+              <div class="temp-diff positive">
+                (+1.86)
+              </div>
+              <div class="temp-spins">7 spins geleden</div>
               <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
@@ -325,24 +337,63 @@
           
       <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Recent Spin History</h2>
-        <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
+        <p class="panel-subtitle">Bekijk de nieuwste spin history met realtime resultaten, multipliers, winnaars en uitbetalingen.</p>
   
         <div class="table-wrap">
           <table class="spin-table">
             <thead>
               <tr>
-                <th class="t-left">Occurred At</th>
-                <th class="t-center">Slot Result</th>
-                <th class="t-center">Spin Result</th>
+                <th class="t-left">Tijdstip</th>
+                <th class="t-center">Slot resultaat</th>
+                <th class="t-center">Spin resultaat</th>
+                
                 <th class="t-right">Multiplier</th>
-                <th class="t-right">Total Winners</th>
-                <th class="t-right">Total Payout</th>
+                <th class="t-right">Winnaars</th>
+                <th class="t-right">Totale payout</th>
               </tr>
             </thead>
+  
             <tbody>
               
                   <tr>
-                    <td class="t-left text-soft">09:57:38 Apr 8</td>
+                    <td class="t-left text-soft">17:33:26 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
+        3+ Lines
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,688
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $3,635
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:32:21 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -352,6 +403,43 @@
     
                       </td>
                     
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,725
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $16,571
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:31:16 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
+        3+ Lines
+      </span>
+    
+                      </td>
+                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#3b82f6;">
@@ -359,22 +447,179 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">3,943</td>
-                    <td class="t-right text-green" style="font-weight:600;">$38,312</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      974
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,418
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:56:33 Apr 8</td>
+                    <td class="t-left text-soft">17:30:11 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
+        3+ Lines
       </span>
     
                       </td>
                     
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,765
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,860
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:29:06 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
+        Mega Bal
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,584
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $5,458
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:28:01 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
+        Mega Bal
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,649
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $4,790
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:26:56 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      588
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $3,624
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:25:51 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
+        3+ Lines
+      </span>
+    
+                      </td>
+                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#8b5cf6;">
@@ -382,13 +627,25 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">2,676</td>
-                    <td class="t-right text-green" style="font-weight:600;">$12,473</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      210
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $254
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:55:28 Apr 8</td>
+                    <td class="t-left text-soft">17:24:46 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -398,29 +655,7 @@
     
                       </td>
                     
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">2,080</td>
-                    <td class="t-right text-green" style="font-weight:600;">$14,142</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:54:23 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                      </td>
-                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#eab308;">
@@ -428,13 +663,25 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">3,959</td>
-                    <td class="t-right text-green" style="font-weight:600;">$5,795</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      164
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $185
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:53:18 Apr 8</td>
+                    <td class="t-left text-soft">17:23:41 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -444,6 +691,259 @@
     
                       </td>
                     
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      497
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $4,444
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:22:36 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      437
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,752
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:21:31 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      971
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $7,783
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:20:26 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
+        3+ Lines
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,549
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,936
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:19:21 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
+        Mega Bal
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,936
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $12,148
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:18:16 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
+        Mega Bal
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#ec4899;">
+        3+ Lines
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      2,019
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $5,532
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:17:11 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,872
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $967
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:16:06 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#eab308;">
+        2 Lines
+      </span>
+    
+                      </td>
+                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#8b5cf6;">
@@ -451,91 +951,35 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">198</td>
-                    <td class="t-right text-green" style="font-weight:600;">$140</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:52:13 Apr 8</td>
+  
                     
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        Mega Bal
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">4,484</td>
-                    <td class="t-right text-green" style="font-weight:600;">$14,364</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:51:08 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
+  
+                    <td class="t-right text-soft">
+                      1,268
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">4,314</td>
-                    <td class="t-right text-green" style="font-weight:600;">$26,571</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:50:03 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $8,332
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">1,494</td>
-                    <td class="t-right text-green" style="font-weight:600;">$8,862</td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:48:58 Apr 8</td>
+                    <td class="t-left text-soft">17:15:01 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        3+ Lines
+      <span class="result-badge result-badge-slot" style="background:#eab308;">
+        2 Lines
       </span>
     
                       </td>
                     
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#eab308;">
@@ -543,13 +987,25 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">4,706</td>
-                    <td class="t-right text-green" style="font-weight:600;">$17,692</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,774
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,973
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:47:53 Apr 8</td>
+                    <td class="t-left text-soft">17:13:56 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -559,6 +1015,7 @@
     
                       </td>
                     
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#3b82f6;">
@@ -566,82 +1023,25 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">4,578</td>
-                    <td class="t-right text-green" style="font-weight:600;">$22,278</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:46:48 Apr 8</td>
+  
                     
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">3,143</td>
-                    <td class="t-right text-green" style="font-weight:600;">$11,411</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:45:43 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
+  
+                    <td class="t-right text-soft">
+                      343
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">4,807</td>
-                    <td class="t-right text-green" style="font-weight:600;">$20,413</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:44:38 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,531
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">2,195</td>
-                    <td class="t-right text-green" style="font-weight:600;">$26,443</td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:43:33 Apr 8</td>
+                    <td class="t-left text-soft">17:12:51 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -651,29 +1051,7 @@
     
                       </td>
                     
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">5,070</td>
-                    <td class="t-right text-green" style="font-weight:600;">$16,707</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:42:28 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
-                      </td>
-                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#3b82f6;">
@@ -681,45 +1059,35 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">2,162</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,930</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,510
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $3,601
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:41:23 Apr 8</td>
+                    <td class="t-left text-soft">17:11:46 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
-      <span class="result-badge result-badge-slot" style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
         3+ Lines
       </span>
     
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">3,231</td>
-                    <td class="t-right text-green" style="font-weight:600;">$31,921</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:40:18 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
                       </td>
                     
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#3b82f6;">
@@ -727,36 +1095,25 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">557</td>
-                    <td class="t-right text-green" style="font-weight:600;">$951</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:39:13 Apr 8</td>
+  
                     
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">2,545</td>
-                    <td class="t-right text-green" style="font-weight:600;">$8,282</td>
+  
+                    <td class="t-right text-soft">
+                      716
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $8,293
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:38:08 Apr 8</td>
+                    <td class="t-left text-soft">17:10:41 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
@@ -766,75 +1123,43 @@
     
                       </td>
                     
+  
                     <td class="t-center">
                       
-      <span class="result-badge " style="background:#ec4899;">
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,620
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $11,385
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:09:36 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#ec4899;">
         3+ Lines
       </span>
     
-                    </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">4,046</td>
-                    <td class="t-right text-green" style="font-weight:600;">$10,512</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:37:03 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
                       </td>
                     
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">3,626</td>
-                    <td class="t-right text-green" style="font-weight:600;">$3,769</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:35:58 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
-        Mega Bal
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">2,984</td>
-                    <td class="t-right text-green" style="font-weight:600;">$2,209</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:34:53 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#eab308;">
-        2 Lines
-      </span>
-    
-                      </td>
-                    
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#eab308;">
@@ -842,68 +1167,35 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">3,629</td>
-                    <td class="t-right text-green" style="font-weight:600;">$24,199</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:33:48 Apr 8</td>
+  
                     
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#3b82f6;">
-        1 Line
-      </span>
-    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
                     </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">1,065</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,820</td>
+  
+                    <td class="t-right text-soft">
+                      1,528
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $14,868
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:32:43 Apr 8</td>
+                    <td class="t-left text-soft">17:08:31 Apr 8</td>
+  
                     
                       <td class="t-center">
                         
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
-                      </td>
-                    
-                    <td class="t-center">
-                      
-      <span class="result-badge " style="background:#eab308;">
+      <span class="result-badge result-badge-slot" style="background:#eab308;">
         2 Lines
       </span>
     
-                    </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">4,685</td>
-                    <td class="t-right text-green" style="font-weight:600;">$18,153</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:31:38 Apr 8</td>
-                    
-                      <td class="t-center">
-                        
-      <span class="result-badge result-badge-slot" style="background:#ec4899;">
-        3+ Lines
-      </span>
-    
                       </td>
                     
+  
                     <td class="t-center">
                       
       <span class="result-badge " style="background:#3b82f6;">
@@ -911,9 +1203,56 @@
       </span>
     
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">2,618</td>
-                    <td class="t-right text-green" style="font-weight:600;">$7,305</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,797
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $21,823
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:07:26 Apr 8</td>
+  
+                    
+                      <td class="t-center">
+                        
+      <span class="result-badge result-badge-slot" style="background:#8b5cf6;">
+        Mega Bal
+      </span>
+    
+                      </td>
+                    
+  
+                    <td class="t-center">
+                      
+      <span class="result-badge " style="background:#3b82f6;">
+        1 Line
+      </span>
+    
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      745
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,579
+                    </td>
                   </tr>
                 
             </tbody>
@@ -930,7 +1269,7 @@
               <div class="chart-box">
                 
                     <div class="chart-col">
-                      <span class="chart-percent">41%</span>
+                      <span class="chart-percent">50.83%</span>
                       <div class="chart-bar-wrap">
                         <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
                       </div>
@@ -938,25 +1277,25 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">34%</span>
+                      <span class="chart-percent">28.33%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:82.92682926829268%; background:#eab308;"></div>
+                        <div class="chart-bar" style="height:55.73480228211686%; background:#eab308;"></div>
                       </div>
                       <span class="chart-label">2 Lin</span>
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">16%</span>
+                      <span class="chart-percent">10%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:39.02439024390244%; background:#ec4899;"></div>
+                        <div class="chart-bar" style="height:19.673421207948063%; background:#ec4899;"></div>
                       </div>
                       <span class="chart-label">3+ Li</span>
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">9%</span>
+                      <span class="chart-percent">10.83%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:21.951219512195124%; background:#8b5cf6;"></div>
+                        <div class="chart-bar" style="height:21.30631516820775%; background:#8b5cf6;"></div>
                       </div>
                       <span class="chart-label">Mega </span>
                     </div>
@@ -969,97 +1308,110 @@
             <h2 class="panel-title">Return to Player</h2>
             <div class="rtp-card-body">
               <div class="rtp-center">
-                <div class="rtp-value">94.77%</div>
-                <p class="rtp-text">Based on last 1,000 spins</p>
+                <div class="rtp-value">95.53%</div>
+                <p class="rtp-text">Gebaseerd op de laatste 1.000 spins</p>
               </div>
             </div>
           </div>
         </div>
   
         <div class="stats-summary-grid">
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Total Spins Today</p>
-          <p class="summary-value">1,027</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Bonus Rounds</p>
-          <p class="summary-value purple">0</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Biggest Multiplier</p>
-          <p class="summary-value gold">5x</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Avg. Payout</p>
-          <p class="summary-value green">$11,014</p>
-        </div>
-      </div>
-
-      
-    </div>
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Totaal spins vandaag</p>
+            <p class="summary-value">995</p>
+          </div>
   
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Bonus rondes</p>
+            <p class="summary-value purple">0</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Grootste multiplier</p>
+            <p class="summary-value gold">5x</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Gem. uitbetaling</p>
+            <p class="summary-value green">$4,830</p>
+          </div>
+        </div>
+  
+        
+      </div>
+    
           
       <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Top Multiplier Wins</h2>
+  
         <div class="bigwins-grid">
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 6, 2026</span>
+                <span class="bigwin-date">Apr 8, 2026</span>
                 <span class="bigwin-rank top">#1</span>
               </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  2 Li
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">25,000x</div>
-                  <div class="bigwin-label">2 Lines</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$466,164</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 3, 2026</span>
-                <span class="bigwin-rank top">#2</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  Mega
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">10,000x</div>
-                  <div class="bigwin-label">Mega Ball</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$317,509</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 6, 2026</span>
-                <span class="bigwin-rank top">#3</span>
-              </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
                   3+ L
                 </span>
+  
                 <div>
-                  <div class="bigwin-multiplier">5,000x</div>
+                  <div class="bigwin-multiplier">25,000x</div>
                   <div class="bigwin-label">3+ Lines</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$207,700</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$405,820</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 6, 2026</span>
+                <span class="bigwin-rank top">#2</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  3+ L
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">10,000x</div>
+                  <div class="bigwin-label">3+ Lines</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$413,947</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 5, 2026</span>
+                <span class="bigwin-rank top">#3</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  2 Li
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">5,000x</div>
+                  <div class="bigwin-label">2 Lines</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$73,630</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
@@ -1068,18 +1420,21 @@
                 <span class="bigwin-date">Apr 6, 2026</span>
                 <span class="bigwin-rank ">#4</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  Mega
+                  3+ L
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">2,500x</div>
-                  <div class="bigwin-label">Mega Ball</div>
+                  <div class="bigwin-label">3+ Lines</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$42,613</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$279,315</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
@@ -1088,78 +1443,90 @@
                 <span class="bigwin-date">Apr 3, 2026</span>
                 <span class="bigwin-rank ">#5</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  2 Li
+                  1 Li
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">2,000x</div>
-                  <div class="bigwin-label">2 Lines</div>
+                  <div class="bigwin-label">1 Line</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$355,590</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$43,106</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 2, 2026</span>
+                <span class="bigwin-date">Apr 6, 2026</span>
                 <span class="bigwin-rank ">#6</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  1 Li
+                  3+ L
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">1,000x</div>
-                  <div class="bigwin-label">1 Line</div>
+                  <div class="bigwin-label">3+ Lines</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$259,627</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$415,415</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 8, 2026</span>
+                <span class="bigwin-rank ">#7</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  3+ L
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">500x</div>
+                  <div class="bigwin-label">3+ Lines</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$129,473</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
                 <span class="bigwin-date">Apr 4, 2026</span>
-                <span class="bigwin-rank ">#7</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  3+ L
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">500x</div>
-                  <div class="bigwin-label">3+ Lines</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$391,292</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 2, 2026</span>
                 <span class="bigwin-rank ">#8</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  Mega
+                  2 Li
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">200x</div>
-                  <div class="bigwin-label">Mega Ball</div>
+                  <div class="bigwin-label">2 Lines</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$492,001</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$324,365</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
@@ -1168,18 +1535,21 @@
                 <span class="bigwin-date">Apr 4, 2026</span>
                 <span class="bigwin-rank ">#9</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
                   Mega
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">100x</div>
                   <div class="bigwin-label">Mega Ball</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$287,242</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$123,614</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Kijken</span>
               </div>
             </article>
           
@@ -1272,10 +1642,9 @@
       Spelen 🎰
     </a>
   
-
     <script id="gamePageData" type="application/json">
-      {"lang":"nl","game":{"id":"megaball","name":"Mega Ball","provider":"Evolution Gaming","color":"#3b82f6","image":{"src":"img/mega-ball-logo.webp","alt":"Mega Ball logo"},"segments":["1 Line","2 Lines","3+ Lines","Mega Ball"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6"],"segProbs":[45,30,15,10],"expectedRtp":95.3}}
-    </script>
+    {"lang":"nl","game":{"id":"megaball","name":"Mega Ball","provider":"Evolution Gaming","color":"#3b82f6","image":{"src":"img/mega-ball-logo.webp","alt":"Mega Ball logo"},"segments":["1 Line","2 Lines","3+ Lines","Mega Ball"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6"],"segProbs":[45,30,15,10],"expectedRtp":95.3},"ui":{"common":{"player":"Speler","verifiedUser":"Geverifieerde gebruiker","liveNow":"Nu live","hour":"uur","hours":"uur","spins":"spins"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Laatste 30 minuten","bestWinsTitle":"Beste winsten per spin","bestWinsText":"Een snel overzicht van de hoogste uitbetalingen van de recent bijgehouden spins.","wheelStatsTitle":"Wiel multiplier statistieken","wheelStatsText":"Bekijk hoe vaak multiplier-segmenten vielen in dezelfde periode.","matchedTitle":"Overeenkomende multipliers","matchedText":"Vergelijk multiplier-hits met normale spins in de huidige dataset.","finished":"Voltooid","outcome":"Resultaat","player":"Speler","wonAmount":"Gewonnen bedrag","multiplier":"Multiplier","match":"Overeenkomst","noMatch":"Geen overeenkomst"},"gamePanels":{"temperatureSubtitle":"Segmenttemperatuur toont hot en cold resultaten in realtime op basis van recente spins versus de verwachte kans.","temperatureSpinsSince":"{n} spins geleden","historySubtitle":"Bekijk de nieuwste spin history met realtime resultaten, multipliers, winnaars en uitbetalingen.","rtpBasedOn":"Gebaseerd op de laatste 1.000 spins","summaryTotalSpinsToday":"Totaal spins vandaag","summaryBonusRounds":"Bonus rondes","summaryBiggestMultiplier":"Grootste multiplier","summaryAvgPayout":"Gem. uitbetaling","occurredAt":"Tijdstip","slotResult":"Slot resultaat","spinResult":"Spin resultaat","specialResult":"Special result","multiplier":"Multiplier","totalWinners":"Winnaars","totalPayout":"Totale payout","watch":"Kijken"}}}
+  </script>
   </div>
   
   <script src="/main-script.js"></script>

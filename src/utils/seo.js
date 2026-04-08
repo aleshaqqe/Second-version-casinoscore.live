@@ -73,6 +73,10 @@ function jsonLdScript(schemaObject) {
       const faqSchema = createFaqSchema(t.monopolyReview.faq);
       schemas.push(jsonLdScript(faqSchema));
     }
+    if (game.id === "dreamcatcher" && t.dreamcatcherReview?.faq?.length) {
+      const faqSchema = createFaqSchema(t.dreamcatcherReview.faq);
+      schemas.push(jsonLdScript(faqSchema));
+    }
   
     return schemas.join("\n");
   }

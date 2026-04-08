@@ -1,6 +1,8 @@
 const { buildPath } = require("../utils/helpers");
+const { renderDreamCatcherReviewPanel } = require("./dreamcatcher-review");
 const { renderCrazyTimeReviewPanel } = require("./crazytime-review");
 const { renderMonopolyReviewPanel } = require("./monopoly-review");
+const { renderDreamCatcherExtraStatsSection } = require("./dream-catcher-extra-stats");
 const { renderHeader, renderFooter, renderFloatingPlayButton } = require("./partials");
 const {
   generateSpinData,
@@ -8,6 +10,7 @@ const {
   countDistribution,
   generateStatsSummary,
   generateBigWins,
+  generateDreamCatcherExtraStats,
   generateCrazyFlapperStats,
   generateCrazyCoinFlipColorStats,
   generateCashHuntSymbolsStats,
@@ -31,8 +34,8 @@ const {
 const { GAMES, SUPPORTED_LANGS } = require("../data/site-data");
 
 function renderTabsRow(t, game) {
-  const hasReview = game.id === "crazytime" || game.id === "monopoly";
-  const hasStream = game.id === "crazytime";
+  const hasReview = game.id === "crazytime" || game.id === "monopoly" || game.id === "dreamcatcher";
+    const hasStream = game.id === "crazytime";
 
   return `
     <div class="tabs-row">
@@ -122,11 +125,15 @@ function renderCrazyTimeStreamLite(t) {
 }
 
 function renderGamePage({ lang, t, game }) {
-  const spinData = generateSpinData(game, 100);
+  const spinData = generateSpinData(game, game.id === "dreamcatcher" ? 520 : 120);
   const temperatureData = generateTemperatureData(game);
   const distribution = countDistribution(game, spinData);
   const summary = generateStatsSummary(game, spinData);
   const wins = generateBigWins(game);
+  const dreamCatcherExtraData =
+  game.id === "dreamcatcher"
+    ? generateDreamCatcherExtraStats(game, spinData)
+    : null;
 
   const crazyTimeExtraData =
     game.id === "crazytime"
@@ -151,19 +158,23 @@ function renderGamePage({ lang, t, game }) {
         }
       : null;
 
-  const statsExtraHtml =
-    game.id === "crazytime" && crazyTimeExtraData
-      ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
-      : game.id === "monopoly" && monopolyExtraData
-        ? renderMonopolyExtraStatsSection(t, monopolyExtraData)
-        : "";
+      const statsExtraHtml =
+      game.id === "dreamcatcher" && dreamCatcherExtraData
+        ? renderDreamCatcherExtraStatsSection(t, dreamCatcherExtraData, game)
+        : game.id === "crazytime" && crazyTimeExtraData
+          ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
+          : game.id === "monopoly" && monopolyExtraData
+            ? renderMonopolyExtraStatsSection(t, monopolyExtraData)
+            : "";
 
-  const reviewPanelHtml =
-    game.id === "crazytime"
-      ? renderCrazyTimeReviewPanel(t)
-      : game.id === "monopoly"
-        ? renderMonopolyReviewPanel(t)
-        : "";
+            const reviewPanelHtml =
+            game.id === "crazytime"
+              ? renderCrazyTimeReviewPanel(t)
+              : game.id === "monopoly"
+                ? renderMonopolyReviewPanel(t)
+                : game.id === "dreamcatcher"
+                  ? renderDreamCatcherReviewPanel(t)
+                  : "";
 
   const streamPanelHtml =
     game.id === "crazytime"
@@ -199,18 +210,29 @@ function renderGamePage({ lang, t, game }) {
               <p>${t.gamePage.subtitlePrefix} ${game.name}</p>
             </div>
 
+            <div class="game-header-actions">
             <div class="live-pill">
               <span class="live-dot"></span>
               <span>${t.common.liveNow}</span>
             </div>
+          
+            <a
+              href="/go/reg/"
+              class="live-now-cta-btn"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
+              ${(t.gamePage && t.gamePage.playCta) || (t.cta && t.cta.playNow) || "Play Now"}
+            </a>
+          </div>
           </div>
 
           ${renderTabsRow(t, game)}
 
-          ${renderTemperaturePanel(game, temperatureData)}
-          ${renderHistoryPanel(game, spinData)}
-          ${renderStatsPanel(game, distribution, summary, statsExtraHtml)}
-          ${renderBigWinsPanel(game, wins)}
+          ${renderTemperaturePanel(game, temperatureData,t)}
+          ${renderHistoryPanel(game, spinData,t)}
+          ${renderStatsPanel(game, distribution, summary, statsExtraHtml,t)}
+          ${renderBigWinsPanel(game, wins,t)}
           ${reviewPanelHtml}
           ${streamPanelHtml}
         </div>
@@ -224,13 +246,18 @@ function renderGamePage({ lang, t, game }) {
     })}
 
     ${renderFloatingPlayButton(t)}
-
     <script id="gamePageData" type="application/json">
-      ${JSON.stringify({
-        lang,
-        game
-      })}
-    </script>
+    ${JSON.stringify({
+      lang,
+      game,
+      ui: {
+        common: t.common || {},
+        dreamcatcherStatsExtra: t.dreamcatcherStatsExtra || {},
+        gamePanels: t.gamePanels || {}
+
+      }
+    })}
+  </script>
   </div>
   `;
 }

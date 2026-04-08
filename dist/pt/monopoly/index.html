@@ -23,7 +23,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/main.css" />
   <link rel="canonical" href="https://casinoscore.live/pt/monopoly/" />
   <link rel="alternate" hreflang="en" href="https://casinoscore.live/monopoly/" />
 <link rel="alternate" hreflang="es" href="https://casinoscore.live/es/monopoly/" />
@@ -244,10 +244,21 @@
               <p>Acompanhe resultados, histórico e estatísticas em tempo real de Monopoly Live</p>
             </div>
 
+            <div class="game-header-actions">
             <div class="live-pill">
               <span class="live-dot"></span>
               <span>Ao vivo</span>
             </div>
+          
+            <a
+              href="/go/reg/"
+              class="live-now-cta-btn"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
+              Jogar agora
+            </a>
+          </div>
           </div>
 
           
@@ -281,7 +292,8 @@
           
       <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Segment Temperature</h2>
-        <p class="panel-subtitle">Showing how each segment is performing relative to its expected frequency.</p>
+        <p class="panel-subtitle">A temperatura dos segmentos destaca resultados quentes e frios em tempo real com base nos giros recentes versus a probabilidade esperada.</p>
+  
         <div class="temp-grid">
           
             <div class="temp-card">
@@ -290,12 +302,12 @@
           <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-cold">37.1%</div>
-              <div class="temp-diff negative">
-                (-1.79)
+              <div class="temp-value temp-hot">40.03%</div>
+              <div class="temp-diff positive">
+                (+1.14)
               </div>
-              <div class="temp-spins">7 spins since</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+              <div class="temp-spins">há 18 giros</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
@@ -304,11 +316,11 @@
           <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-warm">5.72%</div>
-              <div class="temp-diff positive">
-                (+0.16)
+              <div class="temp-value temp-warm">5.12%</div>
+              <div class="temp-diff negative">
+                (-0.44)
               </div>
-              <div class="temp-spins">18 spins since</div>
+              <div class="temp-spins">há 6 giros</div>
               <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
@@ -318,11 +330,11 @@
           <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-cold">11.28%</div>
+              <div class="temp-value temp-cold">11.99%</div>
               <div class="temp-diff negative">
-                (-1.68)
+                (-0.97)
               </div>
-              <div class="temp-spins">14 spins since</div>
+              <div class="temp-spins">há 3 giros</div>
               <i class="fas fa-snowflake temp-cold temp-icon"></i>
             </div>
           
@@ -332,12 +344,12 @@
           <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-cold">12.03%</div>
-              <div class="temp-diff negative">
-                (-0.93)
+              <div class="temp-value temp-warm">13.19%</div>
+              <div class="temp-diff positive">
+                (+0.23)
               </div>
-              <div class="temp-spins">15 spins since</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+              <div class="temp-spins">há 1 giros</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
             <div class="temp-card">
@@ -346,12 +358,12 @@
           <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-warm">3.47%</div>
-              <div class="temp-diff negative">
-                (-0.23)
+              <div class="temp-value temp-hot">5.23%</div>
+              <div class="temp-diff positive">
+                (+1.53)
               </div>
-              <div class="temp-spins">7 spins since</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+              <div class="temp-spins">há 15 giros</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
@@ -360,12 +372,12 @@
           <img src="/img/monopoly/temperature/four-rolls.webp" alt="4 Rolls" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-hot">7.46%</div>
-              <div class="temp-diff positive">
-                (+1.9)
+              <div class="temp-value temp-warm">5.27%</div>
+              <div class="temp-diff negative">
+                (-0.29)
               </div>
-              <div class="temp-spins">8 spins since</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
+              <div class="temp-spins">há 20 giros</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
             <div class="temp-card">
@@ -374,12 +386,12 @@
           <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="temp-segment-img">
         </div>
       
-              <div class="temp-value temp-hot">21.24%</div>
-              <div class="temp-diff positive">
-                (+0.87)
+              <div class="temp-value temp-warm">19.91%</div>
+              <div class="temp-diff negative">
+                (-0.46)
               </div>
-              <div class="temp-spins">18 spins since</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
+              <div class="temp-spins">há 19 giros</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
             </div>
           
         </div>
@@ -388,175 +400,29 @@
           
       <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Recent Spin History</h2>
-        <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
+        <p class="panel-subtitle">Veja o histórico mais recente com resultados em tempo real, multiplicadores, vencedores e pagamentos.</p>
   
         <div class="table-wrap">
           <table class="spin-table">
             <thead>
               <tr>
-                <th class="t-left">Occurred At</th>
+                <th class="t-left">Ocorrido em</th>
                 
-                <th class="t-center">Spin Result</th>
-                <th class="t-right">Multiplier</th>
-                <th class="t-right">Total Winners</th>
-                <th class="t-right">Total Payout</th>
+                <th class="t-center">Resultado do giro</th>
+                
+                <th class="t-right">Multiplicador</th>
+                <th class="t-right">Vencedores</th>
+                <th class="t-right">Pagamento total</th>
               </tr>
             </thead>
+  
             <tbody>
               
                   <tr>
-                    <td class="t-left text-soft">09:57:38 Apr 8</td>
+                    <td class="t-left text-soft">17:33:26 Apr 8</td>
+  
                     
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">5,057</td>
-                    <td class="t-right text-green" style="font-weight:600;">$16,691</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:56:33 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">2,027</td>
-                    <td class="t-right text-green" style="font-weight:600;">$13,426</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:55:28 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">150</td>
-                    <td class="t-right text-green" style="font-weight:600;">$1,021</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:54:23 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">3,046</td>
-                    <td class="t-right text-green" style="font-weight:600;">$5,294</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:53:18 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">15x</td>
-                    <td class="t-right text-soft">4,348</td>
-                    <td class="t-right text-green" style="font-weight:600;">$60,104</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:52:13 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
-                    <td class="t-right text-soft">3,229</td>
-                    <td class="t-right text-green" style="font-weight:600;">$1,440,477</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:51:08 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">20x</td>
-                    <td class="t-right text-soft">280</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,220</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:50:03 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
-                    <td class="t-right text-soft">3,121</td>
-                    <td class="t-right text-green" style="font-weight:600;">$1,088,825</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:48:58 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right text-gold" style="font-weight:600;">500x</td>
-                    <td class="t-right text-soft">4,068</td>
-                    <td class="t-right text-green" style="font-weight:600;">$2,055,136</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:47:53 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-                    <td class="t-right " style="font-weight:600;">2x</td>
-                    <td class="t-right text-soft">3,212</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,431</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:46:48 Apr 8</td>
-                    
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -564,14 +430,27 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">3,846</td>
-                    <td class="t-right text-green" style="font-weight:600;">$8,610</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,362
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $7,482
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:45:43 Apr 8</td>
+                    <td class="t-left text-soft">17:32:21 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image result-badge-bonus-image">
@@ -579,44 +458,27 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">10x</td>
-                    <td class="t-right text-soft">826</td>
-                    <td class="t-right text-green" style="font-weight:600;">$13,082</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:44:38 Apr 8</td>
+  
                     
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
+  
+                    <td class="t-right " style="font-weight:600;">
+                      10x
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">4,302</td>
-                    <td class="t-right text-green" style="font-weight:600;">$4,984</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:43:33 Apr 8</td>
-                    
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
+  
+                    <td class="t-right text-soft">
+                      1,976
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">989</td>
-                    <td class="t-right text-green" style="font-weight:600;">$5,032</td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $26,583
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:42:28 Apr 8</td>
+                    <td class="t-left text-soft">17:31:16 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -624,29 +486,27 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">3,559</td>
-                    <td class="t-right text-green" style="font-weight:600;">$37,705</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:41:23 Apr 8</td>
+  
                     
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
-        </span>
-      
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">3,282</td>
-                    <td class="t-right text-green" style="font-weight:600;">$27,461</td>
+  
+                    <td class="t-right text-soft">
+                      1,467
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $6,729
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:40:18 Apr 8</td>
+                    <td class="t-left text-soft">17:30:11 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -654,14 +514,139 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">1x</td>
-                    <td class="t-right text-soft">4,105</td>
-                    <td class="t-right text-green" style="font-weight:600;">$8,743</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,638
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $3,750
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:39:13 Apr 8</td>
+                    <td class="t-left text-soft">17:29:06 Apr 8</td>
+  
                     
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      880
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,106
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:28:01 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      822
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $5,539
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:26:56 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      987
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $838
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:25:51 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      696
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,271
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:24:46 Apr 8</td>
+  
+                    
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image result-badge-bonus-image">
@@ -669,14 +654,83 @@
         </span>
       
                     </td>
-                    <td class="t-right text-gold" style="font-weight:600;">500x</td>
-                    <td class="t-right text-soft">526</td>
-                    <td class="t-right text-green" style="font-weight:600;">$296,298</td>
+  
+                    
+  
+                    <td class="t-right text-gold" style="font-weight:600;">
+                      500x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      2,064
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,006,182
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:38:08 Apr 8</td>
+                    <td class="t-left text-soft">17:23:41 Apr 8</td>
+  
                     
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      2,067
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $3,091
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:22:36 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      477
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $903
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:21:31 Apr 8</td>
+  
+                    
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -684,44 +738,83 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">3x</td>
-                    <td class="t-right text-soft">2,127</td>
-                    <td class="t-right text-green" style="font-weight:600;">$13,643</td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">09:37:03 Apr 8</td>
+  
                     
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">4,391</td>
-                    <td class="t-right text-green" style="font-weight:600;">$22,702</td>
+  
+                    <td class="t-right text-soft">
+                      1,800
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $8,138
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:35:58 Apr 8</td>
+                    <td class="t-left text-soft">17:20:26 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
         </span>
       
                     </td>
-                    <td class="t-right text-gold" style="font-weight:600;">200x</td>
-                    <td class="t-right text-soft">3,532</td>
-                    <td class="t-right text-green" style="font-weight:600;">$375,062</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      20x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,832
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $25,229
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:34:53 Apr 8</td>
+                    <td class="t-left text-soft">17:19:21 Apr 8</td>
+  
                     
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      15x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,180
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $43,527
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:18:16 Apr 8</td>
+  
+                    
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -729,44 +822,83 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">4,894</td>
-                    <td class="t-right text-green" style="font-weight:600;">$26,966</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,164
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,862
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:33:48 Apr 8</td>
+                    <td class="t-left text-soft">17:17:11 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
         </span>
       
                     </td>
-                    <td class="t-right text-gold" style="font-weight:600;">500x</td>
-                    <td class="t-right text-soft">1,076</td>
-                    <td class="t-right text-green" style="font-weight:600;">$741,007</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      394
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,316
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:32:43 Apr 8</td>
+                    <td class="t-left text-soft">17:16:06 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="result-badge-img">
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">15x</td>
-                    <td class="t-right text-soft">5,091</td>
-                    <td class="t-right text-green" style="font-weight:600;">$181,405</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      329
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $876
+                    </td>
                   </tr>
                 
                   <tr>
-                    <td class="t-left text-soft">09:31:38 Apr 8</td>
+                    <td class="t-left text-soft">17:15:01 Apr 8</td>
+  
                     
+  
                     <td class="t-center">
                       
         <span class="result-badge result-badge-image ">
@@ -774,9 +906,216 @@
         </span>
       
                     </td>
-                    <td class="t-right " style="font-weight:600;">5x</td>
-                    <td class="t-right text-soft">2,646</td>
-                    <td class="t-right text-green" style="font-weight:600;">$19,136</td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,648
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $6,405
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:13:56 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,698
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $18,747
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:12:51 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      5x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      384
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $4,658
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:11:46 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image result-badge-bonus-image">
+          <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      15x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,074
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $22,528
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:10:41 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,416
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $6,586
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:09:36 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/two.webp" alt="2" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      2x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      2,014
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $7,292
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:08:31 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      3x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      554
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $2,356
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">17:07:26 Apr 8</td>
+  
+                    
+  
+                    <td class="t-center">
+                      
+        <span class="result-badge result-badge-image ">
+          <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="result-badge-img">
+        </span>
+      
+                    </td>
+  
+                    
+  
+                    <td class="t-right " style="font-weight:600;">
+                      1x
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      1,296
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $1,083
+                    </td>
                   </tr>
                 
             </tbody>
@@ -793,7 +1132,7 @@
               <div class="chart-box">
                 
                     <div class="chart-col">
-                      <span class="chart-percent">37%</span>
+                      <span class="chart-percent">39.17%</span>
                       <div class="chart-bar-wrap">
                         <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
                       </div>
@@ -805,9 +1144,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">11%</span>
+                      <span class="chart-percent">11.67%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:29.72972972972973%; background:#eab308;"></div>
+                        <div class="chart-bar" style="height:29.793209088588203%; background:#eab308;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -817,9 +1156,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">4%</span>
+                      <span class="chart-percent">10%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:10.81081081081081%; background:#ec4899;"></div>
+                        <div class="chart-bar" style="height:25.52974214960429%; background:#ec4899;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -829,9 +1168,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">7%</span>
+                      <span class="chart-percent">1.67%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:18.91891891891892%; background:#8b5cf6;"></div>
+                        <div class="chart-bar" style="height:4.263466938983916%; background:#8b5cf6;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -841,9 +1180,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">17%</span>
+                      <span class="chart-percent">20%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:45.94594594594595%; background:#f97316;"></div>
+                        <div class="chart-bar" style="height:51.05948429920858%; background:#f97316;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -853,9 +1192,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">4%</span>
+                      <span class="chart-percent">3.33%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:10.81081081081081%; background:#22c55e;"></div>
+                        <div class="chart-bar" style="height:8.501404135818227%; background:#22c55e;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -865,9 +1204,9 @@
                     </div>
                   
                     <div class="chart-col">
-                      <span class="chart-percent">20%</span>
+                      <span class="chart-percent">14.17%</span>
                       <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:54.054054054054056%; background:#ef4444;"></div>
+                        <div class="chart-bar" style="height:36.17564462598928%; background:#ef4444;"></div>
                       </div>
                       
         <span class="chart-label chart-label-image">
@@ -884,33 +1223,36 @@
             <h2 class="panel-title">Return to Player</h2>
             <div class="rtp-card-body">
               <div class="rtp-center">
-                <div class="rtp-value">95.19%</div>
-                <p class="rtp-text">Based on last 1,000 spins</p>
+                <div class="rtp-value">95.45%</div>
+                <p class="rtp-text">Baseado nos últimos 1.000 giros</p>
               </div>
             </div>
           </div>
         </div>
   
         <div class="stats-summary-grid">
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Total Spins Today</p>
-          <p class="summary-value">1,089</p>
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Total de giros hoje</p>
+            <p class="summary-value">909</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Rodadas bônus</p>
+            <p class="summary-value purple">45</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Maior multiplicador</p>
+            <p class="summary-value gold">500x</p>
+          </div>
+  
+          <div class="stats-grid-card summary-card">
+            <p class="summary-label">Pagamento méd.</p>
+            <p class="summary-value green">$73,729</p>
+          </div>
         </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Bonus Rounds</p>
-          <p class="summary-value purple">41</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Biggest Multiplier</p>
-          <p class="summary-value gold">500x</p>
-        </div>
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Avg. Payout</p>
-          <p class="summary-value green">$228,212</p>
-        </div>
-      </div>
-
-      
+  
+        
       <section class="monopoly-extra-section">
         <div class="monopoly-dice-grid">
           
@@ -2588,170 +2930,195 @@
         </div>
       </section>
     
-    </div>
-  
+      </div>
+    
           
       <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
         <h2 class="panel-title">Top Multiplier Wins</h2>
+  
         <div class="bigwins-grid">
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 3, 2026</span>
+                <span class="bigwin-date">Apr 4, 2026</span>
                 <span class="bigwin-rank top">#1</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="bigwin-segment-img">
+                  <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">25,000x</div>
-                  <div class="bigwin-label">2 Rolls</div>
+                  <div class="bigwin-label">1</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$318,924</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$33,421</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 8, 2026</span>
+                <span class="bigwin-rank top">#2</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">10,000x</div>
+                  <div class="bigwin-label">1</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$140,411</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 3, 2026</span>
+                <span class="bigwin-rank top">#3</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">5,000x</div>
+                  <div class="bigwin-label">10</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$110,333</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
                 <span class="bigwin-date">Apr 7, 2026</span>
-                <span class="bigwin-rank top">#2</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="bigwin-segment-img">
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">10,000x</div>
-                  <div class="bigwin-label">2 Rolls</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$408,647</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 6, 2026</span>
-                <span class="bigwin-rank top">#3</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">5,000x</div>
-                  <div class="bigwin-label">5</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$161,101</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 4, 2026</span>
                 <span class="bigwin-rank ">#4</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
                   <img src="/img/monopoly/temperature/two-rolls.webp" alt="2 Rolls" loading="lazy" class="bigwin-segment-img">
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">2,500x</div>
                   <div class="bigwin-label">2 Rolls</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$214,012</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$371,736</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 2, 2026</span>
+                <span class="bigwin-rank ">#5</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="bigwin-segment-img">
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">2,000x</div>
+                  <div class="bigwin-label">Chance</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$413,763</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
+              </div>
+            </article>
+          
+            <article class="stats-grid-card bigwin-card">
+              <div class="bigwin-top">
+                <span class="bigwin-date">Apr 3, 2026</span>
+                <span class="bigwin-rank ">#6</span>
+              </div>
+  
+              <div class="bigwin-main">
+                <span class="bigwin-segment">
+                  <img src="/img/monopoly/temperature/one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+                </span>
+  
+                <div>
+                  <div class="bigwin-multiplier">1,000x</div>
+                  <div class="bigwin-label">1</div>
+                </div>
+              </div>
+  
+              <div class="bigwin-bottom">
+                <span class="bigwin-payout">$31,713</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
                 <span class="bigwin-date">Apr 4, 2026</span>
-                <span class="bigwin-rank ">#5</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">2,000x</div>
-                  <div class="bigwin-label">5</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$450,055</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 5, 2026</span>
-                <span class="bigwin-rank ">#6</span>
-              </div>
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/chance.webp" alt="Chance" loading="lazy" class="bigwin-segment-img">
-                </span>
-                <div>
-                  <div class="bigwin-multiplier">1,000x</div>
-                  <div class="bigwin-label">Chance</div>
-                </div>
-              </div>
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$442,527</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 7, 2026</span>
                 <span class="bigwin-rank ">#7</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
                   <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">500x</div>
                   <div class="bigwin-label">10</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$155,648</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$309,705</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
               </div>
             </article>
           
             <article class="stats-grid-card bigwin-card">
               <div class="bigwin-top">
-                <span class="bigwin-date">Apr 5, 2026</span>
+                <span class="bigwin-date">Apr 8, 2026</span>
                 <span class="bigwin-rank ">#8</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/four-rolls.webp" alt="4 Rolls" loading="lazy" class="bigwin-segment-img">
+                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">200x</div>
-                  <div class="bigwin-label">4 Rolls</div>
+                  <div class="bigwin-label">5</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$152,423</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$191,787</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
               </div>
             </article>
           
@@ -2760,18 +3127,21 @@
                 <span class="bigwin-date">Apr 2, 2026</span>
                 <span class="bigwin-rank ">#9</span>
               </div>
+  
               <div class="bigwin-main">
                 <span class="bigwin-segment">
-                  <img src="/img/monopoly/temperature/ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+                  <img src="/img/monopoly/temperature/five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
                 </span>
+  
                 <div>
                   <div class="bigwin-multiplier">100x</div>
-                  <div class="bigwin-label">10</div>
+                  <div class="bigwin-label">5</div>
                 </div>
               </div>
+  
               <div class="bigwin-bottom">
-                <span class="bigwin-payout">$55,178</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
+                <span class="bigwin-payout">$59,625</span>
+                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Assistir</span>
               </div>
             </article>
           
@@ -3058,10 +3428,9 @@
       Jogar 🎰
     </a>
   
-
     <script id="gamePageData" type="application/json">
-      {"lang":"pt","game":{"id":"monopoly","name":"Monopoly Live","provider":"Evolution Gaming","color":"#22c55e","image":{"src":"img/monopoly-live-casino-logo.webp","alt":"Monopoly Live logo"},"segments":["1","2","5","10","2 Rolls","4 Rolls","Chance"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6","#f97316","#22c55e","#ef4444"],"segProbs":[38.89,12.96,5.56,3.7,12.96,5.56,20.37],"expectedRtp":95.72,"segmentImages":{"1":"img/monopoly/temperature/one.webp","2":"img/monopoly/temperature/two.webp","5":"img/monopoly/temperature/five.webp","10":"img/monopoly/temperature/ten.webp","2 Rolls":"img/monopoly/temperature/two-rolls.webp","4 Rolls":"img/monopoly/temperature/four-rolls.webp","Chance":"img/monopoly/temperature/chance.webp"}}}
-    </script>
+    {"lang":"pt","game":{"id":"monopoly","name":"Monopoly Live","provider":"Evolution Gaming","color":"#22c55e","image":{"src":"img/monopoly-live-casino-logo.webp","alt":"Monopoly Live logo"},"segments":["1","2","5","10","2 Rolls","4 Rolls","Chance"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6","#f97316","#22c55e","#ef4444"],"segProbs":[38.89,12.96,5.56,3.7,12.96,5.56,20.37],"expectedRtp":95.72,"segmentImages":{"1":"img/monopoly/temperature/one.webp","2":"img/monopoly/temperature/two.webp","5":"img/monopoly/temperature/five.webp","10":"img/monopoly/temperature/ten.webp","2 Rolls":"img/monopoly/temperature/two-rolls.webp","4 Rolls":"img/monopoly/temperature/four-rolls.webp","Chance":"img/monopoly/temperature/chance.webp"}},"ui":{"common":{"player":"Jogador","verifiedUser":"Usuário verificado","liveNow":"Ao vivo","hour":"hora","hours":"horas","spins":"giros"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Últimos 30 minutos","bestWinsTitle":"Maiores ganhos por rodada","bestWinsText":"Uma visão rápida dos maiores pagamentos das rodadas mais recentes monitoradas.","wheelStatsTitle":"Estatísticas dos multiplicadores da roda","wheelStatsText":"Veja com que frequência os segmentos multiplicadores apareceram no mesmo período.","matchedTitle":"Multiplicadores correspondentes","matchedText":"Compare os acertos de multiplicadores com rodadas normais na amostra atual.","finished":"Finalizado","outcome":"Resultado","player":"Jogador","wonAmount":"Valor ganho","multiplier":"Multiplicador","match":"Correspondência","noMatch":"Sem correspondência"},"gamePanels":{"temperatureSubtitle":"A temperatura dos segmentos destaca resultados quentes e frios em tempo real com base nos giros recentes versus a probabilidade esperada.","temperatureSpinsSince":"há {n} giros","historySubtitle":"Veja o histórico mais recente com resultados em tempo real, multiplicadores, vencedores e pagamentos.","rtpBasedOn":"Baseado nos últimos 1.000 giros","summaryTotalSpinsToday":"Total de giros hoje","summaryBonusRounds":"Rodadas bônus","summaryBiggestMultiplier":"Maior multiplicador","summaryAvgPayout":"Pagamento méd.","occurredAt":"Ocorrido em","slotResult":"Resultado do slot","spinResult":"Resultado do giro","specialResult":"Resultado especial","multiplier":"Multiplicador","totalWinners":"Vencedores","totalPayout":"Pagamento total","watch":"Assistir"}}}
+  </script>
   </div>
   
   <script src="/main-script.js"></script>

@@ -1,3 +1,9 @@
+"use strict";
+
+/* =========================
+   BOOT
+   ========================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   function getCurrentGameKey() {
     const gameDataScript = document.getElementById("gamePageData");
@@ -30,20 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function activateTab(group, target) {
     if (!group || !target) return;
 
-    document
-      .querySelectorAll(`[data-tab-group="${group}"]`)
-      .forEach((btn) => {
-        const isActive = btn.getAttribute("data-tab-target") === target;
-        btn.classList.toggle("active", isActive);
-      });
+    document.querySelectorAll(`[data-tab-group="${group}"]`).forEach((btn) => {
+      const isActive = btn.getAttribute("data-tab-target") === target;
+      btn.classList.toggle("active", isActive);
+    });
 
-    document
-      .querySelectorAll(`[data-tab-panel-group="${group}"]`)
-      .forEach((panel) => {
-        const isActive = panel.getAttribute("data-tab-panel") === target;
-        panel.classList.toggle("active", isActive);
-      });
+    document.querySelectorAll(`[data-tab-panel-group="${group}"]`).forEach((panel) => {
+      const isActive = panel.getAttribute("data-tab-panel") === target;
+      panel.classList.toggle("active", isActive);
+    });
   }
+
+  // Burger
   const burgerBtn = document.getElementById("burgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -54,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Desktop dropdown
   document.querySelectorAll(".dropdown").forEach((dropdown) => {
     const trigger = dropdown.querySelector(".dropdown-trigger");
     if (!trigger) return;
@@ -66,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const currentGameId = getCurrentGameKey();
 
+  // Tabs click
   document.querySelectorAll("[data-tab-target]").forEach((button) => {
     button.addEventListener("click", () => {
       const target = button.getAttribute("data-tab-target");
       const group = button.getAttribute("data-tab-group");
-
       if (!target || !group) return;
 
       activateTab(group, target);
@@ -81,40 +86,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Restore saved tab (after reload)
   if (currentGameId) {
     const savedTab = getSavedActiveTab(currentGameId);
-
     if (savedTab) {
       const matchingButton = document.querySelector(
         `[data-tab-group="game-tabs"][data-tab-target="${savedTab}"]`
       );
-
-      if (matchingButton) {
-        activateTab("game-tabs", savedTab);
-      }
+      if (matchingButton) activateTab("game-tabs", savedTab);
     }
   }
 
-  document.querySelectorAll(".js-stream-launch").forEach((button) => {
-    button.addEventListener("click", () => {
-      const box = button.closest(".crazytime-stream-box");
-      if (!box) return;
+  // Stream launch (CrazyTime)
+  attachStreamLaunchHandlers(document);
 
-      const preview = box.querySelector(".crazytime-stream-overlay");
-      const frameShell = box.querySelector(".crazytime-stream-frame-shell");
-      const iframe = box.querySelector(".crazytime-stream-frame");
-      const src = button.getAttribute("data-stream-src");
+  // Secure affiliate buttons (/go/...)
+  secureAffiliateLinks(document);
 
-      if (preview) preview.classList.add("hidden");
-      if (frameShell) frameShell.classList.remove("hidden");
+  // Delegated click for secure affiliate spans
+  document.body.addEventListener("click", (e) => {
+    const btn = e.target.closest(".js-aff-btn-secure");
+    if (!btn) return;
 
-      if (iframe && src && !iframe.src) {
-        iframe.src = src;
-      }
-    });
+    const b64Url = btn.getAttribute("data-b64");
+    if (!b64Url) return;
+
+    const decodedUrl = atob(b64Url);
+    window.open(decodedUrl, "_blank", "noopener,noreferrer");
   });
 
-  document.querySelectorAll('a[href^="/go/"]').forEach((link) => {
+  initDynamicGameStats();
+});
+
+/* =========================
+   AFF LINKS SECURITY
+   ========================= */
+
+function secureAffiliateLinks(root = document) {
+  // Replace <a href="/go/..."> with <span data-b64="...">
+  root.querySelectorAll('a[href^="/go/"]').forEach((link) => {
+    // already processed?
+    if (link.closest(".js-aff-btn-secure")) return;
+
     const url = link.getAttribute("href");
     if (!url) return;
 
@@ -130,27 +143,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     link.replaceWith(span);
   });
+}
 
-  document.body.addEventListener("click", function (e) {
-    const btn = e.target.closest(".js-aff-btn-secure");
-    if (!btn) return;
+function attachStreamLaunchHandlers(root = document) {
+  root.querySelectorAll(".js-stream-launch").forEach((button) => {
+    button.addEventListener("click", () => {
+      const box = button.closest(".crazytime-stream-box");
+      if (!box) return;
 
-    const b64Url = btn.getAttribute("data-b64");
-    if (!b64Url) return;
+      const preview = box.querySelector(".crazytime-stream-overlay");
+      const frameShell = box.querySelector(".crazytime-stream-frame-shell");
+      const iframe = box.querySelector(".crazytime-stream-frame");
+      const src = button.getAttribute("data-stream-src");
 
-    const decodedUrl = atob(b64Url);
-    window.open(decodedUrl, "_blank", "noopener,noreferrer");
+      if (preview) preview.classList.add("hidden");
+      if (frameShell) frameShell.classList.remove("hidden");
+
+      if (iframe && src && !iframe.src) iframe.src = src;
+    });
   });
+}
 
-  initDynamicGameStats();
-});
+/* =========================
+   DYNAMIC GAME STATS
+   ========================= */
 
 function initDynamicGameStats() {
   const gameDataScript = document.getElementById("gamePageData");
   if (!gameDataScript) return;
 
   let payload = null;
-
   try {
     payload = JSON.parse(gameDataScript.textContent);
   } catch (error) {
@@ -160,23 +182,39 @@ function initDynamicGameStats() {
   if (!payload?.game) return;
 
   const game = payload.game;
-  let spinData = generateSpinData(game, 120);
+  const ui = payload.ui || {};
+
+  // важно: чтобы DreamCatcher окно 500 всегда работало стабильно
+  let spinData = generateSpinData(game, game.id === "dreamcatcher" ? 520 : 120);
 
   const state = {
     currentTab: "temperature",
-    liveUpdateInterval: null
+    liveUpdateInterval: null,
+    ui
   };
 
+  // если вкладка восстановилась через sessionStorage — читаем активную вкладку из DOM
+  state.currentTab =
+    document
+      .querySelector('[data-tab-group="game-tabs"].tab-btn.active')
+      ?.getAttribute("data-tab-target") || state.currentTab;
+
+  // следим за сменой вкладок
   document.querySelectorAll('[data-tab-group="game-tabs"]').forEach((button) => {
     button.addEventListener("click", () => {
       state.currentTab = button.getAttribute("data-tab-target") || "temperature";
     });
   });
 
+  // каждые 30 секунд симулируем новый спин и обновляем UI
   state.liveUpdateInterval = window.setInterval(() => {
     simulateLiveUpdate(game, spinData, state);
   }, 30000);
 }
+
+/* =========================
+   UTILS (format/random)
+   ========================= */
 
 function truncateLabel(value, max = 5) {
   if (!value) return "";
@@ -218,7 +256,6 @@ function weightedRandom(probabilities) {
     random -= probabilities[i];
     if (random <= 0) return i;
   }
-
   return probabilities.length - 1;
 }
 
@@ -231,6 +268,28 @@ function isBonusSegment(segmentIndex, segmentName) {
   );
 }
 
+/* =========================
+   MOCK DATA (client)
+   ========================= */
+
+function getMultiplierPool(game, bonus) {
+  if (game.id === "dreamcatcher") {
+    return bonus
+      ? [7, 14, 21, 35, 70, 140, 280, 343]
+      : [1, 2, 3, 5, 7, 10];
+  }
+
+  return bonus
+    ? [5, 10, 15, 20, 25, 50, 100, 200, 500]
+    : [1, 2, 3, 5];
+}
+
+function getWinnersCount(game) {
+  return game.id === "dreamcatcher"
+    ? Math.floor(Math.random() * 100) + 1
+    : Math.floor(Math.random() * 2000) + 100;
+}
+
 function generateSpinData(game, count) {
   const data = [];
   const now = Date.now();
@@ -239,11 +298,15 @@ function generateSpinData(game, count) {
     const segIdx = weightedRandom(game.segProbs || [100]);
     const segment = game.segments?.[segIdx] || game.name;
     const bonus = isBonusSegment(segIdx, segment);
-    const multiplierPool = bonus ? [5, 10, 15, 20, 25, 50, 100, 200, 500] : [1, 2, 3, 5];
+    const multiplierPool = getMultiplierPool(game, bonus);
     const multiplier = multiplierPool[Math.floor(Math.random() * multiplierPool.length)];
-    const winners = Math.floor(Math.random() * 5000) + 100;
+    const winners = getWinnersCount(game);
     const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
-    const slotResult = game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] || game.name;
+
+    const slotResult =
+      game.segments?.[
+        Math.floor(Math.random() * Math.min(4, game.segments.length))
+      ] || game.name;
 
     data.push({
       time: new Date(now - i * 65000),
@@ -292,7 +355,6 @@ function generateTemperatureData(game) {
 
   if (game.id === "monopoly") {
     const monopolyOrder = ["1", "5", "2 Rolls", "2", "10", "4 Rolls", "Chance"];
-
     return monopolyOrder
       .map((name) => items.find((item) => item.segment === name))
       .filter(Boolean);
@@ -316,9 +378,11 @@ function countDistribution(game, spinData) {
 
 function generateStatsSummary(game, spinData) {
   const bonusCount = spinData.filter((item) => item.isBonus).length;
-  const biggestMultiplier = Math.max(...spinData.map((item) => item.multiplier));
+  const biggestMultiplier = spinData.length
+    ? Math.max(...spinData.map((item) => item.multiplier))
+    : 0;
   const totalPayout = spinData.reduce((sum, item) => sum + item.payout, 0);
-  const avgPayout = Math.round(totalPayout / spinData.length);
+  const avgPayout = spinData.length ? Math.round(totalPayout / spinData.length) : 0;
   const rtp = ((game.expectedRtp || 96) + (Math.random() * 1.2 - 0.6)).toFixed(2);
 
   return {
@@ -346,6 +410,198 @@ function generateBigWins(game) {
 
   return wins.sort((a, b) => b.multiplier - a.multiplier);
 }
+
+function randomPlayerName() {
+  const names = ["Joe...", "Eri...", "Mar...", "Nik...", "Har...", "Lf", "Dan...", "Zak...", "JMA", "Has..."];
+  return names[Math.floor(Math.random() * names.length)];
+}
+
+/* =========================
+   DREAM CATCHER EXTRA (fixed)
+   ========================= */
+
+function generateDreamCatcherExtraStats(game, spinData) {
+  const DREAM_EXTRA_WINDOW = 500;
+  const trackedSpins = spinData.slice(0, DREAM_EXTRA_WINDOW);
+  const totalSpins = trackedSpins.length;
+
+  const multiplierKeys = ["2x", "7x"];
+
+  // ВАЖНО: НЕ фильтруем hits > 0, чтобы всегда было 2 строки
+  const multiplierRows = multiplierKeys.map((key) => {
+    const hits = trackedSpins.filter((item) => item.spinResult === key).length;
+    const sharePercent = totalSpins ? Number(((hits / totalSpins) * 100).toFixed(2)) : 0;
+
+    return {
+      label: key,
+      hits,
+      total: totalSpins,
+      sharePercent
+    };
+  });
+
+  const matchHits = trackedSpins.filter((item) => multiplierKeys.includes(item.spinResult)).length;
+  const matchPercent = totalSpins ? Number(((matchHits / totalSpins) * 100).toFixed(2)) : 0;
+  const noMatchPercent = Number((100 - matchPercent).toFixed(2));
+
+  const bestWins = [...trackedSpins]
+    .sort((a, b) => b.payout - a.payout || b.multiplier - a.multiplier)
+    .slice(0, 5)
+    .map((item) => ({
+      date: new Date(item.time).toLocaleDateString("en-US", { month: "numeric", day: "numeric" }),
+      time: new Date(item.time).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false }),
+      outcome: item.spinResult,
+      player: randomPlayerName(),
+      amount: `€${item.payout.toLocaleString("en-US")}`,
+      multiplier: `${item.multiplier}x`,
+      segIdx: item.segIdx
+    }));
+
+  return {
+    totalSpins,
+    bestWins,
+    multiplierRows,
+    matchPercent,
+    noMatchPercent
+  };
+}
+
+function rerenderDreamCatcherExtraOnly(game, spinData, ui) {
+  const section = document.querySelector(".dream-catcher__extra-section");
+  if (!section) return;
+
+  const data = generateDreamCatcherExtraStats(game, spinData);
+  section.outerHTML = renderDreamCatcherExtraStatsClient(data, game, ui);
+}
+
+function renderDreamCatcherExtraStatsClient(data, game, ui) {
+  const tr = ui?.dreamcatcherStatsExtra || {};
+  const common = ui?.common || {};
+
+  const matchedTitle = tr.matchedTitle || tr.wheelMatchedTitle || "Wheel Multipliers Matched";
+  const matchedText = tr.matchedText || tr.wheelMatchedText || "Compare multiplier hits against regular spins in the current sample.";
+
+  const trackedMeta = `${tr.trackedMetaPrefix || "Past 30 minutes"} • ${data.totalSpins} ${common.spins || "Spins"}`;
+
+  return `
+    <section class="dream-catcher__extra-section">
+      <article class="dream-catcher__card">
+        <div class="dream-catcher__section-head">
+          <h3 class="dream-catcher__title">${tr.bestWinsTitle || "Top Single-Spin Wins"}</h3>
+          <p class="dream-catcher__meta">${trackedMeta}</p>
+          <p class="dream-catcher__text">${tr.bestWinsText || ""}</p>
+        </div>
+
+        <div class="table-wrap dream-catcher__table-wrap">
+          <table class="spin-table dream-catcher__table">
+            <thead>
+              <tr>
+                <th class="t-left">${tr.finished || "Finished"}</th>
+                <th class="t-center">${tr.outcome || "Outcome"}</th>
+                <th class="t-left">${tr.player || "Player"}</th>
+                <th class="t-left">${tr.wonAmount || "Won Amount"}</th>
+                <th class="t-left">${tr.multiplier || "Multiplier"}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${data.bestWins.map((item) => {
+                const outcomeImage = getSegmentImage(game, item.outcome);
+
+                return `
+                  <tr>
+                    <td class="t-left">
+                      ${item.date}<br>
+                      <span class="text-soft" style="font-size:0.75rem;">${item.time}</span>
+                    </td>
+                    <td class="t-center">
+                      ${outcomeImage
+                        ? `<span class="result-badge result-badge-image dream-catcher__badge">
+                            <img src="/${outcomeImage}" alt="${item.outcome}" loading="lazy" decoding="async" class="result-badge-img">
+                          </span>`
+                        : `<span class="result-badge dream-catcher__badge" style="background:#6b7280;">${item.outcome}</span>`}
+                    </td>
+                    <td class="t-left">${item.player}</td>
+                    <td class="t-left"><strong>${item.amount}</strong></td>
+                    <td class="t-left"><span class="monopoly-multiplier-pill">${item.multiplier}</span></td>
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="dream-catcher__card">
+        <div class="dream-catcher__section-head">
+          <h3 class="dream-catcher__title">${tr.wheelStatsTitle || "Wheel Multipliers Stats"}</h3>
+          <p class="dream-catcher__meta">${trackedMeta}</p>
+          <p class="dream-catcher__text">${tr.wheelStatsText || ""}</p>
+        </div>
+
+        <div class="dream-catcher__wheel-list">
+          ${data.multiplierRows.map((row) => {
+            const wheelImage = getSegmentImage(game, row.label);
+            const barWidth = row.sharePercent > 0 ? Math.max(row.sharePercent, 4) : 0;
+
+            return `
+              <div class="dream-catcher__wheel-item">
+                <div class="dream-catcher__wheel-top">
+                  <div class="dream-catcher__wheel-label">
+                    ${wheelImage
+                      ? `<img src="/${wheelImage}" alt="${row.label}" loading="lazy" decoding="async" class="dream-catcher__wheel-thumb">`
+                      : ""}
+                    <span>${row.label}</span>
+                  </div>
+
+                  <strong>(${row.hits}/${row.total}) ${row.sharePercent}%</strong>
+                </div>
+
+                <div class="dream-catcher__bar">
+                  <div class="dream-catcher__bar-fill" style="width:${barWidth}%;"></div>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </article>
+
+      <article class="dream-catcher__card">
+        <div class="dream-catcher__section-head">
+          <h3 class="dream-catcher__title">${matchedTitle}</h3>
+          <p class="dream-catcher__meta">${trackedMeta}</p>
+          <p class="dream-catcher__text">${matchedText}</p>
+        </div>
+
+        <div class="dream-catcher__match-list">
+          <div class="dream-catcher__match-item">
+            <div class="dream-catcher__match-row">
+              <span>${tr.match || "Match"}</span>
+              <strong>${data.matchPercent}%</strong>
+            </div>
+            <div class="dream-catcher__bar dream-catcher__bar--match">
+              <div class="dream-catcher__bar-fill" style="width:${data.matchPercent}%;"></div>
+            </div>
+          </div>
+
+          <div class="dream-catcher__match-item">
+            <div class="dream-catcher__match-row">
+              <span>${tr.noMatch || "No Match"}</span>
+              <strong>${data.noMatchPercent}%</strong>
+            </div>
+            <div class="dream-catcher__bar dream-catcher__bar--nomatch">
+              <div class="dream-catcher__bar-fill" style="width:${data.noMatchPercent}%;"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  `;
+}
+
+/* =========================
+   MONOPOLY EXTRA (as before)
+   ========================= */
+
 function generateMonopolyDiceRollStats() {
   return {
     low: [
@@ -423,6 +679,7 @@ function generateMonopolyLatestTopMultipliers() {
     { date: "6 Apr", time: "12:39", bonusRoundImage: "img/monopoly/bonus-gold.webp", multiplier: "63x" }
   ];
 }
+
 function renderDiceFace(value) {
   const dotsMap = {
     1: [5],
@@ -641,6 +898,10 @@ function renderMonopolyExtraStatsClient(data) {
   `;
 }
 
+/* =========================
+   IMAGES + BADGES
+   ========================= */
+
 function getSegmentImage(game, segmentName) {
   if (!game) return "";
 
@@ -709,131 +970,187 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
   return `<div class="temp-segment" style="background:${color};">${shortLabel}</div>`;
 }
 
-function rerenderTemperaturePanel(game) {
-  const panel = document.querySelector('[data-tab-panel="temperature"][data-tab-panel-group="game-tabs"]');
-  if (!panel) return;
+/* =========================
+   RERENDER PANELS
+   ========================= */
 
-  const temperatureData = generateTemperatureData(game);
-
-  panel.innerHTML = `
-    <h2 class="panel-title">Segment Temperature</h2>
-    <p class="panel-subtitle">Showing how each segment is performing relative to its expected frequency.</p>
-    <div class="temp-grid">
-      ${temperatureData.map((item) => `
-        <div class="temp-card">
-        ${renderTemperatureSegment(game, item.segment, item.color, item.shortSegment)}
-        <div class="temp-value ${item.tempClass}">${item.actual}%</div>
-          <div class="temp-diff ${item.diff >= 0 ? "positive" : "negative"}">
-            (${item.diff >= 0 ? "+" : ""}${item.diff})
-          </div>
-          <div class="temp-spins">${item.spinsSince} spins since</div>
-          <i class="fas ${item.iconClass} ${item.tempClass} temp-icon"></i>
-        </div>
-      `).join("")}
-    </div>
-  `;
-}
-
-function rerenderHistoryPanel(game, spinData) {
-  const panel = document.querySelector('[data-tab-panel="history"][data-tab-panel-group="game-tabs"]');
-  if (!panel) return;
-
-  const pageData = spinData.slice(0, 25);
-  const isMonopoly = game.id === "monopoly";
-
-  panel.innerHTML = `
-    <h2 class="panel-title">Recent Spin History</h2>
-    <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
-
-    <div class="table-wrap">
-      <table class="spin-table">
-        <thead>
-          <tr>
-            <th class="t-left">Occurred At</th>
-            ${!isMonopoly ? `<th class="t-center">Slot Result</th>` : ""}
-            <th class="t-center">Spin Result</th>
-            <th class="t-right">Multiplier</th>
-            <th class="t-right">Total Winners</th>
-            <th class="t-right">Total Payout</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${pageData.map((spin) => {
-            const segmentIndex = game.segments.indexOf(spin.spinResult);
-            const slotIdx = game.segments.indexOf(spin.slotResult);
-            const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
-            const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
-
+   function rerenderTemperaturePanel(game, ui = {}) {
+    const panel = document.querySelector(
+      '[data-tab-panel="temperature"][data-tab-panel-group="game-tabs"]'
+    );
+    if (!panel) return;
+  
+    const tr = ui?.gamePanels || {};
+  
+    const subtitle =
+      tr.temperatureSubtitle ||
+      "Live segment temperature highlights hot and cold outcomes based on recent spins versus expected probability.";
+  
+    const spinsSinceTpl = tr.temperatureSpinsSince || "{n} spins since";
+  
+    const temperatureData = generateTemperatureData(game);
+  
+    panel.innerHTML = `
+      <h2 class="panel-title">Segment Temperature</h2>
+      <p class="panel-subtitle">${subtitle}</p>
+  
+      <div class="temp-grid">
+        ${temperatureData
+          .map((item) => {
+            const spinsSinceText = spinsSinceTpl.replace("{n}", item.spinsSince);
+  
             return `
-              <tr>
-                <td class="t-left text-soft">${formatTime(spin.time)}</td>
-                ${!isMonopoly ? `
-                  <td class="t-center">
-                    ${renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
-                  </td>
-                ` : ""}
-                <td class="t-center">
-                  ${spin.isBonus
-                    ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
-                    : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")}
-                </td>
-                <td class="t-right ${spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">${spin.multiplier}x</td>
-                <td class="t-right text-soft">${numberWithCommas(spin.winners)}</td>
-                <td class="t-right text-green" style="font-weight:600;">$${numberWithCommas(spin.payout)}</td>
-              </tr>
+              <div class="temp-card">
+                ${renderTemperatureSegment(game, item.segment, item.color, item.shortSegment)}
+                <div class="temp-value ${item.tempClass}">${item.actual}%</div>
+                <div class="temp-diff ${item.diff >= 0 ? "positive" : "negative"}">
+                  (${item.diff >= 0 ? "+" : ""}${item.diff})
+                </div>
+                <div class="temp-spins">${spinsSinceText}</div>
+                <i class="fas ${item.iconClass} ${item.tempClass} temp-icon"></i>
+              </div>
             `;
-          }).join("")}
-        </tbody>
-      </table>
+          })
+          .join("")}
+      </div>
+    `;
+  }
+
+function renderHistoryPanel(game, spinData) {
+  const pageData = spinData.slice(0, 25);
+  const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
+  const showSpecialResult = game.id === "dreamcatcher";
+
+  return `
+    <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+      <h2 class="panel-title">Recent Spin History</h2>
+      <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
+
+      <div class="table-wrap">
+        <table class="spin-table">
+          <thead>
+            <tr>
+              <th class="t-left">Occurred At</th>
+              ${showSlotResult ? `<th class="t-center">Slot Result</th>` : ""}
+              <th class="t-center">Spin Result</th>
+              ${showSpecialResult ? `<th class="t-center">Special Result</th>` : ""}
+              <th class="t-right">Multiplier</th>
+              <th class="t-right">Total Winners</th>
+              <th class="t-right">Total Payout</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            ${pageData.map((spin) => {
+              const isSpecial =
+                showSpecialResult && (spin.spinResult === "2x" || spin.spinResult === "7x");
+
+              const segmentIndex = game.segments.indexOf(spin.spinResult);
+              const slotIdx = game.segments.indexOf(spin.slotResult);
+
+              const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
+              const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
+
+              return `
+                <tr>
+                  <td class="t-left text-soft">${formatTime(spin.time)}</td>
+
+                  ${showSlotResult ? `
+                    <td class="t-center">
+                      ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
+                    </td>
+                  ` : ""}
+
+                  <td class="t-center">
+                    ${
+                      // ВАЖНО: даже для special (2x/7x) показываем картинку в Spin Result
+                      spin.isBonus
+                        ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
+                        : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
+                    }
+                  </td>
+
+                  ${showSpecialResult ? `
+                    <td class="t-center">
+                      ${isSpecial ? `<span class="special-result-pill">${spin.spinResult}</span>` : ""}
+                    </td>
+                  ` : ""}
+
+                  <td class="t-right ${!isSpecial && spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">
+                    ${isSpecial ? "" : `${spin.multiplier}x`}
+                  </td>
+
+                  <td class="t-right text-soft">
+                    ${isSpecial ? "" : numberWithCommas(spin.winners)}
+                  </td>
+
+                  <td class="t-right text-green" style="font-weight:600;">
+                    ${isSpecial ? "" : `$${numberWithCommas(spin.payout)}`}
+                  </td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
     </div>
   `;
 }
 
-function rerenderStatsPanel(game, spinData) {
-  const panel = document.querySelector('[data-tab-panel="stats"][data-tab-panel-group="game-tabs"]');
+function rerenderStatsPanel(game, spinData, ui = {}) {
+  const panel = document.querySelector(
+    '[data-tab-panel="stats"][data-tab-panel-group="game-tabs"]'
+  );
   if (!panel) return;
+
+  const tr = ui?.gamePanels || {};
 
   const distribution = countDistribution(game, spinData);
   const summary = generateStatsSummary(game, spinData);
   const highestPercent = Math.max(...distribution.map((item) => item.percent), 1);
 
+  const rtpBasedOn = tr.rtpBasedOn || "Based on last 1,000 spins";
+
+  const totalSpinsTodayLabel = tr.summaryTotalSpinsToday || "Total Spins Today";
+  const bonusRoundsLabel = tr.summaryBonusRounds || "Bonus Rounds";
+  const biggestMultiplierLabel = tr.summaryBiggestMultiplier || "Biggest Multiplier";
+  const avgPayoutLabel = tr.summaryAvgPayout || "Avg. Payout";
+
   let extraHtml = "";
 
+  // CrazyTime: сохраняем существующий блок extra (чтобы не ломать большую секцию)
   if (game.id === "crazytime") {
     const crazyTimeExtra = panel.querySelector(".crazytime-bonus-section");
     extraHtml = crazyTimeExtra ? crazyTimeExtra.outerHTML : "";
   }
 
-  if (game.id === "monopoly") {
-    const monopolyData = {
-      dice: generateMonopolyDiceRollStats(),
-      board: generateMonopolyBoardMoveStats(),
-      landing: generateMonopolyLandingStats(),
-      bestWins: generateMonopolyBestIndividualWins(),
-      topMultipliers: generateMonopolyLatestTopMultipliers()
-    };
-
-    extraHtml = renderMonopolyExtraStatsClient(monopolyData);
+  // DreamCatcher: ререндерим extra с переводами (если у тебя есть renderDreamCatcherExtraStatsClient)
+  if (game.id === "dreamcatcher" && typeof renderDreamCatcherExtraStatsClient === "function") {
+    const dreamCatcherData = generateDreamCatcherExtraStats(game, spinData);
+    extraHtml = renderDreamCatcherExtraStatsClient(dreamCatcherData, game, ui);
   }
 
   panel.innerHTML = `
     <div class="stats-main-grid">
       <div class="stats-grid-card">
         <h2 class="panel-title">Result Distribution</h2>
+
         <div class="chart-scroll">
           <div class="chart-box">
-            ${distribution.map((item) => {
-              const height = Math.max((item.percent / highestPercent) * 100, 4);
-              return `
-                <div class="chart-col">
-                  <span class="chart-percent">${item.percent}%</span>
-                  <div class="chart-bar-wrap">
-                    <div class="chart-bar" style="height:${height}%; background:${item.color};"></div>
+            ${distribution
+              .map((item) => {
+                const height = Math.max((item.percent / highestPercent) * 100, 4);
+                return `
+                  <div class="chart-col">
+                    <span class="chart-percent">${item.percent}%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:${height}%; background:${item.color};"></div>
+                    </div>
+                    ${renderChartLabel(game, item.label)}
                   </div>
-                  ${renderChartLabel(game, item.label)}
-                </div>
-              `;
-            }).join("")}
+                `;
+              })
+              .join("")}
           </div>
         </div>
       </div>
@@ -843,7 +1160,7 @@ function rerenderStatsPanel(game, spinData) {
         <div class="rtp-card-body">
           <div class="rtp-center">
             <div class="rtp-value">${summary.rtp}</div>
-            <p class="rtp-text">Based on last 1,000 spins</p>
+            <p class="rtp-text">${rtpBasedOn}</p>
           </div>
         </div>
       </div>
@@ -851,74 +1168,102 @@ function rerenderStatsPanel(game, spinData) {
 
     <div class="stats-summary-grid">
       <div class="stats-grid-card summary-card">
-        <p class="summary-label">Total Spins Today</p>
+        <p class="summary-label">${totalSpinsTodayLabel}</p>
         <p class="summary-value">${numberWithCommas(summary.totalSpinsToday)}</p>
       </div>
+
       <div class="stats-grid-card summary-card">
-        <p class="summary-label">Bonus Rounds</p>
+        <p class="summary-label">${bonusRoundsLabel}</p>
         <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
       </div>
+
       <div class="stats-grid-card summary-card">
-        <p class="summary-label">Biggest Multiplier</p>
+        <p class="summary-label">${biggestMultiplierLabel}</p>
         <p class="summary-value gold">${summary.biggestMultToday}</p>
       </div>
+
       <div class="stats-grid-card summary-card">
-        <p class="summary-label">Avg. Payout</p>
+        <p class="summary-label">${avgPayoutLabel}</p>
         <p class="summary-value green">${summary.avgPayoutToday}</p>
       </div>
     </div>
 
     ${extraHtml}
   `;
+
+  // если у тебя есть функция защиты /go/ ссылок — применим повторно
+  if (typeof secureAffiliateLinks === "function") {
+    secureAffiliateLinks(panel);
+  }
 }
 
-function rerenderBigWinsPanel(game) {
-  const panel = document.querySelector('[data-tab-panel="bigwins"][data-tab-panel-group="game-tabs"]');
+function rerenderBigWinsPanel(game, ui = {}) {
+  const panel = document.querySelector(
+    '[data-tab-panel="bigwins"][data-tab-panel-group="game-tabs"]'
+  );
   if (!panel) return;
+
+  const tr = ui?.gamePanels || {};
+  const watchLabel = tr.watch || "Watch";
 
   const wins = generateBigWins(game);
 
   panel.innerHTML = `
     <h2 class="panel-title">Top Multiplier Wins</h2>
+
     <div class="bigwins-grid">
-      ${wins.map((win, index) => `
-        <article class="stats-grid-card bigwin-card">
-          <div class="bigwin-top">
-            <span class="bigwin-date">${formatDate(win.time)}</span>
-            <span class="bigwin-rank ${index < 3 ? "top" : ""}">#${index + 1}</span>
-          </div>
-          <div class="bigwin-main">
-            <span class="bigwin-segment">
-              ${
-                getSegmentImage(game, win.segment)
-                  ? `<img src="/${getSegmentImage(game, win.segment)}" alt="${win.segment}" loading="lazy" class="bigwin-segment-img">`
-                  : truncateLabel(win.segment, 4)
-              }
-            </span>
-            <div>
-              <div class="bigwin-multiplier">${numberWithCommas(win.multiplier)}x</div>
-              <div class="bigwin-label">${win.segment}</div>
+      ${wins
+        .map((win, index) => `
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">${formatDate(win.time)}</span>
+              <span class="bigwin-rank ${index < 3 ? "top" : ""}">#${index + 1}</span>
             </div>
-          </div>
-          <div class="bigwin-bottom">
-            <span class="bigwin-payout">$${numberWithCommas(win.payout)}</span>
-            <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Watch</span>
-          </div>
-        </article>
-      `).join("")}
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                ${
+                  getSegmentImage(game, win.segment)
+                    ? `<img src="/${getSegmentImage(game, win.segment)}" alt="${win.segment}" loading="lazy" class="bigwin-segment-img">`
+                    : truncateLabel(win.segment, 4)
+                }
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">${numberWithCommas(win.multiplier)}x</div>
+                <div class="bigwin-label">${win.segment}</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$${numberWithCommas(win.payout)}</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> ${watchLabel}</span>
+            </div>
+          </article>
+        `)
+        .join("")}
     </div>
   `;
 }
+
+/* =========================
+   LIVE UPDATE
+   ========================= */
 
 function simulateLiveUpdate(game, spinData, state) {
   const segIdx = weightedRandom(game.segProbs || [100]);
   const segment = game.segments?.[segIdx] || game.name;
   const bonus = isBonusSegment(segIdx, segment);
-  const multiplierPool = bonus ? [5, 10, 15, 20, 25, 50, 100, 200, 500] : [1, 2, 3, 5];
+
+  const multiplierPool = getMultiplierPool(game, bonus);
   const multiplier = multiplierPool[Math.floor(Math.random() * multiplierPool.length)];
-  const winners = Math.floor(Math.random() * 5000) + 100;
+  const winners = getWinnersCount(game);
   const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
-  const slotResult = game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] || game.name;
+
+  const slotResult =
+    game.segments?.[
+      Math.floor(Math.random() * Math.min(4, game.segments.length))
+    ] || game.name;
 
   spinData.unshift({
     time: new Date(),
@@ -930,22 +1275,117 @@ function simulateLiveUpdate(game, spinData, state) {
     payout,
     isBonus: bonus
   });
+  function rerenderHistoryPanel(game, spinData, ui = {}) {
+    const panel = document.querySelector(
+      '[data-tab-panel="history"][data-tab-panel-group="game-tabs"]'
+    );
+    if (!panel) return;
+  
+    const tr = ui?.gamePanels || {};
+  
+    const subtitle =
+      tr.historySubtitle ||
+      "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
+  
+    const pageData = spinData.slice(0, 25);
+    const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
+    const showSpecialResult = game.id === "dreamcatcher";
+  
+    panel.innerHTML = `
+      <h2 class="panel-title">Recent Spin History</h2>
+      <p class="panel-subtitle">${subtitle}</p>
+  
+      <div class="table-wrap">
+        <table class="spin-table">
+          <thead>
+            <tr>
+              <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
+              ${showSlotResult ? `<th class="t-center">${tr.slotResult || "Slot Result"}</th>` : ""}
+              <th class="t-center">${tr.spinResult || "Spin Result"}</th>
+              ${showSpecialResult ? `<th class="t-center">${tr.specialResult || "Special Result"}</th>` : ""}
+              <th class="t-right">${tr.multiplier || "Multiplier"}</th>
+              <th class="t-right">${tr.totalWinners || "Total Winners"}</th>
+              <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            ${pageData
+              .map((spin) => {
+                const isSpecial =
+                  showSpecialResult && (spin.spinResult === "2x" || spin.spinResult === "7x");
+  
+                const segmentIndex = game.segments.indexOf(spin.spinResult);
+                const slotIdx = game.segments.indexOf(spin.slotResult);
+  
+                const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
+                const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
+  
+                return `
+                  <tr>
+                    <td class="t-left text-soft">${formatTime(spin.time)}</td>
+  
+                    ${showSlotResult ? `
+                      <td class="t-center">
+                        ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
+                      </td>
+                    ` : ""}
+  
+                    <td class="t-center">
+                      ${
+                        // В Spin Result показываем картинку всегда (включая 2x/7x)
+                        spin.isBonus
+                          ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
+                          : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
+                      }
+                    </td>
+  
+                    ${showSpecialResult ? `
+                      <td class="t-center">
+                        ${isSpecial ? `<span class="special-result-pill">${spin.spinResult}</span>` : ""}
+                      </td>
+                    ` : ""}
+  
+                    <td class="t-right ${!isSpecial && spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">
+                      ${isSpecial ? "" : `${spin.multiplier}x`}
+                    </td>
+  
+                    <td class="t-right text-soft">
+                      ${isSpecial ? "" : numberWithCommas(spin.winners)}
+                    </td>
+  
+                    <td class="t-right text-green" style="font-weight:600;">
+                      ${isSpecial ? "" : `$${numberWithCommas(spin.payout)}`}
+                    </td>
+                  </tr>
+                `;
+              })
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+  // держим запас (чтобы окно 500 работало и не «скакало»)
+  if (spinData.length > 800) spinData.pop();
 
-  if (spinData.length > 500) spinData.pop();
-
+  // всегда обновляем temperature
   rerenderTemperaturePanel(game);
 
+  // conditional updates
   if (state.currentTab === "history") {
-    rerenderHistoryPanel(game, spinData);
+    rerenderHistoryPanel(game, spinData, state.ui);
   }
-
+  
   if (state.currentTab === "stats") {
-    if (game.id !== "monopoly") {
-      rerenderStatsPanel(game, spinData);
-    }
+    rerenderStatsPanel(game, spinData, state.ui);
   }
-
+  
   if (state.currentTab === "bigwins") {
-    rerenderBigWinsPanel(game);
+    rerenderBigWinsPanel(game, state.ui);
+  }
+  // Dream Catcher extra — обновляем всегда, каждые 30 сек
+  if (game.id === "dreamcatcher") {
+    rerenderDreamCatcherExtraOnly(game, spinData, state.ui);
   }
 }
