@@ -146,9 +146,12 @@ function renderFooter({ t, lang, games }) {
           <div class="footer-col">
             <div class="footer-title">${t.footer.resources || "Resources"}</div>
             <ul class="footer-list">
-              <li><a href="#">${t.footer.privacy || "Privacy Policy"}</a></li>
-              <li><a href="#">${t.footer.terms || "Terms of Service"}</a></li>
-              <li><a href="#">${t.footer.contact || "Contact Us"}</a></li>
+            <ul class="footer-list">
+            <li><a href="${buildPath(lang, "home")}#faq">${t.footer.faq || "FAQ"}</a></li>
+            <li><a href="#">${t.footer.privacy || "Privacy Policy"}</a></li>
+            <li><a href="#">${t.footer.terms || "Terms of Service"}</a></li>
+            <li><a href="#">${t.footer.contact || "Contact Us"}</a></li>
+          </ul>
             </ul>
           </div>
         </div>

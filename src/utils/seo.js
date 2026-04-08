@@ -1,3 +1,4 @@
+const { DEFAULT_LANG, UI_TRANSLATIONS } = require("../data/site-data");
 function jsonLdScript(schemaObject) {
     return `<script type="application/ld+json">${JSON.stringify(schemaObject)}</script>`;
   }
@@ -43,6 +44,20 @@ function jsonLdScript(schemaObject) {
       }))
     };
   }
+  function createHomePageSchemas({ lang, t }) {
+    const schemas = [];
+  
+    const homeFaq =
+      t.homeFaq?.faq?.length
+        ? t.homeFaq
+        : UI_TRANSLATIONS[DEFAULT_LANG]?.homeFaq;
+  
+    if (homeFaq?.faq?.length) {
+      schemas.push(jsonLdScript(createFaqSchema(homeFaq.faq)));
+    }
+  
+    return schemas.join("\n");
+  }
   
   function createGamePageSchemas({ lang, game, t }) {
     const schemas = [];
@@ -66,5 +81,6 @@ function jsonLdScript(schemaObject) {
     jsonLdScript,
     createBreadcrumbSchema,
     createFaqSchema,
-    createGamePageSchemas
+    createGamePageSchemas,
+    createHomePageSchemas
   };

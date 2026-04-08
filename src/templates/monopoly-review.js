@@ -9,9 +9,20 @@ function renderMonopolyReviewPanel(t) {
               <h2 class="crazytime-review-title">
                 ${tr.title || "Monopoly Live Review: The Ultimate Live Casino Game Show Experience"}
               </h2>
+  
               <p class="crazytime-review-intro">
                 ${tr.intro || ""}
               </p>
+  
+              <a
+                href="/go/reg/"
+                class="hero-play-btn monopoly-live-btn"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                
+              >
+                ${tr.playbtn || "Play"}
+              </a>
             </div>
   
             <div class="crazytime-review-block">
@@ -20,6 +31,7 @@ function renderMonopolyReviewPanel(t) {
                   <div>${tr.tableFeature || "Feature"}</div>
                   <div>${tr.tableDetails || "Details"}</div>
                 </div>
+
   
                 <div class="crazytime-review-specs-row">
                   <div class="crazytime-review-spec-label">${tr.gameNameLabel || "Game Name"}</div>
@@ -40,7 +52,9 @@ function renderMonopolyReviewPanel(t) {
   
                 <div class="crazytime-review-specs-row">
                   <div class="crazytime-review-spec-label">${tr.rtpLabel || "RTP"}</div>
-                  <div class="crazytime-review-spec-value">${tr.rtpValue || "Up to 96.23%"}</div>
+                  <div class="crazytime-review-spec-value">
+                    ${tr.rtpValue || "Up to 96.23%"}
+                  </div>
                 </div>
   
                 <div class="crazytime-review-specs-row">
@@ -51,6 +65,19 @@ function renderMonopolyReviewPanel(t) {
                 </div>
               </div>
             </div>
+            <div class="crazytime-review-block">
+            <div class="crazytime-review-hero-media monopoly-review-hero-media">
+              <img
+                src="/img/monopoly-review/monopoly-live-review.webp"
+                alt="${tr.heroAlt || "Monopoly Live wheel with live host and game show studio"}"
+                class="crazytime-review-hero-image"
+                loading="lazy"
+                decoding="async"
+                width="894"
+                height="449"
+              />
+            </div>
+          </div>
   
             <div class="crazytime-review-block">
               <h3 class="crazytime-review-subtitle">
@@ -91,6 +118,7 @@ function renderMonopolyReviewPanel(t) {
               <h3 class="crazytime-review-subtitle">
                 ${tr.howToPlayTitle || "How to Play Monopoly Live"}
               </h3>
+  
               <p class="crazytime-review-text">
                 ${tr.howToPlayIntro || ""}
               </p>
@@ -106,8 +134,10 @@ function renderMonopolyReviewPanel(t) {
               <h3 class="crazytime-review-subtitle">
                 ${tr.statsTitle || "Monopoly Live Stats, Results & Trackers"}
               </h3>
+  
               <p class="crazytime-review-text">${tr.statsText1 || ""}</p>
               <p class="crazytime-review-text">${tr.statsText2 || ""}</p>
+  
               <div class="crazytime-review-tip">
                 ${tr.statsNote || ""}
               </div>
@@ -117,6 +147,7 @@ function renderMonopolyReviewPanel(t) {
               <h3 class="crazytime-review-subtitle">
                 ${tr.freePlayTitle || "Can You Play for Free?"}
               </h3>
+  
               <p class="crazytime-review-text">
                 ${tr.freePlayText || ""}
               </p>
@@ -126,6 +157,7 @@ function renderMonopolyReviewPanel(t) {
               <h2 class="crazytime-review-subtitle">
                 ${tr.faqTitle || "Frequently Asked Questions (FAQ)"}
               </h2>
+  
               <div class="crazytime-review-faq-list">
                 ${(tr.faq || []).map((item) => `
                   <div class="crazytime-review-faq-item">

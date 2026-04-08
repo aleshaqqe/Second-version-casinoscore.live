@@ -335,16 +335,31 @@ ul {
 .hero-header {
   text-align: center;
   margin-bottom: 40px;
+  width: 100%;
 }
-
+.hero-title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .hero-title {
-  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  width: 100%;
+  font-size: clamp(2.2rem, 5vw, 3.35rem);
   font-weight: 900;
   color: var(--white);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
   margin-bottom: 14px;
+  text-align: center;
 }
 
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-line-accent {
+  font-size: 1.04em;
+}
 .hero-play-btn {
   margin-top: 28px;
   display: inline-flex;
@@ -3569,4 +3584,23 @@ ul {
   .monopoly-bonus-round-image {
     width: 56px;
   }
+}
+.monopoly-review-hero-media {
+  max-width: 100%;
+}
+.hero-text {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: center;
+}
+.hero-text-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-title {
+  max-width: 100%;
+  padding: 0 16px;
 }

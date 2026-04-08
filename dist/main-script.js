@@ -1,4 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function getCurrentGameKey() {
+    const gameDataScript = document.getElementById("gamePageData");
+    if (!gameDataScript) return null;
+
+    try {
+      const payload = JSON.parse(gameDataScript.textContent);
+      return payload?.game?.id || null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function getStoredTabKey(gameId) {
+    return gameId ? `activeGameTab:${gameId}` : null;
+  }
+
+  function saveActiveTab(gameId, tabName) {
+    const key = getStoredTabKey(gameId);
+    if (!key || !tabName) return;
+    sessionStorage.setItem(key, tabName);
+  }
+
+  function getSavedActiveTab(gameId) {
+    const key = getStoredTabKey(gameId);
+    if (!key) return null;
+    return sessionStorage.getItem(key);
+  }
+
+  function activateTab(group, target) {
+    if (!group || !target) return;
+
+    document
+      .querySelectorAll(`[data-tab-group="${group}"]`)
+      .forEach((btn) => {
+        const isActive = btn.getAttribute("data-tab-target") === target;
+        btn.classList.toggle("active", isActive);
+      });
+
+    document
+      .querySelectorAll(`[data-tab-panel-group="${group}"]`)
+      .forEach((panel) => {
+        const isActive = panel.getAttribute("data-tab-panel") === target;
+        panel.classList.toggle("active", isActive);
+      });
+  }
   const burgerBtn = document.getElementById("burgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -19,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const currentGameId = getCurrentGameKey();
+
   document.querySelectorAll("[data-tab-target]").forEach((button) => {
     button.addEventListener("click", () => {
       const target = button.getAttribute("data-tab-target");
@@ -26,25 +73,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!target || !group) return;
 
-      document
-        .querySelectorAll(`[data-tab-group="${group}"]`)
-        .forEach((btn) => btn.classList.remove("active"));
+      activateTab(group, target);
 
-      document
-        .querySelectorAll(`[data-tab-panel-group="${group}"]`)
-        .forEach((panel) => panel.classList.remove("active"));
-
-      button.classList.add("active");
-
-      const panel = document.querySelector(
-        `[data-tab-panel="${target}"][data-tab-panel-group="${group}"]`
-      );
-
-      if (panel) {
-        panel.classList.add("active");
+      if (group === "game-tabs" && currentGameId) {
+        saveActiveTab(currentGameId, target);
       }
     });
   });
+
+  if (currentGameId) {
+    const savedTab = getSavedActiveTab(currentGameId);
+
+    if (savedTab) {
+      const matchingButton = document.querySelector(
+        `[data-tab-group="game-tabs"][data-tab-target="${savedTab}"]`
+      );
+
+      if (matchingButton) {
+        activateTab("game-tabs", savedTab);
+      }
+    }
+  }
 
   document.querySelectorAll(".js-stream-launch").forEach((button) => {
     button.addEventListener("click", () => {

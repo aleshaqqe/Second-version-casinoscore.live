@@ -17,6 +17,11 @@ function renderLayout({
   <meta name="robots" content="noindex, nofollow" />
   <title>${title}</title>
   <meta name="description" content="${description}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/casino-score-favicon-apple-touch.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/casino-score-favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/casino-score-favicon-16x16.png" />
+  <link rel="manifest" href="/img/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#0f0f1a" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

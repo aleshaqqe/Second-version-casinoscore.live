@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { createGamePageSchemas } = require("./src/utils/seo");
-
+const { createGamePageSchemas, createHomePageSchemas } = require("./src/utils/seo");
 
 const {
   SUPPORTED_LANGS,
@@ -58,20 +57,29 @@ function createHreflangs(pageType, gameId = null) {
 
 function renderHomeHtml(lang) {
   const t = getTranslation(lang);
+  const defaultT = getTranslation(DEFAULT_LANG);
+  const homeSeo = t.seo?.home || defaultT.seo?.home || {};
+
   const body = renderHomePage({
     lang,
     t,
     games: GAMES,
     supportedLangs: SUPPORTED_LANGS
   });
+
+  const schema = createHomePageSchemas({ lang, t });
+
   return renderLayout({
     lang,
     dir: getDir(lang),
-    title: "Casino Score live — Home",
-    description: t.home.heroText,
+    title: homeSeo.title || "Casino Score Live 🔥 Live Stats and Real-Time Results [2026]",
+    description:
+      homeSeo.description ||
+      "Casino Score Live is your ultimate hub for live stats and real-time results in 2026.",
     canonical: `https://casinoscore.live${buildPath(lang, "home")}`,
     hreflangs: createHreflangs("home"),
-    body
+    body,
+    schema
   });
 }
 function renderGameHtml(lang, game) {
