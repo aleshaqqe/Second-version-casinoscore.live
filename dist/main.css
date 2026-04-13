@@ -990,6 +990,34 @@ ul {
   overflow: hidden;
   vertical-align: middle;
 }
+.result-badge-ball {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--purple-strong), var(--indigo));
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.25);
+}
+
+.mega-balls-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.mega-ball-multiplier {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--yellow);
+  font-weight: 700;
+  white-space: nowrap;
+}
 
 .result-badge-image {
   background: transparent !important;
@@ -4092,4 +4120,87 @@ ul {
   display: inline-block;
   width: 1.6em;
   margin-right: 8px;
+}
+/* =========================
+MEGA BALL HISTORY
+========================= */
+
+.result-badge-ball {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f8fafc, #dbeafe);
+  color: #111827;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 6px 18px rgba(0, 0, 0, 0.22);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mega-balls-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 180px;
+}
+
+.mega-ball-multiplier {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  color: var(--yellow);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.spin-table td .result-badge-ball + .mega-ball-multiplier {
+  vertical-align: middle;
+}
+
+.spin-table td:has(.mega-balls-list) {
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  .result-badge-ball {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.82rem;
+  }
+
+  .mega-balls-list {
+    gap: 6px;
+    min-width: 140px;
+  }
+
+  .mega-ball-multiplier {
+    margin-left: 6px;
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .result-badge-ball {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    font-size: 0.76rem;
+  }
+
+  .mega-balls-list {
+    min-width: 120px;
+    gap: 5px;
+  }
+
+  .mega-ball-multiplier {
+    font-size: 0.72rem;
+  }
 }
