@@ -64,17 +64,11 @@ function jsonLdScript(schemaObject) {
     const breadcrumbSchema = createBreadcrumbSchema({ lang, game });
     schemas.push(jsonLdScript(breadcrumbSchema));
   
-    if (game.id === "crazytime" && t.crazytimeReview?.faq?.length) {
-      const faqSchema = createFaqSchema(t.crazytimeReview.faq);
-      schemas.push(jsonLdScript(faqSchema));
-    }
-    
-    if (game.id === "monopoly" && t.monopolyReview?.faq?.length) {
-      const faqSchema = createFaqSchema(t.monopolyReview.faq);
-      schemas.push(jsonLdScript(faqSchema));
-    }
-    if (game.id === "dreamcatcher" && t.dreamcatcherReview?.faq?.length) {
-      const faqSchema = createFaqSchema(t.dreamcatcherReview.faq);
+    const reviewKey = `${game.id}Review`;
+    const faqItems = t[reviewKey]?.faq;
+  
+    if (Array.isArray(faqItems) && faqItems.length) {
+      const faqSchema = createFaqSchema(faqItems);
       schemas.push(jsonLdScript(faqSchema));
     }
   

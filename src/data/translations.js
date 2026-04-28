@@ -3,6 +3,114 @@ const DEFAULT_LANG = "en";
 
 const UI_TRANSLATIONS = {
   en: {
+    megaballReview: {
+      title: "Mega Ball Tracker, RTP & Game Review",
+      intro: "Track Mega Ball stats, results and RTP in real time with live tracker tools. Review ball history, multiplier rounds, winner counts and payout trends in one place.",
+    
+      quickOverviewTitle: "Quick Game Overview",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+      tableFeature: "Feature",
+      tableDescription: "Description",
+    
+      specProvider: "Provider",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Game Name",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95.30%",
+      specReleaseYear: "Release Year",
+      specReleaseYearValue: "2023",
+      specGameType: "Game Type",
+      specGameTypeValue: "Live Bingo Game Show",
+      specMinBet: "Bet Range",
+      specMinBetValue: "Varies by casino",
+      specMaxWin: "Max Win",
+      specMaxWinValue: "Up to 1,000,000x",
+      specBalls: "Balls Drawn",
+      specBallsValue: "20 balls + Mega Ball + possible 2nd Mega Ball",
+    
+      trackerTitle: "What You Can Track",
+      trackerIntro: "On Tracksino, Mega Ball tracker tools focus on the most useful live metrics for round-by-round analysis.",
+      trackBallHistory: "Ball History",
+      trackBallHistoryText: "Review all drawn balls in exact order.",
+      trackMultiplier: "Mega Ball Multiplier",
+      trackMultiplierText: "Track generated multipliers from 5x to 100x.",
+      trackWinners: "Total Winners",
+      trackWinnersText: "See how many winning cards or players were paid.",
+      trackPayouts: "Payout Amounts",
+      trackPayoutsText: "Monitor payout totals and compare active rounds.",
+      trackLive: "Watch Mega Ball Live",
+      trackLiveText: "Open the live game and compare ongoing action with tracker data.",
+    
+      aboutTitle: "About Mega Ball",
+      aboutText1: "Mega Ball is a fast-paced live game show that combines bingo-style card mechanics with lottery-style bouncing balls. One or two bonus stages can appear after the main draw, adding extra excitement through multipliers.",
+      aboutText2: "The goal is to complete as many lines on your cards as possible. More completed lines mean higher payouts, and multiplier rounds can significantly boost qualifying wins.",
+    
+      howToPlayTitle: "How To Play",
+      howToPlayText1: "In Mega Ball, 20 balls are drawn one by one from an automatic machine. Matching numbers on the player's cards are marked automatically, and the cards closest to a win are moved to the top of the interface.",
+      howToPlayText2: "After the final ball, a Mega Ball multiplier between 5x and 100x is generated. If the Mega Ball helps complete a line, the payout can be multiplied. In rare cases, a 2nd Mega Ball may also be drawn, giving players another chance at a boosted win.",
+      howToPlayBullets: [
+        "20 balls are drawn in quick succession.",
+        "Matching numbers are marked automatically on all active cards.",
+        "Cards nearest to completion move higher in the interface.",
+        "A Mega Ball multiplier is generated after the main draw.",
+        "A rare 2nd Mega Ball may create one more chance for a multiplied payout."
+      ],
+    
+      payoutTitle: "Mega Ball Payout",
+      payoutIntro: "Mega Ball payouts depend on how many lines are completed on a single card. Horizontal, vertical and diagonal lines can all count toward the final prize.",
+      payoutColLines: "Completed Lines",
+      payoutColPrize: "Payout",
+      payoutColNote: "How It Works",
+      payout1Line: "1 horizontal, vertical or diagonal line.",
+      payout2Lines: "2 completed lines on one card.",
+      payout3Lines: "3 completed lines on one card.",
+      payout4Lines: "4 completed lines on one card.",
+      payout5Lines: "5 completed lines on one card.",
+      payout6Lines: "6 completed lines on one card.",
+    
+      comparisonTitle: "Mega Ball at a Glance",
+      compColArea: "Area",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Why It Matters",
+      compAreaBase: "Base format",
+      compMegaBallBase: "Live bingo-style game show",
+      compMeaningBase: "Combines card completion with a live ball draw.",
+      compAreaBonus: "Bonus rounds",
+      compMegaBallBonus: "Mega Ball and rare 2nd Mega Ball",
+      compMeaningBonus: "Adds multiplier potential after the main draw.",
+      compAreaTracking: "Tracking value",
+      compMegaBallTracking: "High",
+      compMeaningTracking: "Ball order, winners and payouts are easy to review round by round.",
+      compAreaMaxWin: "Top win potential",
+      compMegaBallMaxWin: "Up to 1,000,000x",
+      compMeaningMaxWin: "The biggest wins depend on completed lines plus multiplier effects.",
+    
+      faqTitle: "Frequently Asked Questions",
+      faq: [
+        {
+          q: "Can I track Mega Ball live results?",
+          a: "Yes. A Mega Ball tracker can show ball history, recent payouts, winner counts and multiplier results round by round."
+        },
+        {
+          q: "How does the Mega Ball multiplier work?",
+          a: "After the main draw, a multiplier between 5x and 100x is generated. If the Mega Ball completes a winning line, the qualifying payout can be multiplied accordingly."
+        },
+        {
+          q: "What is the 2nd Mega Ball?",
+          a: "The 2nd Mega Ball is a rare extra draw that gives players another chance to complete a winning line with multiplier potential."
+        },
+        {
+          q: "Is Mega Ball more like bingo or a game show?",
+          a: "It combines both formats. The core mechanics are based on card lines, but the presentation and pacing follow a live casino game show style."
+        },
+        {
+          q: "Can tracker data predict future results?",
+          a: "No. Tracker data is useful for reviewing recent rounds and live statistics, but every draw remains independent."
+        }
+      ]
+    },
     dreamcatcherReview: {
       title: "Dream Catcher Live: Real-Time Stats, Results & Complete Game Guide",
       intro:
@@ -275,10 +383,14 @@ const UI_TRANSLATIONS = {
       biggestWinsGallery: "Biggest Wins Gallery"
     },
     seo: {
-      home: {
+    home: {
         title: "Casino Score Live 🔥 Live Stats and Real-Time Results [2026]",
         description: "Casino Score Live is your ultimate hub for live stats and real-time results in 2026. Analyze RTP, track hot or cold streaks, and make data-driven betting choices securely."
       },
+      megaball:{ 
+        title: "Mega Ball Live Stats & Results – Play Online + RTP & Trends",
+      description: "Mega Ball live stats, results & RTP insights. Track trends, multipliers and outcomes in real time. Play Mega Ball online or demo – find best casinos now."
+      },    
       crazytime: {
         title: "Crazy Time Stats – Live Results & Multipliers Tracker",
         description: "Crazy Time live stats updated in real time. Track wheel results, bonus rounds & multipliers up to 2000x. Use data to build your winning strategy. Check now!"
@@ -517,6 +629,115 @@ cashHunt: "Cash Hunt",
   },
 
   es: {
+    megaballReview: {
+      title: "Tracker de Mega Ball, RTP y Análisis del Juego",
+      intro: "Sigue las estadísticas, resultados y RTP de Mega Ball en tiempo real con herramientas de seguimiento en vivo. Revisa el historial de bolas, rondas de multiplicadores, conteo de ganadores y tendencias de pagos en un solo lugar.",
+    
+      quickOverviewTitle: "Resumen Rápido del Juego",
+      tableParameter: "Parámetro",
+      tableDetails: "Detalles",
+      tableFeature: "Característica",
+      tableDescription: "Descripción",
+    
+      specProvider: "Proveedor",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nombre del Juego",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95.30%",
+      specReleaseYear: "Año de Lanzamiento",
+      specReleaseYearValue: "2023",
+      specGameType: "Tipo de Juego",
+      specGameTypeValue: "Programa de Juego en Vivo tipo Bingo",
+      specMinBet: "Rango de Apuesta",
+      specMinBetValue: "Varía según el casino",
+      specMaxWin: "Ganancia Máxima",
+      specMaxWinValue: "Hasta 1.000.000x",
+      specBalls: "Bolas Extraídas",
+      specBallsValue: "20 bolas + Mega Ball + posible 2ª Mega Ball",
+    
+      trackerTitle: "Qué Puedes Seguir",
+      trackerIntro: "En Tracksino, las herramientas de seguimiento de Mega Ball se centran en las métricas en vivo más útiles para el análisis ronda por ronda.",
+      trackBallHistory: "Historial de Bolas",
+      trackBallHistoryText: "Revisa todas las bolas extraídas en orden exacto.",
+      trackMultiplier: "Multiplicador Mega Ball",
+      trackMultiplierText: "Sigue los multiplicadores generados de 5x a 100x.",
+      trackWinners: "Total de Ganadores",
+      trackWinnersText: "Consulta cuántas cartas o jugadores ganadores fueron pagados.",
+      trackPayouts: "Importes de Pago",
+      trackPayoutsText: "Monitoriza los totales de pago y compara rondas activas.",
+      trackLive: "Ver Mega Ball en Vivo",
+      trackLiveText: "Abre el juego en vivo y compara la acción en curso con los datos del tracker.",
+    
+      aboutTitle: "¿Qué es Mega Ball?",
+      aboutText1: "Mega Ball es un programa de juego en vivo de ritmo rápido que combina mecánicas de cartas estilo bingo con bolas que rebotan al estilo de la lotería. Una o dos rondas de bonificación pueden aparecer tras el sorteo principal, añadiendo emoción extra mediante multiplicadores.",
+      aboutText2: "El objetivo es completar el mayor número de líneas posible en tus cartas. Más líneas completadas significan mayores pagos, y las rondas de multiplicadores pueden incrementar considerablemente las ganancias calificadas.",
+    
+      howToPlayTitle: "Cómo Jugar a Mega Ball",
+      howToPlayText1: "En Mega Ball, se extraen 20 bolas una a una de una máquina automática. Los números coincidentes en las cartas del jugador se marcan automáticamente, y las cartas más cercanas a ganar se mueven a la parte superior de la interfaz.",
+      howToPlayText2: "Tras la última bola, se genera un multiplicador Mega Ball de entre 5x y 100x. Si la Mega Ball completa una línea ganadora, el pago puede multiplicarse. En casos raros, también puede extraerse una 2ª Mega Ball, dando a los jugadores otra oportunidad de obtener una ganancia potenciada.",
+      howToPlayBullets: [
+        "Se extraen 20 bolas en rápida sucesión.",
+        "Los números coincidentes se marcan automáticamente en todas las cartas activas.",
+        "Las cartas más cercanas a completarse suben en la interfaz.",
+        "Se genera un multiplicador Mega Ball tras el sorteo principal.",
+        "Una rara 2ª Mega Ball puede crear otra oportunidad de pago multiplicado."
+      ],
+    
+      payoutTitle: "Pagos de Mega Ball",
+      payoutIntro: "Los pagos de Mega Ball dependen de cuántas líneas se completen en una sola carta. Las líneas horizontales, verticales y diagonales cuentan para el premio final.",
+      payoutColLines: "Líneas Completadas",
+      payoutColPrize: "Pago",
+      payoutColNote: "Cómo Funciona",
+      payout1Line: "1 línea horizontal, vertical o diagonal.",
+      payout2Lines: "2 líneas completadas en una carta.",
+      payout3Lines: "3 líneas completadas en una carta.",
+      payout4Lines: "4 líneas completadas en una carta.",
+      payout5Lines: "5 líneas completadas en una carta.",
+      payout6Lines: "6 líneas completadas en una carta.",
+    
+      comparisonTitle: "Mega Ball de un Vistazo",
+      compColArea: "Área",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Por Qué Importa",
+      compAreaBase: "Formato base",
+      compMegaBallBase: "Programa de juego en vivo tipo bingo",
+      compMeaningBase: "Combina la completación de cartas con un sorteo en vivo.",
+      compAreaBonus: "Rondas de bonificación",
+      compMegaBallBonus: "Mega Ball y rara 2ª Mega Ball",
+      compMeaningBonus: "Añade potencial de multiplicador tras el sorteo principal.",
+      compAreaTracking: "Valor de seguimiento",
+      compMegaBallTracking: "Alto",
+      compMeaningTracking: "El orden de bolas, ganadores y pagos son fáciles de revisar ronda a ronda.",
+      compAreaMaxWin: "Potencial máximo de ganancia",
+      compMegaBallMaxWin: "Hasta 1.000.000x",
+      compMeaningMaxWin: "Las mayores ganancias dependen de las líneas completadas más los efectos del multiplicador.",
+    
+      faqTitle: "Preguntas Frecuentes",
+      faq: [
+        {
+          q: "¿Puedo seguir los resultados de Mega Ball en vivo?",
+          a: "Sí. Un tracker de Mega Ball puede mostrar el historial de bolas, pagos recientes, conteo de ganadores y resultados de multiplicadores ronda por ronda."
+        },
+        {
+          q: "¿Cómo funciona el multiplicador de Mega Ball?",
+          a: "Tras el sorteo principal, se genera un multiplicador de entre 5x y 100x. Si la Mega Ball completa una línea ganadora, el pago calificado puede multiplicarse según corresponda."
+        },
+        {
+          q: "¿Qué es la 2ª Mega Ball?",
+          a: "La 2ª Mega Ball es una extracción extra poco frecuente que da a los jugadores otra oportunidad de completar una línea ganadora con potencial de multiplicador."
+        },
+        {
+          q: "¿Mega Ball se parece más al bingo o a un programa de juego?",
+          a: "Combina ambos formatos. La mecánica principal se basa en líneas de cartas, pero la presentación y el ritmo siguen el estilo de un programa de casino en vivo."
+        },
+        {
+          q: "¿Pueden los datos del tracker predecir resultados futuros?",
+          a: "No. Los datos del tracker son útiles para revisar rondas recientes y estadísticas en vivo, pero cada sorteo sigue siendo independiente."
+        }
+      ]
+    },
+    
     dreamcatcherReview: {
       title: "Dream Catcher Live: estadísticas en tiempo real, resultados y guía completa del juego",
       intro:
@@ -798,10 +1019,15 @@ cashHunt: "Cash Hunt",
       biggestWinsGallery: "Galería de mayores ganancias"
     },
     seo: {
+
       home: {
         title: "Casino Score Live 🔥 Live Stats y Real-Time Results [2026]",
         description: "Casino Score Live es tu centro definitivo de live stats y real-time results en 2026. Analiza RTP, sigue hot or cold streaks y toma decisiones de apuestas seguras."
       },
+      megaball:{ 
+        title: "Mega Ball estadísticas en vivo y resultados – Juega online + RTP y tendencias",
+        description: "Estadísticas y resultados en vivo de Mega Ball con análisis de RTP. Sigue tendencias, multiplicadores y resultados en tiempo real. Juega online o prueba demo."
+      },    
       crazytime: {
         title: "Estadísticas de Crazy Time - Resultados en Vivo y Rastreador de Multiplicadores",
         description: "Estadísticas en vivo de Crazy Time actualizadas en tiempo real. Sigue los resultados de la rueda, rondas bonus y multiplicadores de hasta 2000x. Usa los datos para construir tu estrategia ganadora. ¡Compruébalo ahora!"
@@ -1033,6 +1259,7 @@ cashHunt: "Cash Hunt",
   },
 
   it: {
+    
     dreamcatcherReview: {
       title: "Dream Catcher Live: Statistiche in Tempo Reale, Risultati e Guida Completa al Gioco",
       intro:
@@ -1208,6 +1435,7 @@ cashHunt: "Cash Hunt",
       howText2: "I dati provengono da fonti di trasmissione aperte, stream di gioco live e interfacce pubbliche dei provider, permettendoci di seguire costantemente i risultati di gioco e i risultati in tempo reale.",
       howText3: "Tutti i risultati vengono sottoposti a elaborazione aggiuntiva e verifica algoritmica per ridurre al minimo i ritardi e mantenere un'elevata precisione statistica. La piattaforma si basa su moderne tecnologie di elaborazione dati, tra cui sincronizzazione dei flussi, parsing automatico e modelli analitici."
     },
+    
     monopolyReview: {
       title: "Monopoly Live Recensione: l'esperienza definitiva del game show da casinò live",
       intro: "Benvenuto nella guida definitiva a Monopoly Live, uno dei giochi con dealer dal vivo più popolari mai creati. Sviluppato dalla leggendaria Evolution Gaming, questo titolo unisce una gigantesca ruota del denaro a un'incredibile funzione bonus 3D in realtà aumentata con Mr. Monopoly in persona. Che tu voglia giocare a Monopoly Live online o semplicemente controllare le statistiche più recenti del gioco, qui troverai tutte le informazioni di cui hai bisogno.",
@@ -1309,6 +1537,10 @@ cashHunt: "Cash Hunt",
         title: "Casino Score Live 🔥 Live Stats e Real-Time Results [2026]",
         description: "Casino Score Live è il tuo hub definitivo per live stats e real-time results nel 2026. Analizza RTP, segui hot or cold streaks e fai scelte di scommessa sicure."
       },
+      megaball:{ 
+        title: "Mega Ball statistiche live e risultati – Gioca online + RTP e trend",
+        description: "Statistiche e risultati live di Mega Ball con analisi RTP. Monitora trend, moltiplicatori ed esiti in tempo reale. Gioca online o prova la demo subito.",
+      },    
       crazytime: {
         title: "Statistiche Crazy Time – Risultati Live e Tracker dei Moltiplicatori",
         description: "Statistiche live di Crazy Time aggiornate in tempo reale. Monitora risultati della ruota, round bonus e moltiplicatori fino a 2000x. Usa i dati per costruire la tua strategia vincente. Controlla ora!"
@@ -1538,6 +1770,114 @@ cashHunt: "Cash Hunt",
   },
 
   de: {
+    megaballReview: {
+      title: "Mega Ball Tracker, RTP und Spielanalyse",
+      intro: "Verfolge Statistiken, Ergebnisse und den RTP von Mega Ball in Echtzeit mit Live-Tracking-Tools. Sieh dir Ballverlauf, Multiplikator-Runden, Gewinneranzahl und Auszahlungstrends an – alles an einem Ort.",
+  
+      quickOverviewTitle: "Spielübersicht auf einen Blick",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+      tableFeature: "Funktion",
+      tableDescription: "Beschreibung",
+  
+      specProvider: "Anbieter",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Spielname",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95,30 %",
+      specReleaseYear: "Erscheinungsjahr",
+      specReleaseYearValue: "2023",
+      specGameType: "Spieltyp",
+      specGameTypeValue: "Live-Game-Show im Bingo-Stil",
+      specMinBet: "Einsatzbereich",
+      specMinBetValue: "Variiert je nach Casino",
+      specMaxWin: "Maximaler Gewinn",
+      specMaxWinValue: "Bis zu 1.000.000x",
+      specBalls: "Gezogene Kugeln",
+      specBallsValue: "20 Kugeln + Mega Ball + mögliche 2. Mega Ball",
+  
+      trackerTitle: "Was du verfolgen kannst",
+      trackerIntro: "Bei Tracksino konzentrieren sich die Mega-Ball-Tracking-Tools auf die wichtigsten Live-Metriken für die Analyse Runde für Runde.",
+      trackBallHistory: "Kugelverlauf",
+      trackBallHistoryText: "Sieh dir alle gezogenen Kugeln in exakter Reihenfolge an.",
+      trackMultiplier: "Mega-Ball-Multiplikator",
+      trackMultiplierText: "Verfolge Multiplikatoren von 5x bis 100x.",
+      trackWinners: "Anzahl der Gewinner",
+      trackWinnersText: "Sieh, wie viele Karten oder Spieler gewonnen haben.",
+      trackPayouts: "Auszahlungsbeträge",
+      trackPayoutsText: "Überwache Gesamtauszahlungen und vergleiche aktive Runden.",
+      trackLive: "Mega Ball live ansehen",
+      trackLiveText: "Öffne das Live-Spiel und vergleiche die laufende Aktion mit den Tracker-Daten.",
+  
+      aboutTitle: "Was ist Mega Ball?",
+      aboutText1: "Mega Ball ist eine schnelle Live-Game-Show, die Bingo-ähnliche Kartenmechaniken mit Lotterie-ähnlichen Kugelziehungen kombiniert. Nach der Hauptziehung können eine oder zwei Bonusrunden erscheinen, die durch Multiplikatoren zusätzliche Spannung bringen.",
+      aboutText2: "Das Ziel ist es, möglichst viele Linien auf deinen Karten zu vervollständigen. Je mehr Linien du abschließt, desto höher sind die Gewinne – und Multiplikatorrunden können qualifizierte Auszahlungen deutlich erhöhen.",
+  
+      howToPlayTitle: "Wie spielt man Mega Ball?",
+      howToPlayText1: "Bei Mega Ball werden 20 Kugeln nacheinander aus einer automatischen Maschine gezogen. Übereinstimmende Zahlen auf den Spielkarten werden automatisch markiert, und die Karten, die dem Gewinn am nächsten sind, werden oben in der Benutzeroberfläche angezeigt.",
+      howToPlayText2: "Nach der letzten Kugel wird ein Mega-Ball-Multiplikator zwischen 5x und 100x generiert. Wenn der Mega Ball eine Gewinnlinie vervollständigt, kann die Auszahlung multipliziert werden. In seltenen Fällen wird auch eine zweite Mega Ball gezogen, die eine zusätzliche Chance auf einen erhöhten Gewinn bietet.",
+      howToPlayBullets: [
+        "20 Kugeln werden schnell hintereinander gezogen.",
+        "Übereinstimmende Zahlen werden automatisch auf allen aktiven Karten markiert.",
+        "Karten, die kurz vor dem Gewinn stehen, werden oben angezeigt.",
+        "Nach der Hauptziehung wird ein Mega-Ball-Multiplikator generiert.",
+        "Eine seltene zweite Mega Ball kann eine zusätzliche Gewinnchance bieten."
+      ],
+  
+      payoutTitle: "Mega Ball Auszahlungen",
+      payoutIntro: "Die Auszahlungen bei Mega Ball hängen davon ab, wie viele Linien auf einer einzelnen Karte vervollständigt werden. Horizontale, vertikale und diagonale Linien zählen für den Gewinn.",
+      payoutColLines: "Abgeschlossene Linien",
+      payoutColPrize: "Auszahlung",
+      payoutColNote: "Funktionsweise",
+      payout1Line: "1 horizontale, vertikale oder diagonale Linie.",
+      payout2Lines: "2 Linien auf einer Karte.",
+      payout3Lines: "3 Linien auf einer Karte.",
+      payout4Lines: "4 Linien auf einer Karte.",
+      payout5Lines: "5 Linien auf einer Karte.",
+      payout6Lines: "6 Linien auf einer Karte.",
+  
+      comparisonTitle: "Mega Ball im Überblick",
+      compColArea: "Bereich",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Warum es wichtig ist",
+      compAreaBase: "Grundformat",
+      compMegaBallBase: "Live-Game-Show im Bingo-Stil",
+      compMeaningBase: "Kombiniert Karten-Vervollständigung mit einer Live-Ziehung.",
+      compAreaBonus: "Bonusrunden",
+      compMegaBallBonus: "Mega Ball und seltene 2. Mega Ball",
+      compMeaningBonus: "Fügt nach der Hauptziehung Multiplikatorpotenzial hinzu.",
+      compAreaTracking: "Tracking-Wert",
+      compMegaBallTracking: "Hoch",
+      compMeaningTracking: "Kugelreihenfolge, Gewinner und Auszahlungen sind leicht nachvollziehbar.",
+      compAreaMaxWin: "Maximales Gewinnpotenzial",
+      compMegaBallMaxWin: "Bis zu 1.000.000x",
+      compMeaningMaxWin: "Die höchsten Gewinne hängen von Linien und Multiplikatoren ab.",
+  
+      faqTitle: "Häufig gestellte Fragen",
+      faq: [
+        {
+          q: "Kann ich Mega-Ball-Ergebnisse live verfolgen?",
+          a: "Ja. Ein Mega-Ball-Tracker zeigt Kugelverlauf, aktuelle Auszahlungen, Gewinneranzahl und Multiplikator-Ergebnisse Runde für Runde."
+        },
+        {
+          q: "Wie funktioniert der Mega-Ball-Multiplikator?",
+          a: "Nach der Hauptziehung wird ein Multiplikator zwischen 5x und 100x generiert. Wenn der Mega Ball eine Gewinnlinie vervollständigt, wird die Auszahlung entsprechend multipliziert."
+        },
+        {
+          q: "Was ist die zweite Mega Ball?",
+          a: "Die zweite Mega Ball ist eine seltene Zusatzziehung, die eine weitere Chance auf eine Gewinnlinie mit Multiplikator bietet."
+        },
+        {
+          q: "Ist Mega Ball eher Bingo oder eine Game-Show?",
+          a: "Es kombiniert beides. Die Mechanik basiert auf Bingo-Linien, während Präsentation und Tempo einer Live-Casino-Game-Show entsprechen."
+        },
+        {
+          q: "Können Tracker-Daten zukünftige Ergebnisse vorhersagen?",
+          a: "Nein. Tracker-Daten helfen bei der Analyse vergangener Runden und Live-Statistiken, aber jede Ziehung ist unabhängig."
+        }
+      ]
+    },
     dreamcatcherReview: {
       title: "Dream Catcher Live: Echtzeit-Statistiken, Ergebnisse & Vollständiger Spielleitfaden",
       intro:
@@ -1814,6 +2154,10 @@ dreamcatcherStatsExtra: {
         title: "Casino Score Live 🔥 Live Stats und Real-Time Results [2026]",
         description: "Casino Score Live ist dein zentraler Hub für live stats und real-time results im Jahr 2026. Analysiere RTP, verfolge hot or cold streaks und triff sichere, datenbasierte Betting-Entscheidungen."
       },
+      megaball:{ 
+        title:"Mega Ball Live Statistiken & Ergebnisse – Online spielen + RTP & Trends",
+        description:"Mega Ball Live-Statistiken und Ergebnisse mit RTP-Analyse. Verfolge Trends, Multiplikatoren und Resultate in Echtzeit. Spiele online oder teste die Demo."
+      },    
       crazytime: {
         title: "Crazy Time Statistiken – Live-Ergebnisse & Multiplikator-Tracker",
         description: "Crazy Time Live-Statistiken in Echtzeit aktualisiert. Verfolge Radergebnisse, Bonusrunden und Multiplikatoren bis zu 2000x. Nutze Daten, um deine Gewinnstrategie aufzubauen. Jetzt ansehen!"
@@ -2043,6 +2387,114 @@ dreamcatcherStatsExtra: {
   },
 
   nl: {
+    megaballReview: {
+      title: "Mega Ball Tracker, RTP en Spelanalyse",
+      intro: "Volg statistieken, resultaten en RTP van Mega Ball in realtime met live trackingtools. Bekijk de balgeschiedenis, multiplier-rondes, het aantal winnaars en uitbetalingstrends op één plek.",
+  
+      quickOverviewTitle: "Snel Speloverzicht",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+      tableFeature: "Kenmerk",
+      tableDescription: "Beschrijving",
+  
+      specProvider: "Provider",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Spelnaam",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95,30%",
+      specReleaseYear: "Jaar van Lancering",
+      specReleaseYearValue: "2023",
+      specGameType: "Speltype",
+      specGameTypeValue: "Live game show in bingo-stijl",
+      specMinBet: "Inzetbereik",
+      specMinBetValue: "Varieert per casino",
+      specMaxWin: "Maximale Winst",
+      specMaxWinValue: "Tot 1.000.000x",
+      specBalls: "Getrokken Ballen",
+      specBallsValue: "20 ballen + Mega Ball + mogelijke 2e Mega Ball",
+  
+      trackerTitle: "Wat Je Kunt Volgen",
+      trackerIntro: "Op Tracksino richten Mega Ball trackingtools zich op de belangrijkste live statistieken voor analyse per ronde.",
+      trackBallHistory: "Balgeschiedenis",
+      trackBallHistoryText: "Bekijk alle getrokken ballen in exacte volgorde.",
+      trackMultiplier: "Mega Ball Multiplier",
+      trackMultiplierText: "Volg multipliers van 5x tot 100x.",
+      trackWinners: "Aantal Winnaars",
+      trackWinnersText: "Bekijk hoeveel kaarten of spelers hebben gewonnen.",
+      trackPayouts: "Uitbetalingen",
+      trackPayoutsText: "Monitor totale uitbetalingen en vergelijk actieve rondes.",
+      trackLive: "Bekijk Mega Ball Live",
+      trackLiveText: "Open het live spel en vergelijk de actie met de trackerdata.",
+  
+      aboutTitle: "Wat is Mega Ball?",
+      aboutText1: "Mega Ball is een snelle live game show die bingo-achtige kaartmechanieken combineert met loterij-achtige baltrekkingen. Na de hoofdtrekking kunnen één of twee bonusrondes verschijnen, wat extra spanning toevoegt via multipliers.",
+      aboutText2: "Het doel is om zoveel mogelijk lijnen op je kaarten te voltooien. Hoe meer lijnen je voltooit, hoe hoger de uitbetalingen, en multiplier-rondes kunnen de winst aanzienlijk verhogen.",
+  
+      howToPlayTitle: "Hoe Speel Je Mega Ball",
+      howToPlayText1: "In Mega Ball worden 20 ballen één voor één getrokken uit een automatische machine. Overeenkomende nummers op de kaarten van de speler worden automatisch gemarkeerd en de kaarten die het dichtst bij winst zijn, worden bovenaan de interface weergegeven.",
+      howToPlayText2: "Na de laatste bal wordt een Mega Ball multiplier tussen 5x en 100x gegenereerd. Als de Mega Ball een winnende lijn voltooit, kan de uitbetaling worden vermenigvuldigd. In zeldzame gevallen kan ook een 2e Mega Ball worden getrokken, wat een extra kans op een verhoogde winst biedt.",
+      howToPlayBullets: [
+        "20 ballen worden snel achter elkaar getrokken.",
+        "Overeenkomende nummers worden automatisch gemarkeerd op alle actieve kaarten.",
+        "Kaarten die dicht bij voltooiing zijn, verschijnen bovenaan de interface.",
+        "Na de hoofdtrekking wordt een Mega Ball multiplier gegenereerd.",
+        "Een zeldzame 2e Mega Ball kan een extra kans op een vermenigvuldigde uitbetaling bieden."
+      ],
+  
+      payoutTitle: "Mega Ball Uitbetalingen",
+      payoutIntro: "Uitbetalingen in Mega Ball zijn afhankelijk van het aantal voltooide lijnen op één kaart. Horizontale, verticale en diagonale lijnen tellen mee voor de uiteindelijke winst.",
+      payoutColLines: "Voltooide Lijnen",
+      payoutColPrize: "Uitbetaling",
+      payoutColNote: "Hoe Het Werkt",
+      payout1Line: "1 horizontale, verticale of diagonale lijn.",
+      payout2Lines: "2 lijnen voltooid op één kaart.",
+      payout3Lines: "3 lijnen voltooid op één kaart.",
+      payout4Lines: "4 lijnen voltooid op één kaart.",
+      payout5Lines: "5 lijnen voltooid op één kaart.",
+      payout6Lines: "6 lijnen voltooid op één kaart.",
+  
+      comparisonTitle: "Mega Ball in Één Oogopslag",
+      compColArea: "Onderdeel",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Waarom Het Belangrijk Is",
+      compAreaBase: "Basisformaat",
+      compMegaBallBase: "Live game show in bingo-stijl",
+      compMeaningBase: "Combineert kaartvoltooiing met een live trekking.",
+      compAreaBonus: "Bonusrondes",
+      compMegaBallBonus: "Mega Ball en zeldzame 2e Mega Ball",
+      compMeaningBonus: "Voegt multiplierpotentieel toe na de hoofdtrekking.",
+      compAreaTracking: "Trackingwaarde",
+      compMegaBallTracking: "Hoog",
+      compMeaningTracking: "Balvolgorde, winnaars en uitbetalingen zijn eenvoudig te analyseren per ronde.",
+      compAreaMaxWin: "Maximale winstpotentieel",
+      compMegaBallMaxWin: "Tot 1.000.000x",
+      compMeaningMaxWin: "De hoogste winsten hangen af van voltooide lijnen en multipliers.",
+  
+      faqTitle: "Veelgestelde Vragen",
+      faq: [
+        {
+          q: "Kan ik Mega Ball resultaten live volgen?",
+          a: "Ja. Een Mega Ball tracker toont balgeschiedenis, recente uitbetalingen, aantal winnaars en multiplierresultaten per ronde."
+        },
+        {
+          q: "Hoe werkt de Mega Ball multiplier?",
+          a: "Na de hoofdtrekking wordt een multiplier tussen 5x en 100x gegenereerd. Als de Mega Ball een lijn voltooit, wordt de uitbetaling vermenigvuldigd."
+        },
+        {
+          q: "Wat is de 2e Mega Ball?",
+          a: "De 2e Mega Ball is een zeldzame extra trekking die spelers een extra kans geeft op een winnende lijn met multiplier."
+        },
+        {
+          q: "Is Mega Ball meer bingo of een game show?",
+          a: "Het combineert beide. De kernmechaniek is gebaseerd op bingolijnen, terwijl presentatie en tempo lijken op een live casinogame show."
+        },
+        {
+          q: "Kunnen trackergegevens toekomstige resultaten voorspellen?",
+          a: "Nee. Trackerdata helpt bij analyse van eerdere rondes en live statistieken, maar elke trekking is onafhankelijk."
+        }
+      ]
+    },
     dreamcatcherReview: {
       title: "Dream Catcher Live: Realtime Statistieken, Resultaten & Complete Spelgids",
       intro:
@@ -2319,6 +2771,10 @@ dreamcatcherStatsExtra: {
         title: "Casino Score Live 🔥 Live Stats en Real-Time Results [2026]",
         description: "Casino Score Live is jouw centrale hub voor live stats en real-time results in 2026. Analyseer RTP, volg hot or cold streaks en maak veilige, datagedreven betting-keuzes."
       },
+      megaball:{ 
+        title: "Mega Ball stats en direct et résultats – Jouer en ligne + RTP et tendances",
+        description: "Statistiques et résultats en direct de Mega Ball avec analyse RTP. Suivez tendances, multiplicateurs et résultats en temps réel. Jouez en ligne ou testez la démo."
+      },    
       crazytime: {
         title: "Crazy Time Statistieken – Live Resultaten & Multiplier Tracker",
         description: "Crazy Time live statistieken in realtime bijgewerkt. Volg wielresultaten, bonusrondes en multipliers tot 2000x. Gebruik data om je winnende strategie op te bouwen. Bekijk het nu!"
@@ -2547,6 +3003,114 @@ dreamcatcherStatsExtra: {
   },
 
   fr: {
+    megaballReview: {
+      title: "Tracker Mega Ball, RTP et Analyse du Jeu",
+      intro: "Suivez les statistiques, les résultats et le RTP de Mega Ball en temps réel grâce à des outils de suivi en direct. Consultez l’historique des boules, les tours avec multiplicateurs, le nombre de gagnants et les tendances des paiements, le tout en un seul endroit.",
+  
+      quickOverviewTitle: "Aperçu Rapide du Jeu",
+      tableParameter: "Paramètre",
+      tableDetails: "Détails",
+      tableFeature: "Fonctionnalité",
+      tableDescription: "Description",
+  
+      specProvider: "Fournisseur",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nom du Jeu",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95,30 %",
+      specReleaseYear: "Année de Sortie",
+      specReleaseYearValue: "2023",
+      specGameType: "Type de Jeu",
+      specGameTypeValue: "Jeu télévisé en direct de type bingo",
+      specMinBet: "Plage de Mise",
+      specMinBetValue: "Varie selon le casino",
+      specMaxWin: "Gain Maximum",
+      specMaxWinValue: "Jusqu’à 1 000 000x",
+      specBalls: "Boules Tirées",
+      specBallsValue: "20 boules + Mega Ball + possible 2e Mega Ball",
+  
+      trackerTitle: "Ce Que Vous Pouvez Suivre",
+      trackerIntro: "Sur Tracksino, les outils de suivi Mega Ball se concentrent sur les métriques live les plus utiles pour analyser chaque tour.",
+      trackBallHistory: "Historique des Boules",
+      trackBallHistoryText: "Consultez toutes les boules tirées dans l’ordre exact.",
+      trackMultiplier: "Multiplicateur Mega Ball",
+      trackMultiplierText: "Suivez les multiplicateurs de 5x à 100x.",
+      trackWinners: "Nombre de Gagnants",
+      trackWinnersText: "Découvrez combien de cartes ou de joueurs ont gagné.",
+      trackPayouts: "Montants des Paiements",
+      trackPayoutsText: "Surveillez les paiements totaux et comparez les tours actifs.",
+      trackLive: "Regarder Mega Ball en Direct",
+      trackLiveText: "Ouvrez le jeu en direct et comparez l’action en cours avec les données du tracker.",
+  
+      aboutTitle: "Qu’est-ce que Mega Ball ?",
+      aboutText1: "Mega Ball est un jeu télévisé en direct rapide qui combine des mécaniques de cartes de type bingo avec des tirages de boules inspirés des loteries. Un ou deux tours bonus peuvent apparaître après le tirage principal, ajoutant du suspense grâce aux multiplicateurs.",
+      aboutText2: "L’objectif est de compléter le plus grand nombre de lignes possible sur vos cartes. Plus vous complétez de lignes, plus les gains sont élevés, et les tours avec multiplicateurs peuvent augmenter considérablement les paiements.",
+  
+      howToPlayTitle: "Comment Jouer à Mega Ball",
+      howToPlayText1: "Dans Mega Ball, 20 boules sont tirées une par une depuis une machine automatique. Les numéros correspondants sur les cartes des joueurs sont marqués automatiquement, et les cartes les plus proches de gagner apparaissent en haut de l’interface.",
+      howToPlayText2: "Après la dernière boule, un multiplicateur Mega Ball entre 5x et 100x est généré. Si la Mega Ball complète une ligne gagnante, le paiement peut être multiplié. Dans de rares cas, une 2e Mega Ball peut également être tirée, offrant une chance supplémentaire de gain augmenté.",
+      howToPlayBullets: [
+        "20 boules sont tirées rapidement les unes après les autres.",
+        "Les numéros correspondants sont marqués automatiquement sur toutes les cartes actives.",
+        "Les cartes proches de la victoire apparaissent en haut de l’interface.",
+        "Un multiplicateur Mega Ball est généré après le tirage principal.",
+        "Une rare 2e Mega Ball peut offrir une opportunité de gain supplémentaire."
+      ],
+  
+      payoutTitle: "Paiements Mega Ball",
+      payoutIntro: "Les paiements de Mega Ball dépendent du nombre de lignes complétées sur une seule carte. Les lignes horizontales, verticales et diagonales comptent pour le gain final.",
+      payoutColLines: "Lignes Complétées",
+      payoutColPrize: "Paiement",
+      payoutColNote: "Fonctionnement",
+      payout1Line: "1 ligne horizontale, verticale ou diagonale.",
+      payout2Lines: "2 lignes complétées sur une carte.",
+      payout3Lines: "3 lignes complétées sur une carte.",
+      payout4Lines: "4 lignes complétées sur une carte.",
+      payout5Lines: "5 lignes complétées sur une carte.",
+      payout6Lines: "6 lignes complétées sur une carte.",
+  
+      comparisonTitle: "Mega Ball en un Coup d’Œil",
+      compColArea: "Domaine",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Pourquoi c’est important",
+      compAreaBase: "Format de base",
+      compMegaBallBase: "Jeu télévisé en direct de type bingo",
+      compMeaningBase: "Combine la complétion des cartes avec un tirage en direct.",
+      compAreaBonus: "Tours bonus",
+      compMegaBallBonus: "Mega Ball et rare 2e Mega Ball",
+      compMeaningBonus: "Ajoute un potentiel de multiplicateur après le tirage principal.",
+      compAreaTracking: "Valeur du suivi",
+      compMegaBallTracking: "Élevée",
+      compMeaningTracking: "L’ordre des boules, les gagnants et les paiements sont faciles à analyser.",
+      compAreaMaxWin: "Gain maximum potentiel",
+      compMegaBallMaxWin: "Jusqu’à 1 000 000x",
+      compMeaningMaxWin: "Les gains les plus élevés dépendent des lignes complétées et des multiplicateurs.",
+  
+      faqTitle: "Questions Fréquemment Posées",
+      faq: [
+        {
+          q: "Puis-je suivre les résultats de Mega Ball en direct ?",
+          a: "Oui. Un tracker Mega Ball peut afficher l’historique des boules, les paiements récents, le nombre de gagnants et les résultats des multiplicateurs pour chaque tour."
+        },
+        {
+          q: "Comment fonctionne le multiplicateur Mega Ball ?",
+          a: "Après le tirage principal, un multiplicateur entre 5x et 100x est généré. Si la Mega Ball complète une ligne gagnante, le paiement est multiplié en conséquence."
+        },
+        {
+          q: "Qu’est-ce que la 2e Mega Ball ?",
+          a: "La 2e Mega Ball est un tirage supplémentaire rare qui offre une autre chance de compléter une ligne gagnante avec multiplicateur."
+        },
+        {
+          q: "Mega Ball est-il plus proche du bingo ou d’un jeu télévisé ?",
+          a: "Il combine les deux. La mécanique repose sur des lignes de bingo, tandis que la présentation ressemble à un jeu télévisé en direct de casino."
+        },
+        {
+          q: "Les données du tracker peuvent-elles prédire les résultats futurs ?",
+          a: "Non. Les données du tracker servent à analyser les tours précédents et les statistiques en direct, mais chaque tirage est indépendant."
+        }
+      ]
+    },
     dreamcatcherReview: {
       title: "Dream Catcher Live : Statistiques en Temps Réel, Résultats & Guide Complet du Jeu",
       intro:
@@ -2822,6 +3386,10 @@ dreamcatcherStatsExtra: {
         title: "Casino Score Live 🔥 Live Stats et Real-Time Results [2026]",
         description: "Casino Score Live est votre hub ultime pour live stats et real-time results en 2026. Analysez le RTP, suivez les hot or cold streaks et prenez des décisions de mise sécurisées."
       },
+      megaball: {
+        title: "Mega Ball live statistieken & resultaten – Speel online + RTP & trends",
+        description: "Mega Ball live statistieken en resultaten met RTP-analyse. Volg trends, multipliers en uitkomsten in realtime. Speel online of probeer de demo nu.",
+      },
       crazytime: {
         title: "Statistiques Crazy Time – Résultats en Direct et Suivi des Multiplicateurs",
         description: "Statistiques Crazy Time en direct mises à jour en temps réel. Suivez les résultats de la roue, les tours bonus et les multiplicateurs jusqu'à 2000x. Utilisez les données pour construire votre stratégie gagnante. Consultez maintenant !"
@@ -3050,6 +3618,114 @@ dreamcatcherStatsExtra: {
   },
 
   pt: {
+    megaballReview: {
+      title: "Tracker Mega Ball, RTP e Análise do Jogo",
+      intro: "Acompanhe estatísticas, resultados e RTP do Mega Ball em tempo real com ferramentas de tracking ao vivo. Veja o histórico de bolas, rondas com multiplicadores, número de vencedores e tendências de pagamento num só lugar.",
+  
+      quickOverviewTitle: "Visão Geral Rápida do Jogo",
+      tableParameter: "Parâmetro",
+      tableDetails: "Detalhes",
+      tableFeature: "Característica",
+      tableDescription: "Descrição",
+  
+      specProvider: "Fornecedor",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nome do Jogo",
+      specGameNameValue: "Mega Ball",
+      specRtp: "RTP",
+      specRtpValue: "95,30%",
+      specReleaseYear: "Ano de Lançamento",
+      specReleaseYearValue: "2023",
+      specGameType: "Tipo de Jogo",
+      specGameTypeValue: "Game show ao vivo estilo bingo",
+      specMinBet: "Faixa de Aposta",
+      specMinBetValue: "Varia conforme o casino",
+      specMaxWin: "Ganho Máximo",
+      specMaxWinValue: "Até 1.000.000x",
+      specBalls: "Bolas Sorteadas",
+      specBallsValue: "20 bolas + Mega Ball + possível 2ª Mega Ball",
+  
+      trackerTitle: "O Que Pode Acompanhar",
+      trackerIntro: "No Tracksino, as ferramentas de tracking do Mega Ball focam nas métricas ao vivo mais úteis para análise ronda a ronda.",
+      trackBallHistory: "Histórico de Bolas",
+      trackBallHistoryText: "Veja todas as bolas sorteadas na ordem exata.",
+      trackMultiplier: "Multiplicador Mega Ball",
+      trackMultiplierText: "Acompanhe multiplicadores de 5x a 100x.",
+      trackWinners: "Número de Vencedores",
+      trackWinnersText: "Veja quantas cartelas ou jogadores ganharam.",
+      trackPayouts: "Valores de Pagamento",
+      trackPayoutsText: "Monitorize pagamentos totais e compare rondas ativas.",
+      trackLive: "Ver Mega Ball ao Vivo",
+      trackLiveText: "Abra o jogo ao vivo e compare a ação com os dados do tracker.",
+  
+      aboutTitle: "O Que é Mega Ball?",
+      aboutText1: "Mega Ball é um game show ao vivo de ritmo rápido que combina mecânicas de cartelas estilo bingo com sorteios de bolas ao estilo de lotaria. Uma ou duas rondas de bónus podem surgir após o sorteio principal, adicionando emoção através de multiplicadores.",
+      aboutText2: "O objetivo é completar o maior número possível de linhas nas suas cartelas. Quanto mais linhas completar, maiores serão os ganhos, e as rondas com multiplicadores podem aumentar significativamente os pagamentos.",
+  
+      howToPlayTitle: "Como Jogar Mega Ball",
+      howToPlayText1: "No Mega Ball, 20 bolas são sorteadas uma a uma a partir de uma máquina automática. Os números correspondentes nas cartelas dos jogadores são marcados automaticamente, e as cartelas mais próximas da vitória aparecem no topo da interface.",
+      howToPlayText2: "Após a última bola, é gerado um multiplicador Mega Ball entre 5x e 100x. Se a Mega Ball completar uma linha vencedora, o pagamento pode ser multiplicado. Em casos raros, pode surgir uma 2ª Mega Ball, oferecendo uma oportunidade extra de ganho aumentado.",
+      howToPlayBullets: [
+        "20 bolas são sorteadas rapidamente uma após a outra.",
+        "Os números correspondentes são marcados automaticamente em todas as cartelas ativas.",
+        "As cartelas mais próximas de completar linhas aparecem no topo.",
+        "Após o sorteio principal, é gerado um multiplicador Mega Ball.",
+        "Uma rara 2ª Mega Ball pode oferecer uma oportunidade adicional de pagamento multiplicado."
+      ],
+  
+      payoutTitle: "Pagamentos do Mega Ball",
+      payoutIntro: "Os pagamentos no Mega Ball dependem do número de linhas completadas numa única cartela. Linhas horizontais, verticais e diagonais contam para o prémio final.",
+      payoutColLines: "Linhas Completadas",
+      payoutColPrize: "Pagamento",
+      payoutColNote: "Como Funciona",
+      payout1Line: "1 linha horizontal, vertical ou diagonal.",
+      payout2Lines: "2 linhas completadas numa cartela.",
+      payout3Lines: "3 linhas completadas numa cartela.",
+      payout4Lines: "4 linhas completadas numa cartela.",
+      payout5Lines: "5 linhas completadas numa cartela.",
+      payout6Lines: "6 linhas completadas numa cartela.",
+  
+      comparisonTitle: "Mega Ball em Resumo",
+      compColArea: "Área",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "Por Que é Importante",
+      compAreaBase: "Formato base",
+      compMegaBallBase: "Game show ao vivo estilo bingo",
+      compMeaningBase: "Combina conclusão de cartelas com sorteio ao vivo.",
+      compAreaBonus: "Rondas de bónus",
+      compMegaBallBonus: "Mega Ball e rara 2ª Mega Ball",
+      compMeaningBonus: "Adiciona potencial de multiplicador após o sorteio principal.",
+      compAreaTracking: "Valor de tracking",
+      compMegaBallTracking: "Alto",
+      compMeaningTracking: "Ordem das bolas, vencedores e pagamentos são fáceis de analisar.",
+      compAreaMaxWin: "Ganho máximo potencial",
+      compMegaBallMaxWin: "Até 1.000.000x",
+      compMeaningMaxWin: "Os maiores ganhos dependem das linhas completadas e dos multiplicadores.",
+  
+      faqTitle: "Perguntas Frequentes",
+      faq: [
+        {
+          q: "Posso acompanhar os resultados do Mega Ball ao vivo?",
+          a: "Sim. Um tracker Mega Ball pode mostrar o histórico de bolas, pagamentos recentes, número de vencedores e resultados dos multiplicadores ronda a ronda."
+        },
+        {
+          q: "Como funciona o multiplicador Mega Ball?",
+          a: "Após o sorteio principal, é gerado um multiplicador entre 5x e 100x. Se a Mega Ball completar uma linha vencedora, o pagamento é multiplicado."
+        },
+        {
+          q: "O que é a 2ª Mega Ball?",
+          a: "A 2ª Mega Ball é um sorteio extra raro que oferece uma nova oportunidade de completar uma linha vencedora com multiplicador."
+        },
+        {
+          q: "Mega Ball é mais parecido com bingo ou game show?",
+          a: "Combina ambos. A mecânica baseia-se em linhas de bingo, enquanto a apresentação segue o estilo de um game show de casino ao vivo."
+        },
+        {
+          q: "Os dados do tracker podem prever resultados futuros?",
+          a: "Não. Os dados do tracker ajudam a analisar rondas anteriores e estatísticas ao vivo, mas cada sorteio é independente."
+        }
+      ]
+    },
     dreamcatcherReview: {
       title: "Dream Catcher Live: Estatísticas em Tempo Real, Resultados & Guia Completo do Jogo",
       intro:
@@ -3325,6 +4001,12 @@ dreamcatcherStatsExtra: {
         title: "Casino Score Live 🔥 Live Stats e Real-Time Results [2026]",
         description: "Casino Score Live é o seu hub definitivo para live stats e real-time results em 2026. Analise RTP, acompanhe hot or cold streaks e faça escolhas de aposta seguras."
       },
+      megaball:{
+        title: "Mega Ball estatísticas ao vivo e resultados – Jogar online + RTP e tendências",
+        description: "Estatísticas e resultados ao vivo do Mega Ball com análise de RTP. Acompanhe tendências, multiplicadores e resultados em tempo real. Jogue online ou teste demo."
+
+
+      },
       crazytime: {
         title: "Estatísticas do Crazy Time – Resultados ao Vivo e Rastreador de Multiplicadores",
         description: "Estatísticas ao vivo do Crazy Time atualizadas em tempo real. Acompanhe resultados da roda, rodadas de bônus e multiplicadores de até 2000x. Use os dados para construir sua estratégia vencedora. Confira agora!"
@@ -3553,6 +4235,114 @@ dreamcatcherStatsExtra: {
   },
 
   ar: {
+    megaballReview: {
+      title: "متتبع Mega Ball، معدل العائد RTP وتحليل اللعبة",
+      intro: "تابع إحصائيات ونتائج ومعدل العائد RTP للعبة Mega Ball في الوقت الفعلي باستخدام أدوات التتبع المباشر. اطّلع على سجل الكرات، جولات المضاعفات، عدد الفائزين واتجاهات المدفوعات في مكان واحد.",
+  
+      quickOverviewTitle: "نظرة سريعة على اللعبة",
+      tableParameter: "المعيار",
+      tableDetails: "التفاصيل",
+      tableFeature: "الميزة",
+      tableDescription: "الوصف",
+  
+      specProvider: "المزوّد",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "اسم اللعبة",
+      specGameNameValue: "Mega Ball",
+      specRtp: "معدل العائد (RTP)",
+      specRtpValue: "95.30%",
+      specReleaseYear: "سنة الإصدار",
+      specReleaseYearValue: "2023",
+      specGameType: "نوع اللعبة",
+      specGameTypeValue: "عرض ألعاب مباشر بأسلوب البينغو",
+      specMinBet: "نطاق الرهان",
+      specMinBetValue: "يختلف حسب الكازينو",
+      specMaxWin: "أقصى ربح",
+      specMaxWinValue: "حتى 1,000,000x",
+      specBalls: "الكرات المسحوبة",
+      specBallsValue: "20 كرة + Mega Ball + إمكانية كرة Mega Ball ثانية",
+  
+      trackerTitle: "ما الذي يمكنك تتبعه",
+      trackerIntro: "في Tracksino، تركز أدوات تتبع Mega Ball على أهم المؤشرات المباشرة لتحليل كل جولة.",
+      trackBallHistory: "سجل الكرات",
+      trackBallHistoryText: "اطّلع على جميع الكرات المسحوبة بالترتيب الدقيق.",
+      trackMultiplier: "مضاعف Mega Ball",
+      trackMultiplierText: "تابع المضاعفات من 5x إلى 100x.",
+      trackWinners: "عدد الفائزين",
+      trackWinnersText: "اكتشف عدد البطاقات أو اللاعبين الذين فازوا.",
+      trackPayouts: "قيم المدفوعات",
+      trackPayoutsText: "راقب إجمالي المدفوعات وقارن بين الجولات النشطة.",
+      trackLive: "مشاهدة Mega Ball مباشرة",
+      trackLiveText: "افتح اللعبة المباشرة وقارن الحدث الجاري مع بيانات المتتبع.",
+  
+      aboutTitle: "ما هي لعبة Mega Ball؟",
+      aboutText1: "Mega Ball هي لعبة عرض مباشر سريعة الإيقاع تجمع بين آليات بطاقات بأسلوب البينغو وسحوبات كرات شبيهة باليانصيب. قد تظهر جولة أو جولتان إضافيتان بعد السحب الرئيسي، مما يضيف مزيدًا من الإثارة عبر المضاعفات.",
+      aboutText2: "الهدف هو إكمال أكبر عدد ممكن من الخطوط على بطاقاتك. كلما زاد عدد الخطوط المكتملة، زادت الأرباح، ويمكن لجولات المضاعفات أن تعزز المدفوعات بشكل كبير.",
+  
+      howToPlayTitle: "كيفية لعب Mega Ball",
+      howToPlayText1: "في Mega Ball، يتم سحب 20 كرة واحدة تلو الأخرى من آلة تلقائية. يتم وضع علامة تلقائيًا على الأرقام المطابقة على بطاقات اللاعبين، وتُعرض البطاقات الأقرب للفوز في أعلى الواجهة.",
+      howToPlayText2: "بعد الكرة الأخيرة، يتم توليد مضاعف Mega Ball يتراوح بين 5x و100x. إذا أكملت Mega Ball خطًا فائزًا، يمكن مضاعفة العائد. وفي حالات نادرة، قد يتم سحب كرة Mega Ball ثانية، مما يمنح فرصة إضافية لتحقيق ربح معزز.",
+      howToPlayBullets: [
+        "يتم سحب 20 كرة بسرعة متتالية.",
+        "تُعلَّم الأرقام المطابقة تلقائيًا على جميع البطاقات النشطة.",
+        "تظهر البطاقات الأقرب لإكمال الخطوط في أعلى الواجهة.",
+        "يتم توليد مضاعف Mega Ball بعد السحب الرئيسي.",
+        "قد توفر كرة Mega Ball ثانية نادرة فرصة إضافية لربح مضاعف."
+      ],
+  
+      payoutTitle: "مدفوعات Mega Ball",
+      payoutIntro: "تعتمد المدفوعات في Mega Ball على عدد الخطوط المكتملة في بطاقة واحدة. تُحتسب الخطوط الأفقية والعمودية والقطرية ضمن الجائزة النهائية.",
+      payoutColLines: "الخطوط المكتملة",
+      payoutColPrize: "المدفوعات",
+      payoutColNote: "كيفية العمل",
+      payout1Line: "خط واحد أفقي أو عمودي أو قطري.",
+      payout2Lines: "خطّان مكتملان في بطاقة واحدة.",
+      payout3Lines: "3 خطوط مكتملة في بطاقة واحدة.",
+      payout4Lines: "4 خطوط مكتملة في بطاقة واحدة.",
+      payout5Lines: "5 خطوط مكتملة في بطاقة واحدة.",
+      payout6Lines: "6 خطوط مكتملة في بطاقة واحدة.",
+  
+      comparisonTitle: "Mega Ball بإيجاز",
+      compColArea: "المجال",
+      compColMegaBall: "Mega Ball",
+      compColMeaning: "أهميته",
+      compAreaBase: "الشكل الأساسي",
+      compMegaBallBase: "عرض ألعاب مباشر بأسلوب البينغو",
+      compMeaningBase: "يجمع بين إكمال البطاقات والسحب المباشر.",
+      compAreaBonus: "الجولات الإضافية",
+      compMegaBallBonus: "Mega Ball وكرة ثانية نادرة",
+      compMeaningBonus: "تضيف إمكانية مضاعفة بعد السحب الرئيسي.",
+      compAreaTracking: "قيمة التتبع",
+      compMegaBallTracking: "مرتفعة",
+      compMeaningTracking: "يمكن تحليل ترتيب الكرات والفائزين والمدفوعات بسهولة.",
+      compAreaMaxWin: "أقصى ربح محتمل",
+      compMegaBallMaxWin: "حتى 1,000,000x",
+      compMeaningMaxWin: "تعتمد أعلى الأرباح على عدد الخطوط والمضاعفات.",
+  
+      faqTitle: "الأسئلة الشائعة",
+      faq: [
+        {
+          q: "هل يمكنني متابعة نتائج Mega Ball مباشرة؟",
+          a: "نعم، يتيح متتبع Mega Ball عرض سجل الكرات، المدفوعات الأخيرة، عدد الفائزين ونتائج المضاعفات لكل جولة."
+        },
+        {
+          q: "كيف يعمل مضاعف Mega Ball؟",
+          a: "بعد السحب الرئيسي، يتم توليد مضاعف بين 5x و100x. إذا أكملت Mega Ball خطًا فائزًا، يتم مضاعفة العائد وفقًا لذلك."
+        },
+        {
+          q: "ما هي كرة Mega Ball الثانية؟",
+          a: "هي سحب إضافي نادر يمنح اللاعبين فرصة أخرى لإكمال خط فائز مع إمكانية مضاعفة الربح."
+        },
+        {
+          q: "هل Mega Ball أقرب إلى البينغو أم عرض ألعاب؟",
+          a: "تجمع بين الاثنين. تعتمد الآلية على خطوط البينغو، بينما يشبه العرض أسلوب برامج الألعاب المباشرة."
+        },
+        {
+          q: "هل يمكن لبيانات المتتبع التنبؤ بالنتائج؟",
+          a: "لا. تُستخدم البيانات لتحليل الجولات السابقة والإحصاءات المباشرة، لكن كل سحب مستقل."
+        }
+      ]
+    },
     dreamcatcherReview: {
     title: "Dream Catcher Live: إحصائيات مباشرة ونتائج ودليل كامل للعبة",
     intro:
@@ -3827,6 +4617,10 @@ dreamcatcherStatsExtra: {
     home: {
     title: "Casino Score Live 🔥 إحصائيات مباشرة ونتائج فورية [2026]",
     description: "Casino Score Live — منصتك الأمثل لإحصائيات الكازينو المباشر والنتائج الفورية في 2026. حلّل نسبة RTP، وتابع الأرقام الساخنة والباردة، واتخذ قرارات رهان مبنية على البيانات."
+    },
+    megaball: {
+      title: "Mega Ball إحصائيات مباشرة ونتائج – العب أونلاين + RTP والاتجاهات",
+      description: "إحصائيات ونتائج Mega Ball المباشرة مع تحليل RTP. تابع الاتجاهات والمضاعفات والنتائج في الوقت الحقيقي. العب أونلاين أو جرّب النسخة التجريبية الآن."
     },
     crazytime: {
     title: "إحصائيات Crazy Time – نتائج مباشرة ومتابع المضاعفات",

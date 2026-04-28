@@ -88,10 +88,20 @@ const GAMES = [
     provider: "Evolution Gaming",
     color: "#3b82f6",
     image: { src: "img/mega-ball-logo.webp", alt: "Mega Ball logo" },
-    segments: ["1 Line", "2 Lines", "3+ Lines", "Mega Ball"],
-    segColors: ["#3b82f6", "#eab308", "#ec4899", "#8b5cf6"],
-    segProbs: [45.0, 30.0, 15.0, 10.0],
-    expectedRtp: 95.3
+    segments: ["5x", "10x", "12x", "15x", "20x", "25x", "50x", "100x"],
+    segColors: ["#3b82f6", "#eab308", "#8b5cf6", "#22c55e", "#f97316", "#ec4899", "#ef4444", "#06b6d4"],
+    segProbs: [35, 34, 12, 10, 6, 5, 4, 0.5],
+    expectedRtp: 95.3,
+    segmentImages: {
+      "5x": "img/mega-ball/icons/5x.webp",
+      "10x": "img/mega-ball/icons/10x.webp",
+      "12x": "img/mega-ball/icons/12x.webp",
+      "15x": "img/mega-ball/icons/15x.webp",
+      "20x": "img/mega-ball/icons/20x.webp",
+      "25x": "img/mega-ball/icons/25x.webp",
+      "50x": "img/mega-ball/icons/50x.webp",
+      "100x": "img/mega-ball/icons/100x.webp"
+    }
   },
   {
     id: "lightningroulette",

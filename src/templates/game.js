@@ -1,4 +1,5 @@
 const { buildPath } = require("../utils/helpers");
+const { renderMegaBallReviewPanel } = require("./megaball-review");
 const { renderDreamCatcherReviewPanel } = require("./dreamcatcher-review");
 const { renderCrazyTimeReviewPanel } = require("./crazytime-review");
 const { renderMonopolyReviewPanel } = require("./monopoly-review");
@@ -34,35 +35,35 @@ const {
 const { GAMES, SUPPORTED_LANGS } = require("../data/site-data");
 
 function renderTabsRow(t, game) {
-  const hasReview = game.id === "crazytime" || game.id === "monopoly" || game.id === "dreamcatcher";
-    const hasStream = game.id === "crazytime";
+  const hasReview = ["crazytime", "monopoly", "dreamcatcher", "megaball"].includes(game.id);
+  const hasStream = game.id === "crazytime";
 
   return `
     <div class="tabs-row">
-      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
+      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature" aria-selected="true">
         ${t.tabs.temperature}
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history" aria-selected="false">
         ${t.tabs.history}
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats" aria-selected="false">
         ${t.tabs.stats}
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins" aria-selected="false">
         ${t.tabs.bigwins}
       </button>
 
       ${hasReview ? `
-        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review">
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review" aria-selected="false">
           ${t.tabs.review}
         </button>
       ` : ""}
 
       ${hasStream ? `
-        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stream">
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stream" aria-selected="false">
           ${t.tabs.stream}
         </button>
       ` : ""}
@@ -74,7 +75,7 @@ function renderCrazyTimeStreamLite(t) {
   if (!t.crazytimeStream) return "";
 
   return `
-    <div class="tab-panel" data-tab-panel="stream" data-tab-panel-group="game-tabs">
+    <div class="tab-panel" id="panel-stream" data-tab-panel="stream" data-tab-panel-group="game-tabs" hidden>
       <div class="crazytime-stream-section">
         <div class="crazytime-stream-card">
           <div class="crazytime-stream-header">
@@ -130,10 +131,11 @@ function renderGamePage({ lang, t, game }) {
   const distribution = countDistribution(game, spinData);
   const summary = generateStatsSummary(game, spinData);
   const wins = generateBigWins(game);
+
   const dreamCatcherExtraData =
-  game.id === "dreamcatcher"
-    ? generateDreamCatcherExtraStats(game, spinData)
-    : null;
+    game.id === "dreamcatcher"
+      ? generateDreamCatcherExtraStats(game, spinData)
+      : null;
 
   const crazyTimeExtraData =
     game.id === "crazytime"
@@ -158,107 +160,112 @@ function renderGamePage({ lang, t, game }) {
         }
       : null;
 
-      const statsExtraHtml =
-      game.id === "dreamcatcher" && dreamCatcherExtraData
-        ? renderDreamCatcherExtraStatsSection(t, dreamCatcherExtraData, game)
-        : game.id === "crazytime" && crazyTimeExtraData
-          ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
-          : game.id === "monopoly" && monopolyExtraData
-            ? renderMonopolyExtraStatsSection(t, monopolyExtraData)
-            : "";
+  const statsExtraHtml =
+    game.id === "dreamcatcher" && dreamCatcherExtraData
+      ? renderDreamCatcherExtraStatsSection(t, dreamCatcherExtraData, game)
+      : game.id === "crazytime" && crazyTimeExtraData
+        ? renderCrazyTimeExtraStatsSection(t, crazyTimeExtraData)
+        : game.id === "monopoly" && monopolyExtraData
+          ? renderMonopolyExtraStatsSection(t, monopolyExtraData)
+          : "";
 
-            const reviewPanelHtml =
-            game.id === "crazytime"
-              ? renderCrazyTimeReviewPanel(t)
-              : game.id === "monopoly"
-                ? renderMonopolyReviewPanel(t)
-                : game.id === "dreamcatcher"
-                  ? renderDreamCatcherReviewPanel(t)
-                  : "";
+          const reviewPanelHtml =
+          game.id === "crazytime" ? renderCrazyTimeReviewPanel(t)
+          : game.id === "monopoly" ? renderMonopolyReviewPanel(t)
+          : game.id === "dreamcatcher" ? renderDreamCatcherReviewPanel(t)
+          : game.id === "megaball" ? renderMegaBallReviewPanel(t)
+          : "";
+        
+        const reviewTabHtml = reviewPanelHtml
+          ? `
+            <div class="tab-panel" id="panel-review" data-tab-panel="review" data-tab-panel-group="game-tabs" hidden>
+              ${reviewPanelHtml.replace(
+                /^<div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">/,
+                ""
+              ).replace(/<\/div>\s*$/, "")}
+            </div>
+          `
+          : "";
 
-  const streamPanelHtml =
-    game.id === "crazytime"
-      ? renderCrazyTimeStreamLite(t)
-      : "";
+  const streamPanelHtml = game.id === "crazytime" ? renderCrazyTimeStreamLite(t) : "";
 
   return `
-  <div id="app" class="app">
-    ${renderHeader({
-      lang,
-      t,
-      games: GAMES,
-      supportedLangs: SUPPORTED_LANGS,
-      currentGameId: game.id
-    })}
+    <div id="app" class="app">
+      ${renderHeader({
+        lang,
+        t,
+        games: GAMES,
+        supportedLangs: SUPPORTED_LANGS,
+        currentGameId: game.id
+      })}
 
-    <main class="page-container">
-      <div class="page game-page">
-        <div class="container">
-          <div class="breadcrumb">
-            <a href="${buildPath(lang, "home")}">${t.nav.home}</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>${game.name}</span>
-          </div>
-
-          <div class="game-header">
-            <div class="game-thumb">
-              <img src="/${game.image.src}" alt="${game.image.alt}" loading="lazy" />
+      <main class="page-container">
+        <div class="page game-page">
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="${buildPath(lang, "home")}">${t.nav.home}</a>
+              <i class="fas fa-chevron-right"></i>
+              <span>${game.name}</span>
             </div>
 
-            <div class="game-heading">
-              <h1>${game.name} ${t.gamePage.statisticsTitleSuffix}</h1>
-              <p>${t.gamePage.subtitlePrefix} ${game.name}</p>
+            <div class="game-header">
+              <div class="game-thumb">
+                <img src="/${game.image.src}" alt="${game.image.alt}" loading="lazy" />
+              </div>
+
+              <div class="game-heading">
+                <h1>${game.name} ${t.gamePage.statisticsTitleSuffix}</h1>
+                <p>${t.gamePage.subtitlePrefix} ${game.name}</p>
+              </div>
+
+              <div class="game-header-actions">
+                <div class="live-pill">
+                  <span class="live-dot"></span>
+                  <span>${t.common.liveNow}</span>
+                </div>
+
+                <a
+                  href="/go/reg/"
+                  class="live-now-cta-btn"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  ${(t.gamePage && t.gamePage.playCta) || (t.cta && t.cta.playNow) || "Play Now"}
+                </a>
+              </div>
             </div>
 
-            <div class="game-header-actions">
-            <div class="live-pill">
-              <span class="live-dot"></span>
-              <span>${t.common.liveNow}</span>
-            </div>
-          
-            <a
-              href="/go/reg/"
-              class="live-now-cta-btn"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-            >
-              ${(t.gamePage && t.gamePage.playCta) || (t.cta && t.cta.playNow) || "Play Now"}
-            </a>
-          </div>
-          </div>
+            ${renderTabsRow(t, game)}
 
-          ${renderTabsRow(t, game)}
-
-          ${renderTemperaturePanel(game, temperatureData,t)}
-          ${renderHistoryPanel(game, spinData,t)}
-          ${renderStatsPanel(game, distribution, summary, statsExtraHtml,t)}
-          ${renderBigWinsPanel(game, wins,t)}
-          ${reviewPanelHtml}
-          ${streamPanelHtml}
+            ${renderTemperaturePanel(game, temperatureData, t)}
+            ${renderHistoryPanel(game, spinData, t)}
+            ${renderStatsPanel(game, distribution, summary, statsExtraHtml, t)}
+            ${renderBigWinsPanel(game, wins, t)}
+            ${reviewTabHtml}
+            ${streamPanelHtml}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    ${renderFooter({
-      t,
-      lang,
-      games: GAMES
-    })}
+      ${renderFooter({
+        t,
+        lang,
+        games: GAMES
+      })}
 
-    ${renderFloatingPlayButton(t)}
-    <script id="gamePageData" type="application/json">
-    ${JSON.stringify({
-      lang,
-      game,
-      ui: {
-        common: t.common || {},
-        dreamcatcherStatsExtra: t.dreamcatcherStatsExtra || {},
-        gamePanels: t.gamePanels || {}
-
-      }
-    })}
-  </script>
-  </div>
+      ${renderFloatingPlayButton(t)}
+      <script id="gamePageData" type="application/json">
+      ${JSON.stringify({
+        lang,
+        game,
+        ui: {
+          common: t.common || {},
+          dreamcatcherStatsExtra: t.dreamcatcherStatsExtra || {},
+          gamePanels: t.gamePanels || {}
+        }
+      })}
+      </script>
+    </div>
   `;
 }
 

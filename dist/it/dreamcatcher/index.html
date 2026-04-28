@@ -38,8 +38,8 @@
 </head>
 <body>
   
-  <div id="app" class="app">
-    
+    <div id="app" class="app">
+      
     <header class="navbar">
       <div class="container navbar-inner">
         <a href="/it/" class="nav-logo">
@@ -225,62 +225,62 @@
     </header>
   
 
-    <main class="page-container">
-      <div class="page game-page">
-        <div class="container">
-          <div class="breadcrumb">
-            <a href="/it/">Home</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>Dream Catcher</span>
-          </div>
-
-          <div class="game-header">
-            <div class="game-thumb">
-              <img src="/img/dream-catcher-logo.webp" alt="Dream Catcher logo" loading="lazy" />
+      <main class="page-container">
+        <div class="page game-page">
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="/it/">Home</a>
+              <i class="fas fa-chevron-right"></i>
+              <span>Dream Catcher</span>
             </div>
 
-            <div class="game-heading">
-              <h1>Dream Catcher Statistiche</h1>
-              <p>Monitora risultati, storico e statistiche in tempo reale di Dream Catcher</p>
+            <div class="game-header">
+              <div class="game-thumb">
+                <img src="/img/dream-catcher-logo.webp" alt="Dream Catcher logo" loading="lazy" />
+              </div>
+
+              <div class="game-heading">
+                <h1>Dream Catcher Statistiche</h1>
+                <p>Monitora risultati, storico e statistiche in tempo reale di Dream Catcher</p>
+              </div>
+
+              <div class="game-header-actions">
+                <div class="live-pill">
+                  <span class="live-dot"></span>
+                  <span>Live ora</span>
+                </div>
+
+                <a
+                  href="/go/reg/"
+                  class="live-now-cta-btn"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  Gioca ora
+                </a>
+              </div>
             </div>
 
-            <div class="game-header-actions">
-            <div class="live-pill">
-              <span class="live-dot"></span>
-              <span>Live ora</span>
-            </div>
-          
-            <a
-              href="/go/reg/"
-              class="live-now-cta-btn"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-            >
-              Gioca ora
-            </a>
-          </div>
-          </div>
-
-          
+            
     <div class="tabs-row">
-      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
+      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature" aria-selected="true">
         Temperatura
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history" aria-selected="false">
         Cronologia
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats" aria-selected="false">
         Statistiche
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins" aria-selected="false">
         Vincite top
       </button>
 
       
-        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review">
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review" aria-selected="false">
           Recensione
         </button>
       
@@ -289,1096 +289,745 @@
     </div>
   
 
-          
-      <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
-        <h2 class="panel-title">Segment Temperature</h2>
-        <p class="panel-subtitle">La temperatura dei segmenti evidenzia risultati caldi e freddi in tempo reale in base agli ultimi spin rispetto alla probabilità attesa.</p>
-  
-        <div class="temp-grid">
-          
+            
+    <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
+      <h2 class="panel-title">Segment Temperature</h2>
+      <p class="panel-subtitle">La temperatura dei segmenti evidenzia risultati caldi e freddi in tempo reale in base agli ultimi spin rispetto alla probabilità attesa.</p>
+
+      <div class="temp-grid">
+        
             <div class="temp-card">
               
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-hot">43.64%</div>
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-hot">43.27%</div>
               <div class="temp-diff positive">
-                (+1.05)
-              </div>
-              <div class="temp-spins">9 spin fa</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">26.6%</div>
-              <div class="temp-diff negative">
-                (-1.18)
-              </div>
-              <div class="temp-spins">20 spin fa</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">12.18%</div>
-              <div class="temp-diff negative">
-                (-0.78)
-              </div>
-              <div class="temp-spins">19 spin fa</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-warm">5.2%</div>
-              <div class="temp-diff negative">
-                (-0.36)
-              </div>
-              <div class="temp-spins">21 spin fa</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-warm">3.67%</div>
-              <div class="temp-diff negative">
-                (-0.03)
-              </div>
-              <div class="temp-spins">22 spin fa</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">0.68%</div>
-              <div class="temp-diff negative">
-                (-1.17)
+                +0.68%
               </div>
               <div class="temp-spins">16 spin fa</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">2.06%</div>
-              <div class="temp-diff negative">
-                (-1.64)
-              </div>
-              <div class="temp-spins">28 spin fa</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-hot">2.77%</div>
-              <div class="temp-diff positive">
-                (+0.92)
-              </div>
-              <div class="temp-spins">18 spin fa</div>
               <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
-        </div>
-      </div>
-    
-          
-      <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
-        <h2 class="panel-title">Recent Spin History</h2>
-        <p class="panel-subtitle">Consulta la cronologia più recente con risultati in tempo reale, moltiplicatori, vincitori e payout.</p>
-  
-        <div class="table-wrap">
-          <table class="spin-table">
-            <thead>
-              <tr>
-                <th class="t-left">Avvenuto</th>
-                
-                <th class="t-center">Risultato spin</th>
-                <th class="t-center">Risultato speciale</th>
-                <th class="t-right">Moltiplicatore</th>
-                <th class="t-right">Vincitori</th>
-                <th class="t-right">Payout totale</th>
-              </tr>
-            </thead>
-  
-            <tbody>
+            <div class="temp-card">
               
-                  <tr>
-                    <td class="t-left text-soft">17:59:33 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      10x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      30
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $228
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:58:28 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      1x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      21
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $31
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:57:23 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      1x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      3
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $2
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:56:18 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      100
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $1,153
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:55:13 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      30
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $238
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:54:08 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      34
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $338
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:53:03 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      3x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      85
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $403
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:51:58 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      31
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $244
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:50:53 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right text-gold" style="font-weight:600;">
-                      70x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      74
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $3,291
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:49:48 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      7x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      76
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $732
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:48:43 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      3x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      73
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $528
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:47:38 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      7x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      64
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $654
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:46:33 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      87
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $848
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:45:28 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      1x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      8
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $13
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:44:23 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      2x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      37
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $120
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:43:18 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      7x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      59
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $315
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:42:13 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      1x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      7
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $11
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:41:08 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      2x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      58
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $114
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:40:03 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      2x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      88
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $386
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:38:58 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      2x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      77
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $194
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:37:53 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      2x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      58
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $83
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:36:48 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      52
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $190
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:35:43 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image result-badge-bonus-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        <span class="special-result-pill">7x</span>
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:34:38 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      5x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      75
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $392
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td class="t-left text-soft">17:33:33 Apr 13</td>
-  
-                    
-  
-                    <td class="t-center">
-                      
-        <span class="result-badge result-badge-image ">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
-        </span>
-      
-                    </td>
-  
-                    
-                      <td class="t-center">
-                        
-                      </td>
-                    
-  
-                    <td class="t-right " style="font-weight:600;">
-                      3x
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      5
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      $32
-                    </td>
-                  </tr>
-                
-            </tbody>
-          </table>
-        </div>
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="temp-segment-img">
       </div>
     
+              <div class="temp-value temp-hot">28.59%</div>
+              <div class="temp-diff positive">
+                +0.81%
+              </div>
+              <div class="temp-spins">6 spin fa</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
           
-      <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
-        <div class="stats-main-grid">
-          <div class="stats-grid-card">
-            <h2 class="panel-title">Result Distribution</h2>
-            <div class="chart-scroll">
-              <div class="chart-box">
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-hot">14.67%</div>
+              <div class="temp-diff positive">
+                +1.71%
+              </div>
+              <div class="temp-spins">20 spin fa</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-cold">3.87%</div>
+              <div class="temp-diff negative">
+                -1.69%
+              </div>
+              <div class="temp-spins">13 spin fa</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-cold">2.92%</div>
+              <div class="temp-diff negative">
+                -0.78%
+              </div>
+              <div class="temp-spins">10 spin fa</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-cold">0%</div>
+              <div class="temp-diff negative">
+                -1.93%
+              </div>
+              <div class="temp-spins">18 spin fa</div>
+              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-warm">3.64%</div>
+              <div class="temp-diff negative">
+                -0.06%
+              </div>
+              <div class="temp-spins">2 spin fa</div>
+              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+            </div>
+          
+            <div class="temp-card">
+              
+      <div class="temp-segment temp-segment-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" class="temp-segment-img">
+      </div>
+    
+              <div class="temp-value temp-hot">3.09%</div>
+              <div class="temp-diff positive">
+                +1.24%
+              </div>
+              <div class="temp-spins">19 spin fa</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
+            </div>
+          
+      </div>
+    </div>
+  
+            
+    <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+      <h2 class="panel-title">Recent Spin History</h2>
+      <p class="panel-subtitle">Consulta la cronologia più recente con risultati in tempo reale, moltiplicatori, vincitori e payout.</p>
+
+      <div class="table-wrap">
+        <table class="spin-table">
+          <thead>
+            <tr>
+              <th class="t-left">Avvenuto</th>
+              
+              <th class="t-left">Risultato spin</th>
+              <th class="t-left">Risultato speciale</th>
+              <th class="t-right">Moltiplicatore</th>
+              <th class="t-right">Vincitori</th>
+              <th class="t-right">Payout totale</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+                <tr>
+                  <td class="t-left text-soft">20:50:00 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">3x</td>
+                  <td class="t-right">86</td>
+                  <td class="t-right text-green">$427</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:48:55 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">28</td>
+                  <td class="t-right text-green">$342</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:47:50 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image result-badge-bonus-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left">20</td>
+                  
+                  <td class="t-right"></td>
+                  <td class="t-right"></td>
+                  <td class="t-right text-green"></td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:46:45 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image result-badge-bonus-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left">2x</td>
+                  
+                  <td class="t-right"></td>
+                  <td class="t-right"></td>
+                  <td class="t-right text-green"></td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:45:40 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">5</td>
+                  <td class="t-right text-green">$81</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:44:35 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">7</td>
+                  <td class="t-right text-green">$79</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:43:30 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">44</td>
+                  <td class="t-right text-green">$162</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:42:25 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">89</td>
+                  <td class="t-right text-green">$943</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:41:20 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">2x</td>
+                  <td class="t-right">43</td>
+                  <td class="t-right text-green">$51</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:40:15 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">2x</td>
+                  <td class="t-right">37</td>
+                  <td class="t-right text-green">$92</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:39:10 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">2x</td>
+                  <td class="t-right">78</td>
+                  <td class="t-right text-green">$313</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:38:05 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image result-badge-bonus-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left">20</td>
+                  
+                  <td class="t-right"></td>
+                  <td class="t-right"></td>
+                  <td class="t-right text-green"></td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:37:00 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">37</td>
+                  <td class="t-right text-green">$416</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:35:55 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">12</td>
+                  <td class="t-right text-green">$33</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:34:50 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">3x</td>
+                  <td class="t-right">32</td>
+                  <td class="t-right text-green">$97</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:33:45 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">2x</td>
+                  <td class="t-right">70</td>
+                  <td class="t-right text-green">$96</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:32:40 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">18</td>
+                  <td class="t-right text-green">$245</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:31:35 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">38</td>
+                  <td class="t-right text-green">$405</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:30:30 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">1x</td>
+                  <td class="t-right">4</td>
+                  <td class="t-right text-green">$8</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:29:25 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">96</td>
+                  <td class="t-right text-green">$1,429</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:28:20 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">79</td>
+                  <td class="t-right text-green">$844</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:27:15 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">10x</td>
+                  <td class="t-right">79</td>
+                  <td class="t-right text-green">$1,529</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:26:10 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">3x</td>
+                  <td class="t-right">7</td>
+                  <td class="t-right text-green">$28</td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:25:05 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image result-badge-bonus-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left">40</td>
+                  
+                  <td class="t-right"></td>
+                  <td class="t-right"></td>
+                  <td class="t-right text-green"></td>
+                </tr>
+              
+                <tr>
+                  <td class="t-left text-soft">20:24:00 Apr 28</td>
+                  
+                  <td class="t-left">
+                    
+      <span class="result-badge result-badge-image ">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="result-badge-img">
+      </span>
+    
+                  </td>
+                  
+                    <td class="t-left"></td>
+                  
+                  <td class="t-right">5x</td>
+                  <td class="t-right">13</td>
+                  <td class="t-right text-green">$73</td>
+                </tr>
+              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+            
+    <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
+      <div class="stats-main-grid">
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Result Distribution</h2>
+          <div class="chart-scroll">
+            <div class="chart-box">
+              
+                  <div class="chart-col">
+                    <span class="chart-percent">42.31%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
+                    </div>
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
                 
-                    <div class="chart-col">
-                      <span class="chart-percent">37.88%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="chart-label-img">
-        </span>
-      
+                  <div class="chart-col">
+                    <span class="chart-percent">26.15%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:61.805719688017014%; background:#eab308;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">31.54%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:83.26293558606123%; background:#eab308;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">14.42%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:34.081777357598675%; background:#ec4899;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">11.54%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:30.46462513199577%; background:#ec4899;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">3.85%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:9.09950366343654%; background:#8b5cf6;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">8.08%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:21.330517423442448%; background:#8b5cf6;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">4.62%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:10.919404396123847%; background:#f97316;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">3.46%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:9.134107708553325%; background:#f97316;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">1.73%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:4.088867879933822%; background:#ef4444;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">1.92%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:5.068637803590285%; background:#ef4444;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">4.23%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:9.997636492554953%; background:#6b7280;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">4.23%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:11.166842661034847%; background:#6b7280;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">2.69%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:6.357835027180335%; background:#22c55e;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">1.35%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#22c55e;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" class="chart-label-img">
-        </span>
-      
-                    </div>
-                  
-              </div>
-            </div>
-          </div>
-  
-          <div class="stats-grid-card">
-            <h2 class="panel-title">Return to Player</h2>
-            <div class="rtp-card-body">
-              <div class="rtp-center">
-                <div class="rtp-value">96.57%</div>
-                <p class="rtp-text">Basato sugli ultimi 1.000 spin</p>
-              </div>
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
             </div>
           </div>
         </div>
-  
-        <div class="stats-summary-grid">
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Spin totali oggi</p>
-            <p class="summary-value">1,035</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Round bonus</p>
-            <p class="summary-value purple">57</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Moltiplicatore più alto</p>
-            <p class="summary-value gold">343x</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Payout medio</p>
-            <p class="summary-value green">$1,421</p>
+
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Return to Player</h2>
+          <div class="rtp-card-body">
+            <div class="rtp-center">
+              <div class="rtp-value">96.32%</div>
+              <p class="rtp-text">Basato sugli ultimi 1.000 spin</p>
+            </div>
           </div>
         </div>
-  
-        
+      </div>
+
+      <div class="stats-summary-grid">
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Spin totali oggi</p>
+          <p class="summary-value">939</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Round bonus</p>
+          <p class="summary-value purple">69</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Moltiplicatore più alto</p>
+          <p class="summary-value gold">343x</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Payout medio</p>
+          <p class="summary-value green">$1,428</p>
+        </div>
+      </div>
+
+      
       <section class="dream-catcher__extra-section">
         <article class="dream-catcher__card">
           <div class="dream-catcher__section-head">
@@ -1402,76 +1051,76 @@
                 
                     <tr>
                       <td class="t-left">
-                        4/13<br>
-                        <span class="text-soft" style="font-size:0.75rem;">13:29</span>
+                        4/28<br>
+                        <span class="text-soft" style="font-size:0.75rem;">17:31</span>
                       </td>
                       <td class="t-center">
                         <span class="result-badge result-badge-image dream-catcher__badge">
-                              <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" decoding="async" class="result-badge-img">
+                              <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" decoding="async" class="result-badge-img">
                             </span>
                       </td>
-                      <td class="t-left">Has...</td>
-                      <td class="t-left"><strong>€57,129</strong></td>
+                      <td class="t-left">Dan...</td>
+                      <td class="t-left"><strong>€63,421</strong></td>
                       <td class="t-left"><span class="monopoly-multiplier-pill">343x</span></td>
                     </tr>
                   
                     <tr>
                       <td class="t-left">
-                        4/13<br>
-                        <span class="text-soft" style="font-size:0.75rem;">12:39</span>
-                      </td>
-                      <td class="t-center">
-                        <span class="result-badge result-badge-image dream-catcher__badge">
-                              <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" decoding="async" class="result-badge-img">
-                            </span>
-                      </td>
-                      <td class="t-left">Mar...</td>
-                      <td class="t-left"><strong>€55,551</strong></td>
-                      <td class="t-left"><span class="monopoly-multiplier-pill">280x</span></td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left">
-                        4/13<br>
-                        <span class="text-soft" style="font-size:0.75rem;">17:05</span>
-                      </td>
-                      <td class="t-center">
-                        <span class="result-badge result-badge-image dream-catcher__badge">
-                              <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" decoding="async" class="result-badge-img">
-                            </span>
-                      </td>
-                      <td class="t-left">JMA</td>
-                      <td class="t-left"><strong>€52,701</strong></td>
-                      <td class="t-left"><span class="monopoly-multiplier-pill">280x</span></td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left">
-                        4/13<br>
-                        <span class="text-soft" style="font-size:0.75rem;">11:19</span>
-                      </td>
-                      <td class="t-center">
-                        <span class="result-badge result-badge-image dream-catcher__badge">
-                              <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" decoding="async" class="result-badge-img">
-                            </span>
-                      </td>
-                      <td class="t-left">JMA</td>
-                      <td class="t-left"><strong>€39,090</strong></td>
-                      <td class="t-left"><span class="monopoly-multiplier-pill">280x</span></td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left">
-                        4/13<br>
-                        <span class="text-soft" style="font-size:0.75rem;">10:32</span>
+                        4/28<br>
+                        <span class="text-soft" style="font-size:0.75rem;">13:20</span>
                       </td>
                       <td class="t-center">
                         <span class="result-badge result-badge-image dream-catcher__badge">
                               <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" decoding="async" class="result-badge-img">
                             </span>
                       </td>
-                      <td class="t-left">Joe...</td>
-                      <td class="t-left"><strong>€38,044</strong></td>
+                      <td class="t-left">Eri...</td>
+                      <td class="t-left"><strong>€55,805</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">280x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left">
+                        4/28<br>
+                        <span class="text-soft" style="font-size:0.75rem;">14:47</span>
+                      </td>
+                      <td class="t-center">
+                        <span class="result-badge result-badge-image dream-catcher__badge">
+                              <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" decoding="async" class="result-badge-img">
+                            </span>
+                      </td>
+                      <td class="t-left">Zak...</td>
+                      <td class="t-left"><strong>€36,963</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">280x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left">
+                        4/28<br>
+                        <span class="text-soft" style="font-size:0.75rem;">14:29</span>
+                      </td>
+                      <td class="t-center">
+                        <span class="result-badge result-badge-image dream-catcher__badge">
+                              <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" decoding="async" class="result-badge-img">
+                            </span>
+                      </td>
+                      <td class="t-left">Has...</td>
+                      <td class="t-left"><strong>€30,226</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">343x</span></td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left">
+                        4/28<br>
+                        <span class="text-soft" style="font-size:0.75rem;">12:56</span>
+                      </td>
+                      <td class="t-center">
+                        <span class="result-badge result-badge-image dream-catcher__badge">
+                              <img src="/img/dream-catcher/spin/dream-catcher-7x.webp" alt="7x" loading="lazy" decoding="async" class="result-badge-img">
+                            </span>
+                      </td>
+                      <td class="t-left">Mar...</td>
+                      <td class="t-left"><strong>€26,339</strong></td>
                       <td class="t-left"><span class="monopoly-multiplier-pill">343x</span></td>
                     </tr>
                   
@@ -1514,7 +1163,7 @@
                       <span>7x</span>
                     </div>
   
-                    <strong>(7/500) 1.4%</strong>
+                    <strong>(14/500) 2.8%</strong>
                   </div>
   
                   <div class="dream-catcher__bar">
@@ -1539,12 +1188,12 @@
             <div class="dream-catcher__match-item">
               <div class="dream-catcher__match-row">
                 <span>Corrispondenza</span>
-                <strong>5.8%</strong>
+                <strong>7.2%</strong>
               </div>
               <div class="dream-catcher__bar dream-catcher__bar--match">
                 <div
                   class="dream-catcher__bar-fill"
-                  style="width:5.8%;"
+                  style="width:7.2%;"
                 ></div>
               </div>
             </div>
@@ -1552,12 +1201,12 @@
             <div class="dream-catcher__match-item">
               <div class="dream-catcher__match-row">
                 <span>Nessuna corrispondenza</span>
-                <strong>94.2%</strong>
+                <strong>92.8%</strong>
               </div>
               <div class="dream-catcher__bar dream-catcher__bar--nomatch">
                 <div
                   class="dream-catcher__bar-fill"
-                  style="width:94.2%;"
+                  style="width:92.8%;"
                 ></div>
               </div>
             </div>
@@ -1565,225 +1214,227 @@
         </article>
       </section>
     
+    </div>
+  
+            
+    <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
+      <h2 class="panel-title">Top Multiplier Wins</h2>
+
+      <div class="bigwins-grid">
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 25, 2026</span>
+              <span class="bigwin-rank top">#1</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">25,000x</div>
+                <div class="bigwin-label">40</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$459,677</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 26, 2026</span>
+              <span class="bigwin-rank top">#2</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">10,000x</div>
+                <div class="bigwin-label">40</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$27,024</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 22, 2026</span>
+              <span class="bigwin-rank top">#3</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">5,000x</div>
+                <div class="bigwin-label">5</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$181,374</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 25, 2026</span>
+              <span class="bigwin-rank ">#4</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">2,500x</div>
+                <div class="bigwin-label">2</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$342,888</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 26, 2026</span>
+              <span class="bigwin-rank ">#5</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">2,000x</div>
+                <div class="bigwin-label">2</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$16,653</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 25, 2026</span>
+              <span class="bigwin-rank ">#6</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">1,000x</div>
+                <div class="bigwin-label">2x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$383,182</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 26, 2026</span>
+              <span class="bigwin-rank ">#7</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">500x</div>
+                <div class="bigwin-label">10</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$376,603</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 25, 2026</span>
+              <span class="bigwin-rank ">#8</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">200x</div>
+                <div class="bigwin-label">1</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$476,453</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 24, 2026</span>
+              <span class="bigwin-rank ">#9</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">100x</div>
+                <div class="bigwin-label">5</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$459,518</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
+            </div>
+          </article>
+        
       </div>
-    
-          
-      <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
-        <h2 class="panel-title">Top Multiplier Wins</h2>
+    </div>
   
-        <div class="bigwins-grid">
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 13, 2026</span>
-                <span class="bigwin-rank top">#1</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-five.webp" alt="5" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">25,000x</div>
-                  <div class="bigwin-label">5</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$196,377</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 10, 2026</span>
-                <span class="bigwin-rank top">#2</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-twenty.webp" alt="20" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">10,000x</div>
-                  <div class="bigwin-label">20</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$195,343</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 10, 2026</span>
-                <span class="bigwin-rank top">#3</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-2x.webp" alt="2x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">5,000x</div>
-                  <div class="bigwin-label">2x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$254,594</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 7, 2026</span>
-                <span class="bigwin-rank ">#4</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-two.webp" alt="2" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">2,500x</div>
-                  <div class="bigwin-label">2</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$385,590</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 11, 2026</span>
-                <span class="bigwin-rank ">#5</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-forty.webp" alt="40" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">2,000x</div>
-                  <div class="bigwin-label">40</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$430,780</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 11, 2026</span>
-                <span class="bigwin-rank ">#6</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-one.webp" alt="1" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">1,000x</div>
-                  <div class="bigwin-label">1</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$449,469</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 11, 2026</span>
-                <span class="bigwin-rank ">#7</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">500x</div>
-                  <div class="bigwin-label">10</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$67,493</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 10, 2026</span>
-                <span class="bigwin-rank ">#8</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">200x</div>
-                  <div class="bigwin-label">10</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$413,905</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 11, 2026</span>
-                <span class="bigwin-rank ">#9</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/dream-catcher/spin/dream-catcher-ten.webp" alt="10" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">100x</div>
-                  <div class="bigwin-label">10</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$459,333</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Guarda</span>
-              </div>
-            </article>
-          
-        </div>
-      </div>
-    
-          
+            
+            <div class="tab-panel" id="panel-review" data-tab-panel="review" data-tab-panel-group="game-tabs" hidden>
+              
       <div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">
         <div class="dreamcatcher-review-section">
           <div class="dreamcatcher-review-card">
@@ -2118,14 +1769,15 @@ A differenza dei giochi da tavolo tradizionali, Dream Catcher non richiede alcun
   
           </div>
         </div>
-      </div>
-    
+      
+            </div>
           
+            
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    
+      
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-grid">
@@ -2194,7 +1846,7 @@ A differenza dei giochi da tavolo tradizionali, Dream Catcher non richiede alcun
     </footer>
   
 
-    
+      
     <a
       href="/go/reg/"
       class="floating-play-btn"
@@ -2205,10 +1857,10 @@ A differenza dei giochi da tavolo tradizionali, Dream Catcher non richiede alcun
       Gioca 🎰
     </a>
   
-    <script id="gamePageData" type="application/json">
-    {"lang":"it","game":{"id":"dreamcatcher","name":"Dream Catcher","provider":"Evolution Gaming","color":"#f59e0b","image":{"src":"img/dream-catcher-logo.webp","alt":"Dream Catcher logo"},"segments":["1","2","5","10","20","40","2x","7x"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6","#f97316","#ef4444","#6b7280","#22c55e"],"segProbs":[42.59,27.78,12.96,5.56,3.7,1.85,3.7,1.85],"expectedRtp":96.58,"hideSlotResult":true,"segmentImages":{"1":"img/dream-catcher/spin/dream-catcher-one.webp","2":"img/dream-catcher/spin/dream-catcher-two.webp","5":"img/dream-catcher/spin/dream-catcher-five.webp","10":"img/dream-catcher/spin/dream-catcher-ten.webp","20":"img/dream-catcher/spin/dream-catcher-twenty.webp","40":"img/dream-catcher/spin/dream-catcher-forty.webp","2x":"img/dream-catcher/spin/dream-catcher-2x.webp","7x":"img/dream-catcher/spin/dream-catcher-7x.webp"},"spinResultImages":{"1":"img/dream-catcher/spin/dream-catcher-one.webp","2":"img/dream-catcher/spin/dream-catcher-two.webp","5":"img/dream-catcher/spin/dream-catcher-five.webp","10":"img/dream-catcher/spin/dream-catcher-ten.webp","20":"img/dream-catcher/spin/dream-catcher-twenty.webp","40":"img/dream-catcher/spin/dream-catcher-forty.webp","2x":"img/dream-catcher/spin/dream-catcher-2x.webp","7x":"img/dream-catcher/spin/dream-catcher-7x.webp"}},"ui":{"common":{"player":"Giocatore","verifiedUser":"Utente verificato","liveNow":"Live ora","hour":"ora","hours":"ore","spins":"spin"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Ultimi 30 minuti","bestWinsTitle":"Migliori vincite per singolo giro","bestWinsText":"Uno sguardo rapido ai pagamenti più alti dagli ultimi giri tracciati.","wheelStatsTitle":"Statistiche dei moltiplicatori della ruota","wheelStatsText":"Scopri con quale frequenza sono usciti i segmenti moltiplicatori nello stesso intervallo analizzato.","matchedTitle":"Moltiplicatori della ruota corrisposti","matchedText":"Confronta le uscite dei moltiplicatori con i giri normali nel campione attuale.","finished":"Completato","outcome":"Risultato","player":"Giocatore","wonAmount":"Importo vinto","multiplier":"Moltiplicatore","match":"Corrispondenza","noMatch":"Nessuna corrispondenza"},"gamePanels":{"temperatureSubtitle":"La temperatura dei segmenti evidenzia risultati caldi e freddi in tempo reale in base agli ultimi spin rispetto alla probabilità attesa.","temperatureSpinsSince":"{n} spin fa","historySubtitle":"Consulta la cronologia più recente con risultati in tempo reale, moltiplicatori, vincitori e payout.","rtpBasedOn":"Basato sugli ultimi 1.000 spin","summaryTotalSpinsToday":"Spin totali oggi","summaryBonusRounds":"Round bonus","summaryBiggestMultiplier":"Moltiplicatore più alto","summaryAvgPayout":"Payout medio","occurredAt":"Avvenuto","slotResult":"Risultato slot","spinResult":"Risultato spin","specialResult":"Risultato speciale","multiplier":"Moltiplicatore","totalWinners":"Vincitori","totalPayout":"Payout totale","watch":"Guarda"}}}
-  </script>
-  </div>
+      <script id="gamePageData" type="application/json">
+      {"lang":"it","game":{"id":"dreamcatcher","name":"Dream Catcher","provider":"Evolution Gaming","color":"#f59e0b","image":{"src":"img/dream-catcher-logo.webp","alt":"Dream Catcher logo"},"segments":["1","2","5","10","20","40","2x","7x"],"segColors":["#3b82f6","#eab308","#ec4899","#8b5cf6","#f97316","#ef4444","#6b7280","#22c55e"],"segProbs":[42.59,27.78,12.96,5.56,3.7,1.85,3.7,1.85],"expectedRtp":96.58,"hideSlotResult":true,"segmentImages":{"1":"img/dream-catcher/spin/dream-catcher-one.webp","2":"img/dream-catcher/spin/dream-catcher-two.webp","5":"img/dream-catcher/spin/dream-catcher-five.webp","10":"img/dream-catcher/spin/dream-catcher-ten.webp","20":"img/dream-catcher/spin/dream-catcher-twenty.webp","40":"img/dream-catcher/spin/dream-catcher-forty.webp","2x":"img/dream-catcher/spin/dream-catcher-2x.webp","7x":"img/dream-catcher/spin/dream-catcher-7x.webp"},"spinResultImages":{"1":"img/dream-catcher/spin/dream-catcher-one.webp","2":"img/dream-catcher/spin/dream-catcher-two.webp","5":"img/dream-catcher/spin/dream-catcher-five.webp","10":"img/dream-catcher/spin/dream-catcher-ten.webp","20":"img/dream-catcher/spin/dream-catcher-twenty.webp","40":"img/dream-catcher/spin/dream-catcher-forty.webp","2x":"img/dream-catcher/spin/dream-catcher-2x.webp","7x":"img/dream-catcher/spin/dream-catcher-7x.webp"}},"ui":{"common":{"player":"Giocatore","verifiedUser":"Utente verificato","liveNow":"Live ora","hour":"ora","hours":"ore","spins":"spin"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Ultimi 30 minuti","bestWinsTitle":"Migliori vincite per singolo giro","bestWinsText":"Uno sguardo rapido ai pagamenti più alti dagli ultimi giri tracciati.","wheelStatsTitle":"Statistiche dei moltiplicatori della ruota","wheelStatsText":"Scopri con quale frequenza sono usciti i segmenti moltiplicatori nello stesso intervallo analizzato.","matchedTitle":"Moltiplicatori della ruota corrisposti","matchedText":"Confronta le uscite dei moltiplicatori con i giri normali nel campione attuale.","finished":"Completato","outcome":"Risultato","player":"Giocatore","wonAmount":"Importo vinto","multiplier":"Moltiplicatore","match":"Corrispondenza","noMatch":"Nessuna corrispondenza"},"gamePanels":{"temperatureSubtitle":"La temperatura dei segmenti evidenzia risultati caldi e freddi in tempo reale in base agli ultimi spin rispetto alla probabilità attesa.","temperatureSpinsSince":"{n} spin fa","historySubtitle":"Consulta la cronologia più recente con risultati in tempo reale, moltiplicatori, vincitori e payout.","rtpBasedOn":"Basato sugli ultimi 1.000 spin","summaryTotalSpinsToday":"Spin totali oggi","summaryBonusRounds":"Round bonus","summaryBiggestMultiplier":"Moltiplicatore più alto","summaryAvgPayout":"Payout medio","occurredAt":"Avvenuto","slotResult":"Risultato slot","spinResult":"Risultato spin","specialResult":"Risultato speciale","multiplier":"Moltiplicatore","totalWinners":"Vincitori","totalPayout":"Payout totale","watch":"Guarda"}}}
+      </script>
+    </div>
   
   <script src="/main-script.js"></script>
 </body>

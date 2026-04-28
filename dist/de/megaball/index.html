@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Mega Ball Statistiken</title>
-  <meta name="description" content="Verfolge Echtzeit-Ergebnisse, Verlauf und Statistiken für Mega Ball" />
+  <title>Mega Ball Live Statistiken & Ergebnisse – Online spielen + RTP & Trends</title>
+  <meta name="description" content="Mega Ball Live-Statistiken und Ergebnisse mit RTP-Analyse. Verfolge Trends, Multiplikatoren und Resultate in Echtzeit. Spiele online oder teste die Demo." />
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/casino-score-favicon-apple-touch.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/casino-score-favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/casino-score-favicon-16x16.png" />
@@ -34,11 +34,12 @@
 <link rel="alternate" hreflang="pt" href="https://casinoscore.live/pt/megaball/" />
 <link rel="alternate" hreflang="ar" href="https://casinoscore.live/ar/megaball/" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://casinoscore.live/de/"},{"@type":"ListItem","position":2,"name":"Mega Ball","item":"https://casinoscore.live/de/megaball/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann ich Mega-Ball-Ergebnisse live verfolgen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Ein Mega-Ball-Tracker zeigt Kugelverlauf, aktuelle Auszahlungen, Gewinneranzahl und Multiplikator-Ergebnisse Runde für Runde."}},{"@type":"Question","name":"Wie funktioniert der Mega-Ball-Multiplikator?","acceptedAnswer":{"@type":"Answer","text":"Nach der Hauptziehung wird ein Multiplikator zwischen 5x und 100x generiert. Wenn der Mega Ball eine Gewinnlinie vervollständigt, wird die Auszahlung entsprechend multipliziert."}},{"@type":"Question","name":"Was ist die zweite Mega Ball?","acceptedAnswer":{"@type":"Answer","text":"Die zweite Mega Ball ist eine seltene Zusatzziehung, die eine weitere Chance auf eine Gewinnlinie mit Multiplikator bietet."}},{"@type":"Question","name":"Ist Mega Ball eher Bingo oder eine Game-Show?","acceptedAnswer":{"@type":"Answer","text":"Es kombiniert beides. Die Mechanik basiert auf Bingo-Linien, während Präsentation und Tempo einer Live-Casino-Game-Show entsprechen."}},{"@type":"Question","name":"Können Tracker-Daten zukünftige Ergebnisse vorhersagen?","acceptedAnswer":{"@type":"Answer","text":"Nein. Tracker-Daten helfen bei der Analyse vergangener Runden und Live-Statistiken, aber jede Ziehung ist unabhängig."}}]}</script>
 </head>
 <body>
   
-  <div id="app" class="app">
-    
+    <div id="app" class="app">
+      
     <header class="navbar">
       <div class="container navbar-inner">
         <a href="/de/" class="nav-logo">
@@ -224,1013 +225,1291 @@
     </header>
   
 
-    <main class="page-container">
-      <div class="page game-page">
-        <div class="container">
-          <div class="breadcrumb">
-            <a href="/de/">Start</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>Mega Ball</span>
-          </div>
-
-          <div class="game-header">
-            <div class="game-thumb">
-              <img src="/img/mega-ball-logo.webp" alt="Mega Ball logo" loading="lazy" />
+      <main class="page-container">
+        <div class="page game-page">
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="/de/">Start</a>
+              <i class="fas fa-chevron-right"></i>
+              <span>Mega Ball</span>
             </div>
 
-            <div class="game-heading">
-              <h1>Mega Ball Statistiken</h1>
-              <p>Verfolge Echtzeit-Ergebnisse, Verlauf und Statistiken für Mega Ball</p>
+            <div class="game-header">
+              <div class="game-thumb">
+                <img src="/img/mega-ball-logo.webp" alt="Mega Ball logo" loading="lazy" />
+              </div>
+
+              <div class="game-heading">
+                <h1>Mega Ball Statistiken</h1>
+                <p>Verfolge Echtzeit-Ergebnisse, Verlauf und Statistiken für Mega Ball</p>
+              </div>
+
+              <div class="game-header-actions">
+                <div class="live-pill">
+                  <span class="live-dot"></span>
+                  <span>Jetzt live</span>
+                </div>
+
+                <a
+                  href="/go/reg/"
+                  class="live-now-cta-btn"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  Jetzt spielen
+                </a>
+              </div>
             </div>
 
-            <div class="game-header-actions">
-            <div class="live-pill">
-              <span class="live-dot"></span>
-              <span>Jetzt live</span>
-            </div>
-          
-            <a
-              href="/go/reg/"
-              class="live-now-cta-btn"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-            >
-              Jetzt spielen
-            </a>
-          </div>
-          </div>
-
-          
+            
     <div class="tabs-row">
-      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature">
+      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature" aria-selected="true">
         Temperatur
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history" aria-selected="false">
         Verlauf
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats" aria-selected="false">
         Statistiken
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins">
+      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins" aria-selected="false">
         Top-Gewinne
       </button>
 
+      
+        <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="review" aria-selected="false">
+          Bewertung
+        </button>
       
 
       
     </div>
   
 
-          
+            
       <div class="tab-panel active" data-tab-panel="temperature" data-tab-panel-group="game-tabs">
-        <h2 class="panel-title">Segment Temperature</h2>
-        <p class="panel-subtitle">Die Segment-Temperatur zeigt heiße und kalte Ergebnisse in Echtzeit basierend auf aktuellen Spins im Vergleich zur erwarteten Wahrscheinlichkeit.</p>
-  
-        <div class="temp-grid">
+        <h2 class="panel-title">Hot & Cold Multipliers</h2>
+        <p class="panel-subtitle">
+          Die Segment-Temperatur zeigt heiße und kalte Ergebnisse in Echtzeit basierend auf aktuellen Spins im Vergleich zur erwarteten Wahrscheinlichkeit.
+        </p>
+
+        <div class="temp-grid mega-temp-grid">
           
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">34.38%</div>
-              <div class="temp-diff negative">
-                (-0.62)
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-hot">36.97%</div>
+                <div class="temp-diff positive">
+                  +1.97%
+                </div>
+                <div class="temp-spins">2 spins</div>
               </div>
-              <div class="temp-spins">seit 14 Drehungen</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">33.44%</div>
-              <div class="temp-diff negative">
-                (-0.56)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-warm">34.49%</div>
+                <div class="temp-diff positive">
+                  +0.49%
+                </div>
+                <div class="temp-spins">0 spins</div>
               </div>
-              <div class="temp-spins">seit 27 Drehungen</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-cold">10.87%</div>
-              <div class="temp-diff negative">
-                (-1.13)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-cold">10.98%</div>
+                <div class="temp-diff negative">
+                  -1.02%
+                </div>
+                <div class="temp-spins">7 spins</div>
               </div>
-              <div class="temp-spins">seit 13 Drehungen</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/15x.webp" alt="15x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-warm">10.06%</div>
-              <div class="temp-diff positive">
-                (+0.06)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/15x.webp" alt="15x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-cold">9.09%</div>
+                <div class="temp-diff negative">
+                  -0.91%
+                </div>
+                <div class="temp-spins">0 spins</div>
               </div>
-              <div class="temp-spins">seit 19 Drehungen</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-hot">6.64%</div>
-              <div class="temp-diff positive">
-                (+0.64)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-cold">4.77%</div>
+                <div class="temp-diff negative">
+                  -1.23%
+                </div>
+                <div class="temp-spins">18 spins</div>
               </div>
-              <div class="temp-spins">seit 9 Drehungen</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-warm">4.71%</div>
-              <div class="temp-diff negative">
-                (-0.29)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-cold">4.24%</div>
+                <div class="temp-diff negative">
+                  -0.76%
+                </div>
+                <div class="temp-spins">26 spins</div>
               </div>
-              <div class="temp-spins">seit 6 Drehungen</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-hot">4.58%</div>
-              <div class="temp-diff positive">
-                (+0.58)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-warm">4.48%</div>
+                <div class="temp-diff positive">
+                  +0.48%
+                </div>
+                <div class="temp-spins">13 spins</div>
               </div>
-              <div class="temp-spins">seit 27 Drehungen</div>
-              <i class="fas fa-fire temp-hot temp-icon"></i>
-            </div>
-          
-            <div class="temp-card">
-              
-        <div class="temp-segment temp-segment-image">
-          <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="temp-segment-img">
-        </div>
-      
-              <div class="temp-value temp-warm">0.8%</div>
-              <div class="temp-diff positive">
-                (+0.3)
+            
+              <div class="temp-card">
+                <div class="temp-segment temp-segment-image mega-temp-segment-image">
+                         <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" decoding="async" class="temp-segment-img">
+                       </div>
+                <div class="temp-value temp-hot">1.88%</div>
+                <div class="temp-diff positive">
+                  +1.38%
+                </div>
+                <div class="temp-spins">18 spins</div>
               </div>
-              <div class="temp-spins">seit 24 Drehungen</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
-            </div>
-          
+            
         </div>
       </div>
     
-          
-        <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
-          <h2 class="panel-title">Recent Spin History</h2>
-          <p class="panel-subtitle">Sieh dir die neuesten Spins mit Echtzeit-Ergebnissen, Multiplikatoren, Gewinnern und Auszahlungen an.</p>
-  
-          <div class="table-wrap">
-            <table class="spin-table">
-              <thead>
-                <tr>
-                  <th class="t-left">Zeitpunkt</th>
-                  <th class="t-left">Mega Ball</th>
-                  <th class="t-left">2nd Mega Ball</th>
-                  <th class="t-left">Balls</th>
-                  <th class="t-right">Gesamtauszahlung</th>
-                </tr>
-              </thead>
-  
-              <tbody>
+            
+      <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">Recent Spin History</h2>
+        <p class="panel-subtitle">Sieh dir die neuesten Spins mit Echtzeit-Ergebnissen, Multiplikatoren, Gewinnern und Auszahlungen an.</p>
+
+        <div class="table-wrap">
+          <table class="spin-table">
+            <thead>
+              <tr>
+                <th class="t-left">Zeitpunkt</th>
+                <th class="t-left">Mega Ball</th>
+                <th class="t-left">2nd Mega Ball</th>
+                <th class="t-left">Balls</th>
+                <th class="t-right">Gesamtauszahlung</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                  <tr>
+                    <td class="t-left text-soft">20:50:00 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">4</span>
+                       <span class="mega-ball-multiplier">(25x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €19,687
+                    </td>
+                  </tr>
                 
-                    <tr>
-                      <td class="t-left text-soft">17:59:33 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">22</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">48</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,712
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:58:28 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">32</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">48</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €2,388
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:57:23 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">3</span>
-                    <span class="mega-ball-multiplier">(12x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,950
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:56:18 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">11</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,180
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:55:13 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">25</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,663
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:54:08 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">10</span>
-                    <span class="mega-ball-multiplier">(12x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €2,763
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:53:03 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">8</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,211
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:51:58 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">24</span>
-                    <span class="mega-ball-multiplier">(25x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,593
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:50:53 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">19</span>
-                    <span class="mega-ball-multiplier">(15x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,438
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:49:48 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">7</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">49</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €2,426
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:48:43 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">14</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €2,703
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:47:38 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">43</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,972
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:46:33 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">4</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €1,816
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:45:28 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">10</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">
-                      <span class="result-badge result-badge-ball">38</span>
-                      <span class="mega-ball-multiplier">(50x)</span>
+                  <tr>
+                    <td class="t-left text-soft">20:48:55 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">5</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">45</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €37,565
                     </td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €1,710
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:44:23 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">20</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,555
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:43:18 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">8</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,365
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:42:13 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">49</span>
-                    <span class="mega-ball-multiplier">(12x)</span>
-                  </td>
-                      <td class="t-left">
-                      <span class="result-badge result-badge-ball">38</span>
-                      <span class="mega-ball-multiplier">(12x)</span>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:47:50 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">5</span>
+                       <span class="mega-ball-multiplier">(10x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €34,058
                     </td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">49</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,471
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:41:08 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">16</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €934
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:40:03 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">48</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €1,451
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:38:58 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">9</span>
-                    <span class="mega-ball-multiplier">(15x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €1,575
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:37:53 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">51</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €969
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:36:48 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">8</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">
-                      <span class="result-badge result-badge-ball">20</span>
-                      <span class="mega-ball-multiplier">(25x)</span>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:46:45 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">6</span>
+                       <span class="mega-ball-multiplier">(10x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €17,745
                     </td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,068
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:35:43 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">12</span>
-                    <span class="mega-ball-multiplier">(5x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">48</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,299
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:34:38 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">18</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">50</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €4,607
-                      </td>
-                    </tr>
-                  
-                    <tr>
-                      <td class="t-left text-soft">17:33:33 Apr 13</td>
-                      <td class="t-left">
-                    <span class="result-badge result-badge-ball">11</span>
-                    <span class="mega-ball-multiplier">(10x)</span>
-                  </td>
-                      <td class="t-left">—</td>
-                      <td class="t-left">
-                    <div class="mega-balls-list">
-                      <span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">51</span>
-                    </div>
-                  </td>
-                      <td class="t-right text-green" style="font-weight:600;">
-                        €3,017
-                      </td>
-                    </tr>
-                  
-              </tbody>
-            </table>
-          </div>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:45:40 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">23</span>
+                       <span class="mega-ball-multiplier">(20x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">47</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €21,991
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:44:35 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">3</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €13,664
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:43:30 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">14</span>
+                       <span class="mega-ball-multiplier">(20x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €42,733
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:42:25 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">3</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €10,612
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:41:20 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">6</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €23,414
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:40:15 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">21</span>
+                       <span class="mega-ball-multiplier">(25x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">48</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €23,954
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:39:10 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">23</span>
+                       <span class="mega-ball-multiplier">(50x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €4,199
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:38:05 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">22</span>
+                       <span class="mega-ball-multiplier">(10x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">48</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €30,391
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:37:00 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">7</span>
+                       <span class="mega-ball-multiplier">(20x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €47,798
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:35:55 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">20</span>
+                       <span class="mega-ball-multiplier">(20x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €12,066
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:34:50 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">2</span>
+                       <span class="mega-ball-multiplier">(25x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €14,142
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:33:45 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">16</span>
+                       <span class="mega-ball-multiplier">(100x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €26,749
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:32:40 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">15</span>
+                       <span class="mega-ball-multiplier">(15x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">45</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €32,432
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:31:35 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">4</span>
+                       <span class="mega-ball-multiplier">(25x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €48,444
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:30:30 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">12</span>
+                       <span class="mega-ball-multiplier">(10x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €23,084
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:29:25 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">21</span>
+                       <span class="mega-ball-multiplier">(100x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">15</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">44</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">47</span><span class="result-badge result-badge-ball">49</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €35,767
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:28:20 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">13</span>
+                       <span class="mega-ball-multiplier">(50x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">1</span><span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">8</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">46</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €43,800
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:27:15 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">3</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">5</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">16</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">22</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">29</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">41</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">48</span><span class="result-badge result-badge-ball">50</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €35,326
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:26:10 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">17</span>
+                       <span class="mega-ball-multiplier">(50x)</span>
+                     </div></td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">19</span>
+                       <span class="mega-ball-multiplier">(10x)</span>
+                     </div></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">20</span><span class="result-badge result-badge-ball">21</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">38</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">46</span><span class="result-badge result-badge-ball">49</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €40,597
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:25:05 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">12</span>
+                       <span class="mega-ball-multiplier">(5x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">3</span><span class="result-badge result-badge-ball">6</span><span class="result-badge result-badge-ball">11</span><span class="result-badge result-badge-ball">13</span><span class="result-badge result-badge-ball">19</span><span class="result-badge result-badge-ball">23</span><span class="result-badge result-badge-ball">25</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">27</span><span class="result-badge result-badge-ball">28</span><span class="result-badge result-badge-ball">33</span><span class="result-badge result-badge-ball">34</span><span class="result-badge result-badge-ball">35</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">43</span><span class="result-badge result-badge-ball">49</span><span class="result-badge result-badge-ball">50</span><span class="result-badge result-badge-ball">51</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €1,141
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td class="t-left text-soft">20:24:00 Apr 28</td>
+                    <td class="t-left"><div class="mega-ball-inline">
+                       <span class="result-badge result-badge-ball">21</span>
+                       <span class="mega-ball-multiplier">(25x)</span>
+                     </div></td>
+                    <td class="t-left"><span class="text-soft">—</span></td>
+                    <td class="t-left mega-balls-cell">
+    <div class="mega-balls-list">
+      <span class="result-badge result-badge-ball">2</span><span class="result-badge result-badge-ball">4</span><span class="result-badge result-badge-ball">7</span><span class="result-badge result-badge-ball">9</span><span class="result-badge result-badge-ball">10</span><span class="result-badge result-badge-ball">12</span><span class="result-badge result-badge-ball">14</span><span class="result-badge result-badge-ball">17</span><span class="result-badge result-badge-ball">18</span><span class="result-badge result-badge-ball">24</span><span class="result-badge result-badge-ball">26</span><span class="result-badge result-badge-ball">30</span><span class="result-badge result-badge-ball">31</span><span class="result-badge result-badge-ball">32</span><span class="result-badge result-badge-ball">36</span><span class="result-badge result-badge-ball">37</span><span class="result-badge result-badge-ball">39</span><span class="result-badge result-badge-ball">40</span><span class="result-badge result-badge-ball">42</span><span class="result-badge result-badge-ball">44</span>
+    </div>
+  </td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      €27,394
+                    </td>
+                  </tr>
+                
+            </tbody>
+          </table>
         </div>
-      
-          
-      <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
-        <div class="stats-main-grid">
-          <div class="stats-grid-card">
-            <h2 class="panel-title">Result Distribution</h2>
-            <div class="chart-scroll">
-              <div class="chart-box">
+      </div>
+    
+            
+    <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
+      <div class="stats-main-grid">
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Result Distribution</h2>
+          <div class="chart-scroll">
+            <div class="chart-box">
+              
+                  <div class="chart-col">
+                    <span class="chart-percent">35%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:100%; background:#3b82f6;"></div>
+                    </div>
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
                 
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#3b82f6;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                  <div class="chart-col">
+                    <span class="chart-percent">34%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:97.14285714285714%; background:#eab308;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#eab308;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">12%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:34.285714285714285%; background:#8b5cf6;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#8b5cf6;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">10%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:28.57142857142857%; background:#22c55e;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#22c55e;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/15x.webp" alt="15x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/15x.webp" alt="15x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">6%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:17.142857142857142%; background:#f97316;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#f97316;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">5%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:14.285714285714285%; background:#ec4899;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#ec4899;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">4%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:11.428571428571429%; background:#ef4444;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#ef4444;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" class="chart-label-img">
-        </span>
-      
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
+                  <div class="chart-col">
+                    <span class="chart-percent">0.5%</span>
+                    <div class="chart-bar-wrap">
+                      <div class="chart-bar" style="height:4%; background:#06b6d4;"></div>
                     </div>
-                  
-                    <div class="chart-col">
-                      <span class="chart-percent">0%</span>
-                      <div class="chart-bar-wrap">
-                        <div class="chart-bar" style="height:4%; background:#06b6d4;"></div>
-                      </div>
-                      
-        <span class="chart-label chart-label-image">
-          <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="chart-label-img">
-        </span>
-      
-                    </div>
-                  
-              </div>
-            </div>
-          </div>
-  
-          <div class="stats-grid-card">
-            <h2 class="panel-title">Return to Player</h2>
-            <div class="rtp-card-body">
-              <div class="rtp-center">
-                <div class="rtp-value">94.84%</div>
-                <p class="rtp-text">Basierend auf den letzten 1.000 Spins</p>
-              </div>
+                    
+      <span class="chart-label chart-label-image">
+        <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="chart-label-img">
+      </span>
+    
+                  </div>
+                
             </div>
           </div>
         </div>
-  
-        <div class="stats-summary-grid">
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Spins heute</p>
-            <p class="summary-value">1,009</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Bonusrunden</p>
-            <p class="summary-value purple">8</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Größter Multiplikator</p>
-            <p class="summary-value gold">500x</p>
-          </div>
-  
-          <div class="stats-grid-card summary-card">
-            <p class="summary-label">Ø Auszahlung</p>
-            <p class="summary-value green">$2,719</p>
+
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Return to Player</h2>
+          <div class="rtp-card-body">
+            <div class="rtp-center">
+              <div class="rtp-value">95.79%</div>
+              <p class="rtp-text">Basierend auf den letzten 1.000 Spins</p>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="stats-summary-grid">
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Spins heute</p>
+          <p class="summary-value">729</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Bonusrunden</p>
+          <p class="summary-value purple">5</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Größter Multiplikator</p>
+          <p class="summary-value gold">NaNx</p>
+        </div>
+
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">Ø Auszahlung</p>
+          <p class="summary-value green">$26,426</p>
+        </div>
+      </div>
+
+      
+    </div>
   
+            
+    <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
+      <h2 class="panel-title">Top Multiplier Wins</h2>
+
+      <div class="bigwins-grid">
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 27, 2026</span>
+              <span class="bigwin-rank top">#1</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">25,000x</div>
+                <div class="bigwin-label">100x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$127,662</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 22, 2026</span>
+              <span class="bigwin-rank top">#2</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">10,000x</div>
+                <div class="bigwin-label">25x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$360,234</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 24, 2026</span>
+              <span class="bigwin-rank top">#3</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">5,000x</div>
+                <div class="bigwin-label">12x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$347,686</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 26, 2026</span>
+              <span class="bigwin-rank ">#4</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">2,500x</div>
+                <div class="bigwin-label">20x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$495,034</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 27, 2026</span>
+              <span class="bigwin-rank ">#5</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">2,000x</div>
+                <div class="bigwin-label">5x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$279,373</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 28, 2026</span>
+              <span class="bigwin-rank ">#6</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/20x.webp" alt="20x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">1,000x</div>
+                <div class="bigwin-label">20x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$500,894</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 25, 2026</span>
+              <span class="bigwin-rank ">#7</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">500x</div>
+                <div class="bigwin-label">10x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$176,368</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 24, 2026</span>
+              <span class="bigwin-rank ">#8</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/10x.webp" alt="10x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">200x</div>
+                <div class="bigwin-label">10x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$145,238</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 22, 2026</span>
+              <span class="bigwin-rank ">#9</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="bigwin-segment-img">
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">100x</div>
+                <div class="bigwin-label">12x</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$48,249</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
+            </div>
+          </article>
         
       </div>
-    
-          
-      <div class="tab-panel" data-tab-panel="bigwins" data-tab-panel-group="game-tabs">
-        <h2 class="panel-title">Top Multiplier Wins</h2>
+    </div>
   
-        <div class="bigwins-grid">
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 6, 2026</span>
-                <span class="bigwin-rank top">#1</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">25,000x</div>
-                  <div class="bigwin-label">12x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$101,474</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 9, 2026</span>
-                <span class="bigwin-rank top">#2</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/5x.webp" alt="5x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">10,000x</div>
-                  <div class="bigwin-label">5x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$467,757</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 8, 2026</span>
-                <span class="bigwin-rank top">#3</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">5,000x</div>
-                  <div class="bigwin-label">50x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$217,897</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 12, 2026</span>
-                <span class="bigwin-rank ">#4</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">2,500x</div>
-                  <div class="bigwin-label">100x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$16,649</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 12, 2026</span>
-                <span class="bigwin-rank ">#5</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/50x.webp" alt="50x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">2,000x</div>
-                  <div class="bigwin-label">50x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$419,122</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 12, 2026</span>
-                <span class="bigwin-rank ">#6</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/25x.webp" alt="25x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">1,000x</div>
-                  <div class="bigwin-label">25x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$393,689</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 8, 2026</span>
-                <span class="bigwin-rank ">#7</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/12x.webp" alt="12x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">500x</div>
-                  <div class="bigwin-label">12x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$307,826</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 8, 2026</span>
-                <span class="bigwin-rank ">#8</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/15x.webp" alt="15x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">200x</div>
-                  <div class="bigwin-label">15x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$305,898</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-            <article class="stats-grid-card bigwin-card">
-              <div class="bigwin-top">
-                <span class="bigwin-date">Apr 11, 2026</span>
-                <span class="bigwin-rank ">#9</span>
-              </div>
-  
-              <div class="bigwin-main">
-                <span class="bigwin-segment">
-                  <img src="/img/mega-ball/icons/100x.webp" alt="100x" loading="lazy" class="bigwin-segment-img">
-                </span>
-  
-                <div>
-                  <div class="bigwin-multiplier">100x</div>
-                  <div class="bigwin-label">100x</div>
-                </div>
-              </div>
-  
-              <div class="bigwin-bottom">
-                <span class="bigwin-payout">$119,943</span>
-                <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Ansehen</span>
-              </div>
-            </article>
-          
-        </div>
-      </div>
-    
-          
-          
-        </div>
-      </div>
-    </main>
+            
+            <div class="tab-panel" id="panel-review" data-tab-panel="review" data-tab-panel-group="game-tabs" hidden>
+              
+    <div class="tab-panel" data-tab-panel="review" data-tab-panel-group="game-tabs">
+      <section class="megaball-review-section">
+        <div class="megaball-review-card">
 
+          <!-- HERO -->
+          <div class="megaball-review-hero">
+          <div class="megaball-review-hero-bg"></div>
+          <div class="megaball-review-hero-content">
+            <h2 class="megaball-review-title">Mega Ball Tracker, RTP und Spielanalyse</h2>
+            <p class="megaball-review-intro">Verfolge Statistiken, Ergebnisse und den RTP von Mega Ball in Echtzeit mit Live-Tracking-Tools. Sieh dir Ballverlauf, Multiplikator-Runden, Gewinneranzahl und Auszahlungstrends an – alles an einem Ort.</p>
+            
+    <a
+      href="/go/reg/"
+      class="hero-play-btn megaball-cta-top"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+    >Spielen 🎰</a>
+  
+          </div>
+        </div>
+
+          <!-- QUICK OVERVIEW TABLE -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Spielübersicht auf einen Blick</h3>
+            <div class="megaball-review-specs">
+              <div class="megaball-review-specs-head">
+                <div>Parameter</div>
+                <div>Details</div>
+              </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Anbieter</div>
+                  <div class="megaball-review-spec-value">Evolution Gaming</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Spielname</div>
+                  <div class="megaball-review-spec-value">Mega Ball</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Erscheinungsjahr</div>
+                  <div class="megaball-review-spec-value">2023</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Spieltyp</div>
+                  <div class="megaball-review-spec-value">Live-Game-Show im Bingo-Stil</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">RTP</div>
+                  <div class="megaball-review-spec-value">95,30 %</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Einsatzbereich</div>
+                  <div class="megaball-review-spec-value">Variiert je nach Casino</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Maximaler Gewinn</div>
+                  <div class="megaball-review-spec-value">Bis zu 1.000.000x</div>
+                </div>
+              
+                <div class="megaball-review-specs-row">
+                  <div class="megaball-review-spec-label">Gezogene Kugeln</div>
+                  <div class="megaball-review-spec-value">20 Kugeln + Mega Ball + mögliche 2. Mega Ball</div>
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- WHAT IS MEGA BALL -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Was ist Mega Ball?</h3>
+            <p class="megaball-review-text">Mega Ball ist eine schnelle Live-Game-Show, die Bingo-ähnliche Kartenmechaniken mit Lotterie-ähnlichen Kugelziehungen kombiniert. Nach der Hauptziehung können eine oder zwei Bonusrunden erscheinen, die durch Multiplikatoren zusätzliche Spannung bringen.</p>
+            <p class="megaball-review-text">Das Ziel ist es, möglichst viele Linien auf deinen Karten zu vervollständigen. Je mehr Linien du abschließt, desto höher sind die Gewinne – und Multiplikatorrunden können qualifizierte Auszahlungen deutlich erhöhen.</p>
+          </div>
+
+          <!-- HOW TO PLAY MEGA BALL -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Wie spielt man Mega Ball?</h3>
+            <p class="megaball-review-text">Bei Mega Ball werden 20 Kugeln nacheinander aus einer automatischen Maschine gezogen. Übereinstimmende Zahlen auf den Spielkarten werden automatisch markiert, und die Karten, die dem Gewinn am nächsten sind, werden oben in der Benutzeroberfläche angezeigt.</p>
+            <p class="megaball-review-text">Nach der letzten Kugel wird ein Mega-Ball-Multiplikator zwischen 5x und 100x generiert. Wenn der Mega Ball eine Gewinnlinie vervollständigt, kann die Auszahlung multipliziert werden. In seltenen Fällen wird auch eine zweite Mega Ball gezogen, die eine zusätzliche Chance auf einen erhöhten Gewinn bietet.</p>
+            
+            <ul class="megaball-review-steps-list">
+              
+                <li class="megaball-review-steps-item">
+                  <span class="megaball-steps-num">1</span>
+                  <span>20 Kugeln werden schnell hintereinander gezogen.</span>
+                </li>
+              
+                <li class="megaball-review-steps-item">
+                  <span class="megaball-steps-num">2</span>
+                  <span>Übereinstimmende Zahlen werden automatisch auf allen aktiven Karten markiert.</span>
+                </li>
+              
+                <li class="megaball-review-steps-item">
+                  <span class="megaball-steps-num">3</span>
+                  <span>Karten, die kurz vor dem Gewinn stehen, werden oben angezeigt.</span>
+                </li>
+              
+                <li class="megaball-review-steps-item">
+                  <span class="megaball-steps-num">4</span>
+                  <span>Nach der Hauptziehung wird ein Mega-Ball-Multiplikator generiert.</span>
+                </li>
+              
+                <li class="megaball-review-steps-item">
+                  <span class="megaball-steps-num">5</span>
+                  <span>Eine seltene zweite Mega Ball kann eine zusätzliche Gewinnchance bieten.</span>
+                </li>
+              
+            </ul>
+          
+          
+          </div>
+
+          <!-- MEGA BALL PAYOUT TABLE -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Mega Ball Auszahlungen</h3>
+            <p class="megaball-review-text">Die Auszahlungen bei Mega Ball hängen davon ab, wie viele Linien auf einer einzelnen Karte vervollständigt werden. Horizontale, vertikale und diagonale Linien zählen für den Gewinn.</p>
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Abgeschlossene Linien</th>
+                    <th class="t-left">Auszahlung</th>
+                    <th class="t-left">Funktionsweise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left"><strong>1</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">1:1</span></td>
+                      <td class="t-left">1 horizontale, vertikale oder diagonale Linie.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>2</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">5:1</span></td>
+                      <td class="t-left">2 Linien auf einer Karte.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>3</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">50:1</span></td>
+                      <td class="t-left">3 Linien auf einer Karte.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>4</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">500:1</span></td>
+                      <td class="t-left">4 Linien auf einer Karte.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>5</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">10,000:1</span></td>
+                      <td class="t-left">5 Linien auf einer Karte.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>6+</strong></td>
+                      <td class="t-left"><span class="monopoly-multiplier-pill">1,000,000x</span></td>
+                      <td class="t-left">6 Linien auf einer Karte.</td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- WHAT YOU CAN TRACK -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Was du verfolgen kannst</h3>
+            <p class="megaball-review-text">Bei Tracksino konzentrieren sich die Mega-Ball-Tracking-Tools auf die wichtigsten Live-Metriken für die Analyse Runde für Runde.</p>
+            <div class="crazytime-review-bonus-grid">
+              
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">Kugelverlauf</h4>
+                  <p class="megaball-review-text">Sieh dir alle gezogenen Kugeln in exakter Reihenfolge an.</p>
+                </article>
+              
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">Mega-Ball-Multiplikator</h4>
+                  <p class="megaball-review-text">Verfolge Multiplikatoren von 5x bis 100x.</p>
+                </article>
+              
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">Anzahl der Gewinner</h4>
+                  <p class="megaball-review-text">Sieh, wie viele Karten oder Spieler gewonnen haben.</p>
+                </article>
+              
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">Auszahlungsbeträge</h4>
+                  <p class="megaball-review-text">Überwache Gesamtauszahlungen und vergleiche aktive Runden.</p>
+                </article>
+              
+                <article class="crazytime-review-bonus-card">
+                  <h4 class="crazytime-review-bonus-title">Mega Ball live ansehen</h4>
+                  <p class="megaball-review-text">Öffne das Live-Spiel und vergleiche die laufende Aktion mit den Tracker-Daten.</p>
+                </article>
+              
+            </div>
+          </div>
+
+          <!-- MEGA BALL AT A GLANCE (COMPARISON) -->
+          <div class="megaball-review-block">
+            <h3 class="megaball-review-subtitle">Mega Ball im Überblick</h3>
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Bereich</th>
+                    <th class="t-left">Mega Ball</th>
+                    <th class="t-left">Warum es wichtig ist</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Grundformat</strong></td>
+                      <td class="t-left">Live-Game-Show im Bingo-Stil</td>
+                      <td class="t-left">Kombiniert Karten-Vervollständigung mit einer Live-Ziehung.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Bonusrunden</strong></td>
+                      <td class="t-left">Mega Ball und seltene 2. Mega Ball</td>
+                      <td class="t-left">Fügt nach der Hauptziehung Multiplikatorpotenzial hinzu.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Tracking-Wert</strong></td>
+                      <td class="t-left">Hoch</td>
+                      <td class="t-left">Kugelreihenfolge, Gewinner und Auszahlungen sind leicht nachvollziehbar.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Maximales Gewinnpotenzial</strong></td>
+                      <td class="t-left">Bis zu 1.000.000x</td>
+                      <td class="t-left">Die höchsten Gewinne hängen von Linien und Multiplikatoren ab.</td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- CTA MID -->
+          <div class="megaball-review-block megaball-review-cta-block">
+            
+    <a
+      href="/go/reg/"
+      class="hero-play-btn"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+    >Spielen 🎰</a>
+  
+          </div>
+
+          <!-- FAQ -->
+          <div class="megaball-review-block">
+            <h2 class="megaball-review-subtitle">Häufig gestellte Fragen</h2>
+            <div class="crazytime-review-faq-list">
+              
+                <div class="crazytime-review-faq-item">
+                  <p class="crazytime-review-faq-question">Kann ich Mega-Ball-Ergebnisse live verfolgen?</p>
+                  <p class="crazytime-review-faq-answer">Ja. Ein Mega-Ball-Tracker zeigt Kugelverlauf, aktuelle Auszahlungen, Gewinneranzahl und Multiplikator-Ergebnisse Runde für Runde.</p>
+                </div>
+              
+                <div class="crazytime-review-faq-item">
+                  <p class="crazytime-review-faq-question">Wie funktioniert der Mega-Ball-Multiplikator?</p>
+                  <p class="crazytime-review-faq-answer">Nach der Hauptziehung wird ein Multiplikator zwischen 5x und 100x generiert. Wenn der Mega Ball eine Gewinnlinie vervollständigt, wird die Auszahlung entsprechend multipliziert.</p>
+                </div>
+              
+                <div class="crazytime-review-faq-item">
+                  <p class="crazytime-review-faq-question">Was ist die zweite Mega Ball?</p>
+                  <p class="crazytime-review-faq-answer">Die zweite Mega Ball ist eine seltene Zusatzziehung, die eine weitere Chance auf eine Gewinnlinie mit Multiplikator bietet.</p>
+                </div>
+              
+                <div class="crazytime-review-faq-item">
+                  <p class="crazytime-review-faq-question">Ist Mega Ball eher Bingo oder eine Game-Show?</p>
+                  <p class="crazytime-review-faq-answer">Es kombiniert beides. Die Mechanik basiert auf Bingo-Linien, während Präsentation und Tempo einer Live-Casino-Game-Show entsprechen.</p>
+                </div>
+              
+                <div class="crazytime-review-faq-item">
+                  <p class="crazytime-review-faq-question">Können Tracker-Daten zukünftige Ergebnisse vorhersagen?</p>
+                  <p class="crazytime-review-faq-answer">Nein. Tracker-Daten helfen bei der Analyse vergangener Runden und Live-Statistiken, aber jede Ziehung ist unabhängig.</p>
+                </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </section>
     
+            </div>
+          
+            
+          </div>
+        </div>
+      </main>
+
+      
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-grid">
@@ -1299,7 +1578,7 @@
     </footer>
   
 
-    
+      
     <a
       href="/go/reg/"
       class="floating-play-btn"
@@ -1310,10 +1589,10 @@
       Spielen 🎰
     </a>
   
-    <script id="gamePageData" type="application/json">
-    {"lang":"de","game":{"id":"megaball","name":"Mega Ball","provider":"Evolution Gaming","color":"#3b82f6","image":{"src":"img/mega-ball-logo.webp","alt":"Mega Ball logo"},"segments":["5x","10x","12x","15x","20x","25x","50x","100x"],"segColors":["#3b82f6","#eab308","#8b5cf6","#22c55e","#f97316","#ec4899","#ef4444","#06b6d4"],"segProbs":[35,34,12,10,6,5,4,0.5],"expectedRtp":95.3,"segmentImages":{"5x":"img/mega-ball/icons/5x.webp","10x":"img/mega-ball/icons/10x.webp","12x":"img/mega-ball/icons/12x.webp","15x":"img/mega-ball/icons/15x.webp","20x":"img/mega-ball/icons/20x.webp","25x":"img/mega-ball/icons/25x.webp","50x":"img/mega-ball/icons/50x.webp","100x":"img/mega-ball/icons/100x.webp"}},"ui":{"common":{"player":"Spieler","verifiedUser":"Verifizierter Nutzer","liveNow":"Jetzt live","hour":"Stunde","hours":"Stunden","spins":"Drehungen"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Letzte 30 Minuten","bestWinsTitle":"Top Gewinne pro Dreh","bestWinsText":"Ein schneller Überblick über die höchsten Auszahlungen der zuletzt erfassten Drehungen.","wheelStatsTitle":"Multiplikator-Statistiken des Rades","wheelStatsText":"Sieh, wie oft die Multiplikator-Felder im gleichen Zeitraum gefallen sind.","matchedTitle":"Übereinstimmende Multiplikatoren","matchedText":"Vergleiche Multiplikator-Treffer mit normalen Drehungen im aktuellen Datensatz.","finished":"Abgeschlossen","outcome":"Ergebnis","player":"Spieler","wonAmount":"Gewinnbetrag","multiplier":"Multiplikator","match":"Übereinstimmung","noMatch":"Keine Übereinstimmung"},"gamePanels":{"temperatureSubtitle":"Die Segment-Temperatur zeigt heiße und kalte Ergebnisse in Echtzeit basierend auf aktuellen Spins im Vergleich zur erwarteten Wahrscheinlichkeit.","temperatureSpinsSince":"seit {n} Drehungen","historySubtitle":"Sieh dir die neuesten Spins mit Echtzeit-Ergebnissen, Multiplikatoren, Gewinnern und Auszahlungen an.","rtpBasedOn":"Basierend auf den letzten 1.000 Spins","summaryTotalSpinsToday":"Spins heute","summaryBonusRounds":"Bonusrunden","summaryBiggestMultiplier":"Größter Multiplikator","summaryAvgPayout":"Ø Auszahlung","occurredAt":"Zeitpunkt","slotResult":"Slot-Ergebnis","spinResult":"Spin-Ergebnis","specialResult":"Spezial-Ergebnis","multiplier":"Multiplikator","totalWinners":"Gewinner","totalPayout":"Gesamtauszahlung","watch":"Ansehen"}}}
-  </script>
-  </div>
+      <script id="gamePageData" type="application/json">
+      {"lang":"de","game":{"id":"megaball","name":"Mega Ball","provider":"Evolution Gaming","color":"#3b82f6","image":{"src":"img/mega-ball-logo.webp","alt":"Mega Ball logo"},"segments":["5x","10x","12x","15x","20x","25x","50x","100x"],"segColors":["#3b82f6","#eab308","#8b5cf6","#22c55e","#f97316","#ec4899","#ef4444","#06b6d4"],"segProbs":[35,34,12,10,6,5,4,0.5],"expectedRtp":95.3,"segmentImages":{"5x":"img/mega-ball/icons/5x.webp","10x":"img/mega-ball/icons/10x.webp","12x":"img/mega-ball/icons/12x.webp","15x":"img/mega-ball/icons/15x.webp","20x":"img/mega-ball/icons/20x.webp","25x":"img/mega-ball/icons/25x.webp","50x":"img/mega-ball/icons/50x.webp","100x":"img/mega-ball/icons/100x.webp"}},"ui":{"common":{"player":"Spieler","verifiedUser":"Verifizierter Nutzer","liveNow":"Jetzt live","hour":"Stunde","hours":"Stunden","spins":"Drehungen"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"Letzte 30 Minuten","bestWinsTitle":"Top Gewinne pro Dreh","bestWinsText":"Ein schneller Überblick über die höchsten Auszahlungen der zuletzt erfassten Drehungen.","wheelStatsTitle":"Multiplikator-Statistiken des Rades","wheelStatsText":"Sieh, wie oft die Multiplikator-Felder im gleichen Zeitraum gefallen sind.","matchedTitle":"Übereinstimmende Multiplikatoren","matchedText":"Vergleiche Multiplikator-Treffer mit normalen Drehungen im aktuellen Datensatz.","finished":"Abgeschlossen","outcome":"Ergebnis","player":"Spieler","wonAmount":"Gewinnbetrag","multiplier":"Multiplikator","match":"Übereinstimmung","noMatch":"Keine Übereinstimmung"},"gamePanels":{"temperatureSubtitle":"Die Segment-Temperatur zeigt heiße und kalte Ergebnisse in Echtzeit basierend auf aktuellen Spins im Vergleich zur erwarteten Wahrscheinlichkeit.","temperatureSpinsSince":"seit {n} Drehungen","historySubtitle":"Sieh dir die neuesten Spins mit Echtzeit-Ergebnissen, Multiplikatoren, Gewinnern und Auszahlungen an.","rtpBasedOn":"Basierend auf den letzten 1.000 Spins","summaryTotalSpinsToday":"Spins heute","summaryBonusRounds":"Bonusrunden","summaryBiggestMultiplier":"Größter Multiplikator","summaryAvgPayout":"Ø Auszahlung","occurredAt":"Zeitpunkt","slotResult":"Slot-Ergebnis","spinResult":"Spin-Ergebnis","specialResult":"Spezial-Ergebnis","multiplier":"Multiplikator","totalWinners":"Gewinner","totalPayout":"Gesamtauszahlung","watch":"Ansehen"}}}
+      </script>
+    </div>
   
   <script src="/main-script.js"></script>
 </body>

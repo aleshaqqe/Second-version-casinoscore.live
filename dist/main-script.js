@@ -39,11 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(`[data-tab-group="${group}"]`).forEach((btn) => {
       const isActive = btn.getAttribute("data-tab-target") === target;
       btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-selected", String(isActive));
     });
 
     document.querySelectorAll(`[data-tab-panel-group="${group}"]`).forEach((panel) => {
       const isActive = panel.getAttribute("data-tab-panel") === target;
       panel.classList.toggle("active", isActive);
+      panel.hidden = !isActive;
     });
   }
 
@@ -186,6 +188,9 @@ function initDynamicGameStats() {
 
   // важно: чтобы DreamCatcher окно 500 всегда работало стабильно
   let spinData = generateSpinData(game, game.id === "dreamcatcher" ? 520 : 120);
+  // После инициализации spinData:
+
+
 
   const state = {
     currentTab: "temperature",
@@ -271,7 +276,24 @@ function isBonusSegment(segmentIndex, segmentName) {
 /* =========================
    MOCK DATA (client)
    ========================= */
-
+   function randomIntClient(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  function pickUniqueBallsClient(count, min, max) {
+    const pool = [];
+    for (let i = min; i <= max; i++) pool.push(i);
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return pool.slice(0, count).sort((a, b) => a - b);
+  }
+  
+  function getRandomMegaMultiplierClient() {
+    return ["5x","10x","15x","20x","25x","50x","100x"][Math.floor(Math.random() * 7)];
+  }
+  
 function getMultiplierPool(game, bonus) {
   if (game.id === "dreamcatcher") {
     return bonus
@@ -302,12 +324,30 @@ function generateSpinData(game, count) {
     const multiplier = multiplierPool[Math.floor(Math.random() * multiplierPool.length)];
     const winners = getWinnersCount(game);
     const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
-
-    const slotResult =
-      game.segments?.[
-        Math.floor(Math.random() * Math.min(4, game.segments.length))
-      ] || game.name;
-
+    const slotResult = game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] || game.name;
+  
+    // ← ДОБАВИТЬ ЭТОТ БЛОК
+    if (game.id === "megaball") {
+      const megaBallNumber = randomIntClient(1, 25);
+      const hasSecond = Math.random() < 0.03;
+      let secondNum = null;
+      if (hasSecond) {
+        do { secondNum = randomIntClient(1, 25); } while (secondNum === megaBallNumber);
+      }
+      data.push({
+        time: new Date(now - i * 65000),
+        balls: pickUniqueBallsClient(20, 1, 51),
+        megaBallNumber,
+        megaBallMultiplier: getRandomMegaMultiplierClient(),
+        secondMegaBallNumber: secondNum,
+        secondMegaBallMultiplier: hasSecond ? getRandomMegaMultiplierClient() : null,
+        payout: Math.round(Math.random() * 49500 + 500),
+        isBonus: hasSecond
+      });
+      continue; // ← пропускаем стандартный push ниже
+    }
+    // ← КОНЕЦ БЛОКА
+  
     data.push({
       time: new Date(now - i * 65000),
       slotResult,
@@ -319,6 +359,7 @@ function generateSpinData(game, count) {
       isBonus: bonus
     });
   }
+  
 
   return data;
 }
@@ -975,6 +1016,7 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
    ========================= */
 
    function rerenderTemperaturePanel(game, ui = {}) {
+    if (game.id === "megaball") return;
     const panel = document.querySelector(
       '[data-tab-panel="temperature"][data-tab-panel-group="game-tabs"]'
     );
@@ -1016,74 +1058,140 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
     `;
   }
 
-function renderHistoryPanel(game, spinData) {
-  const pageData = spinData.slice(0, 25);
-  const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
-  const showSpecialResult = game.id === "dreamcatcher";
-
-  return `
-    <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+  function rerenderHistoryPanel(game, spinData, ui = {}) {
+    const panel = document.querySelector(
+      '[data-tab-panel="history"][data-tab-panel-group="game-tabs"]'
+    );
+    if (!panel) return;
+  
+    const tr = ui?.gamePanels || {};
+    const subtitle =
+      tr.historySubtitle ||
+      "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
+    const pageData = spinData.slice(0, 25);
+  
+    // ── MEGABALL ──────────────────────────────────────────────
+    if (game.id === "megaball") {
+      const renderBall = (n) =>
+        `<span class="result-badge result-badge-ball">${n}</span>`;
+  
+      panel.innerHTML = `
+        <h2 class="panel-title">Recent Spin History</h2>
+        <p class="panel-subtitle">${subtitle}</p>
+  
+        <div class="table-wrap">
+          <table class="spin-table">
+            <thead>
+              <tr>
+                <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
+                <th class="t-left">Mega Ball</th>
+                <th class="t-left">2nd Mega Ball</th>
+                <th class="t-left">Balls</th>
+                <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${pageData.map((spin) => {
+                const megaBallMarkup = spin.megaBallNumber
+                  ? `<div class="mega-ball-inline">
+                       ${renderBall(spin.megaBallNumber)}
+                       <span class="mega-ball-multiplier">${spin.megaBallMultiplier || ""}</span>
+                     </div>`
+                  : `<span class="text-soft">—</span>`;
+  
+                const secondMegaBallMarkup = spin.secondMegaBallNumber
+                  ? `<div class="mega-ball-inline">
+                       ${renderBall(spin.secondMegaBallNumber)}
+                       <span class="mega-ball-multiplier">${spin.secondMegaBallMultiplier || ""}</span>
+                     </div>`
+                  : `<span class="text-soft">—</span>`;
+  
+                const ballsMarkup = Array.isArray(spin.balls)
+                  ? `<div class="mega-balls-list">${spin.balls.map(renderBall).join("")}</div>`
+                  : "";
+  
+                return `
+                  <tr>
+                    <td class="t-left text-soft">${formatTime(spin.time)}</td>
+                    <td class="t-left">${megaBallMarkup}</td>
+                    <td class="t-left">${secondMegaBallMarkup}</td>
+                    <td class="t-left mega-balls-cell">${ballsMarkup}</td>
+                    <td class="t-right text-green" style="font-weight:600;">
+                      $${numberWithCommas(spin.payout)}
+                    </td>
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+      return;
+    }
+  
+    // ── СТАНДАРТНЫЙ РЕНДЕР (все остальные игры) ───────────────
+    const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
+    const showSpecialResult = game.id === "dreamcatcher";
+  
+    panel.innerHTML = `
       <h2 class="panel-title">Recent Spin History</h2>
-      <p class="panel-subtitle">The spin history statistics provide a detailed overview of the game’s recent activity.</p>
-
+      <p class="panel-subtitle">${subtitle}</p>
+  
       <div class="table-wrap">
         <table class="spin-table">
           <thead>
             <tr>
-              <th class="t-left">Occurred At</th>
-              ${showSlotResult ? `<th class="t-center">Slot Result</th>` : ""}
-              <th class="t-center">Spin Result</th>
-              ${showSpecialResult ? `<th class="t-center">Special Result</th>` : ""}
-              <th class="t-right">Multiplier</th>
-              <th class="t-right">Total Winners</th>
-              <th class="t-right">Total Payout</th>
+              <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
+              ${showSlotResult ? `<th class="t-center">${tr.slotResult || "Slot Result"}</th>` : ""}
+              <th class="t-center">${tr.spinResult || "Spin Result"}</th>
+              ${showSpecialResult ? `<th class="t-center">${tr.specialResult || "Special Result"}</th>` : ""}
+              <th class="t-right">${tr.multiplier || "Multiplier"}</th>
+              <th class="t-right">${tr.totalWinners || "Total Winners"}</th>
+              <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
             </tr>
           </thead>
-
           <tbody>
             ${pageData.map((spin) => {
               const isSpecial =
-                showSpecialResult && (spin.spinResult === "2x" || spin.spinResult === "7x");
-
+                showSpecialResult &&
+                (spin.spinResult === "2x" || spin.spinResult === "7x");
+  
               const segmentIndex = game.segments.indexOf(spin.spinResult);
               const slotIdx = game.segments.indexOf(spin.slotResult);
-
               const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
               const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
-
+  
               return `
                 <tr>
                   <td class="t-left text-soft">${formatTime(spin.time)}</td>
-
+  
                   ${showSlotResult ? `
                     <td class="t-center">
                       ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
                     </td>
                   ` : ""}
-
+  
                   <td class="t-center">
-                    ${
-                      // ВАЖНО: даже для special (2x/7x) показываем картинку в Spin Result
-                      spin.isBonus
-                        ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
-                        : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
+                    ${spin.isBonus
+                      ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
+                      : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
                     }
                   </td>
-
+  
                   ${showSpecialResult ? `
                     <td class="t-center">
                       ${isSpecial ? `<span class="special-result-pill">${spin.spinResult}</span>` : ""}
                     </td>
                   ` : ""}
-
+  
                   <td class="t-right ${!isSpecial && spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">
                     ${isSpecial ? "" : `${spin.multiplier}x`}
                   </td>
-
+  
                   <td class="t-right text-soft">
                     ${isSpecial ? "" : numberWithCommas(spin.winners)}
                   </td>
-
+  
                   <td class="t-right text-green" style="font-weight:600;">
                     ${isSpecial ? "" : `$${numberWithCommas(spin.payout)}`}
                   </td>
@@ -1093,9 +1201,9 @@ function renderHistoryPanel(game, spinData) {
           </tbody>
         </table>
       </div>
-    </div>
-  `;
-}
+    `;
+  }
+  
 
 function rerenderStatsPanel(game, spinData, ui = {}) {
   const panel = document.querySelector(
@@ -1265,107 +1373,66 @@ function simulateLiveUpdate(game, spinData, state) {
       Math.floor(Math.random() * Math.min(4, game.segments.length))
     ] || game.name;
 
-  spinData.unshift({
-    time: new Date(),
-    slotResult,
-    spinResult: segment,
-    segIdx,
-    multiplier,
-    winners,
-    payout,
-    isBonus: bonus
-  });
-  function rerenderHistoryPanel(game, spinData, ui = {}) {
-    const panel = document.querySelector(
-      '[data-tab-panel="history"][data-tab-panel-group="game-tabs"]'
-    );
-    if (!panel) return;
-  
-    const tr = ui?.gamePanels || {};
-  
-    const subtitle =
-      tr.historySubtitle ||
-      "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
-  
-    const pageData = spinData.slice(0, 25);
-    const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
-    const showSpecialResult = game.id === "dreamcatcher";
-  
-    panel.innerHTML = `
-      <h2 class="panel-title">Recent Spin History</h2>
-      <p class="panel-subtitle">${subtitle}</p>
-  
-      <div class="table-wrap">
-        <table class="spin-table">
-          <thead>
-            <tr>
-              <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
-              ${showSlotResult ? `<th class="t-center">${tr.slotResult || "Slot Result"}</th>` : ""}
-              <th class="t-center">${tr.spinResult || "Spin Result"}</th>
-              ${showSpecialResult ? `<th class="t-center">${tr.specialResult || "Special Result"}</th>` : ""}
-              <th class="t-right">${tr.multiplier || "Multiplier"}</th>
-              <th class="t-right">${tr.totalWinners || "Total Winners"}</th>
-              <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
-            </tr>
-          </thead>
-  
-          <tbody>
-            ${pageData
-              .map((spin) => {
-                const isSpecial =
-                  showSpecialResult && (spin.spinResult === "2x" || spin.spinResult === "7x");
-  
-                const segmentIndex = game.segments.indexOf(spin.spinResult);
-                const slotIdx = game.segments.indexOf(spin.slotResult);
-  
-                const spinColor = segmentIndex >= 0 ? game.segColors[segmentIndex] : "#6b7280";
-                const slotColor = slotIdx >= 0 ? game.segColors[slotIdx] : "#6b7280";
-  
-                return `
-                  <tr>
-                    <td class="t-left text-soft">${formatTime(spin.time)}</td>
-  
-                    ${showSlotResult ? `
-                      <td class="t-center">
-                        ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
-                      </td>
-                    ` : ""}
-  
-                    <td class="t-center">
-                      ${
-                        // В Spin Result показываем картинку всегда (включая 2x/7x)
-                        spin.isBonus
-                          ? renderSegmentBadge(game, spin.spinResult, spinColor, "result-badge-bonus-image", "spin")
-                          : renderSegmentBadge(game, spin.spinResult, spinColor, "", "spin")
-                      }
-                    </td>
-  
-                    ${showSpecialResult ? `
-                      <td class="t-center">
-                        ${isSpecial ? `<span class="special-result-pill">${spin.spinResult}</span>` : ""}
-                      </td>
-                    ` : ""}
-  
-                    <td class="t-right ${!isSpecial && spin.multiplier >= 50 ? "text-gold" : ""}" style="font-weight:600;">
-                      ${isSpecial ? "" : `${spin.multiplier}x`}
-                    </td>
-  
-                    <td class="t-right text-soft">
-                      ${isSpecial ? "" : numberWithCommas(spin.winners)}
-                    </td>
-  
-                    <td class="t-right text-green" style="font-weight:600;">
-                      ${isSpecial ? "" : `$${numberWithCommas(spin.payout)}`}
-                    </td>
-                  </tr>
-                `;
-              })
-              .join("")}
-          </tbody>
-        </table>
-      </div>
-    `;
+// Базовый объект спина
+const newSpin = {
+  time: new Date(),
+  slotResult,
+  spinResult: segment,
+  segIdx,
+  multiplier,
+  winners,
+  payout,
+  isBonus: bonus
+};
+
+// ── MEGABALL: добавляем специфичные поля ──────────────────
+if (game.id === "megaball") {
+  const megaMultipliers = ["5x", "10x", "12x", "15x", "20x", "25x", "50x", "100x"];
+  const megaWeights     = [30,   25,    15,    12,    8,     5,     3,     2];
+
+  // взвешенный случайный выбор мультипликатора
+  const pickMegaMult = () => {
+    const total = megaWeights.reduce((a, b) => a + b, 0);
+    let r = Math.random() * total;
+    for (let i = 0; i < megaMultipliers.length; i++) {
+      r -= megaWeights[i];
+      if (r <= 0) return megaMultipliers[i];
+    }
+    return megaMultipliers[0];
+  };
+
+  // 20 уникальных шаров из диапазона 1–80
+  const pickBalls = (count) => {
+    const pool = Array.from({ length: 80 }, (_, i) => i + 1);
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      const idx = Math.floor(Math.random() * pool.length);
+      result.push(pool.splice(idx, 1)[0]);
+    }
+    return result.sort((a, b) => a - b);
+  };
+
+  const balls = pickBalls(20);
+  const megaBallNumber = Math.floor(Math.random() * 80) + 1;
+
+  newSpin.balls              = balls;
+  newSpin.megaBallNumber     = megaBallNumber;
+  newSpin.megaBallMultiplier = pickMegaMult();
+
+  // ~10% шанс второго Mega Ball
+  if (Math.random() < 0.10) {
+    let secondNum;
+    do { secondNum = Math.floor(Math.random() * 80) + 1; }
+    while (secondNum === megaBallNumber);
+    newSpin.secondMegaBallNumber     = secondNum;
+    newSpin.secondMegaBallMultiplier = pickMegaMult();
   }
+  newSpin.payout = Math.round(Math.random() * 49500 + 500);
+}
+// ─────────────────────────────────────────────────────────
+
+spinData.unshift(newSpin);
+  
   // держим запас (чтобы окно 500 работало и не «скакало»)
   if (spinData.length > 800) spinData.pop();
 

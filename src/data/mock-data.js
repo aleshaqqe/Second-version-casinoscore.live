@@ -6,6 +6,9 @@ const {
   randomPlayerName
 } = require("../utils/render-helpers");
 
+
+
+
 function getMultiplierPool(game, bonus) {
   if (game.id === "dreamcatcher") {
     return bonus
@@ -23,7 +26,26 @@ function getWinnersCount(game) {
     ? Math.floor(Math.random() * 100) + 1
     : Math.floor(Math.random() * 2000) + 100;
 }
+// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ MEGA BALL
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+function pickUniqueBalls(count, min = 1, max = 51) {
+  const pool = [];
+  for (let i = min; i <= max; i += 1) {
+    pool.push(i);
+  }
+  for (let i = pool.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, count).sort((a, b) => a - b);
+}
+
+function getRandomMegaMultiplier() {
+  return ["5x", "10x", "15x", "20x", "25x", "50x", "100x"][Math.floor(Math.random() * 7)];
+}
 function generateSpinData(game, count = 80) {
   const data = [];
   const now = Date.now();
@@ -39,6 +61,42 @@ function generateSpinData(game, count = 80) {
     const slotResult =
       game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] ||
       game.name;
+
+      if (game.id === "megaball") {
+        // 20 уникальных шаров
+        const drawnBalls = pickUniqueBalls(20, 1, 51);
+        
+        // Mega Ball (всегда есть)
+        const megaBallNumber = randomInt(1, 25);
+        const megaBallMultiplier = getRandomMegaMultiplier();
+        
+        // 2nd Mega Ball (редко, 3%)
+        const hasSecondMegaBall = Math.random() < 0.03;
+        let secondMegaBallNumber = null;
+        let secondMegaBallMultiplier = null;
+        
+        if (hasSecondMegaBall) {
+          secondMegaBallNumber = randomInt(1, 25);
+          while (secondMegaBallNumber === megaBallNumber) {
+            secondMegaBallNumber = randomInt(1, 25);
+          }
+          secondMegaBallMultiplier = getRandomMegaMultiplier();
+        }
+      
+        const payout = Math.round(Math.random() * 49500 + 500);
+      
+        data.push({
+          time: new Date(now - i * 65000),
+          megaBallNumber,
+          megaBallMultiplier,
+          secondMegaBallNumber,
+          secondMegaBallMultiplier,
+          balls: drawnBalls, // все 20 шаров
+          payout,
+          isBonus: hasSecondMegaBall
+        });
+        continue;
+      }
 
     data.push({
       time: new Date(now - i * 65000),
@@ -97,8 +155,36 @@ function generateTemperatureData(game) {
 }
 
 function countDistribution(game, spinData) {
+  if (game.id === "megaball") {
+    const segments = game.segments || [];
+    const countsMap = Object.fromEntries(segments.map((segment) => [segment, 0]));
+
+    (spinData || []).forEach((item) => {
+      const result =
+        item.spinResult ||
+        item.resultCategory ||
+        item.outcome ||
+        item.hitType ||
+        "";
+
+      if (countsMap[result] !== undefined) {
+        countsMap[result] += 1;
+      }
+    });
+
+    const total = Object.values(countsMap).reduce((sum, count) => sum + count, 0);
+
+    return segments.map((segment, index) => ({
+      label: segment,
+      color: game.segColors?.[index] || "#6b7280",
+      percent: total
+        ? Number(((countsMap[segment] / total) * 100).toFixed(2))
+        : Number((game.segProbs?.[index] || 0).toFixed(2))
+    }));
+  }
+
   const counts = (game.segments || []).map(
-    (segment) => spinData.filter((item) => item.spinResult === segment).length
+    (segment) => (spinData || []).filter((item) => item.spinResult === segment).length
   );
   const total = counts.reduce((sum, count) => sum + count, 0);
 
