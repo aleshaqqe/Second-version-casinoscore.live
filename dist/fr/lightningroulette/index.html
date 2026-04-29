@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Lightning Roulette Statistiques</title>
-  <meta name="description" content="Suivez les résultats, l’historique et les statistiques en temps réel de Lightning Roulette" />
+  <title>Lightning Roulette stats, RTP et résultats en direct</title>
+  <meta name="description" content="Consultez les statistiques Lightning Roulette : RTP, multiplicateurs, Lucky Numbers, historique des spins, paiements et résultats live." />
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/casino-score-favicon-apple-touch.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/casino-score-favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/casino-score-favicon-16x16.png" />
@@ -23,7 +23,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="/global.css" />
   <link rel="canonical" href="https://casinoscore.live/fr/lightningroulette/" />
   <link rel="alternate" hreflang="en" href="https://casinoscore.live/lightningroulette/" />
 <link rel="alternate" hreflang="es" href="https://casinoscore.live/es/lightningroulette/" />
@@ -34,6 +34,7 @@
 <link rel="alternate" hreflang="pt" href="https://casinoscore.live/pt/lightningroulette/" />
 <link rel="alternate" hreflang="ar" href="https://casinoscore.live/ar/lightningroulette/" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://casinoscore.live/fr/"},{"@type":"ListItem","position":2,"name":"Lightning Roulette","item":"https://casinoscore.live/fr/lightningroulette/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que Lightning Roulette?","acceptedAnswer":{"@type":"Answer","text":"Lightning Roulette est une version en direct de la roulette européenne avec des multiplicateurs aléatoires sur les Numéros Chanceux sélectionnés."}},{"@type":"Question","name":"Comment fonctionnent les multiplicateurs de Lightning Roulette?","acceptedAnswer":{"@type":"Answer","text":"Avant chaque spin, le jeu sélectionne 1 à 5 Numéros Chanceux et attribue des multiplicateurs de 50x à 500x. Si une mise directe atterrit sur l'un de ces numéros, le paiement du multiplicateur s'applique."}},{"@type":"Question","name":"Quel est le RTP de Lightning Roulette?","acceptedAnswer":{"@type":"Answer","text":"Le RTP typique est d'environ 97,30% pour les mises standard et d'environ 97,10% pour les mises directes."}},{"@type":"Question","name":"Les paiements de Lightning Roulette sont-ils différents de la roulette standard?","acceptedAnswer":{"@type":"Answer","text":"La plupart des types de mises utilisent les paiements standard de la roulette européenne. La principale différence est le paiement basé sur le multiplicateur sur les numéros directs sélectionnés."}},{"@type":"Question","name":"Lightning Roulette est-il plus volatil que la roulette classique?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le système de multiplicateur crée une variance plus large à court terme, surtout pour les joueurs se concentrant sur les mises intérieures."}}]}</script>
 </head>
 <body>
   
@@ -227,6 +228,7 @@
       <main class="page-container">
         <div class="page game-page">
           <div class="container">
+
             <div class="breadcrumb">
               <a href="/fr/">Accueil</a>
               <i class="fas fa-chevron-right"></i>
@@ -235,7 +237,13 @@
 
             <div class="game-header">
               <div class="game-thumb">
-                <img src="/img/lightning-roulette-logo-casino.webp" alt="Lightning Roulette logo" loading="lazy" />
+                <img
+                  src="/img/lightning-roulette-logo-casino.webp"
+                  alt="Lightning Roulette logo"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
               </div>
 
               <div class="game-heading">
@@ -262,22 +270,31 @@
 
             
     <div class="tabs-row">
-      <button class="tab-btn active" type="button" data-tab-group="game-tabs" data-tab-target="temperature" aria-selected="true">
+      <button class="tab-btn active" type="button"
+        data-tab-group="game-tabs" data-tab-target="temperature" aria-selected="true">
         Température
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="history" aria-selected="false">
+      <button class="tab-btn" type="button"
+        data-tab-group="game-tabs" data-tab-target="history" aria-selected="false">
         Historique
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="stats" aria-selected="false">
+      <button class="tab-btn" type="button"
+        data-tab-group="game-tabs" data-tab-target="stats" aria-selected="false">
         Statistiques
       </button>
 
-      <button class="tab-btn" type="button" data-tab-group="game-tabs" data-tab-target="bigwins" aria-selected="false">
+      <button class="tab-btn" type="button"
+        data-tab-group="game-tabs" data-tab-target="bigwins" aria-selected="false">
         Gros gains
       </button>
 
+      
+        <button class="tab-btn" type="button"
+          data-tab-group="game-tabs" data-tab-target="review" aria-selected="false">
+          Avis
+        </button>
       
 
       
@@ -293,721 +310,558 @@
         
             <div class="temp-card">
               <div class="temp-segment" style="background:#ef4444;">Red</div>
-              <div class="temp-value temp-hot">49.78%</div>
+              <div class="temp-value temp-hot">50.18%</div>
               <div class="temp-diff positive">
-                +1.18%
+                +1.58%
               </div>
-              <div class="temp-spins">il y a 21 spins</div>
+              <div class="temp-spins">il y a 9 spins</div>
               <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
               <div class="temp-segment" style="background:#1f2937;">Bla</div>
-              <div class="temp-value temp-warm">48.75%</div>
+              <div class="temp-value temp-hot">50.1%</div>
               <div class="temp-diff positive">
-                +0.15%
+                +1.5%
               </div>
-              <div class="temp-spins">il y a 7 spins</div>
-              <i class="fas fa-temperature-half temp-warm temp-icon"></i>
+              <div class="temp-spins">il y a 8 spins</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
               <div class="temp-segment" style="background:#22c55e;">Gre</div>
-              <div class="temp-value temp-cold">1.14%</div>
-              <div class="temp-diff negative">
-                -1.56%
+              <div class="temp-value temp-hot">4.37%</div>
+              <div class="temp-diff positive">
+                +1.67%
               </div>
-              <div class="temp-spins">il y a 19 spins</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+              <div class="temp-spins">il y a 14 spins</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
             <div class="temp-card">
               <div class="temp-segment" style="background:#eab308;">Lig</div>
-              <div class="temp-value temp-cold">0%</div>
-              <div class="temp-diff negative">
-                -1.17%
+              <div class="temp-value temp-hot">1.51%</div>
+              <div class="temp-diff positive">
+                +1.41%
               </div>
-              <div class="temp-spins">il y a 5 spins</div>
-              <i class="fas fa-snowflake temp-cold temp-icon"></i>
+              <div class="temp-spins">il y a 11 spins</div>
+              <i class="fas fa-fire temp-hot temp-icon"></i>
             </div>
           
       </div>
     </div>
   
             
-    <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
-      <h2 class="panel-title">Recent Spin History</h2>
-      <p class="panel-subtitle">Consultez l’historique récent avec résultats en temps réel, multiplicateurs, gagnants et paiements.</p>
+      <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">Historique des tours</h2>
+        <p class="panel-subtitle">
+          Historique récent avec les numéros chanceux.
+        </p>
 
-      <div class="table-wrap">
-        <table class="spin-table">
-          <thead>
-            <tr>
-              <th class="t-left">Date/heure</th>
-              <th class="t-left">Résultat slot</th>
-              <th class="t-left">Résultat du spin</th>
+        <div class="lr-hist-wrap">
+          <table class="lr-hist-table">
+            <thead>
+              <tr class="lr-hist-head">
+                <th class="lr-hist-th lr-hist-th--time">Survenu à</th><th class="lr-hist-th">Résultat</th><th class="lr-hist-th">Multiplicateur</th><th class="lr-hist-th">1er numéro chanceux</th><th class="lr-hist-th">2e numéro chanceux</th><th class="lr-hist-th">3e numéro chanceux</th><th class="lr-hist-th">4e numéro chanceux</th><th class="lr-hist-th">5e numéro chanceux</th>
+              </tr>
+            </thead>
+            <tbody>
               
-              <th class="t-right">Multiplicateur</th>
-              <th class="t-right">Gagnants</th>
-              <th class="t-right">Paiement total</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-                <tr>
-                  <td class="t-left text-soft">20:50:00 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#eab308;">
-      Lightnin
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">3x</td>
-                  <td class="t-right">1,441</td>
-                  <td class="t-right text-green">$3,733</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:48:55 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">1,923</td>
-                  <td class="t-right text-green">$21,687</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:47:50 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">2x</td>
-                  <td class="t-right">983</td>
-                  <td class="t-right text-green">$4,464</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:46:45 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#eab308;">
-      Lightnin
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,878</td>
-                  <td class="t-right text-green">$3,575</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:45:40 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">702</td>
-                  <td class="t-right text-green">$1,341</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:44:35 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,999</td>
-                  <td class="t-right text-green">$2,778</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:43:30 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">3x</td>
-                  <td class="t-right">1,541</td>
-                  <td class="t-right text-green">$3,642</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:42:25 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">2x</td>
-                  <td class="t-right">2,067</td>
-                  <td class="t-right text-green">$6,328</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:41:20 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">137</td>
-                  <td class="t-right text-green">$447</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:40:15 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,084</td>
-                  <td class="t-right text-green">$1,403</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:39:10 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">267</td>
-                  <td class="t-right text-green">$3,042</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:38:05 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,825</td>
-                  <td class="t-right text-green">$3,225</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:37:00 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">1,772</td>
-                  <td class="t-right text-green">$14,393</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:35:55 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">1,720</td>
-                  <td class="t-right text-green">$8,692</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:34:50 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">364</td>
-                  <td class="t-right text-green">$678</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:33:45 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#eab308;">
-      Lightnin
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,491</td>
-                  <td class="t-right text-green">$3,285</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:32:40 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">1,994</td>
-                  <td class="t-right text-green">$1,013</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:31:35 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">814</td>
-                  <td class="t-right text-green">$799</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:30:30 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#eab308;">
-      Lightnin
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">484</td>
-                  <td class="t-right text-green">$500</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:29:25 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#1f2937;">
-      Black
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">5x</td>
-                  <td class="t-right">1,172</td>
-                  <td class="t-right text-green">$6,217</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:28:20 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">1x</td>
-                  <td class="t-right">147</td>
-                  <td class="t-right text-green">$108</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:27:15 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">2x</td>
-                  <td class="t-right">1,620</td>
-                  <td class="t-right text-green">$3,681</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:26:10 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#1f2937;">
-      Black
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">2x</td>
-                  <td class="t-right">1,650</td>
-                  <td class="t-right text-green">$4,236</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:25:05 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#ef4444;">
-      Red
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">3x</td>
-                  <td class="t-right">212</td>
-                  <td class="t-right text-green">$1,489</td>
-                </tr>
-              
-                <tr>
-                  <td class="t-left text-soft">20:24:00 Apr 28</td>
-                  
-                    <td class="t-left">
-                      
-    <span class="result-badge result-badge-slot" style="background:#22c55e;">
-      Green
-    </span>
-  
-                    </td>
-                  
-                  <td class="t-left">
-                    
-    <span class="result-badge " style="background:#ef4444;">
-      Red
-    </span>
-  
-                  </td>
-                  
-                  <td class="t-right">2x</td>
-                  <td class="t-right">1,931</td>
-                  <td class="t-right text-green">$3,014</td>
-                </tr>
-              
-          </tbody>
-        </table>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 23:05 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">6</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">21</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">35</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 23:04 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">5</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">24</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">13</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">1</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">22</span>
+          <span class="lr-hist-mult">(300x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 23:03 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">3</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">10</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">18</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">26</span>
+          <span class="lr-hist-mult">(500x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 23:02 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">21</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">18</span>
+          <span class="lr-hist-mult">(250x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">7</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 23:00 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">9</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">14</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:59 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">34</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">19</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">1</span>
+          <span class="lr-hist-mult">(400x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:58 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">28</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">12</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">17</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">5</span>
+          <span class="lr-hist-mult">(400x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">9</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:57 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">18</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">5</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">22</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(300x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:56 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">13</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">3</span>
+          <span class="lr-hist-mult">(250x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:55 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">33</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">1</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">14</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">7</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">32</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#16a34a;color:#fff">0</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:54 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">27</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">32</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">26</span>
+          <span class="lr-hist-mult">(500x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:53 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">14</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">22</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">1</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:52 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">31</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:51 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">22</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          <span class="lr-hist-mult">(250x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">34</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:50 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">24</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">7</span>
+          <span class="lr-hist-mult">(300x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">11</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">9</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">20</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:49 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">10</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">11</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">16</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">31</span>
+          <span class="lr-hist-mult">(300x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:47 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#16a34a;color:#fff">0</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">13</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">19</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          <span class="lr-hist-mult">(150x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:46 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">2</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">31</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">36</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">5</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:45 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">20</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">16</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">26</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">11</span>
+          <span class="lr-hist-mult">(400x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:44 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">2</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">28</span>
+          <span class="lr-hist-mult">(300x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">23</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">35</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:43 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">15</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">28</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:42 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">23</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">34</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">4</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row lr-hist-row--hit">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:41 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult">
+             <span class="lr-hist-hit">200x</span>
+             <span class="lr-hist-bolt">⚡</span>
+           </td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">27</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">17</span>
+          <span class="lr-hist-mult">(350x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">35</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">29</span>
+          <span class="lr-hist-mult">(200x)</span>
+        </td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:40 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#dc2626;color:#fff">30</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">21</span>
+          <span class="lr-hist-mult">(500x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">9</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+        <tr class="lr-hist-row">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">Apr 29 2026 @ 22:39 UTC+03</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">6</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--mult"></td>
+          <td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">36</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#dc2626;color:#fff">18</span>
+          <span class="lr-hist-mult">(100x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky">
+          <span class="lr-hist-ball" style="background:#1a1a1a;color:#fff">2</span>
+          <span class="lr-hist-mult">(50x)</span>
+        </td><td class="lr-hist-td lr-hist-td--lucky"></td><td class="lr-hist-td lr-hist-td--lucky"></td>
+        </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  
+    
             
     <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
       <div class="stats-main-grid">
-        <div class="stats-grid-card">
-          <h2 class="panel-title">Result Distribution</h2>
-          <div class="chart-scroll">
-            <div class="chart-box">
-              
-                  <div class="chart-col">
-                    <span class="chart-percent">54.17%</span>
-                    <div class="chart-bar-wrap">
-                      <div class="chart-bar" style="height:100%; background:#ef4444;"></div>
-                    </div>
-                    <span class="chart-label">Red</span>
-                  </div>
-                
-                  <div class="chart-col">
-                    <span class="chart-percent">41.67%</span>
-                    <div class="chart-bar-wrap">
-                      <div class="chart-bar" style="height:76.9244969540336%; background:#1f2937;"></div>
-                    </div>
-                    <span class="chart-label">Black</span>
-                  </div>
-                
-                  <div class="chart-col">
-                    <span class="chart-percent">4.17%</span>
-                    <div class="chart-bar-wrap">
-                      <div class="chart-bar" style="height:7.6979878161343915%; background:#22c55e;"></div>
-                    </div>
-                    <span class="chart-label">Green</span>
-                  </div>
-                
-                  <div class="chart-col">
-                    <span class="chart-percent">0%</span>
-                    <div class="chart-bar-wrap">
-                      <div class="chart-bar" style="height:4%; background:#eab308;"></div>
-                    </div>
-                    <span class="chart-label">Light</span>
-                  </div>
-                
-            </div>
-          </div>
-        </div>
-
+      
         <div class="stats-grid-card">
           <h2 class="panel-title">Return to Player</h2>
           <div class="rtp-card-body">
             <div class="rtp-center">
-              <div class="rtp-value">96.52%</div>
+              <div class="rtp-value">97.07%</div>
               <p class="rtp-text">Basé sur les 1 000 derniers spins</p>
             </div>
           </div>
@@ -1017,26 +871,432 @@
       <div class="stats-summary-grid">
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Spins totaux aujourd’hui</p>
-          <p class="summary-value">876</p>
+          <p class="summary-value">1,031</p>
         </div>
 
         <div class="stats-grid-card summary-card">
           <p class="summary-label">Tours bonus</p>
-          <p class="summary-value purple">0</p>
+          <p class="summary-value purple">5</p>
         </div>
 
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Plus gros multiplicateur</p>
-          <p class="summary-value gold">5x</p>
-        </div>
+        
 
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">Paiement moyen</p>
-          <p class="summary-value green">$3,945</p>
-        </div>
+      
       </div>
 
       
+  <section class="lr-extra-section">
+    
+    <article class="lr-extra-card">
+      <div class="lr-extra-head">
+        <h3 class="lr-extra-title">Colour Distribution</h3>
+        <p class="lr-extra-meta">Past 72h • 5,167 spins</p>
+      </div>
+      <div class="lr-color-bars">
+        
+          <div class="lr-color-row">
+            <span class="lr-color-dot" style="background:#1a1a1a"></span>
+            <span class="lr-color-label">Black</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:100.0%;background:#1a1a1a"></div>
+            </div>
+            <span class="lr-color-pct">49.12%</span>
+            <span class="lr-color-count">2,538</span>
+          </div>
+          <div class="lr-color-row">
+            <span class="lr-color-dot" style="background:#dc2626"></span>
+            <span class="lr-color-label">Red</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:98.0%;background:#dc2626"></div>
+            </div>
+            <span class="lr-color-pct">48.13%</span>
+            <span class="lr-color-count">2,487</span>
+          </div>
+          <div class="lr-color-row">
+            <span class="lr-color-dot" style="background:#16a34a"></span>
+            <span class="lr-color-label">Green</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:5.6%;background:#16a34a"></div>
+            </div>
+            <span class="lr-color-pct">2.75%</span>
+            <span class="lr-color-count">142</span>
+          </div>
+      </div>
+    </article>
+    
+    <article class="lr-extra-card">
+      <div class="lr-extra-head">
+        <h3 class="lr-extra-title">Lightning Multiplier Frequency</h3>
+        <p class="lr-extra-meta">Past 72h • 5,167 spins</p>
+      </div>
+      <div class="lr-mult-list">
+        
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">50X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:94.0%"></div>
+            </div>
+            <span class="lr-mult-pct">36.72%</span>
+            <span class="lr-mult-hits">141/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">100X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:100.0%"></div>
+            </div>
+            <span class="lr-mult-pct">39.06%</span>
+            <span class="lr-mult-hits">150/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">150X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:21.3%"></div>
+            </div>
+            <span class="lr-mult-pct">8.33%</span>
+            <span class="lr-mult-hits">32/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">200X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:26.0%"></div>
+            </div>
+            <span class="lr-mult-pct">10.16%</span>
+            <span class="lr-mult-hits">39/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">250X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:0.0%"></div>
+            </div>
+            <span class="lr-mult-pct">0%</span>
+            <span class="lr-mult-hits">0/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">300X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:3.0%"></div>
+            </div>
+            <span class="lr-mult-pct">0.78%</span>
+            <span class="lr-mult-hits">3/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">350X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:3.0%"></div>
+            </div>
+            <span class="lr-mult-pct">0.26%</span>
+            <span class="lr-mult-hits">1/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">400X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:3.0%"></div>
+            </div>
+            <span class="lr-mult-pct">1.04%</span>
+            <span class="lr-mult-hits">4/384</span>
+          </div>
+          <div class="lr-mult-row">
+            <span class="lr-mult-label">500X</span>
+            <div class="lr-mult-bar-track">
+              <div class="lr-mult-bar-fill" style="width:9.3%"></div>
+            </div>
+            <span class="lr-mult-pct">3.65%</span>
+            <span class="lr-mult-hits">14/384</span>
+          </div>
+      </div>
+    </article>
+    
+    <article class="lr-extra-card">
+      <div class="lr-extra-head">
+        <h3 class="lr-extra-title">Number Statistics</h3>
+        <p class="lr-extra-meta">Past 72h • 5,167 spins</p>
+      </div>
+      <div class="lr-number-grid">
+        
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#16a34a;color:#fff">0</span>
+            
+            <span class="lr-number-pct">2.73%</span>
+            <span class="lr-number-since">27 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">1</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.61%</span>
+            <span class="lr-number-since">12 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">2</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.83%</span>
+            <span class="lr-number-since">13 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">3</span>
+            
+            <span class="lr-number-pct">2.98%</span>
+            <span class="lr-number-since">38 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">4</span>
+            
+            <span class="lr-number-pct">2.56%</span>
+            <span class="lr-number-since">122 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">5</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.83%</span>
+            <span class="lr-number-since">10 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">6</span>
+            
+            <span class="lr-number-pct">2.5%</span>
+            <span class="lr-number-since">48 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">7</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.63%</span>
+            <span class="lr-number-since">15 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">8</span>
+            
+            <span class="lr-number-pct">2.52%</span>
+            <span class="lr-number-since">8 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">9</span>
+            
+            <span class="lr-number-pct">3%</span>
+            <span class="lr-number-since">29 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">10</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.59%</span>
+            <span class="lr-number-since">2 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">11</span>
+            
+            <span class="lr-number-pct">2.92%</span>
+            <span class="lr-number-since">30 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">12</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.67%</span>
+            <span class="lr-number-since">17 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-just-hit">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">13</span>
+            
+            <span class="lr-number-pct">2.3%</span>
+            <span class="lr-number-since">now</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">14</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.67%</span>
+            <span class="lr-number-since">4 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">15</span>
+            
+            <span class="lr-number-pct">3.08%</span>
+            <span class="lr-number-since">9 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">16</span>
+            
+            <span class="lr-number-pct">2.65%</span>
+            <span class="lr-number-since">181 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">17</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">3.37%</span>
+            <span class="lr-number-since">67 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">18</span>
+            
+            <span class="lr-number-pct">2.52%</span>
+            <span class="lr-number-since">11 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">19</span>
+            
+            <span class="lr-number-pct">2.38%</span>
+            <span class="lr-number-since">183 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">20</span>
+            
+            <span class="lr-number-pct">2.63%</span>
+            <span class="lr-number-since">18 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning lr-number-cold">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">21</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.59%</span>
+            <span class="lr-number-since">103 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">22</span>
+            
+            <span class="lr-number-pct">2.9%</span>
+            <span class="lr-number-since">5 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">23</span>
+            
+            <span class="lr-number-pct">2.83%</span>
+            <span class="lr-number-since">26 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">24</span>
+            
+            <span class="lr-number-pct">2.77%</span>
+            <span class="lr-number-since">55 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">25</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.48%</span>
+            <span class="lr-number-since">14 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">26</span>
+            
+            <span class="lr-number-pct">2.96%</span>
+            <span class="lr-number-since">20 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">27</span>
+            
+            <span class="lr-number-pct">2.77%</span>
+            <span class="lr-number-since">59 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">28</span>
+            
+            <span class="lr-number-pct">2.46%</span>
+            <span class="lr-number-since">21 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">29</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.83%</span>
+            <span class="lr-number-since">16 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">30</span>
+            
+            <span class="lr-number-pct">2.44%</span>
+            <span class="lr-number-since">56 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">31</span>
+            
+            <span class="lr-number-pct">3.14%</span>
+            <span class="lr-number-since">6 ago</span>
+          </div>
+          <div class="lr-number-cell ">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">32</span>
+            
+            <span class="lr-number-pct">2.57%</span>
+            <span class="lr-number-since">1 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">33</span>
+            
+            <span class="lr-number-pct">2.11%</span>
+            <span class="lr-number-since">128 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">34</span>
+            
+            <span class="lr-number-pct">2.63%</span>
+            <span class="lr-number-since">101 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-cold">
+            <span class="lr-number-val" style="background:#1a1a1a;color:#fff">35</span>
+            
+            <span class="lr-number-pct">2.69%</span>
+            <span class="lr-number-since">116 ago</span>
+          </div>
+          <div class="lr-number-cell lr-number-lightning">
+            <span class="lr-number-val" style="background:#dc2626;color:#fff">36</span>
+            <span class="lr-number-bolt">⚡</span>
+            <span class="lr-number-pct">2.86%</span>
+            <span class="lr-number-since">3 ago</span>
+          </div>
+      </div>
+    </article>
+    
+    <article class="lr-extra-card lr-extra-card--split">
+      <div class="lr-split-col">
+        <h3 class="lr-extra-title">Dozens</h3>
+        <p class="lr-extra-meta">Past 72h • 5,167 spins</p>
+        <div class="lr-group-bars">
+          
+          <div class="lr-group-row">
+            <span class="lr-group-label">1st Dozen</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:32.64%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">32.64%</span>
+          </div>
+          <div class="lr-group-row">
+            <span class="lr-group-label">2nd Dozen</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:32.69%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">32.69%</span>
+          </div>
+          <div class="lr-group-row">
+            <span class="lr-group-label">3rd Dozen</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:31.94%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">31.94%</span>
+          </div>
+        </div>
+      </div>
+      <div class="lr-split-col">
+        <h3 class="lr-extra-title">Columns</h3>
+        <p class="lr-extra-meta">Past 72h • 5,167 spins</p>
+        <div class="lr-group-bars">
+          
+          <div class="lr-group-row">
+            <span class="lr-group-label">1st Column</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:31.34%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">31.34%</span>
+          </div>
+          <div class="lr-group-row">
+            <span class="lr-group-label">2nd Column</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:33.64%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">33.64%</span>
+          </div>
+          <div class="lr-group-row">
+            <span class="lr-group-label">3rd Column</span>
+            <div class="lr-color-bar-track">
+              <div class="lr-color-bar-fill" style="width:32.29%;background:var(--color-primary,#eab308)"></div>
+            </div>
+            <span class="lr-color-pct">32.29%</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
     </div>
   
             
@@ -1063,53 +1323,53 @@
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$123,425</span>
+              <span class="bigwin-payout">$473,235</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
         
           <article class="stats-grid-card bigwin-card">
             <div class="bigwin-top">
-              <span class="bigwin-date">Apr 23, 2026</span>
+              <span class="bigwin-date">Apr 29, 2026</span>
               <span class="bigwin-rank top">#2</span>
             </div>
 
             <div class="bigwin-main">
               <span class="bigwin-segment">
-                Blac
+                Gree
               </span>
 
               <div>
                 <div class="bigwin-multiplier">10,000x</div>
-                <div class="bigwin-label">Black</div>
+                <div class="bigwin-label">Green</div>
               </div>
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$275,733</span>
+              <span class="bigwin-payout">$463,777</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
         
           <article class="stats-grid-card bigwin-card">
             <div class="bigwin-top">
-              <span class="bigwin-date">Apr 26, 2026</span>
+              <span class="bigwin-date">Apr 25, 2026</span>
               <span class="bigwin-rank top">#3</span>
             </div>
 
             <div class="bigwin-main">
               <span class="bigwin-segment">
-                Red
+                Ligh
               </span>
 
               <div>
                 <div class="bigwin-multiplier">5,000x</div>
-                <div class="bigwin-label">Red</div>
+                <div class="bigwin-label">Lightning</div>
               </div>
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$81,170</span>
+              <span class="bigwin-payout">$438,892</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
@@ -1122,17 +1382,86 @@
 
             <div class="bigwin-main">
               <span class="bigwin-segment">
-                Red
+                Blac
               </span>
 
               <div>
                 <div class="bigwin-multiplier">2,500x</div>
+                <div class="bigwin-label">Black</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$251,555</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 29, 2026</span>
+              <span class="bigwin-rank ">#5</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                Red
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">2,000x</div>
                 <div class="bigwin-label">Red</div>
               </div>
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$129,738</span>
+              <span class="bigwin-payout">$257,366</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 29, 2026</span>
+              <span class="bigwin-rank ">#6</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                Ligh
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">1,000x</div>
+                <div class="bigwin-label">Lightning</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$47,329</span>
+              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
+            </div>
+          </article>
+        
+          <article class="stats-grid-card bigwin-card">
+            <div class="bigwin-top">
+              <span class="bigwin-date">Apr 27, 2026</span>
+              <span class="bigwin-rank ">#7</span>
+            </div>
+
+            <div class="bigwin-main">
+              <span class="bigwin-segment">
+                Blac
+              </span>
+
+              <div>
+                <div class="bigwin-multiplier">500x</div>
+                <div class="bigwin-label">Black</div>
+              </div>
+            </div>
+
+            <div class="bigwin-bottom">
+              <span class="bigwin-payout">$498,764</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
@@ -1140,22 +1469,22 @@
           <article class="stats-grid-card bigwin-card">
             <div class="bigwin-top">
               <span class="bigwin-date">Apr 26, 2026</span>
-              <span class="bigwin-rank ">#5</span>
+              <span class="bigwin-rank ">#8</span>
             </div>
 
             <div class="bigwin-main">
               <span class="bigwin-segment">
-                Blac
+                Ligh
               </span>
 
               <div>
-                <div class="bigwin-multiplier">2,000x</div>
-                <div class="bigwin-label">Black</div>
+                <div class="bigwin-multiplier">200x</div>
+                <div class="bigwin-label">Lightning</div>
               </div>
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$431,065</span>
+              <span class="bigwin-payout">$76,769</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
@@ -1163,91 +1492,22 @@
           <article class="stats-grid-card bigwin-card">
             <div class="bigwin-top">
               <span class="bigwin-date">Apr 24, 2026</span>
-              <span class="bigwin-rank ">#6</span>
-            </div>
-
-            <div class="bigwin-main">
-              <span class="bigwin-segment">
-                Blac
-              </span>
-
-              <div>
-                <div class="bigwin-multiplier">1,000x</div>
-                <div class="bigwin-label">Black</div>
-              </div>
-            </div>
-
-            <div class="bigwin-bottom">
-              <span class="bigwin-payout">$92,408</span>
-              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
-            </div>
-          </article>
-        
-          <article class="stats-grid-card bigwin-card">
-            <div class="bigwin-top">
-              <span class="bigwin-date">Apr 28, 2026</span>
-              <span class="bigwin-rank ">#7</span>
-            </div>
-
-            <div class="bigwin-main">
-              <span class="bigwin-segment">
-                Red
-              </span>
-
-              <div>
-                <div class="bigwin-multiplier">500x</div>
-                <div class="bigwin-label">Red</div>
-              </div>
-            </div>
-
-            <div class="bigwin-bottom">
-              <span class="bigwin-payout">$143,949</span>
-              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
-            </div>
-          </article>
-        
-          <article class="stats-grid-card bigwin-card">
-            <div class="bigwin-top">
-              <span class="bigwin-date">Apr 28, 2026</span>
-              <span class="bigwin-rank ">#8</span>
-            </div>
-
-            <div class="bigwin-main">
-              <span class="bigwin-segment">
-                Red
-              </span>
-
-              <div>
-                <div class="bigwin-multiplier">200x</div>
-                <div class="bigwin-label">Red</div>
-              </div>
-            </div>
-
-            <div class="bigwin-bottom">
-              <span class="bigwin-payout">$132,028</span>
-              <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
-            </div>
-          </article>
-        
-          <article class="stats-grid-card bigwin-card">
-            <div class="bigwin-top">
-              <span class="bigwin-date">Apr 25, 2026</span>
               <span class="bigwin-rank ">#9</span>
             </div>
 
             <div class="bigwin-main">
               <span class="bigwin-segment">
-                Gree
+                Ligh
               </span>
 
               <div>
                 <div class="bigwin-multiplier">100x</div>
-                <div class="bigwin-label">Green</div>
+                <div class="bigwin-label">Lightning</div>
               </div>
             </div>
 
             <div class="bigwin-bottom">
-              <span class="bigwin-payout">$426,555</span>
+              <span class="bigwin-payout">$127,081</span>
               <span class="bigwin-watch"><i class="fas fa-play-circle"></i> Voir</span>
             </div>
           </article>
@@ -1256,7 +1516,351 @@
     </div>
   
             
+      <div class="tab-panel" id="panel-review"
+        data-tab-panel="review" data-tab-panel-group="game-tabs" hidden>
+        
+      <section class="lr-review-section">
+        <div class="lr-review-card">
+  
+          <div class="lr-review-hero">
+            <div class="lr-review-hero-bg"></div>
+            <div class="lr-review-hero-content">
+              <h2 class="lr-review-title">Avis Lightning Roulette, RTP et Statistiques en Direct</h2>
+              <p class="lr-review-intro">Lightning Roulette est une variante de roulette en direct basée sur la roue européenne. Le jeu suit les règles standard de la roulette, mais chaque tour peut attribuer des multiplicateurs aléatoires à des numéros sélectionnés appelés Numéros Chanceux, créant une version à plus haute variance de la roulette en direct traditionnelle.</p>
+              
+      <a
+        href="/go/reg/"
+        class="hero-play-btn lr-review-cta lr-review-cta--top"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >Jouer 🎰</a>
+    
+            </div>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Aperçu Rapide du Jeu</h3>
+            <div class="lr-review-specs">
+              <div class="lr-review-specs-head">
+                <div>Paramètre</div>
+                <div>Détails</div>
+              </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Fournisseur</div>
+                  <div class="lr-review-spec-value">Evolution Gaming</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Nom du Jeu</div>
+                  <div class="lr-review-spec-value">Lightning Roulette</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Année de Sortie</div>
+                  <div class="lr-review-spec-value">2018</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Type de Jeu</div>
+                  <div class="lr-review-spec-value">Roulette en Direct avec Croupier</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Format de la Roue</div>
+                  <div class="lr-review-spec-value">Roulette Européenne (zéro unique)</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">RTP</div>
+                  <div class="lr-review-spec-value">97,30% sur les mises standard; 97,10% sur les mises directes</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Mise Minimale</div>
+                  <div class="lr-review-spec-value">$0,20</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Mise Maximale</div>
+                  <div class="lr-review-spec-value">$10 000</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Multiplicateur Maximum</div>
+                  <div class="lr-review-spec-value">500x</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Numéros Chanceux</div>
+                  <div class="lr-review-spec-value">1 à 5 par tour</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Volatilité</div>
+                  <div class="lr-review-spec-value">Moyenne à élevée</div>
+                </div>
+              
+                <div class="lr-review-specs-row">
+                  <div class="lr-review-spec-label">Jeu Mobile</div>
+                  <div class="lr-review-spec-value">Supporté</div>
+                </div>
+              
+            </div>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Qu'est-ce que Lightning Roulette?</h3>
+            <p class="lr-review-text">Lightning Roulette est un jeu de roulette en direct qui conserve la roue européenne à zéro unique et la mise en page de mise standard, tout en ajoutant des événements de multiplicateurs aléatoires avant chaque spin. Ce format est souvent décrit comme la roulette éclair en direct ou la roulette éclair en ligne car le jeu combine un croupier de studio réel avec une mécanique de multiplicateur générée avant que la balle ne tombe.</p>
+            <p class="lr-review-text">En termes pratiques, la différence par rapport à la roulette classique est simple: un à cinq numéros deviennent des Numéros Chanceux à chaque tour, et si une mise directe atterrit sur l'un d'eux, le paiement utilise le multiplicateur attribué au lieu du paiement direct standard. C'est l'idée centrale derrière la plupart des pages d'avis de roulette éclair et des suiveurs de statistiques.</p>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Comment Jouer à Lightning Roulette</h3>
+            <p class="lr-review-text">Comment jouer à Lightning Roulette est simple pour quiconque connaît la roulette. Les joueurs placent des mises pendant la phase de mise, puis le jeu révèle les Numéros Chanceux et leurs multiplicateurs avant le spin en direct commence.</p>
+            <p class="lr-review-text">Les règles de la roulette éclair sont basées sur la roulette européenne, donc les mises extérieures, les douzaines, les colonnes et les mises intérieures fonctionnent comme prévu. Le mécanisme supplémentaire n'affecte que les mises directes qui atterrissent sur les Numéros Chanceux sélectionnés.</p>
+  
             
+              <ul class="lr-review-steps-list">
+                
+                  <li class="lr-review-steps-item">
+                    <span class="lr-review-step-num">1</span>
+                    <span>Choisissez les valeurs des jetons et placez les mises sur la disposition de la roulette.</span>
+                  </li>
+                
+                  <li class="lr-review-steps-item">
+                    <span class="lr-review-step-num">2</span>
+                    <span>Attendez que le jeu attribue 1 à 5 Numéros Chanceux avec des multiplicateurs aléatoires.</span>
+                  </li>
+                
+                  <li class="lr-review-steps-item">
+                    <span class="lr-review-step-num">3</span>
+                    <span>Regardez le croupier faire tourner la roue et lâcher la balle.</span>
+                  </li>
+                
+                  <li class="lr-review-steps-item">
+                    <span class="lr-review-step-num">4</span>
+                    <span>Si votre mise directe frappe un Numéro Chanceux, le tour utilise le paiement du multiplicateur éclair.</span>
+                  </li>
+                
+                  <li class="lr-review-steps-item">
+                    <span class="lr-review-step-num">5</span>
+                    <span>Toutes les mises non multipliées sont réglées selon les règles standard de la roulette européenne.</span>
+                  </li>
+                
+              </ul>
+            
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Paiements de Lightning Roulette</h3>
+            <p class="lr-review-text">Les paiements de la roulette éclair suivent la roulette standard pour la plupart des mises, tandis que la différence principale apparaît sur les numéros directs. Lorsqu'un Numéro Chanceux sélectionné gagne, le multiplicateur attribué remplace le paiement direct standard et peut atteindre jusqu'à 500x.</p>
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Type de Mise</th>
+                    <th class="t-left">Paiement</th>
+                    <th class="t-left">Comment Cela Fonctionne</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Direct (Numéro Chanceux)</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">50x–500x</span></td>
+                      <td class="t-left">Appliqué lorsqu'une mise directe atterrit sur un Numéro Chanceux avec un multiplicateur attribué.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Direct (standard)</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">29:1</span></td>
+                      <td class="t-left">Gain direct standard sans multiplicateur éclair.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Cheval</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">17:1</span></td>
+                      <td class="t-left">Mise sur 2 numéros adjacents.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Transversale</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">11:1</span></td>
+                      <td class="t-left">Mise sur 3 numéros à la suite.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Carré</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">8:1</span></td>
+                      <td class="t-left">Mise sur 4 numéros.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Douzaine / Colonne</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">2:1</span></td>
+                      <td class="t-left">Couvre 12 numéros.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Rouge/Noir, Impair/Pair, Haut/Bas</strong></td>
+                      <td class="t-left"><span class="lr-review-pill">1:1</span></td>
+                      <td class="t-left">Mises extérieures standard.</td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">RTP et Volatilité de Lightning Roulette</h3>
+            <p class="lr-review-text">Le RTP de la roulette éclair dépend du type de mise. Les mises standard comme rouge/noir ou douzaines maintiennent un RTP d'environ 97,30%, tandis que les mises directes se situent autour de 97,10% car le jeu réalloue une partie de la structure de paiement pour financer la fonction de multiplicateur.</p>
+            <p class="lr-review-text">En termes de variance, le jeu est plus volatil que la roulette classique lorsque l'accent est mis sur les numéros intérieurs. Les multiplicateurs de roulette éclair créent des moments de paiement moins fréquents mais plus importants, c'est pourquoi beaucoup de joueurs décrivent le jeu comme une volatilité moyenne à élevée plutôt qu'un profil de roulette standard.</p>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Notes de Stratégie Lightning Roulette</h3>
+            <p class="lr-review-text">Une stratégie de roulette éclair ne change pas l'avantage de la maison, mais elle peut changer le profil de risque d'une session. Les joueurs qui préfèrent une variance plus faible restent généralement plus près des mises extérieures, tandis que ceux qui veulent une exposition aux multiplicateurs se concentrent davantage sur la couverture directe.</p>
+            <p class="lr-review-text">D'un point de vue statistique, le jeu est mieux abordé comme la roulette européenne avec une couche de multiplicateur supplémentaire. Cela le rend utile pour suivre la fréquence des Numéros Chanceux, la distribution des multiplicateurs et les oscillations de paiement sur un échantillon plus grand plutôt que de juger le jeu sur une courte série.</p>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Ce Que Vous Pouvez Suivre</h3>
+            <p class="lr-review-text">Cette section du site est conçue pour les joueurs qui souhaitent examiner la roulette éclair en ligne à travers les résultats récents, les multiplicateurs et les métriques de synthèse plutôt que de se fier à des impressions à court terme.</p>
+            <div class="lr-review-grid">
+              
+                <article class="lr-review-mini-card">
+                  <h4 class="lr-review-mini-title">Historique des Numéros Chanceux</h4>
+                  <p class="lr-review-text">Suivez les numéros qui ont reçu des multiplicateurs et à quelle fréquence ils apparaissent dans les tours récents.</p>
+                </article>
+              
+                <article class="lr-review-mini-card">
+                  <h4 class="lr-review-mini-title">Distribution des Multiplicateurs</h4>
+                  <p class="lr-review-text">Voyez à quelle fréquence les multiplicateurs 50x, 100x, 150x, 200x, 300x, 400x et 500x apparaissent.</p>
+                </article>
+              
+                <article class="lr-review-mini-card">
+                  <h4 class="lr-review-mini-title">Résultats des Tours</h4>
+                  <p class="lr-review-text">Examinez les résultats récents, y compris le numéro gagnant, les numéros éclair et les multiplicateurs touchés.</p>
+                </article>
+              
+                <article class="lr-review-mini-card">
+                  <h4 class="lr-review-mini-title">Aperçu du RTP</h4>
+                  <p class="lr-review-text">Comparez les résultats observés avec le profil de rendement attendu du jeu.</p>
+                </article>
+              
+                <article class="lr-review-mini-card">
+                  <h4 class="lr-review-mini-title">Modèles de Résultats</h4>
+                  <p class="lr-review-text">Utilisez l'historique récent et les données de distribution pour suivre les séries à court terme et la fréquence des numéros.</p>
+                </article>
+              
+            </div>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Lightning Roulette en un Coup d'œil</h3>
+            <div class="table-wrap">
+              <table class="spin-table">
+                <thead>
+                  <tr>
+                    <th class="t-left">Domaine</th>
+                    <th class="t-left">Lightning Roulette</th>
+                    <th class="t-left">Pourquoi C'est Important</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Format de Base</strong></td>
+                      <td class="t-left">Roulette européenne avec croupier en direct</td>
+                      <td class="t-left">Les règles principales restent familières pour les joueurs qui connaissent déjà la roulette standard.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Multiplicateurs Éclair</strong></td>
+                      <td class="t-left">1–5 Numéros Chanceux, 50x à 500x</td>
+                      <td class="t-left">Ajoute un potentiel de gain plus important aux mises directes sans modifier les paiements des mises extérieures.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Profil RTP</strong></td>
+                      <td class="t-left">97,30% standard / 97,10% direct</td>
+                      <td class="t-left">Utile pour comprendre comment le financement du multiplicateur affecte différents types de mises.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Volatilité</strong></td>
+                      <td class="t-left">Plus élevée que la roulette classique sur les mises intérieures</td>
+                      <td class="t-left">Les paiements basés sur les multiplicateurs créent des oscillations plus larges à court terme.</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="t-left"><strong>Meilleur Cas d'Usage</strong></td>
+                      <td class="t-left">Joueurs qui veulent une roulette avec variance supplémentaire</td>
+                      <td class="t-left">Conserve la structure standard de la roulette tout en ajoutant des paiements occasionnellement améliorés.</td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+  
+          <div class="lr-review-block lr-review-cta-block">
+            
+      <a
+        href="/go/reg/"
+        class="hero-play-btn lr-review-cta"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >Jouer 🎰</a>
+    
+          </div>
+  
+          <div class="lr-review-block">
+            <h2 class="lr-review-subtitle">Questions Fréquemment Posées</h2>
+            <div class="lr-review-faq-list">
+              
+                <div class="lr-review-faq-item">
+                  <p class="lr-review-faq-question">Qu'est-ce que Lightning Roulette?</p>
+                  <p class="lr-review-faq-answer">Lightning Roulette est une version en direct de la roulette européenne avec des multiplicateurs aléatoires sur les Numéros Chanceux sélectionnés.</p>
+                </div>
+              
+                <div class="lr-review-faq-item">
+                  <p class="lr-review-faq-question">Comment fonctionnent les multiplicateurs de Lightning Roulette?</p>
+                  <p class="lr-review-faq-answer">Avant chaque spin, le jeu sélectionne 1 à 5 Numéros Chanceux et attribue des multiplicateurs de 50x à 500x. Si une mise directe atterrit sur l'un de ces numéros, le paiement du multiplicateur s'applique.</p>
+                </div>
+              
+                <div class="lr-review-faq-item">
+                  <p class="lr-review-faq-question">Quel est le RTP de Lightning Roulette?</p>
+                  <p class="lr-review-faq-answer">Le RTP typique est d'environ 97,30% pour les mises standard et d'environ 97,10% pour les mises directes.</p>
+                </div>
+              
+                <div class="lr-review-faq-item">
+                  <p class="lr-review-faq-question">Les paiements de Lightning Roulette sont-ils différents de la roulette standard?</p>
+                  <p class="lr-review-faq-answer">La plupart des types de mises utilisent les paiements standard de la roulette européenne. La principale différence est le paiement basé sur le multiplicateur sur les numéros directs sélectionnés.</p>
+                </div>
+              
+                <div class="lr-review-faq-item">
+                  <p class="lr-review-faq-question">Lightning Roulette est-il plus volatil que la roulette classique?</p>
+                  <p class="lr-review-faq-answer">Oui. Le système de multiplicateur crée une variance plus large à court terme, surtout pour les joueurs se concentrant sur les mises intérieures.</p>
+                </div>
+              
+            </div>
+          </div>
+  
+          <div class="lr-review-block">
+            <h3 class="lr-review-subtitle">Impression Générale</h3>
+            <p class="lr-review-text">En tant qu'avis neutre de roulette éclair, le jeu peut être décrit comme une roulette européenne standard avec une couche de multiplicateur supplémentaire qui augmente la variance sans modifier le format principal. Pour les joueurs intéressés par les statistiques en direct de la roulette éclair, c'est un jeu utile à suivre car la fréquence des multiplicateurs, la sélection des Numéros Chanceux et les modèles de paiement peuvent tous être mesurés au fil du temps.</p>
+          </div>
+  
+        </div>
+      </section>
+    
+      </div>
+    
+            
+
           </div>
         </div>
       </main>
@@ -1329,7 +1933,6 @@
       </div>
     </footer>
   
-
       
     <a
       href="/go/reg/"
@@ -1341,11 +1944,11 @@
       Jouer 🎰
     </a>
   
-      <script id="gamePageData" type="application/json">
-      {"lang":"fr","game":{"id":"lightningroulette","name":"Lightning Roulette","provider":"Evolution Gaming","color":"#eab308","image":{"src":"img/lightning-roulette-logo-casino.webp","alt":"Lightning Roulette logo"},"segments":["Red","Black","Green","Lightning"],"segColors":["#ef4444","#1f2937","#22c55e","#eab308"],"segProbs":[48.6,48.6,2.7,0.1],"expectedRtp":97.1},"ui":{"common":{"player":"Joueur","verifiedUser":"Utilisateur vérifié","liveNow":"En direct","hour":"heure","hours":"heures","spins":"spins"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"30 dernières minutes","bestWinsTitle":"Meilleurs gains par tour","bestWinsText":"Un aperçu rapide des plus gros gains des derniers tours suivis.","wheelStatsTitle":"Statistiques des multiplicateurs de la roue","wheelStatsText":"Découvrez à quelle fréquence les segments multiplicateurs sont sortis sur la même période.","matchedTitle":"Multiplicateurs correspondants","matchedText":"Comparez les apparitions des multiplicateurs avec les tours classiques dans l’échantillon actuel.","finished":"Terminé","outcome":"Résultat","player":"Joueur","wonAmount":"Montant gagné","multiplier":"Multiplicateur","match":"Correspondance","noMatch":"Aucune correspondance"},"gamePanels":{"temperatureSubtitle":"La température des segments met en évidence les résultats chauds et froids en temps réel selon les derniers spins par rapport à la probabilité attendue.","temperatureSpinsSince":"il y a {n} spins","historySubtitle":"Consultez l’historique récent avec résultats en temps réel, multiplicateurs, gagnants et paiements.","rtpBasedOn":"Basé sur les 1 000 derniers spins","summaryTotalSpinsToday":"Spins totaux aujourd’hui","summaryBonusRounds":"Tours bonus","summaryBiggestMultiplier":"Plus gros multiplicateur","summaryAvgPayout":"Paiement moyen","occurredAt":"Date/heure","slotResult":"Résultat slot","spinResult":"Résultat du spin","specialResult":"Résultat spécial","multiplier":"Multiplicateur","totalWinners":"Gagnants","totalPayout":"Paiement total","watch":"Voir"}}}
-      </script>
+
+      <script id="gamePageData" type="application/json">{"lang":"fr","game":{"id":"lightningroulette","name":"Lightning Roulette","provider":"Evolution Gaming","color":"#eab308","image":{"src":"img/lightning-roulette-logo-casino.webp","alt":"Lightning Roulette logo"},"segments":["Red","Black","Green","Lightning"],"segColors":["#ef4444","#1f2937","#22c55e","#eab308"],"segProbs":[48.6,48.6,2.7,0.1],"expectedRtp":97.1},"ui":{"common":{"player":"Joueur","verifiedUser":"Utilisateur vérifié","liveNow":"En direct","hour":"heure","hours":"heures","spins":"spins"},"dreamcatcherStatsExtra":{"trackedMetaPrefix":"30 dernières minutes","bestWinsTitle":"Meilleurs gains par tour","bestWinsText":"Un aperçu rapide des plus gros gains des derniers tours suivis.","wheelStatsTitle":"Statistiques des multiplicateurs de la roue","wheelStatsText":"Découvrez à quelle fréquence les segments multiplicateurs sont sortis sur la même période.","matchedTitle":"Multiplicateurs correspondants","matchedText":"Comparez les apparitions des multiplicateurs avec les tours classiques dans l’échantillon actuel.","finished":"Terminé","outcome":"Résultat","player":"Joueur","wonAmount":"Montant gagné","multiplier":"Multiplicateur","match":"Correspondance","noMatch":"Aucune correspondance"},"gamePanels":{"temperatureSubtitle":"La température des segments met en évidence les résultats chauds et froids en temps réel selon les derniers spins par rapport à la probabilité attendue.","temperatureSpinsSince":"il y a {n} spins","historySubtitle":"Consultez l’historique récent avec résultats en temps réel, multiplicateurs, gagnants et paiements.","rtpBasedOn":"Basé sur les 1 000 derniers spins","summaryTotalSpinsToday":"Spins totaux aujourd’hui","summaryBonusRounds":"Tours bonus","summaryBiggestMultiplier":"Plus gros multiplicateur","summaryAvgPayout":"Paiement moyen","occurredAt":"Date/heure","slotResult":"Résultat slot","spinResult":"Résultat du spin","specialResult":"Résultat spécial","multiplier":"Multiplicateur","totalWinners":"Gagnants","totalPayout":"Paiement total","watch":"Voir"},"crazytimeStatsExtra":{"sectionTitle":"Statistiques Avancées des Bonus Crazy Time","flapperTitle":"Flapper Bonus Crazy Time","flapperText":"Comparez les multiplicateurs moyens des trois couleurs du flapper Crazy Time. Ces chiffres donnent un aperçu rapide des performances à court terme par rapport à la moyenne de long terme.","avgAlways":"Moy. historique","flapperFootnote":"Le marqueur indique la référence du multiplicateur moyen à long terme pour la couleur de flapper sélectionnée sur la base des données historiques suivies.","coinFlipTitle":"Coin Flip","coinFlipText":"Comparez les résultats rouges et bleus de Coin Flip avec les multiplicateurs moyens et la fréquence d’apparition par rapport aux attentes de long terme.","avgMultiplier":"Multiplicateur moy.","frequency":"Fréquence","vsAvg":"vs moy.","coinFlipFootnote":"Le marqueur indique la référence de fréquence moyenne à long terme pour la couleur sélectionnée sur la base des données suivies.","cashHuntSymbolsTitle":"Symboles Cash Hunt","cashHuntSymbolsText":"Cette répartition montre le multiplicateur moyen et la fréquence d’apparition de chaque symbole cible de Cash Hunt.","times":"fois","recentCashHuntTitle":"Cash Hunt : Multiplicateurs Récents","recentCashHuntText":"Suivez les multiplicateurs récents des manches Cash Hunt. Les cellules mises en évidence marquent les résultats récents les plus forts et les plus faibles.","bestBetsTitle":"Meilleurs Paris Individuels","bestBetsText":"Ce tableau met en avant les gains individuels les plus importants de la période sélectionnée, y compris joueur, paiement, résultat et multiplicateur.","date":"Date","result":"Résultat","player":"Joueur","payout":"Paiement","multiplier":"Multiplicateur","view":"Voir","latestMaxTitle":"Derniers Multiplicateurs Maximums","latestMaxText":"Ces récents meilleurs résultats bonus montrent les multiplicateurs les plus élevés atteints durant la période sélectionnée.","clip":"Voir le clip","biggestWinsGallery":"Galerie des Plus Gros Gains","yellow":"Jaune","blue":"Bleu","green":"Vert","red":"Rouge","cashHunt":"Cash Hunt"}},"ctExtraData":null}</script>
+      
     </div>
   
-  <script src="/main-script.js"></script>
+  <script src="/client.js"></script>
 </body>
 </html>

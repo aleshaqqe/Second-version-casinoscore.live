@@ -195,9 +195,20 @@ function initDynamicGameStats() {
   const state = {
     currentTab: "temperature",
     liveUpdateInterval: null,
-    ui
+    ui,
+    
   };
-
+function readTotalSpinsFromDOM() {
+  const labels = document.querySelectorAll('.summary-label');
+  for (const label of labels) {
+    if (label.textContent.includes('Total Spins')) {
+      const val = label.nextElementSibling?.textContent?.replace(/,/g, '');
+      return parseInt(val, 10) || 0;
+    }
+  }
+  return 700 + Math.floor(Math.random() * 400);
+}
+state.totalSpinsToday = readTotalSpinsFromDOM();
   // если вкладка восстановилась через sessionStorage — читаем активную вкладку из DOM
   state.currentTab =
     document
@@ -210,11 +221,40 @@ function initDynamicGameStats() {
       state.currentTab = button.getAttribute("data-tab-target") || "temperature";
     });
   });
-
+  state.liveUpdateInterval = window.setInterval(() => {
+    // ── ДЕБАГ: снимаем снапшот ДО обновления ──
+    const containers = [
+      '[data-tab-panel="temperature"]',
+      '[data-tab-panel="history"]',
+      '[data-tab-panel="stats"]',
+      '[data-tab-panel="bigwins"]',
+      ".dream-catcher__extra-section",
+      ".monopoly-extra-section"
+    ];
+  
+    const before = {};
+    containers.forEach((sel) => {
+      const el = document.querySelector(sel);
+      before[sel] = el ? el.innerHTML.length : -1; // длина HTML до
+    });
+  
+    // ── сам апдейт ──
+    simulateLiveUpdate(game, spinData, state);
+  
+    // ── ДЕБАГ: сравниваем ПОСЛЕ ──
+    containers.forEach((sel) => {
+      const el = document.querySelector(sel);
+      const after = el ? el.innerHTML.length : -1;
+      if (before[sel] > 100 && after < 10) {
+        console.error(`[CLEARED] ${sel} был ${before[sel]} символов → стал ${after}`);
+      }
+    });
+  }, 13000);
+  
   // каждые 30 секунд симулируем новый спин и обновляем UI
   state.liveUpdateInterval = window.setInterval(() => {
     simulateLiveUpdate(game, spinData, state);
-  }, 30000);
+  }, 13000);
 }
 
 /* =========================
@@ -326,6 +366,29 @@ function generateSpinData(game, count) {
     const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
     const slotResult = game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] || game.name;
   
+    // ── LIGHTNING ROULETTE ─────────────────────────────────────
+    if (game.id === "lightningroulette") {
+      const LR_RED_GEN = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+      const LR_MULTS   = [50, 100, 150, 200, 250, 300, 350, 400, 500];
+      const LR_WEIGHTS = [30, 30, 12, 8, 5, 4, 3, 3, 5];
+      const luckyCount = weightedRandom([5, 15, 50, 20, 10]) + 1;
+      const pool = Array.from({ length: 37 }, (_, i) => i);
+      for (let j = pool.length - 1; j > 0; j--) {
+        const k = Math.floor(Math.random() * (j + 1));
+        [pool[j], pool[k]] = [pool[k], pool[j]];
+      }
+      const luckyNumbers = pool.slice(0, luckyCount).map((num) => ({
+        number: num,
+        multiplier: LR_MULTS[weightedRandom(LR_WEIGHTS)]
+      }));
+      const spinResult  = Math.floor(Math.random() * 37);
+      const luckyHit    = luckyNumbers.find((l) => l.number === spinResult) || null;
+      const color       = spinResult === 0 ? "green" : LR_RED_GEN.has(spinResult) ? "red" : "black";
+      data.push({ time: new Date(now - i * 65000), spinResult, color, luckyNumbers,
+        hitMultiplier: luckyHit ? luckyHit.multiplier : null, isBonus: luckyHit !== null });
+      continue;
+    }
+    // ── END LR ───────────────────────────────────────────────────
     // ← ДОБАВИТЬ ЭТОТ БЛОК
     if (game.id === "megaball") {
       const megaBallNumber = randomIntClient(1, 25);
@@ -512,8 +575,15 @@ function rerenderDreamCatcherExtraOnly(game, spinData, ui) {
   if (!section) return;
 
   const data = generateDreamCatcherExtraStats(game, spinData);
-  section.outerHTML = renderDreamCatcherExtraStatsClient(data, game, ui);
+  const newHtml = renderDreamCatcherExtraStatsClient(data, game, ui);
+
+  // ✅ replaceWith вместо outerHTML =
+  const tmp = document.createElement("div");
+  tmp.innerHTML = newHtml;
+  const newSection = tmp.firstElementChild;
+  if (newSection) section.replaceWith(newSection);
 }
+
 
 function renderDreamCatcherExtraStatsClient(data, game, ui) {
   const tr = ui?.dreamcatcherStatsExtra || {};
@@ -1070,7 +1140,56 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
       "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
     const pageData = spinData.slice(0, 25);
   
-    // ── MEGABALL ──────────────────────────────────────────────
+        // ── LIGHTNING ROULETTE HISTORY ──────────────────────────────
+    if (game.id === "lightningroulette") {
+      const lrTr = ui?.lightningrouletteHistory || {};
+      const LR_RED_RR = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+      const lrColorRR = (n) => {
+        if (n === 0)           return { bg: "#16a34a", text: "#fff" };
+        if (LR_RED_RR.has(n)) return { bg: "#dc2626", text: "#fff" };
+        return                        { bg: "#1a1a1a", text: "#fff" };
+      };
+      const lrBallRR = (n) => {
+        const c = lrColorRR(n);
+        return `<span class="lr-hist-ball" style="background:${c.bg};color:${c.text}">${n}</span>`;
+      };
+      const lrTimeRR = (date) => {
+        const d = new Date(date), off = -d.getTimezoneOffset() / 60;
+        const s = off >= 0 ? "+" : "-", p = (x) => String(Math.abs(x)).padStart(2, "0");
+        const mon = d.toLocaleDateString("en-US", { month: "short" });
+        return `${mon} ${d.getDate()} ${d.getFullYear()} @ ${p(d.getHours())}:${p(d.getMinutes())} UTC${s}${p(off)}`;
+      };
+      const cols = [
+        lrTr.occurredAt  || "Occurred At",  lrTr.spinResult  || "Spin Result",
+        lrTr.multiplier  || "Multiplier",   lrTr.firstLucky  || "First Lucky",
+        lrTr.secondLucky || "Second Lucky", lrTr.thirdLucky  || "Third Lucky",
+        lrTr.fourthLucky || "Fourth Lucky", lrTr.fifthLucky  || "Fifth Lucky",
+      ];
+      const lrRows = pageData.map((spin) => {
+        const multCell = spin.hitMultiplier
+          ? `<td class="lr-hist-td lr-hist-td--mult"><span class="lr-hist-hit">${spin.hitMultiplier}x</span> <span class="lr-hist-bolt">⚡</span></td>`
+          : `<td class="lr-hist-td lr-hist-td--mult"></td>`;
+        const luckyCells = Array.from({ length: 5 }, (_, i) => {
+          const lucky = spin.luckyNumbers?.[i] || null;
+          if (!lucky) return `<td class="lr-hist-td lr-hist-td--lucky"></td>`;
+          return `<td class="lr-hist-td lr-hist-td--lucky">${lrBallRR(lucky.number)} <span class="lr-hist-mult">(${lucky.multiplier}x)</span></td>`;
+        }).join("");
+        return `<tr class="lr-hist-row${spin.hitMultiplier ? " lr-hist-row--hit" : ""}">
+          <td class="lr-hist-td lr-hist-td--time"><span class="lr-hist-time">${lrTimeRR(spin.time)}</span></td>
+          <td class="lr-hist-td lr-hist-td--result">${lrBallRR(spin.spinResult)}</td>
+          ${multCell}${luckyCells}</tr>`;
+      }).join("");
+      panel.innerHTML = `
+        <h2 class="panel-title">${lrTr.panelTitle || "Spin History"}</h2>
+        <p class="panel-subtitle">${lrTr.subtitle || "Recent spin history with Lucky Number results."}</p>
+        <div class="lr-hist-wrap"><table class="lr-hist-table">
+          <thead><tr class="lr-hist-head">${cols.map((c,i)=>`<th class="lr-hist-th${i===0?" lr-hist-th--time":""}">${c}</th>`).join("")}</tr></thead>
+          <tbody>${lrRows}</tbody>
+        </table></div>`;
+      return;
+    }
+    // ── END LR HISTORY ───────────────────────────────────────────
+// ── MEGABALL ──────────────────────────────────────────────
     if (game.id === "megaball") {
       const renderBall = (n) =>
         `<span class="result-badge result-badge-ball">${n}</span>`;
@@ -1205,48 +1324,55 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
   }
   
 
-function rerenderStatsPanel(game, spinData, ui = {}) {
-  const panel = document.querySelector(
-    '[data-tab-panel="stats"][data-tab-panel-group="game-tabs"]'
-  );
-  if (!panel) return;
-
-  const tr = ui?.gamePanels || {};
-
-  const distribution = countDistribution(game, spinData);
-  const summary = generateStatsSummary(game, spinData);
-  const highestPercent = Math.max(...distribution.map((item) => item.percent), 1);
-
-  const rtpBasedOn = tr.rtpBasedOn || "Based on last 1,000 spins";
-
-  const totalSpinsTodayLabel = tr.summaryTotalSpinsToday || "Total Spins Today";
-  const bonusRoundsLabel = tr.summaryBonusRounds || "Bonus Rounds";
-  const biggestMultiplierLabel = tr.summaryBiggestMultiplier || "Biggest Multiplier";
-  const avgPayoutLabel = tr.summaryAvgPayout || "Avg. Payout";
-
-  let extraHtml = "";
-
-  // CrazyTime: сохраняем существующий блок extra (чтобы не ломать большую секцию)
-  if (game.id === "crazytime") {
-    const crazyTimeExtra = panel.querySelector(".crazytime-bonus-section");
-    extraHtml = crazyTimeExtra ? crazyTimeExtra.outerHTML : "";
-  }
-
-  // DreamCatcher: ререндерим extra с переводами (если у тебя есть renderDreamCatcherExtraStatsClient)
-  if (game.id === "dreamcatcher" && typeof renderDreamCatcherExtraStatsClient === "function") {
-    const dreamCatcherData = generateDreamCatcherExtraStats(game, spinData);
-    extraHtml = renderDreamCatcherExtraStatsClient(dreamCatcherData, game, ui);
-  }
-
-  panel.innerHTML = `
-    <div class="stats-main-grid">
-      <div class="stats-grid-card">
-        <h2 class="panel-title">Result Distribution</h2>
-
-        <div class="chart-scroll">
-          <div class="chart-box">
-            ${distribution
-              .map((item) => {
+  function rerenderStatsPanel(game, spinData, ui = {}, state = {}) {
+    const panel = document.querySelector('[data-tab-panel="stats"][data-tab-panel-group="game-tabs"]');
+    if (!panel) return;
+  
+    const tr = ui?.gamePanels || {};
+    const distribution = countDistribution(game, spinData);
+    const summary = generateStatsSummary(game, spinData);
+    if (state?.totalSpinsToday) summary.totalSpinsToday = state.totalSpinsToday;
+    const highestPercent = Math.max(...distribution.map((item) => item.percent), 1);
+    const rtpBasedOn = tr.rtpBasedOn || "Based on last 1,000 spins";
+  
+    let extraHtml = "";
+  
+    if (game.id === "crazytime" && typeof renderCrazyTimeExtraStatsClient === "function") {
+      try {
+        extraHtml = renderCrazyTimeExtraStatsClient(game, spinData, ui);
+      } catch (e) {
+        console.warn("[rerenderStatsPanel] crazytime extra failed:", e);
+      }
+    }
+  
+    if (game.id === "dreamcatcher" && typeof renderDreamCatcherExtraStatsClient === "function") {
+      try {
+        const dreamCatcherData = generateDreamCatcherExtraStats(game, spinData);
+        extraHtml = renderDreamCatcherExtraStatsClient(dreamCatcherData, game, ui);
+      } catch (e) {
+        console.warn("[rerenderStatsPanel] dreamcatcher extra failed:", e);
+      }
+    }
+  
+    if (game.id === "lightningroulette") {
+      try {
+        const lrData = generateLightningRouletteExtraStatsClient();
+        extraHtml = renderLightningRouletteExtraStatsClient(lrData, ui);
+      } catch (e) {
+        console.warn("[rerenderStatsPanel] lr extra failed:", e);
+      }
+    }
+  
+    const isLR = game.id === "lightningroulette";
+  
+    const newHtml = `
+      <div class="stats-main-grid" >
+        ${!isLR ? `
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Result Distribution</h2>
+          <div class="chart-scroll">
+            <div class="chart-box">
+              ${distribution.map((item) => {
                 const height = Math.max((item.percent / highestPercent) * 100, 4);
                 return `
                   <div class="chart-col">
@@ -1257,53 +1383,55 @@ function rerenderStatsPanel(game, spinData, ui = {}) {
                     ${renderChartLabel(game, item.label)}
                   </div>
                 `;
-              })
-              .join("")}
+              }).join("")}
+            </div>
+          </div>
+        </div>
+        ` : ""}
+  
+        <div class="stats-grid-card">
+          <h2 class="panel-title">Return to Player</h2>
+          <div class="rtp-card-body">
+            <div class="rtp-center">
+              <div class="rtp-value">${summary.rtp}</div>
+              <p class="rtp-text">${rtpBasedOn}</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="stats-grid-card">
-        <h2 class="panel-title">Return to Player</h2>
-        <div class="rtp-card-body">
-          <div class="rtp-center">
-            <div class="rtp-value">${summary.rtp}</div>
-            <p class="rtp-text">${rtpBasedOn}</p>
-          </div>
+  
+      <div class="stats-summary-grid">
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">${tr.summaryTotalSpinsToday || "Total Spins Today"}</p>
+          <p class="summary-value">${numberWithCommas(summary.totalSpinsToday)}</p>
         </div>
+  
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">${tr.summaryBonusRounds || "Bonus Rounds"}</p>
+          <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
+        </div>
+  
+        ${!isLR ? `
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">${tr.summaryBiggestMultiplier || "Biggest Multiplier"}</p>
+          <p class="summary-value gold">${summary.biggestMultToday}</p>
+        </div>
+  
+        <div class="stats-grid-card summary-card">
+          <p class="summary-label">${tr.summaryAvgPayout || "Avg. Payout"}</p>
+          <p class="summary-value green">${summary.avgPayoutToday}</p>
+        </div>
+        ` : ""}
       </div>
-    </div>
-
-    <div class="stats-summary-grid">
-      <div class="stats-grid-card summary-card">
-        <p class="summary-label">${totalSpinsTodayLabel}</p>
-        <p class="summary-value">${numberWithCommas(summary.totalSpinsToday)}</p>
-      </div>
-
-      <div class="stats-grid-card summary-card">
-        <p class="summary-label">${bonusRoundsLabel}</p>
-        <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
-      </div>
-
-      <div class="stats-grid-card summary-card">
-        <p class="summary-label">${biggestMultiplierLabel}</p>
-        <p class="summary-value gold">${summary.biggestMultToday}</p>
-      </div>
-
-      <div class="stats-grid-card summary-card">
-        <p class="summary-label">${avgPayoutLabel}</p>
-        <p class="summary-value green">${summary.avgPayoutToday}</p>
-      </div>
-    </div>
-
-    ${extraHtml}
-  `;
-
-  // если у тебя есть функция защиты /go/ ссылок — применим повторно
-  if (typeof secureAffiliateLinks === "function") {
-    secureAffiliateLinks(panel);
+  
+      ${extraHtml}
+    `;
+  
+    panel.innerHTML = newHtml;
+  
+    if (typeof secureAffiliateLinks === "function") secureAffiliateLinks(panel);
   }
-}
+  
 
 function rerenderBigWinsPanel(game, ui = {}) {
   const panel = document.querySelector(
@@ -1358,101 +1486,292 @@ function rerenderBigWinsPanel(game, ui = {}) {
    LIVE UPDATE
    ========================= */
 
-function simulateLiveUpdate(game, spinData, state) {
-  const segIdx = weightedRandom(game.segProbs || [100]);
-  const segment = game.segments?.[segIdx] || game.name;
-  const bonus = isBonusSegment(segIdx, segment);
+   function simulateLiveUpdate(game, spinData, state) {
+    state.totalSpinsToday = (state.totalSpinsToday || 800) + 1; // ← добавить
 
-  const multiplierPool = getMultiplierPool(game, bonus);
-  const multiplier = multiplierPool[Math.floor(Math.random() * multiplierPool.length)];
-  const winners = getWinnersCount(game);
-  const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
-
-  const slotResult =
-    game.segments?.[
-      Math.floor(Math.random() * Math.min(4, game.segments.length))
-    ] || game.name;
-
-// Базовый объект спина
-const newSpin = {
-  time: new Date(),
-  slotResult,
-  spinResult: segment,
-  segIdx,
-  multiplier,
-  winners,
-  payout,
-  isBonus: bonus
-};
-
-// ── MEGABALL: добавляем специфичные поля ──────────────────
-if (game.id === "megaball") {
-  const megaMultipliers = ["5x", "10x", "12x", "15x", "20x", "25x", "50x", "100x"];
-  const megaWeights     = [30,   25,    15,    12,    8,     5,     3,     2];
-
-  // взвешенный случайный выбор мультипликатора
-  const pickMegaMult = () => {
-    const total = megaWeights.reduce((a, b) => a + b, 0);
-    let r = Math.random() * total;
-    for (let i = 0; i < megaMultipliers.length; i++) {
-      r -= megaWeights[i];
-      if (r <= 0) return megaMultipliers[i];
+    const segIdx = weightedRandom(game.segProbs || [100]);
+    const segment = game.segments?.[segIdx] || game.name;
+    const bonus = isBonusSegment(segIdx, segment);
+    const multiplierPool = getMultiplierPool(game, bonus);
+    const multiplier = multiplierPool[Math.floor(Math.random() * multiplierPool.length)];
+    const winners = getWinnersCount(game);
+    const payout = Math.round(multiplier * winners * (Math.random() * 2 + 0.5));
+    const slotResult =
+      game.segments?.[Math.floor(Math.random() * Math.min(4, game.segments.length))] || game.name;
+  
+    const newSpin = { time: new Date(), slotResult, spinResult: segment, segIdx, multiplier, winners, payout, isBonus: bonus };
+  
+    if (game.id === "megaball") {
+      const megaMultipliers = ["5x","10x","12x","15x","20x","25x","50x","100x"];
+      const megaWeights     = [30,   25,    15,    12,    8,    5,    3,    2];
+      const pickMegaMult = () => {
+        const total = megaWeights.reduce((a, b) => a + b, 0);
+        let r = Math.random() * total;
+        for (let i = 0; i < megaMultipliers.length; i++) { r -= megaWeights[i]; if (r <= 0) return megaMultipliers[i]; }
+        return megaMultipliers[0];
+      };
+      const pickBalls = (count) => {
+        const pool = Array.from({ length: 80 }, (_, i) => i + 1);
+        const result = [];
+        for (let i = 0; i < count; i++) { const idx = Math.floor(Math.random() * pool.length); result.push(pool.splice(idx, 1)[0]); }
+        return result.sort((a, b) => a - b);
+      };
+      const megaBallNumber = Math.floor(Math.random() * 80) + 1;
+      newSpin.balls = pickBalls(20);
+      newSpin.megaBallNumber = megaBallNumber;
+      newSpin.megaBallMultiplier = pickMegaMult();
+      if (Math.random() < 0.10) {
+        let secondNum;
+        do { secondNum = Math.floor(Math.random() * 80) + 1; } while (secondNum === megaBallNumber);
+        newSpin.secondMegaBallNumber = secondNum;
+        newSpin.secondMegaBallMultiplier = pickMegaMult();
+      }
+      newSpin.payout = Math.round(Math.random() * 49500 + 500);
     }
-    return megaMultipliers[0];
+  
+
+    // ── LIGHTNING ROULETTE live spin ────────────────────────────
+    if (game.id === "lightningroulette") {
+      const LR_RED_SIM = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+      const LR_ML = [50,100,150,200,250,300,350,400,500], LR_MW = [30,30,12,8,5,4,3,3,5];
+      const lkCount = weightedRandom([5,15,50,20,10]) + 1;
+      const lkPool  = Array.from({length:37},(_,i)=>i);
+      for (let j=lkPool.length-1;j>0;j--){const k=Math.floor(Math.random()*(j+1));[lkPool[j],lkPool[k]]=[lkPool[k],lkPool[j]];}
+      const lkNums = lkPool.slice(0,lkCount).map(num=>({number:num, multiplier:LR_ML[weightedRandom(LR_MW)]}));
+      const lkRes  = Math.floor(Math.random()*37);
+      const lkHit  = lkNums.find(l=>l.number===lkRes)||null;
+      newSpin.spinResult    = lkRes;
+      newSpin.color         = lkRes===0?"green":LR_RED_SIM.has(lkRes)?"red":"black";
+      newSpin.luckyNumbers  = lkNums;
+      newSpin.hitMultiplier = lkHit?lkHit.multiplier:null;
+      newSpin.isBonus       = lkHit!==null;
+    }
+    // ── END LR live spin ─────────────────────────────────────────
+    spinData.unshift(newSpin);
+    if (spinData.length > 800) spinData.pop();
+  
+    // ✅ Каждый rerender обёрнут в try/catch — одна ошибка не ломает остальные
+    const tab = state.currentTab;
+  
+    if (tab === "temperature") {
+      safeRerender("temperature", () => rerenderTemperaturePanel(game, state.ui));
+    } else if (tab === "history") {
+      safeRerender("history", () => rerenderHistoryPanel(game, spinData, state.ui));
+    } else if (tab === "stats") {
+      safeRerender("stats", () => rerenderStatsPanel(game, spinData, state.ui, state));
+    } else if (tab === "bigwins") {
+      safeRerender("bigwins", () => rerenderBigWinsPanel(game, state.ui));
+    }
+  
+    // DreamCatcher extra — только если активна вкладка extra
+    if (game.id === "dreamcatcher" && tab === "extra") {
+      safeRerender("dreamcatcher-extra", () => rerenderDreamCatcherExtraOnly(game, spinData, state.ui));
+    }
+  }
+  
+
+  
+  /* =========================
+   LIGHTNING ROULETTE EXTRA — CLIENT SIDE
+   ========================= */
+
+function generateLightningRouletteExtraStatsClient() {
+  // Берём базовые данные (те же что server-side) + лёгкая рандомизация
+  const base = {
+    totalSpins: 5167 + Math.floor(Math.random() * 50),
+    trackedHours: 72,
+    colorStats: [
+      { label: "Black", color: "#1a1a1a", percent: Number((49.12 + (Math.random() * 0.4 - 0.2)).toFixed(2)), count: 2538 },
+      { label: "Red",   color: "#dc2626", percent: Number((48.13 + (Math.random() * 0.4 - 0.2)).toFixed(2)), count: 2487 },
+      { label: "Green", color: "#16a34a", percent: Number((2.75  + (Math.random() * 0.2 - 0.1)).toFixed(2)), count: 142  }
+    ],
+    multiplierRows: [
+      { label: "50X",  hits: 141 + Math.floor(Math.random() * 5), total: 384, sharePercent: 36.72 },
+      { label: "100X", hits: 150 + Math.floor(Math.random() * 5), total: 384, sharePercent: 39.06 },
+      { label: "150X", hits: 32,  total: 384, sharePercent: 8.33  },
+      { label: "200X", hits: 39,  total: 384, sharePercent: 10.16 },
+      { label: "250X", hits: 0,   total: 384, sharePercent: 0     },
+      { label: "300X", hits: 3,   total: 384, sharePercent: 0.78  },
+      { label: "350X", hits: 1,   total: 384, sharePercent: 0.26  },
+      { label: "400X", hits: 4,   total: 384, sharePercent: 1.04  },
+      { label: "500X", hits: 14,  total: 384, sharePercent: 3.65  }
+    ],
+    numberStats: [
+      { number: 0,  percent: 2.73, count: 141, lastSeen: 27,  isLightning: false },
+      { number: 1,  percent: 2.61, count: 135, lastSeen: 12,  isLightning: true  },
+      { number: 2,  percent: 2.83, count: 146, lastSeen: 13,  isLightning: true  },
+      { number: 3,  percent: 2.98, count: 154, lastSeen: 38,  isLightning: false },
+      { number: 4,  percent: 2.56, count: 132, lastSeen: 122, isLightning: false },
+      { number: 5,  percent: 2.83, count: 146, lastSeen: 10,  isLightning: true  },
+      { number: 6,  percent: 2.50, count: 129, lastSeen: 48,  isLightning: false },
+      { number: 7,  percent: 2.63, count: 136, lastSeen: 15,  isLightning: true  },
+      { number: 8,  percent: 2.52, count: 130, lastSeen: 8,   isLightning: false },
+      { number: 9,  percent: 3.00, count: 155, lastSeen: 29,  isLightning: false },
+      { number: 10, percent: 2.59, count: 134, lastSeen: 2,   isLightning: true  },
+      { number: 11, percent: 2.92, count: 151, lastSeen: 30,  isLightning: false },
+      { number: 12, percent: 2.67, count: 138, lastSeen: 17,  isLightning: true  },
+      { number: 13, percent: 2.30, count: 119, lastSeen: 0,   isLightning: false },
+      { number: 14, percent: 2.67, count: 138, lastSeen: 4,   isLightning: true  },
+      { number: 15, percent: 3.08, count: 159, lastSeen: 9,   isLightning: false },
+      { number: 16, percent: 2.65, count: 137, lastSeen: 181, isLightning: false },
+      { number: 17, percent: 3.37, count: 174, lastSeen: 67,  isLightning: true  },
+      { number: 18, percent: 2.52, count: 130, lastSeen: 11,  isLightning: false },
+      { number: 19, percent: 2.38, count: 123, lastSeen: 183, isLightning: false },
+      { number: 20, percent: 2.63, count: 136, lastSeen: 18,  isLightning: false },
+      { number: 21, percent: 2.59, count: 134, lastSeen: 103, isLightning: true  },
+      { number: 22, percent: 2.90, count: 150, lastSeen: 5,   isLightning: false },
+      { number: 23, percent: 2.83, count: 146, lastSeen: 26,  isLightning: false },
+      { number: 24, percent: 2.77, count: 143, lastSeen: 55,  isLightning: false },
+      { number: 25, percent: 2.48, count: 128, lastSeen: 14,  isLightning: true  },
+      { number: 26, percent: 2.96, count: 153, lastSeen: 20,  isLightning: false },
+      { number: 27, percent: 2.77, count: 143, lastSeen: 59,  isLightning: false },
+      { number: 28, percent: 2.46, count: 127, lastSeen: 21,  isLightning: false },
+      { number: 29, percent: 2.83, count: 146, lastSeen: 16,  isLightning: true  },
+      { number: 30, percent: 2.44, count: 126, lastSeen: 56,  isLightning: false },
+      { number: 31, percent: 3.14, count: 162, lastSeen: 6,   isLightning: false },
+      { number: 32, percent: 2.57, count: 133, lastSeen: 1,   isLightning: false },
+      { number: 33, percent: 2.11, count: 109, lastSeen: 128, isLightning: false },
+      { number: 34, percent: 2.63, count: 136, lastSeen: 101, isLightning: false },
+      { number: 35, percent: 2.69, count: 139, lastSeen: 116, isLightning: false },
+      { number: 36, percent: 2.86, count: 148, lastSeen: 3,   isLightning: true  }
+    ],
+    rowStats: [
+      { label: "1st Dozen", percent: 32.64 },
+      { label: "2nd Dozen", percent: 32.69 },
+      { label: "3rd Dozen", percent: 31.94 }
+    ],
+    columnStats: [
+      { label: "1st Column", percent: 31.34 },
+      { label: "2nd Column", percent: 33.64 },
+      { label: "3rd Column", percent: 32.29 }
+    ]
   };
 
-  // 20 уникальных шаров из диапазона 1–80
-  const pickBalls = (count) => {
-    const pool = Array.from({ length: 80 }, (_, i) => i + 1);
-    const result = [];
-    for (let i = 0; i < count; i++) {
-      const idx = Math.floor(Math.random() * pool.length);
-      result.push(pool.splice(idx, 1)[0]);
+  // лёгкая рандомизация lastSeen при каждом тике
+  base.numberStats = base.numberStats.map((n) => ({
+    ...n,
+    lastSeen: Math.max(0, n.lastSeen + Math.floor(Math.random() * 3 - 1))
+  }));
+
+  return base;
+}
+
+function renderLightningRouletteExtraStatsClient(data, ui = {}) {
+  const trackedMeta = `Past ${data.trackedHours}h • ${data.totalSpins.toLocaleString("en-US")} Spins`;
+  const maxColorPercent = Math.max(...data.colorStats.map((c) => c.percent), 1);
+  const maxMultPercent  = Math.max(...data.multiplierRows.map((r) => r.sharePercent), 1);
+
+  return `
+    <section class="lr-extra-section">
+
+      <!-- Colour Distribution -->
+      <article class="lr-extra-card">
+        <div class="lr-extra-head">
+          <h3 class="lr-extra-title">Colour Distribution</h3>
+          <p class="lr-extra-meta">${trackedMeta}</p>
+        </div>
+        <div class="lr-color-bars">
+          ${data.colorStats.map((c) => {
+            const w = Math.max((c.percent / maxColorPercent) * 100, 3);
+            return `
+              <div class="lr-color-row">
+                <span class="lr-color-dot" style="background:${c.color};"></span>
+                <span class="lr-color-label">${c.label}</span>
+                <div class="lr-color-bar-track">
+                  <div class="lr-color-bar-fill" style="width:${w}%; background:${c.color};"></div>
+                </div>
+                <span class="lr-color-pct">${c.percent}%</span>
+                <span class="lr-color-count">(${c.count.toLocaleString("en-US")})</span>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </article>
+
+      <!-- Lightning Multipliers -->
+      <article class="lr-extra-card">
+        <div class="lr-extra-head">
+          <h3 class="lr-extra-title">Lightning Multiplier Frequency</h3>
+          <p class="lr-extra-meta">${trackedMeta}</p>
+        </div>
+        <div class="lr-mult-list">
+          ${data.multiplierRows.map((r) => {
+            const w = Math.max((r.sharePercent / maxMultPercent) * 100, r.hits > 0 ? 3 : 0);
+            return `
+              <div class="lr-mult-row">
+                <span class="lr-mult-label">${r.label}</span>
+                <div class="lr-mult-bar-track">
+                  <div class="lr-mult-bar-fill" style="width:${w}%;"></div>
+                </div>
+                <span class="lr-mult-pct">${r.sharePercent}%</span>
+                <span class="lr-mult-hits">(${r.hits}/${r.total})</span>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </article>
+
+      <!-- Number Grid -->
+      <article class="lr-extra-card">
+        <div class="lr-extra-head">
+          <h3 class="lr-extra-title">Number Statistics</h3>
+          <p class="lr-extra-meta">${trackedMeta}</p>
+        </div>
+        <div class="lr-number-grid">
+          ${data.numberStats.map((n) => `
+            <div class="lr-number-cell ${n.isLightning ? "lr-number-lightning" : ""} ${n.lastSeen === 0 ? "lr-number-just-hit" : n.lastSeen > 100 ? "lr-number-cold" : ""}">
+              <span class="lr-number-val">${n.number}</span>
+              ${n.isLightning ? `<span class="lr-number-bolt">⚡</span>` : ""}
+              <span class="lr-number-pct">${n.percent}%</span>
+              <span class="lr-number-since">${n.lastSeen === 0 ? "now" : n.lastSeen + " ago"}</span>
+            </div>
+          `).join("")}
+        </div>
+      </article>
+
+      <!-- Dozens & Columns -->
+      <article class="lr-extra-card lr-extra-card--split">
+        <div class="lr-split-col">
+          <h3 class="lr-extra-title">Dozens</h3>
+          <p class="lr-extra-meta">${trackedMeta}</p>
+          <div class="lr-group-bars">
+            ${data.rowStats.map((r) => `
+              <div class="lr-group-row">
+                <span class="lr-group-label">${r.label}</span>
+                <div class="lr-color-bar-track">
+                  <div class="lr-color-bar-fill" style="width:${r.percent}%; background:var(--color-primary, #eab308);"></div>
+                </div>
+                <span class="lr-color-pct">${r.percent}%</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+        <div class="lr-split-col">
+          <h3 class="lr-extra-title">Columns</h3>
+          <p class="lr-extra-meta">${trackedMeta}</p>
+          <div class="lr-group-bars">
+            ${data.columnStats.map((c) => `
+              <div class="lr-group-row">
+                <span class="lr-group-label">${c.label}</span>
+                <div class="lr-color-bar-track">
+                  <div class="lr-color-bar-fill" style="width:${c.percent}%; background:var(--color-primary, #eab308);"></div>
+                </div>
+                <span class="lr-color-pct">${c.percent}%</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </article>
+
+    </section>
+  `;
+}
+
+
+  function safeRerender(name, fn) {
+    try {
+      fn();
+    } catch (err) {
+      console.warn(`[safeRerender:${name}] упала с ошибкой, контент сохранён:`, err);
     }
-    return result.sort((a, b) => a - b);
-  };
-
-  const balls = pickBalls(20);
-  const megaBallNumber = Math.floor(Math.random() * 80) + 1;
-
-  newSpin.balls              = balls;
-  newSpin.megaBallNumber     = megaBallNumber;
-  newSpin.megaBallMultiplier = pickMegaMult();
-
-  // ~10% шанс второго Mega Ball
-  if (Math.random() < 0.10) {
-    let secondNum;
-    do { secondNum = Math.floor(Math.random() * 80) + 1; }
-    while (secondNum === megaBallNumber);
-    newSpin.secondMegaBallNumber     = secondNum;
-    newSpin.secondMegaBallMultiplier = pickMegaMult();
   }
-  newSpin.payout = Math.round(Math.random() * 49500 + 500);
-}
-// ─────────────────────────────────────────────────────────
-
-spinData.unshift(newSpin);
-  
-  // держим запас (чтобы окно 500 работало и не «скакало»)
-  if (spinData.length > 800) spinData.pop();
-
-  // всегда обновляем temperature
-  rerenderTemperaturePanel(game);
-
-  // conditional updates
-  if (state.currentTab === "history") {
-    rerenderHistoryPanel(game, spinData, state.ui);
-  }
-  
-  if (state.currentTab === "stats") {
-    rerenderStatsPanel(game, spinData, state.ui);
-  }
-  
-  if (state.currentTab === "bigwins") {
-    rerenderBigWinsPanel(game, state.ui);
-  }
-  // Dream Catcher extra — обновляем всегда, каждые 30 сек
-  if (game.id === "dreamcatcher") {
-    rerenderDreamCatcherExtraOnly(game, spinData, state.ui);
-  }
-}

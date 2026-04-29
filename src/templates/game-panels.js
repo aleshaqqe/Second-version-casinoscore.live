@@ -1,3 +1,5 @@
+"use strict";
+
 const {
   truncateLabel,
   numberWithCommas,
@@ -5,62 +7,76 @@ const {
   formatDate
 } = require("../utils/render-helpers");
 
+// ── Lightning Roulette helpers ────────────────────────────────────────────────
+const LR_RED_SET = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+
+function lrColor(n) {
+  if (n === 0)              return { bg: "#16a34a", text: "#fff" };
+  if (LR_RED_SET.has(n))   return { bg: "#dc2626", text: "#fff" };
+  return                           { bg: "#1a1a1a", text: "#fff" };
+}
+
+function lrFormatTime(date) {
+  const d      = new Date(date);
+  const offset = -d.getTimezoneOffset() / 60;
+  const sign   = offset >= 0 ? "+" : "-";
+  const pad    = (n) => String(Math.abs(n)).padStart(2, "0");
+  const mon    = d.toLocaleDateString("en-US", { month: "short" });
+  return `${mon} ${d.getDate()} ${d.getFullYear()} @ ${pad(d.getHours())}:${pad(d.getMinutes())} UTC${sign}${pad(offset)}`;
+}
+
+function lrBall(n) {
+  const c = lrColor(n);
+  return `<span class="lr-hist-ball" style="background:${c.bg};color:${c.text}">${n}</span>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 
 function getSegmentImage(game, segmentName) {
   if (!game || !segmentName) return "";
-
   const key = String(segmentName).trim();
 
   if (game.id === "monopoly") {
     const monopolySegmentImages = {
-      "1": "img/monopoly/temperature/one.webp",
-      "2": "img/monopoly/temperature/two.webp",
-      "5": "img/monopoly/temperature/five.webp",
-      "10": "img/monopoly/temperature/ten.webp",
+      "1":       "img/monopoly/temperature/one.webp",
+      "2":       "img/monopoly/temperature/two.webp",
+      "5":       "img/monopoly/temperature/five.webp",
+      "10":      "img/monopoly/temperature/ten.webp",
       "2 Rolls": "img/monopoly/temperature/two-rolls.webp",
       "4 Rolls": "img/monopoly/temperature/four-rolls.webp",
-      "Chance": "img/monopoly/temperature/chance.webp"
+      "Chance":  "img/monopoly/temperature/chance.webp"
     };
     return monopolySegmentImages[key] || "";
   }
 
   if (game.id === "megaball") {
     const megaBallSegmentImages = {
-      "5x": "/img/mega-ball/icons/5x.webp",
-      "10x": "/img/mega-ball/icons/10x.webp",
-      "12x": "/img/mega-ball/icons/12x.webp",
-      "15x": "/img/mega-ball/icons/15x.webp",
-      "20x": "/img/mega-ball/icons/20x.webp",
-      "25x": "/img/mega-ball/icons/25x.webp",
-      "50x": "/img/mega-ball/icons/50x.webp",
+      "5x":   "/img/mega-ball/icons/5x.webp",
+      "10x":  "/img/mega-ball/icons/10x.webp",
+      "12x":  "/img/mega-ball/icons/12x.webp",
+      "15x":  "/img/mega-ball/icons/15x.webp",
+      "20x":  "/img/mega-ball/icons/20x.webp",
+      "25x":  "/img/mega-ball/icons/25x.webp",
+      "50x":  "/img/mega-ball/icons/50x.webp",
       "100x": "/img/mega-ball/icons/100x.webp"
     };
     return megaBallSegmentImages[key] || "";
   }
 
-  if (game.spinResultImages && game.spinResultImages[key]) {
-    return game.spinResultImages[key];
-  }
-
-  if (game.segmentImages && game.segmentImages[key]) {
-    return game.segmentImages[key];
-  }
-
+  if (game.spinResultImages && game.spinResultImages[key]) return game.spinResultImages[key];
+  if (game.segmentImages    && game.segmentImages[key])    return game.segmentImages[key];
   return "";
 }
-
 
 function getSlotResultImage(game, segmentName) {
   if (!game || !game.slotResultImages) return "";
   return game.slotResultImages[segmentName] || "";
 }
 
-
 function normalizeImagePath(image) {
   if (!image) return "";
   return image.startsWith("/") ? image : `/${image}`;
 }
-
 
 function renderSegmentBadge(game, segmentName, color, extraClass = "", imageType = "spin") {
   const image =
@@ -83,7 +99,6 @@ function renderSegmentBadge(game, segmentName, color, extraClass = "", imageType
   `;
 }
 
-
 function renderChartLabel(game, segmentName) {
   const image = getSegmentImage(game, segmentName);
 
@@ -98,7 +113,6 @@ function renderChartLabel(game, segmentName) {
   return `<span class="chart-label">${truncateLabel(segmentName)}</span>`;
 }
 
-
 function renderTemperatureSegment(game, segmentName, color, shortLabel) {
   const image = getSegmentImage(game, segmentName);
 
@@ -112,7 +126,6 @@ function renderTemperatureSegment(game, segmentName, color, shortLabel) {
 
   return `<div class="temp-segment" style="background:${color};">${shortLabel}</div>`;
 }
-
 
 function renderTemperaturePanel(game, temperatureData, t) {
   const tr = t?.gamePanels || {};
@@ -130,7 +143,6 @@ function renderTemperaturePanel(game, temperatureData, t) {
         <div class="temp-grid mega-temp-grid">
           ${items.map((item) => {
             const segmentImage = getSegmentImage(game, item.segment);
-            
             return `
               <div class="temp-card">
                 ${
@@ -183,11 +195,10 @@ function renderTemperaturePanel(game, temperatureData, t) {
   `;
 }
 
-// КРУЖКИ ДЛЯ МЕГА БОЛОВ
+// ── Mega Ball helpers ─────────────────────────────────────────────────────────
 function renderBallBadge(ball) {
   return `<span class="result-badge result-badge-ball">${ball}</span>`;
 }
-
 
 function renderBallsList(balls = []) {
   return `
@@ -197,12 +208,90 @@ function renderBallsList(balls = []) {
   `;
 }
 
-
+// ── History panel ─────────────────────────────────────────────────────────────
 function renderHistoryPanel(game, spinData, t) {
-  const tr = t?.gamePanels || {};
+  const tr       = t?.gamePanels || {};
   const pageData = spinData.slice(0, 25);
-  const subtitle = tr.historySubtitle || "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
+  const subtitle =
+    tr.historySubtitle ||
+    "Explore the latest spin history with real-time results, multipliers, winners, and payouts.";
 
+  // ── Lightning Roulette ──────────────────────────────────────────────────────
+  if (game.id === "lightningroulette") {
+    const lrTr = t?.lightningrouletteHistory || {};
+
+    // Translation keys (добавь в translations.js → lightningrouletteHistory):
+    // occurredAt, spinResult, multiplier, firstLucky, secondLucky,
+    // thirdLucky, fourthLucky, fifthLucky, panelTitle, subtitle
+    const cols = [
+      lrTr.occurredAt  || "Occurred At",
+      lrTr.spinResult  || "Spin Result",
+      lrTr.multiplier  || "Multiplier",
+      lrTr.firstLucky  || "First Lucky",
+      lrTr.secondLucky || "Second Lucky",
+      lrTr.thirdLucky  || "Third Lucky",
+      lrTr.fourthLucky || "Fourth Lucky",
+      lrTr.fifthLucky  || "Fifth Lucky",
+    ];
+
+    const rows = pageData.map((spin) => {
+      // Multiplier cell — заполняется только если шар попал на Lucky Number
+      const multCell = spin.hitMultiplier
+        ? `<td class="lr-hist-td lr-hist-td--mult">
+             <span class="lr-hist-hit">${spin.hitMultiplier}x</span>
+             <span class="lr-hist-bolt">⚡</span>
+           </td>`
+        : `<td class="lr-hist-td lr-hist-td--mult"></td>`;
+
+      // 5 слотов Lucky Numbers (пустые если меньше)
+      const luckyCells = Array.from({ length: 5 }, (_, i) => {
+        const lucky = spin.luckyNumbers?.[i] || null;
+        if (!lucky) return `<td class="lr-hist-td lr-hist-td--lucky"></td>`;
+        return `<td class="lr-hist-td lr-hist-td--lucky">
+          ${lrBall(lucky.number)}
+          <span class="lr-hist-mult">(${lucky.multiplier}x)</span>
+        </td>`;
+      }).join("");
+
+      return `
+        <tr class="lr-hist-row${spin.hitMultiplier ? " lr-hist-row--hit" : ""}">
+          <td class="lr-hist-td lr-hist-td--time">
+            <span class="lr-hist-time">${lrFormatTime(spin.time)}</span>
+          </td>
+          <td class="lr-hist-td lr-hist-td--result">
+            ${lrBall(spin.spinResult)}
+          </td>
+          ${multCell}
+          ${luckyCells}
+        </tr>`;
+    }).join("");
+
+    return `
+      <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
+        <h2 class="panel-title">${lrTr.panelTitle || "Spin History"}</h2>
+        <p class="panel-subtitle">
+          ${lrTr.subtitle || "Recent spin history with Lucky Number results."}
+        </p>
+
+        <div class="lr-hist-wrap">
+          <table class="lr-hist-table">
+            <thead>
+              <tr class="lr-hist-head">
+                ${cols.map((c, i) =>
+                  `<th class="lr-hist-th${i === 0 ? " lr-hist-th--time" : ""}">${c}</th>`
+                ).join("")}
+              </tr>
+            </thead>
+            <tbody>
+              ${rows}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Mega Ball ───────────────────────────────────────────────────────────────
   if (game.id === "megaball") {
     return `
       <div class="tab-panel" data-tab-panel="history" data-tab-panel-group="game-tabs">
@@ -213,7 +302,7 @@ function renderHistoryPanel(game, spinData, t) {
           <table class="spin-table">
             <thead>
               <tr>
-                <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
+                <th class="t-left">${tr.occurredAt   || "Occurred At"}</th>
                 <th class="t-left">Mega Ball</th>
                 <th class="t-left">2nd Mega Ball</th>
                 <th class="t-left">Balls</th>
@@ -236,14 +325,12 @@ function renderHistoryPanel(game, spinData, t) {
                      </div>`
                   : `<span class="text-soft">—</span>`;
 
-                const ballsMarkup = renderBallsList(spin.balls);
-
                 return `
                   <tr>
                     <td class="t-left text-soft">${formatTime(spin.time)}</td>
                     <td class="t-left">${megaBallMarkup}</td>
                     <td class="t-left">${secondMegaBallMarkup}</td>
-                    <td class="t-left mega-balls-cell">${ballsMarkup}</td>
+                    <td class="t-left mega-balls-cell">${renderBallsList(spin.balls)}</td>
                     <td class="t-right text-green" style="font-weight:600;">
                       €${numberWithCommas(spin.payout)}
                     </td>
@@ -257,7 +344,8 @@ function renderHistoryPanel(game, spinData, t) {
     `;
   }
 
-  const showSlotResult = game.id !== "monopoly" && !game.hideSlotResult;
+  // ── Все остальные игры ──────────────────────────────────────────────────────
+  const showSlotResult   = game.id !== "monopoly" && !game.hideSlotResult;
   const showSpecialResult = game.id === "dreamcatcher";
 
   return `
@@ -269,13 +357,13 @@ function renderHistoryPanel(game, spinData, t) {
         <table class="spin-table">
           <thead>
             <tr>
-              <th class="t-left">${tr.occurredAt || "Occurred At"}</th>
-              ${showSlotResult ? `<th class="t-left">${tr.slotResult || "Slot Result"}</th>` : ""}
-              <th class="t-left">${tr.spinResult || "Spin Result"}</th>
+              <th class="t-left">${tr.occurredAt    || "Occurred At"}</th>
+              ${showSlotResult    ? `<th class="t-left">${tr.slotResult    || "Slot Result"}</th>`    : ""}
+              <th class="t-left">${tr.spinResult    || "Spin Result"}</th>
               ${showSpecialResult ? `<th class="t-left">${tr.specialResult || "Special Result"}</th>` : ""}
-              <th class="t-right">${tr.multiplier || "Multiplier"}</th>
+              <th class="t-right">${tr.multiplier   || "Multiplier"}</th>
               <th class="t-right">${tr.totalWinners || "Total Winners"}</th>
-              <th class="t-right">${tr.totalPayout || "Total Payout"}</th>
+              <th class="t-right">${tr.totalPayout  || "Total Payout"}</th>
             </tr>
           </thead>
           <tbody>
@@ -290,7 +378,9 @@ function renderHistoryPanel(game, spinData, t) {
                   <td class="t-left text-soft">${formatTime(spin.time)}</td>
                   ${showSlotResult ? `
                     <td class="t-left">
-                      ${isSpecial ? "" : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
+                      ${isSpecial
+                        ? ""
+                        : renderSegmentBadge(game, spin.slotResult, slotColor, "result-badge-slot", "slot")}
                     </td>
                   ` : ""}
                   <td class="t-left">
@@ -314,39 +404,41 @@ function renderHistoryPanel(game, spinData, t) {
   `;
 }
 
+// ── Stats panel ───────────────────────────────────────────────────────────────
 function renderStatsPanel(game, distribution, summary, extraContent = "", t) {
   const tr = t?.gamePanels || {};
   const highestPercent = Math.max(...distribution.map((item) => item.percent), 1);
 
-  const rtpBasedOn = tr.rtpBasedOn || "Based on last 1,000 spins";
-  const totalSpinsTodayLabel = tr.summaryTotalSpinsToday || "Total Spins Today";
-  const bonusRoundsLabel = tr.summaryBonusRounds || "Bonus Rounds";
+  const rtpBasedOn            = tr.rtpBasedOn            || "Based on last 1,000 spins";
+  const totalSpinsTodayLabel  = tr.summaryTotalSpinsToday || "Total Spins Today";
+  const bonusRoundsLabel      = tr.summaryBonusRounds     || "Bonus Rounds";
   const biggestMultiplierLabel = tr.summaryBiggestMultiplier || "Biggest Multiplier";
-  const avgPayoutLabel = tr.summaryAvgPayout || "Avg. Payout";
+  const avgPayoutLabel        = tr.summaryAvgPayout       || "Avg. Payout";
 
   return `
     <div class="tab-panel" data-tab-panel="stats" data-tab-panel-group="game-tabs">
       <div class="stats-main-grid">
-        <div class="stats-grid-card">
-          <h2 class="panel-title">Result Distribution</h2>
-          <div class="chart-scroll">
-            <div class="chart-box">
-              ${distribution.map((item) => {
-                const height = Math.max((item.percent / highestPercent) * 100, 4);
-                return `
-                  <div class="chart-col">
-                    <span class="chart-percent">${item.percent}%</span>
-                    <div class="chart-bar-wrap">
-                      <div class="chart-bar" style="height:${height}%; background:${item.color};"></div>
-                    </div>
-                    ${renderChartLabel(game, item.label)}
-                  </div>
-                `;
-              }).join("")}
-            </div>
+      ${game.id !== "lightningroulette" ? `
+      <div class="stats-grid-card">
+        <h2 class="panel-title">Result Distribution</h2>
+        <div class="chart-scroll">
+          <div class="chart-box">
+          ${distribution.map((item) => {
+            const height = Math.max((item.percent / highestPercent) * 100, 4);
+            return `
+              <div class="chart-col">
+                <span class="chart-percent">${item.percent}%</span>
+                <div class="chart-bar-wrap">
+                  <div class="chart-bar" style="height:${height}%; background:${item.color};"></div>
+                </div>
+                ${renderChartLabel(game, item.label)}
+              </div>
+            `;
+          }).join("")}
           </div>
         </div>
-
+      </div>
+    ` : ""}
         <div class="stats-grid-card">
           <h2 class="panel-title">Return to Player</h2>
           <div class="rtp-card-body">
@@ -369,15 +461,19 @@ function renderStatsPanel(game, distribution, summary, extraContent = "", t) {
           <p class="summary-value purple">${numberWithCommas(summary.bonusRoundsToday)}</p>
         </div>
 
+        ${game.id !== "lightningroulette" ? `
         <div class="stats-grid-card summary-card">
           <p class="summary-label">${biggestMultiplierLabel}</p>
           <p class="summary-value gold">${summary.biggestMultToday}</p>
         </div>
+      ` : ""}
 
-        <div class="stats-grid-card summary-card">
-          <p class="summary-label">${avgPayoutLabel}</p>
-          <p class="summary-value green">${summary.avgPayoutToday}</p>
-        </div>
+      ${game.id !== "lightningroulette" ? `
+  <div class="stats-grid-card summary-card">
+    <p class="summary-label">${avgPayoutLabel}</p>
+    <p class="summary-value green">${summary.avgPayoutToday}</p>
+  </div>
+` : ""}
       </div>
 
       ${extraContent}
@@ -385,7 +481,7 @@ function renderStatsPanel(game, distribution, summary, extraContent = "", t) {
   `;
 }
 
-
+// ── Big wins panel ────────────────────────────────────────────────────────────
 function renderBigWinsPanel(game, wins, t) {
   const tr = t?.gamePanels || {};
   const watchLabel = tr.watch || "Watch";
@@ -427,7 +523,6 @@ function renderBigWinsPanel(game, wins, t) {
     </div>
   `;
 }
-
 
 module.exports = {
   getSegmentImage,

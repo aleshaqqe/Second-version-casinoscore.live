@@ -3,6 +3,203 @@ const DEFAULT_LANG = "en";
 
 const UI_TRANSLATIONS = {
   en: {
+    lightningrouletteReview: {
+      title: "Lightning Roulette Review, RTP & Live Statistics",
+      intro:
+        "Lightning Roulette is a live dealer roulette variant based on the European wheel. The game follows standard roulette rules, but each round can assign random multipliers to selected Lucky Numbers, creating a higher-variance version of traditional live roulette.",
+    
+      quickOverviewTitle: "Quick Game Overview",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+    
+      specProvider: "Provider",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Game Name",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Release Year",
+      specReleaseYearValue: "2018",
+      specGameType: "Game Type",
+      specGameTypeValue: "Live Dealer Roulette",
+      specWheel: "Wheel Format",
+      specWheelValue: "European Roulette (single zero)",
+      specRtp: "RTP",
+      specRtpValue: "97.30% on standard bets; 97.10% on straight-up bets",
+      specMinBet: "Minimum Bet",
+      specMinBetValue: "$0.20",
+      specMaxBet: "Maximum Bet",
+      specMaxBetValue: "$10,000",
+      specMaxWin: "Max Multiplier",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Lucky Numbers",
+      specLuckyNumbersValue: "1 to 5 per round",
+      specVolatility: "Volatility",
+      specVolatilityValue: "Medium to high",
+      specMobile: "Mobile Play",
+      specMobileValue: "Supported",
+    
+      aboutTitle: "What is Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette is a live roulette game that keeps the European single-zero wheel and standard betting layout, while adding random multiplier events before each spin. This format is often described as lightning roulette live or lightning roulette online because the game combines a real studio dealer with a multiplier mechanic generated before the ball lands.",
+      aboutText2:
+        "In practical terms, the difference from classic roulette is simple: one to five numbers become Lucky Numbers each round, and if a straight-up bet lands on one of them, the payout uses the assigned multiplier instead of the regular straight-up payout. That is the core idea behind most lightning roulette review pages and statistics trackers.",
+    
+      howToPlayTitle: "How to Play Lightning Roulette",
+      howToPlayText1:
+        "How to play Lightning Roulette is straightforward for anyone familiar with roulette. Players place bets during the betting phase, then the game reveals Lucky Numbers and their multipliers before the live spin begins.",
+      howToPlayText2:
+        "Lightning roulette rules are based on European roulette, so outside bets, dozens, columns and inside bets all work as expected. The extra mechanic affects only straight-up bets that land on selected Lucky Numbers.",
+      howToPlayBullets: [
+        "Choose chip values and place bets on the roulette layout.",
+        "Wait for the game to assign 1 to 5 Lucky Numbers with random multipliers.",
+        "Watch the dealer spin the wheel and release the ball.",
+        "If your straight-up bet hits a Lucky Number, the round uses the Lightning multiplier payout.",
+        "All non-multiplied bets settle according to standard European roulette rules."
+      ],
+    
+      payoutTitle: "Lightning Roulette Payouts",
+      payoutIntro:
+        "Lightning roulette payouts follow standard roulette for most bets, while the main difference appears on straight-up numbers. When a selected Lucky Number wins, the assigned multiplier replaces the regular straight-up payout and can reach up to 500x.",
+    
+      payoutColBet: "Bet Type",
+      payoutColPayout: "Payout",
+      payoutColNote: "How It Works",
+    
+      payoutBetStraightLucky: "Straight Up (Lucky Number)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Applied when a straight-up bet lands on a Lucky Number with an assigned multiplier.",
+    
+      payoutBetStraight: "Straight Up (standard)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Standard straight-up win without a Lightning multiplier.",
+    
+      payoutBetSplit: "Split",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Bet on 2 adjacent numbers.",
+    
+      payoutBetStreet: "Street",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Bet on 3 numbers in a row.",
+    
+      payoutBetCorner: "Corner",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Bet on 4 numbers.",
+    
+      payoutBetDozen: "Dozen / Column",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Covers 12 numbers.",
+    
+      payoutBetEven: "Red/Black, Odd/Even, High/Low",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Standard outside bets.",
+    
+      rtpTitle: "Lightning Roulette RTP and Volatility",
+      rtpText1:
+        "Lightning roulette RTP depends on the type of bet. Standard bets such as red/black or dozens keep an RTP of about 97.30%, while straight-up bets sit around 97.10% because the game reallocates part of the payout structure to fund the multiplier feature.",
+      rtpText2:
+        "In terms of variance, the game is more volatile than classic roulette when the focus is on inside numbers. Lightning roulette multipliers create less frequent but larger payout moments, which is why many players describe the game as medium-to-high volatility rather than a standard roulette profile.",
+    
+      strategyTitle: "Lightning Roulette Strategy Notes",
+      strategyText1:
+        "A lightning roulette strategy does not change the house edge, but it can change the risk profile of a session. Players who prefer lower variance usually stay closer to outside bets, while those who want exposure to multipliers focus more on straight-up coverage.",
+      strategyText2:
+        "From a statistics perspective, the game is best approached as European roulette with an additional multiplier layer. That makes it useful to track Lucky Number frequency, multiplier distribution and payout swings over a larger sample rather than judge the game by a short streak.",
+    
+      trackerTitle: "What You Can Track",
+      trackerIntro:
+        "This section of the site is built for players who want to review lightning roulette online through recent results, multipliers and summary metrics rather than rely on short-term impressions.",
+    
+      trackLuckyNumbers: "Lucky Number History",
+      trackLuckyNumbersText:
+        "Track which numbers received multipliers and how often they appear in recent rounds.",
+    
+      trackMultipliers: "Multiplier Distribution",
+      trackMultipliersText:
+        "See how often 50x, 100x, 150x, 200x, 300x, 400x and 500x multipliers appear.",
+    
+      trackSpinResults: "Spin Results",
+      trackSpinResultsText:
+        "Review recent results, including winning number, lightning numbers and hit multipliers.",
+    
+      trackRtp: "RTP Snapshot",
+      trackRtpText:
+        "Compare observed outcomes with the expected return profile of the game.",
+    
+      trackPatterns: "Result Patterns",
+      trackPatternsText:
+        "Use recent history and distribution data to follow short-term streaks and number frequency.",
+    
+      comparisonTitle: "Lightning Roulette at a Glance",
+      compColArea: "Area",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Why It Matters",
+    
+      compAreaBase: "Base Format",
+      compValueBase: "European roulette with a live dealer",
+      compWhyBase:
+        "The core rules stay familiar for players who already know standard roulette.",
+    
+      compAreaMultipliers: "Lightning Multipliers",
+      compValueMultipliers: "1–5 Lucky Numbers, 50x to 500x",
+      compWhyMultipliers:
+        "Adds higher upside to straight-up bets without changing outside bet payouts.",
+    
+      compAreaRtp: "RTP Profile",
+      compValueRtp: "97.30% standard / 97.10% straight-up",
+      compWhyRtp:
+        "Useful for understanding how multiplier funding affects different bet types.",
+    
+      compAreaVariance: "Volatility",
+      compValueVariance: "Higher than classic roulette on inside bets",
+      compWhyVariance:
+        "Multiplier-based payouts create wider short-term swings.",
+    
+      compAreaUse: "Best Use Case",
+      compValueUse: "Players who want roulette with extra variance",
+      compWhyUse:
+        "Keeps the standard roulette structure while adding occasional boosted payouts.",
+    
+      faqTitle: "Frequently Asked Questions",
+      faq: [
+        {
+          q: "What is Lightning Roulette?",
+          a: "Lightning Roulette is a live dealer version of European roulette with random multipliers on selected Lucky Numbers."
+        },
+        {
+          q: "How do Lightning Roulette multipliers work?",
+          a: "Before each spin, the game selects 1 to 5 Lucky Numbers and assigns multipliers from 50x to 500x. If a straight-up bet lands on one of those numbers, the multiplier payout applies."
+        },
+        {
+          q: "What is the Lightning Roulette RTP?",
+          a: "The typical RTP is around 97.30% for standard bets and about 97.10% for straight-up bets."
+        },
+        {
+          q: "Are Lightning Roulette payouts different from standard roulette?",
+          a: "Most bet types use standard European roulette payouts. The main difference is the multiplier-based payout on selected straight-up numbers."
+        },
+        {
+          q: "Is Lightning Roulette more volatile than classic roulette?",
+          a: "Yes. The multiplier system creates wider short-term variance, especially for players focusing on inside bets."
+        }
+      ],
+    
+      conclusionTitle: "General Impression",
+      conclusionText:
+        "As a neutral lightning roulette review, the game can be described as standard European roulette with an added multiplier layer that increases variance without changing the core format. For players interested in lightning roulette live statistics, it is a useful game to track because multiplier frequency, Lucky Number selection and payout patterns can all be measured over time."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Spin History",
+      subtitle:    "Recent spin history with Lucky Number results.",
+      occurredAt:  "Occurred At",
+      spinResult:  "Spin Result",
+      multiplier:  "Multiplier",
+      firstLucky:  "First Lucky",
+      secondLucky: "Second Lucky",
+      thirdLucky:  "Third Lucky",
+      fourthLucky: "Fourth Lucky",
+      fifthLucky:  "Fifth Lucky",
+    },
     megaballReview: {
       title: "Mega Ball Tracker, RTP & Game Review",
       intro: "Track Mega Ball stats, results and RTP in real time with live tracker tools. Review ball history, multiplier rounds, winner counts and payout trends in one place.",
@@ -387,6 +584,10 @@ const UI_TRANSLATIONS = {
         title: "Casino Score Live 🔥 Live Stats and Real-Time Results [2026]",
         description: "Casino Score Live is your ultimate hub for live stats and real-time results in 2026. Analyze RTP, track hot or cold streaks, and make data-driven betting choices securely."
       },
+      lightningroulette:{
+        title: "Lightning Roulette Statistics, RTP & Live Results",
+        description: "Track Lightning Roulette live results, RTP, multipliers, Lucky Numbers and spin history. View payouts, trends and real-time game stats online."
+      },
       megaball:{ 
         title: "Mega Ball Live Stats & Results – Play Online + RTP & Trends",
       description: "Mega Ball live stats, results & RTP insights. Track trends, multipliers and outcomes in real time. Play Mega Ball online or demo – find best casinos now."
@@ -629,6 +830,203 @@ cashHunt: "Cash Hunt",
   },
 
   es: {
+    lightningrouletteReview: {
+      title: "Revisión de Lightning Roulette, RTP y Estadísticas en Vivo",
+      intro:
+        "Lightning Roulette es una variante de ruleta con crupier en vivo basada en la rueda europea. El juego sigue las reglas estándar de ruleta, pero cada ronda puede asignar multiplicadores aleatorios a números seleccionados como Números de la Suerte, creando una versión de mayor varianza que la ruleta en vivo tradicional.",
+    
+      quickOverviewTitle: "Descripción General Rápida del Juego",
+      tableParameter: "Parámetro",
+      tableDetails: "Detalles",
+    
+      specProvider: "Proveedor",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nombre del Juego",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Año de Lanzamiento",
+      specReleaseYearValue: "2018",
+      specGameType: "Tipo de Juego",
+      specGameTypeValue: "Ruleta con Crupier en Vivo",
+      specWheel: "Formato de la Rueda",
+      specWheelValue: "Ruleta Europea (cero único)",
+      specRtp: "RTP",
+      specRtpValue: "97.30% en apuestas estándar; 97.10% en apuestas directas",
+      specMinBet: "Apuesta Mínima",
+      specMinBetValue: "$0.20",
+      specMaxBet: "Apuesta Máxima",
+      specMaxBetValue: "$10,000",
+      specMaxWin: "Multiplicador Máximo",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Números de la Suerte",
+      specLuckyNumbersValue: "1 a 5 por ronda",
+      specVolatility: "Volatilidad",
+      specVolatilityValue: "Media a alta",
+      specMobile: "Juego Móvil",
+      specMobileValue: "Soportado",
+    
+      aboutTitle: "¿Qué es Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette es un juego de ruleta en vivo que mantiene la rueda europea de cero único y la mesa de apuestas estándar, mientras añade eventos de multiplicadores aleatorios antes de cada giro. Este formato se describe a menudo como ruleta de relámpago en vivo o ruleta de relámpago en línea porque el juego combina un crupier de estudio real con una mecánica de multiplicador generada antes de que la bola caiga.",
+      aboutText2:
+        "En términos prácticos, la diferencia respecto a la ruleta clásica es simple: uno a cinco números se convierten en Números de la Suerte cada ronda, y si una apuesta directa cae en uno de ellos, el pago utiliza el multiplicador asignado en lugar del pago directo regular. Esta es la idea central detrás de la mayoría de páginas de revisión de ruleta de relámpago y rastreadores de estadísticas.",
+    
+      howToPlayTitle: "Cómo Jugar a Lightning Roulette",
+      howToPlayText1:
+        "Cómo jugar a Lightning Roulette es sencillo para cualquiera familiarizado con la ruleta. Los jugadores realizan apuestas durante la fase de apuestas, luego el juego revela los Números de la Suerte y sus multiplicadores antes de que comience el giro en vivo.",
+      howToPlayText2:
+        "Las reglas de ruleta de relámpago se basan en la ruleta europea, por lo que las apuestas exteriores, docenas, columnas y apuestas interiores funcionan como se esperaba. El mecanismo adicional afecta solo a las apuestas directas que caen en Números de la Suerte seleccionados.",
+      howToPlayBullets: [
+        "Elige valores de fichas y realiza apuestas en la mesa de ruleta.",
+        "Espera a que el juego asigne 1 a 5 Números de la Suerte con multiplicadores aleatorios.",
+        "Observa al crupier girar la rueda y soltar la bola.",
+        "Si tu apuesta directa acierta un Número de la Suerte, la ronda utiliza el pago del multiplicador de relámpago.",
+        "Todas las apuestas no multiplicadas se resuelven según las reglas estándar de ruleta europea."
+      ],
+    
+      payoutTitle: "Pagos de Lightning Roulette",
+      payoutIntro:
+        "Los pagos de ruleta de relámpago siguen la ruleta estándar para la mayoría de apuestas, mientras que la principal diferencia aparece en números directos. Cuando un Número de la Suerte seleccionado gana, el multiplicador asignado reemplaza el pago directo regular y puede alcanzar hasta 500x.",
+    
+      payoutColBet: "Tipo de Apuesta",
+      payoutColPayout: "Pago",
+      payoutColNote: "Cómo Funciona",
+    
+      payoutBetStraightLucky: "Directo (Número de la Suerte)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Aplicado cuando una apuesta directa cae en un Número de la Suerte con un multiplicador asignado.",
+    
+      payoutBetStraight: "Directo (estándar)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Ganancia directa estándar sin multiplicador de relámpago.",
+    
+      payoutBetSplit: "Repartición",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Apuesta en 2 números adyacentes.",
+    
+      payoutBetStreet: "Calle",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Apuesta en 3 números en fila.",
+    
+      payoutBetCorner: "Esquina",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Apuesta en 4 números.",
+    
+      payoutBetDozen: "Docena / Columna",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Cubre 12 números.",
+    
+      payoutBetEven: "Rojo/Negro, Impar/Par, Alto/Bajo",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Apuestas exteriores estándar.",
+    
+      rtpTitle: "RTP y Volatilidad de Lightning Roulette",
+      rtpText1:
+        "El RTP de ruleta de relámpago depende del tipo de apuesta. Las apuestas estándar como rojo/negro o docenas mantienen un RTP de aproximadamente 97.30%, mientras que las apuestas directas rondan el 97.10% porque el juego reasigna parte de la estructura de pago para financiar la función de multiplicador.",
+      rtpText2:
+        "En términos de varianza, el juego es más volátil que la ruleta clásica cuando el enfoque está en números interiores. Los multiplicadores de ruleta de relámpago crean momentos de pago menos frecuentes pero más grandes, por lo que muchos jugadores describen el juego como volatilidad media a alta en lugar de un perfil de ruleta estándar.",
+    
+      strategyTitle: "Notas sobre la Estrategia de Lightning Roulette",
+      strategyText1:
+        "Una estrategia de ruleta de relámpago no cambia la ventaja de la casa, pero puede cambiar el perfil de riesgo de una sesión. Los jugadores que prefieren menor varianza generalmente se mantienen más cerca de apuestas exteriores, mientras que aquellos que desean exposición a multiplicadores se enfocan más en cobertura directa.",
+      strategyText2:
+        "Desde una perspectiva estadística, el juego se aborda mejor como ruleta europea con una capa de multiplicador adicional. Esto hace que sea útil rastrear la frecuencia de Números de la Suerte, distribución de multiplicadores y oscilaciones de pago en una muestra más grande en lugar de juzgar el juego por una racha corta.",
+    
+      trackerTitle: "Qué Puedes Rastrear",
+      trackerIntro:
+        "Esta sección del sitio está diseñada para jugadores que desean revisar ruleta de relámpago en línea a través de resultados recientes, multiplicadores y métricas de resumen en lugar de confiar en impresiones a corto plazo.",
+    
+      trackLuckyNumbers: "Historial de Números de la Suerte",
+      trackLuckyNumbersText:
+        "Rastrea qué números recibieron multiplicadores y con qué frecuencia aparecen en rondas recientes.",
+    
+      trackMultipliers: "Distribución de Multiplicadores",
+      trackMultipliersText:
+        "Ve con qué frecuencia aparecen multiplicadores de 50x, 100x, 150x, 200x, 300x, 400x y 500x.",
+    
+      trackSpinResults: "Resultados de Giros",
+      trackSpinResultsText:
+        "Revisa resultados recientes, incluyendo número ganador, números de relámpago y multiplicadores acertados.",
+    
+      trackRtp: "Instantánea de RTP",
+      trackRtpText:
+        "Compara los resultados observados con el perfil de retorno esperado del juego.",
+    
+      trackPatterns: "Patrones de Resultados",
+      trackPatternsText:
+        "Usa el historial reciente y datos de distribución para seguir rachas a corto plazo y frecuencia de números.",
+    
+      comparisonTitle: "Lightning Roulette de un Vistazo",
+      compColArea: "Área",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Por Qué Importa",
+    
+      compAreaBase: "Formato Base",
+      compValueBase: "Ruleta europea con crupier en vivo",
+      compWhyBase:
+        "Las reglas principales se mantienen familiares para jugadores que ya conocen la ruleta estándar.",
+    
+      compAreaMultipliers: "Multiplicadores de Relámpago",
+      compValueMultipliers: "1–5 Números de la Suerte, 50x a 500x",
+      compWhyMultipliers:
+        "Añade mayor potencial a apuestas directas sin cambiar los pagos de apuestas exteriores.",
+    
+      compAreaRtp: "Perfil de RTP",
+      compValueRtp: "97.30% estándar / 97.10% directo",
+      compWhyRtp:
+        "Útil para entender cómo el financiamiento del multiplicador afecta diferentes tipos de apuestas.",
+    
+      compAreaVariance: "Volatilidad",
+      compValueVariance: "Mayor que la ruleta clásica en apuestas interiores",
+      compWhyVariance:
+        "Los pagos basados en multiplicadores crean fluctuaciones más amplias a corto plazo.",
+    
+      compAreaUse: "Mejor Caso de Uso",
+      compValueUse: "Jugadores que desean ruleta con varianza adicional",
+      compWhyUse:
+        "Mantiene la estructura de ruleta estándar mientras añade pagos ocasionalmente mejorados.",
+    
+      faqTitle: "Preguntas Frecuentes",
+      faq: [
+        {
+          q: "¿Qué es Lightning Roulette?",
+          a: "Lightning Roulette es una versión de crupier en vivo de ruleta europea con multiplicadores aleatorios en Números de la Suerte seleccionados."
+        },
+        {
+          q: "¿Cómo funcionan los multiplicadores de Lightning Roulette?",
+          a: "Antes de cada giro, el juego selecciona 1 a 5 Números de la Suerte y asigna multiplicadores de 50x a 500x. Si una apuesta directa cae en uno de esos números, se aplica el pago del multiplicador."
+        },
+        {
+          q: "¿Cuál es el RTP de Lightning Roulette?",
+          a: "El RTP típico es alrededor del 97.30% para apuestas estándar y aproximadamente 97.10% para apuestas directas."
+        },
+        {
+          q: "¿Son diferentes los pagos de Lightning Roulette respecto a la ruleta estándar?",
+          a: "La mayoría de tipos de apuestas utilizan pagos estándar de ruleta europea. La principal diferencia es el pago basado en multiplicador en números directos seleccionados."
+        },
+        {
+          q: "¿Es Lightning Roulette más volátil que la ruleta clásica?",
+          a: "Sí. El sistema de multiplicador crea varianza más amplia a corto plazo, especialmente para jugadores que se enfocan en apuestas interiores."
+        }
+      ],
+    
+      conclusionTitle: "Impresión General",
+      conclusionText:
+        "Como revisión neutral de ruleta de relámpago, el juego puede describirse como ruleta europea estándar con una capa de multiplicador añadida que aumenta la varianza sin cambiar el formato principal. Para jugadores interesados en estadísticas en vivo de ruleta de relámpago, es un juego útil para rastrear porque la frecuencia de multiplicadores, selección de Números de la Suerte y patrones de pago pueden medirse a lo largo del tiempo."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Historial de giros",
+      subtitle:    "Historial reciente con resultados de números suertudos.",
+      occurredAt:  "Ocurrido en",
+      spinResult:  "Resultado",
+      multiplier:  "Multiplicador",
+      firstLucky:  "Primero suertudo",
+      secondLucky: "Segundo suertudo",
+      thirdLucky:  "Tercero suertudo",
+      fourthLucky: "Cuarto suertudo",
+      fifthLucky:  "Quinto suertudo",
+    },
     megaballReview: {
       title: "Tracker de Mega Ball, RTP y Análisis del Juego",
       intro: "Sigue las estadísticas, resultados y RTP de Mega Ball en tiempo real con herramientas de seguimiento en vivo. Revisa el historial de bolas, rondas de multiplicadores, conteo de ganadores y tendencias de pagos en un solo lugar.",
@@ -1019,6 +1417,10 @@ cashHunt: "Cash Hunt",
       biggestWinsGallery: "Galería de mayores ganancias"
     },
     seo: {
+      lightningroulette: {
+        title: "Lightning Roulette estadísticas, RTP y resultados live",
+        description: "Consulta estadísticas de Lightning Roulette: RTP, multiplicadores, Lucky Numbers, historial de giros, pagos y resultados live online."
+      },
 
       home: {
         title: "Casino Score Live 🔥 Live Stats y Real-Time Results [2026]",
@@ -1259,6 +1661,203 @@ cashHunt: "Cash Hunt",
   },
 
   it: {
+    lightningrouletteReview: {
+      title: "Recensione di Lightning Roulette, RTP e Statistiche dal Vivo",
+      intro:
+        "Lightning Roulette è una variante della roulette con croupier dal vivo basata sulla ruota europea. Il gioco segue le regole standard della roulette, ma ogni turno può assegnare moltiplicatori casuali a numeri selezionati come Numeri Fortunati, creando una versione ad alta varianza della roulette dal vivo tradizionale.",
+    
+      quickOverviewTitle: "Panoramica Rapida del Gioco",
+      tableParameter: "Parametro",
+      tableDetails: "Dettagli",
+    
+      specProvider: "Provider",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nome del Gioco",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Anno di Rilascio",
+      specReleaseYearValue: "2018",
+      specGameType: "Tipo di Gioco",
+      specGameTypeValue: "Roulette con Croupier dal Vivo",
+      specWheel: "Formato della Ruota",
+      specWheelValue: "Roulette Europea (singolo zero)",
+      specRtp: "RTP",
+      specRtpValue: "97.30% su scommesse standard; 97.10% su scommesse dirette",
+      specMinBet: "Puntata Minima",
+      specMinBetValue: "$0.20",
+      specMaxBet: "Puntata Massima",
+      specMaxBetValue: "$10,000",
+      specMaxWin: "Moltiplicatore Massimo",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Numeri Fortunati",
+      specLuckyNumbersValue: "1 a 5 per turno",
+      specVolatility: "Volatilità",
+      specVolatilityValue: "Media-alta",
+      specMobile: "Gioco Mobile",
+      specMobileValue: "Supportato",
+    
+      aboutTitle: "Cos'è Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette è un gioco di roulette dal vivo che mantiene la ruota europea a singolo zero e il layout standard delle scommesse, mentre aggiunge eventi di moltiplicatori casuali prima di ogni giro. Questo formato è spesso descritto come roulette fulmine dal vivo o roulette fulmine online perché il gioco combina un croupier di studio reale con una meccanica di moltiplicatore generata prima che la pallina atterri.",
+      aboutText2:
+        "In termini pratici, la differenza rispetto alla roulette classica è semplice: uno a cinque numeri diventano Numeri Fortunati ogni turno, e se una scommessa diretta cade su uno di essi, la vincita utilizza il moltiplicatore assegnato invece della puntata diretta regolare. Questo è il concetto centrale alla base della maggior parte delle pagine di recensione della roulette fulmine e dei tracker statistici.",
+    
+      howToPlayTitle: "Come Giocare a Lightning Roulette",
+      howToPlayText1:
+        "Come giocare a Lightning Roulette è semplice per chiunque abbia familiarità con la roulette. I giocatori piazzano scommesse durante la fase di scommessa, quindi il gioco rivela i Numeri Fortunati e i loro moltiplicatori prima che il giro dal vivo inizi.",
+      howToPlayText2:
+        "Le regole della roulette fulmine si basano sulla roulette europea, quindi le scommesse esterne, dozzine, colonne e scommesse interne funzionano come previsto. Il meccanismo aggiuntivo riguarda solo le scommesse dirette che cadono su Numeri Fortunati selezionati.",
+      howToPlayBullets: [
+        "Scegli i valori delle fiches e piazza le scommesse sul layout della roulette.",
+        "Attendi che il gioco assegni 1 a 5 Numeri Fortunati con moltiplicatori casuali.",
+        "Guarda il croupier girare la ruota e rilasciare la pallina.",
+        "Se la tua scommessa diretta colpisce un Numero Fortunato, il turno utilizza il pagamento del moltiplicatore fulmine.",
+        "Tutte le scommesse non moltiplicate si risolvono secondo le regole standard della roulette europea."
+      ],
+    
+      payoutTitle: "Pagamenti di Lightning Roulette",
+      payoutIntro:
+        "I pagamenti della roulette fulmine seguono la roulette standard per la maggior parte delle scommesse, mentre la differenza principale appare nei numeri diretti. Quando un Numero Fortunato selezionato vince, il moltiplicatore assegnato sostituisce il pagamento diretto regolare e può raggiungere fino a 500x.",
+    
+      payoutColBet: "Tipo di Scommessa",
+      payoutColPayout: "Pagamento",
+      payoutColNote: "Come Funziona",
+    
+      payoutBetStraightLucky: "Diretta (Numero Fortunato)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Applicato quando una scommessa diretta cade su un Numero Fortunato con un moltiplicatore assegnato.",
+    
+      payoutBetStraight: "Diretta (standard)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Vincita diretta standard senza moltiplicatore fulmine.",
+    
+      payoutBetSplit: "Spaccata",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Scommessa su 2 numeri adiacenti.",
+    
+      payoutBetStreet: "Terzina",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Scommessa su 3 numeri in fila.",
+    
+      payoutBetCorner: "Quadrupla",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Scommessa su 4 numeri.",
+    
+      payoutBetDozen: "Dozzina / Colonna",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Copre 12 numeri.",
+    
+      payoutBetEven: "Rosso/Nero, Dispari/Pari, Alto/Basso",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Scommesse esterne standard.",
+    
+      rtpTitle: "RTP e Volatilità di Lightning Roulette",
+      rtpText1:
+        "L'RTP della roulette fulmine dipende dal tipo di scommessa. Le scommesse standard come rosso/nero o dozzine mantengono un RTP di circa il 97.30%, mentre le scommesse dirette si aggirano intorno al 97.10% perché il gioco riassegna parte della struttura di pagamento per finanziare la funzione moltiplicatore.",
+      rtpText2:
+        "In termini di varianza, il gioco è più volatile della roulette classica quando l'attenzione è sui numeri interni. I moltiplicatori della roulette fulmine creano momenti di pagamento meno frequenti ma più grandi, motivo per cui molti giocatori descrivono il gioco come volatilità media-alta piuttosto che un profilo di roulette standard.",
+    
+      strategyTitle: "Note sulla Strategia di Lightning Roulette",
+      strategyText1:
+        "Una strategia di roulette fulmine non cambia il vantaggio della casa, ma può cambiare il profilo di rischio di una sessione. I giocatori che preferiscono varianza minore di solito rimangono più vicini alle scommesse esterne, mentre coloro che desiderano esposizione ai moltiplicatori si concentrano più sulla copertura diretta.",
+      strategyText2:
+        "Da una prospettiva statistica, il gioco è meglio affrontato come roulette europea con un livello di moltiplicatore aggiuntivo. Ciò lo rende utile per tracciare la frequenza dei Numeri Fortunati, la distribuzione dei moltiplicatori e le oscillazioni di pagamento su un campione più ampio piuttosto che giudicare il gioco da una breve serie.",
+    
+      trackerTitle: "Cosa Puoi Tracciare",
+      trackerIntro:
+        "Questa sezione del sito è costruita per i giocatori che desiderano rivedere la roulette fulmine online attraverso risultati recenti, moltiplicatori e metriche riassuntive piuttosto che affidarsi a impressioni a breve termine.",
+    
+      trackLuckyNumbers: "Cronologia dei Numeri Fortunati",
+      trackLuckyNumbersText:
+        "Traccia quali numeri hanno ricevuto moltiplicatori e con quale frequenza appaiono nei turni recenti.",
+    
+      trackMultipliers: "Distribuzione dei Moltiplicatori",
+      trackMultipliersText:
+        "Vedi con quale frequenza appaiono moltiplicatori da 50x, 100x, 150x, 200x, 300x, 400x e 500x.",
+    
+      trackSpinResults: "Risultati dei Giri",
+      trackSpinResultsText:
+        "Esamina i risultati recenti, incluso il numero vincente, i numeri fulmine e i moltiplicatori colpiti.",
+    
+      trackRtp: "Istantanea RTP",
+      trackRtpText:
+        "Confronta i risultati osservati con il profilo di rendimento atteso del gioco.",
+    
+      trackPatterns: "Modelli di Risultati",
+      trackPatternsText:
+        "Utilizza la cronologia recente e i dati di distribuzione per seguire serie a breve termine e frequenza dei numeri.",
+    
+      comparisonTitle: "Lightning Roulette a Colpo d'Occhio",
+      compColArea: "Area",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Perché Importa",
+    
+      compAreaBase: "Formato Base",
+      compValueBase: "Roulette europea con croupier dal vivo",
+      compWhyBase:
+        "Le regole core rimangono familiari per i giocatori che già conoscono la roulette standard.",
+    
+      compAreaMultipliers: "Moltiplicatori Fulmine",
+      compValueMultipliers: "1–5 Numeri Fortunati, 50x a 500x",
+      compWhyMultipliers:
+        "Aggiunge un potenziale maggiore alle scommesse dirette senza modificare i pagamenti delle scommesse esterne.",
+    
+      compAreaRtp: "Profilo RTP",
+      compValueRtp: "97.30% standard / 97.10% diretto",
+      compWhyRtp:
+        "Utile per comprendere come il finanziamento dei moltiplicatori influisce su diversi tipi di scommesse.",
+    
+      compAreaVariance: "Volatilità",
+      compValueVariance: "Superiore alla roulette classica nelle scommesse interne",
+      compWhyVariance:
+        "I pagamenti basati su moltiplicatori creano oscillazioni a breve termine più ampie.",
+    
+      compAreaUse: "Miglior Caso d'Uso",
+      compValueUse: "Giocatori che desiderano roulette con varianza aggiuntiva",
+      compWhyUse:
+        "Mantiene la struttura di roulette standard mentre aggiunge pagamenti occasionalmente potenziati.",
+    
+      faqTitle: "Domande Frequenti",
+      faq: [
+        {
+          q: "Cos'è Lightning Roulette?",
+          a: "Lightning Roulette è una versione con croupier dal vivo della roulette europea con moltiplicatori casuali su Numeri Fortunati selezionati."
+        },
+        {
+          q: "Come funzionano i moltiplicatori di Lightning Roulette?",
+          a: "Prima di ogni giro, il gioco seleziona 1 a 5 Numeri Fortunati e assegna moltiplicatori da 50x a 500x. Se una scommessa diretta cade su uno di quei numeri, si applica il pagamento del moltiplicatore."
+        },
+        {
+          q: "Qual è l'RTP di Lightning Roulette?",
+          a: "L'RTP tipico è di circa il 97.30% per le scommesse standard e circa il 97.10% per le scommesse dirette."
+        },
+        {
+          q: "I pagamenti di Lightning Roulette sono diversi dalla roulette standard?",
+          a: "La maggior parte dei tipi di scommesse utilizza pagamenti standard della roulette europea. La differenza principale è il pagamento basato su moltiplicatore su numeri diretti selezionati."
+        },
+        {
+          q: "Lightning Roulette è più volatile della roulette classica?",
+          a: "Sì. Il sistema di moltiplicatore crea varianza più ampia a breve termine, specialmente per i giocatori che si concentrano su scommesse interne."
+        }
+      ],
+    
+      conclusionTitle: "Impressione Generale",
+      conclusionText:
+        "Come recensione neutrale della roulette fulmine, il gioco può essere descritto come roulette europea standard con uno strato di moltiplicatore aggiunto che aumenta la varianza senza modificare il formato principale. Per i giocatori interessati alle statistiche dal vivo della roulette fulmine, è un gioco utile da tracciare perché la frequenza dei moltiplicatori, la selezione dei Numeri Fortunati e i modelli di pagamento possono essere misurati nel tempo."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Cronologia giri",
+      subtitle:    "Cronologia recente con risultati dei numeri fortunati.",
+      occurredAt:  "Verificato il",
+      spinResult:  "Risultato",
+      multiplier:  "Moltiplicatore",
+      firstLucky:  "Primo fortunato",
+      secondLucky: "Secondo fortunato",
+      thirdLucky:  "Terzo fortunato",
+      fourthLucky: "Quarto fortunato",
+      fifthLucky:  "Quinto fortunato",
+    },
     
     dreamcatcherReview: {
       title: "Dream Catcher Live: Statistiche in Tempo Reale, Risultati e Guida Completa al Gioco",
@@ -1533,6 +2132,12 @@ cashHunt: "Cash Hunt",
       biggestWinsGallery: "Galleria delle vincite più grandi"
     },
     seo: {
+      
+        lightningroulette: {
+          title: "Lightning Roulette statistiche, RTP e risultati live",
+          description: "Segui Lightning Roulette con RTP, moltiplicatori, Lucky Numbers, cronologia spin, pagamenti e risultati live aggiornati."
+        },
+      
       home: {
         title: "Casino Score Live 🔥 Live Stats e Real-Time Results [2026]",
         description: "Casino Score Live è il tuo hub definitivo per live stats e real-time results nel 2026. Analizza RTP, segui hot or cold streaks e fai scelte di scommessa sicure."
@@ -1770,6 +2375,203 @@ cashHunt: "Cash Hunt",
   },
 
   de: {
+    lightningrouletteReview: {
+      title: "Lightning Roulette Bewertung, RTP und Live-Statistiken",
+      intro:
+        "Lightning Roulette ist eine Live-Roulette-Variante basierend auf dem europäischen Rad. Das Spiel folgt den Standard-Roulette-Regeln, aber jede Runde kann zufällige Multiplikatoren auf ausgewählten Glückszahlen zuweisen und erzeugt so eine höhere Volatilitätsversion des traditionellen Live-Roulettes.",
+    
+      quickOverviewTitle: "Schneller Spielüberblick",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+    
+      specProvider: "Anbieter",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Spielname",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Veröffentlichungsjahr",
+      specReleaseYearValue: "2018",
+      specGameType: "Spieltyp",
+      specGameTypeValue: "Live-Dealer-Roulette",
+      specWheel: "Radformat",
+      specWheelValue: "Europäisches Roulette (einfache Null)",
+      specRtp: "RTP",
+      specRtpValue: "97,30% bei Standard-Einsätzen; 97,10% bei Einzelwetten",
+      specMinBet: "Mindesteinsatz",
+      specMinBetValue: "$0,20",
+      specMaxBet: "Maximaleinsatz",
+      specMaxBetValue: "$10.000",
+      specMaxWin: "Maximaler Multiplikator",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Glückszahlen",
+      specLuckyNumbersValue: "1 bis 5 pro Runde",
+      specVolatility: "Volatilität",
+      specVolatilityValue: "Mittel bis hoch",
+      specMobile: "Mobiles Spielen",
+      specMobileValue: "Unterstützt",
+    
+      aboutTitle: "Was ist Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette ist ein Live-Roulette-Spiel, das das europäische Rad mit einfacher Null und das Standard-Einsatzlayout beibehält, während es zufällige Multiplikator-Events vor jedem Spin hinzufügt. Dieses Format wird oft als Blitz-Roulette live oder Blitz-Roulette online beschrieben, da das Spiel einen echten Studio-Dealer mit einer Multiplikator-Mechanik kombiniert, die generiert wird, bevor die Kugel landet.",
+      aboutText2:
+        "In praktischer Hinsicht ist der Unterschied zum klassischen Roulette einfach: Ein bis fünf Zahlen werden pro Runde zu Glückszahlen, und wenn eine Einzelwette auf einer von ihnen landet, verwendet die Auszahlung den zugewiesenen Multiplikator anstelle der regulären Einzelwette. Dies ist die zentrale Idee hinter den meisten Blitz-Roulette-Bewertungsseiten und Statistik-Trackern.",
+    
+      howToPlayTitle: "Wie man Lightning Roulette spielt",
+      howToPlayText1:
+        "Wie man Lightning Roulette spielt, ist für jeden, der mit Roulette vertraut ist, unkompliziert. Spieler platzieren Einsätze während der Einsatzphase, dann zeigt das Spiel die Glückszahlen und ihre Multiplikatoren an, bevor der Live-Spin beginnt.",
+      howToPlayText2:
+        "Die Blitz-Roulette-Regeln basieren auf europäischem Roulette, daher funktionieren Außeneinsätze, Dutzende, Spalten und Inneneinsätze wie erwartet. Die zusätzliche Mechanik wirkt sich nur auf Einzelwetten aus, die auf ausgewählten Glückszahlen landen.",
+      howToPlayBullets: [
+        "Wählen Sie Chip-Werte und platzieren Sie Einsätze auf dem Roulette-Layout.",
+        "Warten Sie, bis das Spiel 1 bis 5 Glückszahlen mit zufälligen Multiplikatoren zuweist.",
+        "Beobachten Sie, wie der Dealer das Rad dreht und die Kugel loslässt.",
+        "Wenn Ihre Einzelwette eine Glückszahl trifft, verwendet die Runde die Blitz-Multiplikator-Auszahlung.",
+        "Alle nicht multiplizierten Einsätze werden nach Standard-Regeln des europäischen Roulettes abgerechnet."
+      ],
+    
+      payoutTitle: "Lightning Roulette Auszahlungen",
+      payoutIntro:
+        "Lightning Roulette Auszahlungen folgen dem Standard-Roulette für die meisten Einsätze, während der Hauptunterschied bei Einzelzahlen auftritt. Wenn eine ausgewählte Glückszahl gewinnt, ersetzt der zugewiesene Multiplikator die reguläre Einzelwette-Auszahlung und kann bis zu 500x erreichen.",
+    
+      payoutColBet: "Einsatztyp",
+      payoutColPayout: "Auszahlung",
+      payoutColNote: "Wie es funktioniert",
+    
+      payoutBetStraightLucky: "Einzelwette (Glückszahl)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Angewendet, wenn eine Einzelwette auf eine Glückszahl mit zugewiesenem Multiplikator landet.",
+    
+      payoutBetStraight: "Einzelwette (Standard)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Standard-Einzelwettgewinn ohne Blitz-Multiplikator.",
+    
+      payoutBetSplit: "Split",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Einsatz auf 2 benachbarte Zahlen.",
+    
+      payoutBetStreet: "Transversale",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Einsatz auf 3 Zahlen in einer Reihe.",
+    
+      payoutBetCorner: "Quadrat",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Einsatz auf 4 Zahlen.",
+    
+      payoutBetDozen: "Dutzend / Spalte",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Umfasst 12 Zahlen.",
+    
+      payoutBetEven: "Rot/Schwarz, Ungerade/Gerade, Hoch/Tief",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Standard-Außeneinsätze.",
+    
+      rtpTitle: "Lightning Roulette RTP und Volatilität",
+      rtpText1:
+        "Das Blitz-Roulette-RTP hängt von der Art des Einsatzes ab. Standard-Einsätze wie Rot/Schwarz oder Dutzende halten ein RTP von etwa 97,30%, während Einzelwetten bei etwa 97,10% liegen, da das Spiel einen Teil der Auszahlungsstruktur zur Finanzierung der Multiplikator-Funktion umverteilt.",
+      rtpText2:
+        "In Bezug auf Varianz ist das Spiel volatiler als klassisches Roulette, wenn der Fokus auf inneren Zahlen liegt. Blitz-Roulette-Multiplikatoren schaffen weniger häufige, aber größere Auszahlungsmomente, weshalb viele Spieler das Spiel als mittlere bis hohe Volatilität beschreiben, anstatt ein Standard-Roulette-Profil zu haben.",
+    
+      strategyTitle: "Lightning Roulette Strategie-Hinweise",
+      strategyText1:
+        "Eine Blitz-Roulette-Strategie ändert nicht den Hausvorteil, kann aber das Risikoprofil einer Sitzung verändern. Spieler, die niedrigere Varianz bevorzugen, bleiben normalerweise näher bei Außeneinsätzen, während diejenigen, die Multiplikator-Exposition wünschen, sich mehr auf die Einzelwette-Abdeckung konzentrieren.",
+      strategyText2:
+        "Aus statistischer Perspektive wird das Spiel am besten als europäisches Roulette mit einer zusätzlichen Multiplikator-Schicht angegangen. Dies macht es nützlich, die Glückszahl-Häufigkeit, Multiplikator-Verteilung und Auszahlungsschwankungen über eine größere Stichprobe zu verfolgen, anstatt das Spiel nach einer kurzen Serie zu beurteilen.",
+    
+      trackerTitle: "Was Sie verfolgen können",
+      trackerIntro:
+        "Dieser Abschnitt der Website ist für Spieler gedacht, die Blitz-Roulette online durch aktuelle Ergebnisse, Multiplikatoren und Zusammenfassungsmetriken überprüfen möchten, anstatt sich auf kurzfristige Eindrücke zu verlassen.",
+    
+      trackLuckyNumbers: "Glückszahlen-Verlauf",
+      trackLuckyNumbersText:
+        "Verfolgen Sie, welche Zahlen Multiplikatoren erhalten haben und wie oft sie in letzten Runden erscheinen.",
+    
+      trackMultipliers: "Multiplikator-Verteilung",
+      trackMultipliersText:
+        "Sehen Sie, wie oft Multiplikatoren von 50x, 100x, 150x, 200x, 300x, 400x und 500x erscheinen.",
+    
+      trackSpinResults: "Spin-Ergebnisse",
+      trackSpinResultsText:
+        "Überprüfen Sie aktuelle Ergebnisse, einschließlich Gewinnzahl, Blitzzahlen und getroffene Multiplikatoren.",
+    
+      trackRtp: "RTP-Momentaufnahme",
+      trackRtpText:
+        "Vergleichen Sie beobachtete Ergebnisse mit dem erwarteten Rückgabeprofil des Spiels.",
+    
+      trackPatterns: "Ergebnis-Muster",
+      trackPatternsText:
+        "Nutzen Sie aktuelle Historie und Verteilungsdaten, um kurzfristige Serien und Zahlenhäufigkeit zu verfolgen.",
+    
+      comparisonTitle: "Lightning Roulette auf einen Blick",
+      compColArea: "Bereich",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Warum es wichtig ist",
+    
+      compAreaBase: "Basis-Format",
+      compValueBase: "Europäisches Roulette mit Live-Dealer",
+      compWhyBase:
+        "Die Kernregeln bleiben für Spieler, die bereits Standard-Roulette kennen, vertraut.",
+    
+      compAreaMultipliers: "Blitz-Multiplikatoren",
+      compValueMultipliers: "1–5 Glückszahlen, 50x bis 500x",
+      compWhyMultipliers:
+        "Fügt höheres Aufwärtspotenzial zu Einzelwetten hinzu, ohne Außeneinsatz-Auszahlungen zu ändern.",
+    
+      compAreaRtp: "RTP-Profil",
+      compValueRtp: "97,30% Standard / 97,10% Einzelwette",
+      compWhyRtp:
+        "Nützlich zum Verständnis, wie die Multiplikator-Finanzierung verschiedene Einsatztypen beeinflusst.",
+    
+      compAreaVariance: "Volatilität",
+      compValueVariance: "Höher als klassisches Roulette bei Inneneinsätzen",
+      compWhyVariance:
+        "Multiplikator-basierte Auszahlungen schaffen breitere kurzfristige Schwankungen.",
+    
+      compAreaUse: "Bester Anwendungsfall",
+      compValueUse: "Spieler, die Roulette mit zusätzlicher Varianz wünschen",
+      compWhyUse:
+        "Behält die Standard-Roulette-Struktur bei, während es gelegentlich verstärkte Auszahlungen hinzufügt.",
+    
+      faqTitle: "Häufig Gestellte Fragen",
+      faq: [
+        {
+          q: "Was ist Lightning Roulette?",
+          a: "Lightning Roulette ist eine Live-Dealer-Version des europäischen Roulettes mit zufälligen Multiplikatoren auf ausgewählten Glückszahlen."
+        },
+        {
+          q: "Wie funktionieren Lightning Roulette Multiplikatoren?",
+          a: "Vor jedem Spin wählt das Spiel 1 bis 5 Glückszahlen aus und weist Multiplikatoren von 50x bis 500x zu. Wenn eine Einzelwette auf einer dieser Zahlen landet, wird die Multiplikator-Auszahlung angewendet."
+        },
+        {
+          q: "Was ist das Lightning Roulette RTP?",
+          a: "Das typische RTP beträgt etwa 97,30% für Standard-Einsätze und etwa 97,10% für Einzelwetten."
+        },
+        {
+          q: "Unterscheiden sich Lightning Roulette Auszahlungen von Standard-Roulette?",
+          a: "Die meisten Einsatztypen verwenden Standard-Auszahlungen für europäisches Roulette. Der Hauptunterschied ist die Multiplikator-basierte Auszahlung auf ausgewählten Einzelzahlen."
+        },
+        {
+          q: "Ist Lightning Roulette volatiler als klassisches Roulette?",
+          a: "Ja. Das Multiplikator-System erzeugt breitere kurzfristige Varianz, besonders für Spieler, die sich auf Inneneinsätze konzentrieren."
+        }
+      ],
+    
+      conclusionTitle: "Gesamteindruck",
+      conclusionText:
+        "Als neutrale Blitz-Roulette-Bewertung kann das Spiel als Standard-Europäisches Roulette mit einer zusätzlichen Multiplikator-Schicht beschrieben werden, die die Varianz erhöht, ohne das Kernformat zu ändern. Für Spieler, die an Live-Statistiken zum Blitz-Roulette interessiert sind, ist es ein nützliches Spiel zum Verfolgen, da die Multiplikator-Häufigkeit, Glückszahl-Auswahl und Auszahlungsmuster alle über die Zeit gemessen werden können."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Drehverlauf",
+      subtitle:    "Letzte Drehrunde mit Lucky-Number-Ergebnissen.",
+      occurredAt:  "Aufgetreten am",
+      spinResult:  "Drehergebnis",
+      multiplier:  "Multiplikator",
+      firstLucky:  "Erste Glückszahl",
+      secondLucky: "Zweite Glückszahl",
+      thirdLucky:  "Dritte Glückszahl",
+      fourthLucky: "Vierte Glückszahl",
+      fifthLucky:  "Fünfte Glückszahl",
+    },
     megaballReview: {
       title: "Mega Ball Tracker, RTP und Spielanalyse",
       intro: "Verfolge Statistiken, Ergebnisse und den RTP von Mega Ball in Echtzeit mit Live-Tracking-Tools. Sieh dir Ballverlauf, Multiplikator-Runden, Gewinneranzahl und Auszahlungstrends an – alles an einem Ort.",
@@ -2150,6 +2952,12 @@ dreamcatcherStatsExtra: {
       biggestWinsGallery: "Galerie der größten Gewinne"
     },
     seo: {
+      nl: {
+        lightningroulette: {
+          title: "Lightning Roulette statistieken, RTP & live resultaten",
+          description: "Volg Lightning Roulette met RTP, multipliers, Lucky Numbers, spingeschiedenis, uitbetalingen en live resultaten online."
+        }
+      },
       home: {
         title: "Casino Score Live 🔥 Live Stats und Real-Time Results [2026]",
         description: "Casino Score Live ist dein zentraler Hub für live stats und real-time results im Jahr 2026. Analysiere RTP, verfolge hot or cold streaks und triff sichere, datenbasierte Betting-Entscheidungen."
@@ -2387,6 +3195,203 @@ dreamcatcherStatsExtra: {
   },
 
   nl: {
+    lightningrouletteReview: {
+      title: "Lightning Roulette Review, RTP en Live Statistieken",
+      intro:
+        "Lightning Roulette is een live roulettevariant gebaseerd op het Europese wiel. Het spel volgt standaard rouletteregels, maar elke ronde kan willekeurige vermenigvuldigers toewijzen aan geselecteerde Geluksgetallen, wat een hogere volatiliteitsversie van traditionele live roulette creëert.",
+    
+      quickOverviewTitle: "Snelle Spelomschrijving",
+      tableParameter: "Parameter",
+      tableDetails: "Details",
+    
+      specProvider: "Provider",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Speelnaam",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Releasejaar",
+      specReleaseYearValue: "2018",
+      specGameType: "Speltype",
+      specGameTypeValue: "Live Dealer Roulette",
+      specWheel: "Wielformaat",
+      specWheelValue: "Europese Roulette (enkele nul)",
+      specRtp: "RTP",
+      specRtpValue: "97,30% bij standaardweddenschappen; 97,10% bij rechtstreekse weddenschappen",
+      specMinBet: "Minimale Inzet",
+      specMinBetValue: "$0,20",
+      specMaxBet: "Maximale Inzet",
+      specMaxBetValue: "$10.000",
+      specMaxWin: "Maximale Vermenigvuldiger",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Geluksgetallen",
+      specLuckyNumbersValue: "1 tot 5 per ronde",
+      specVolatility: "Volatiliteit",
+      specVolatilityValue: "Gemiddeld tot hoog",
+      specMobile: "Mobiel Spelen",
+      specMobileValue: "Ondersteund",
+    
+      aboutTitle: "Wat is Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette is een live roulettesspel dat het Europese wieltje met enkele nul en de standaard weddenscaplay behoudt, terwijl willekeurige vermenigvuldigerevents voor elke spin worden toegevoegd. Dit format wordt vaak beschreven als lightning roulette live of lightning roulette online omdat het spel een echte studiodealer combineert met een vermenigvuldigingsmechaniek die wordt gegenereerd voordat de bal landt.",
+      aboutText2:
+        "In praktische zin is het verschil met klassieke roulette eenvoudig: één tot vijf getallen worden elke ronde Geluksgetallen, en als een rechtstreekse weddenschap op een van hen landt, gebruikt de uitbetaling de toegewezen vermenigvuldiger in plaats van de reguliere rechtstreekse uitbetaling. Dit is het kernidee achter de meeste lightning roulette reviewpagina's en statistiekenvolgers.",
+    
+      howToPlayTitle: "Hoe Lightning Roulette Spelen",
+      howToPlayText1:
+        "Hoe Lightning Roulette spelen is eenvoudig voor iedereen die bekend is met roulette. Spelers plaatsen weddenschappen tijdens de inzetfase, vervolgens onthult het spel de Geluksgetallen en hun vermenigvuldigers voordat de live spin begint.",
+      howToPlayText2:
+        "Lightning roulette regels zijn gebaseerd op Europese roulette, dus buitenweddenschappen, dozijnen, kolommen en binnenweddenschappen werken zoals verwacht. Het extra mechanisme beïnvloedt alleen rechtstreekse weddenschappen die op geselecteerde Geluksgetallen landen.",
+      howToPlayBullets: [
+        "Kies chipwaarden en plaats weddenschappen op de roulettelay-out.",
+        "Wacht tot het spel 1 tot 5 Geluksgetallen met willekeurige vermenigvuldigers toewijst.",
+        "Kijk hoe de croupier het wiel draait en de bal loslaat.",
+        "Als je rechtstreekse weddenschap een Geluksgetal raakt, gebruikt de ronde de Lightning vermenigvuldiger uitbetaling.",
+        "Alle niet-vermenigvuldigde weddenschappen worden volgens standaard Europese rouletteregels afgehandeld."
+      ],
+    
+      payoutTitle: "Lightning Roulette Uitbetalingen",
+      payoutIntro:
+        "Lightning roulette uitbetalingen volgen standaard roulette voor de meeste weddenschappen, terwijl het belangrijkste verschil verschijnt bij rechtstreekse getallen. Wanneer een geselecteerd Geluksgetal wint, vervangt de toegewezen vermenigvuldiger de reguliere rechtstreekse uitbetaling en kan tot 500x bereiken.",
+    
+      payoutColBet: "Weddenschapstype",
+      payoutColPayout: "Uitbetaling",
+      payoutColNote: "Hoe Het Werkt",
+    
+      payoutBetStraightLucky: "Rechtstreeks (Geluksgetal)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Toegepast wanneer een rechtstreekse weddenschap op een Geluksgetal met een toegewezen vermenigvuldiger landt.",
+    
+      payoutBetStraight: "Rechtstreeks (standaard)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Standaard rechtstreekse winst zonder Lightning vermenigvuldiger.",
+    
+      payoutBetSplit: "Splitsing",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Weddenschap op 2 aangrenzende getallen.",
+    
+      payoutBetStreet: "Straat",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Weddenschap op 3 getallen in een rij.",
+    
+      payoutBetCorner: "Hoek",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Weddenschap op 4 getallen.",
+    
+      payoutBetDozen: "Dozijn / Kolom",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Dekt 12 getallen.",
+    
+      payoutBetEven: "Rood/Zwart, Oneven/Even, Hoog/Laag",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Standaard buitenweddenschappen.",
+    
+      rtpTitle: "Lightning Roulette RTP en Volatiliteit",
+      rtpText1:
+        "Lightning roulette RTP hangt af van het type weddenschap. Standaardweddenschappen zoals rood/zwart of dozijnen behouden een RTP van ongeveer 97,30%, terwijl rechtstreekse weddenschappen rond de 97,10% liggen omdat het spel deel van de uitbetalingsstructuur herverdeelt om de vermenigvuldigerfunctie te financieren.",
+      rtpText2:
+        "Wat betreft variantie is het spel volatieler dan klassieke roulette wanneer de focus op binnennummers ligt. Lightning roulette vermenigvuldigers creëren minder frequente maar grotere uitbetalingsmomenten, daarom beschrijven veel spelers het spel als gemiddeld tot hoge volatiliteit in plaats van een standaard rouleprofiel.",
+    
+      strategyTitle: "Lightning Roulette Strategie Opmerkingen",
+      strategyText1:
+        "Een lightning roulette strategie verandert de huisvoordeel niet, maar kan het risicoprofiel van een sessie veranderen. Spelers die lagere variantie prefereren blijven meestal dichter bij buitenweddenschappen, terwijl degenen die blootstelling aan vermenigvuldigers willen meer op rechtstreekse dekking concentreren.",
+      strategyText2:
+        "Vanuit statistisch perspectief wordt het spel het beste benaderd als Europese roulette met een extra vermenigvuldigingslaag. Dit maakt het handig om Gelsgettal frequentie, vermenigvuldiger distributie en uitbetalingsschommelingen over een grotere steekproef bij te houden in plaats van het spel op basis van een korte reeks te beoordelen.",
+    
+      trackerTitle: "Wat Je Kunt Volgen",
+      trackerIntro:
+        "Deze sectie van de site is gebouwd voor spelers die lightning roulette online willen beoordelen via recente resultaten, vermenigvuldigers en samenvattingsmetreken in plaats van op korte termijn indrukken te vertrouwen.",
+    
+      trackLuckyNumbers: "Gelsgettal Geschiedenis",
+      trackLuckyNumbersText:
+        "Volg welke getallen vermenigvuldigers hebben gekregen en hoe vaak ze in recente rondes voorkomen.",
+    
+      trackMultipliers: "Vermenigvuldiger Distributie",
+      trackMultipliersText:
+        "Zie hoe vaak 50x, 100x, 150x, 200x, 300x, 400x en 500x vermenigvuldigers voorkomen.",
+    
+      trackSpinResults: "Spin Resultaten",
+      trackSpinResultsText:
+        "Controleer recente resultaten, inclusief winnend getal, lightning getallen en geraamde vermenigvuldigers.",
+    
+      trackRtp: "RTP Momentopname",
+      trackRtpText:
+        "Vergelijk waargenomen resultaten met het verwachte rendementsprofiel van het spel.",
+    
+      trackPatterns: "Resultaatpatronen",
+      trackPatternsText:
+        "Gebruik recente geschiedenis en distributiegegevens om korte-termijnreeksen en getalfrequentie te volgen.",
+    
+      comparisonTitle: "Lightning Roulette in één Oogopslag",
+      compColArea: "Gebied",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Waarom Het Belangrijk Is",
+    
+      compAreaBase: "Basisformaat",
+      compValueBase: "Europese roulette met live dealer",
+      compWhyBase:
+        "De kernregels blijven vertrouwd voor spelers die al standaard roulette kennen.",
+    
+      compAreaMultipliers: "Lightning Vermenigvuldigers",
+      compValueMultipliers: "1–5 Geluksgetallen, 50x tot 500x",
+      compWhyMultipliers:
+        "Voegt hogere opside toe aan rechtstreekse weddenschappen zonder buitenweddenschapuitbetalingen te veranderen.",
+    
+      compAreaRtp: "RTP Profiel",
+      compValueRtp: "97,30% standaard / 97,10% rechtstreeks",
+      compWhyRtp:
+        "Handig voor het begrijpen hoe vermenigvuldiger financiering verschillende weddenschaftypen beïnvloedt.",
+    
+      compAreaVariance: "Volatiliteit",
+      compValueVariance: "Hoger dan klassieke roulette op binnenweddenschappen",
+      compWhyVariance:
+        "Vermenigvuldiger-gebaseerde uitbetalingen creëren bredere korte-termijnschommelingen.",
+    
+      compAreaUse: "Beste Gebruikscase",
+      compValueUse: "Spelers die roulette met extra variantie willen",
+      compWhyUse:
+        "Behoudt de standaard roulettestructuur terwijl af en toe verhoogde uitbetalingen worden toegevoegd.",
+    
+      faqTitle: "Veelgestelde Vragen",
+      faq: [
+        {
+          q: "Wat is Lightning Roulette?",
+          a: "Lightning Roulette is een live dealer versie van Europese roulette met willekeurige vermenigvuldigers op geselecteerde Geluksgetallen."
+        },
+        {
+          q: "Hoe werken Lightning Roulette vermenigvuldigers?",
+          a: "Voor elke spin selecteert het spel 1 tot 5 Geluksgetallen en wijst vermenigvuldigers van 50x tot 500x toe. Als een rechtstreekse weddenschap op een van die getallen landt, wordt de vermenigvuldiger uitbetaling toegepast."
+        },
+        {
+          q: "Wat is de Lightning Roulette RTP?",
+          a: "De typische RTP is ongeveer 97,30% voor standaardweddenschappen en ongeveer 97,10% voor rechtstreekse weddenschappen."
+        },
+        {
+          q: "Verschillen Lightning Roulette uitbetalingen van standaard roulette?",
+          a: "De meeste weddenschaftypen gebruiken standaard Europese rouletteuitbetalingen. Het belangrijkste verschil is de vermenigvuldiger-gebaseerde uitbetaling op geselecteerde rechtstreekse getallen."
+        },
+        {
+          q: "Is Lightning Roulette volatieler dan klassieke roulette?",
+          a: "Ja. Het vermenigvuldigersysteem creëert bredere korte-termijnvariantie, vooral voor spelers die zich op binnenweddenschappen concentreren."
+        }
+      ],
+    
+      conclusionTitle: "Algemene Indruk",
+      conclusionText:
+        "Als neutrale lightning roulette review kan het spel worden beschreven als standaard Europese roulette met een toegevoegde vermenigvuldigingslaag die volatiliteit verhoogt zonder het kernformaat te veranderen. Voor spelers die geïnteresseerd zijn in lightning roulette live statistieken, is het een handig spel om bij te houden omdat vermenigvuldiger frequentie, Gelsgettal selectie en uitbetalingspatronen allemaal in de tijd kunnen worden gemeten."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Draaigeschiedenis",
+      subtitle:    "Recente draaien met Lucky Number-resultaten.",
+      occurredAt:  "Opgetreden om",
+      spinResult:  "Draairesultaat",
+      multiplier:  "Vermenigvuldiger",
+      firstLucky:  "Eerste geluksgetal",
+      secondLucky: "Tweede geluksgetal",
+      thirdLucky:  "Derde geluksgetal",
+      fourthLucky: "Vierde geluksgetal",
+      fifthLucky:  "Vijfde geluksgetal",
+    },
     megaballReview: {
       title: "Mega Ball Tracker, RTP en Spelanalyse",
       intro: "Volg statistieken, resultaten en RTP van Mega Ball in realtime met live trackingtools. Bekijk de balgeschiedenis, multiplier-rondes, het aantal winnaars en uitbetalingstrends op één plek.",
@@ -3003,6 +4008,203 @@ dreamcatcherStatsExtra: {
   },
 
   fr: {
+    lightningrouletteReview: {
+      title: "Avis Lightning Roulette, RTP et Statistiques en Direct",
+      intro:
+        "Lightning Roulette est une variante de roulette en direct basée sur la roue européenne. Le jeu suit les règles standard de la roulette, mais chaque tour peut attribuer des multiplicateurs aléatoires à des numéros sélectionnés appelés Numéros Chanceux, créant une version à plus haute variance de la roulette en direct traditionnelle.",
+    
+      quickOverviewTitle: "Aperçu Rapide du Jeu",
+      tableParameter: "Paramètre",
+      tableDetails: "Détails",
+    
+      specProvider: "Fournisseur",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nom du Jeu",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Année de Sortie",
+      specReleaseYearValue: "2018",
+      specGameType: "Type de Jeu",
+      specGameTypeValue: "Roulette en Direct avec Croupier",
+      specWheel: "Format de la Roue",
+      specWheelValue: "Roulette Européenne (zéro unique)",
+      specRtp: "RTP",
+      specRtpValue: "97,30% sur les mises standard; 97,10% sur les mises directes",
+      specMinBet: "Mise Minimale",
+      specMinBetValue: "$0,20",
+      specMaxBet: "Mise Maximale",
+      specMaxBetValue: "$10 000",
+      specMaxWin: "Multiplicateur Maximum",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Numéros Chanceux",
+      specLuckyNumbersValue: "1 à 5 par tour",
+      specVolatility: "Volatilité",
+      specVolatilityValue: "Moyenne à élevée",
+      specMobile: "Jeu Mobile",
+      specMobileValue: "Supporté",
+    
+      aboutTitle: "Qu'est-ce que Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette est un jeu de roulette en direct qui conserve la roue européenne à zéro unique et la mise en page de mise standard, tout en ajoutant des événements de multiplicateurs aléatoires avant chaque spin. Ce format est souvent décrit comme la roulette éclair en direct ou la roulette éclair en ligne car le jeu combine un croupier de studio réel avec une mécanique de multiplicateur générée avant que la balle ne tombe.",
+      aboutText2:
+        "En termes pratiques, la différence par rapport à la roulette classique est simple: un à cinq numéros deviennent des Numéros Chanceux à chaque tour, et si une mise directe atterrit sur l'un d'eux, le paiement utilise le multiplicateur attribué au lieu du paiement direct standard. C'est l'idée centrale derrière la plupart des pages d'avis de roulette éclair et des suiveurs de statistiques.",
+    
+      howToPlayTitle: "Comment Jouer à Lightning Roulette",
+      howToPlayText1:
+        "Comment jouer à Lightning Roulette est simple pour quiconque connaît la roulette. Les joueurs placent des mises pendant la phase de mise, puis le jeu révèle les Numéros Chanceux et leurs multiplicateurs avant le spin en direct commence.",
+      howToPlayText2:
+        "Les règles de la roulette éclair sont basées sur la roulette européenne, donc les mises extérieures, les douzaines, les colonnes et les mises intérieures fonctionnent comme prévu. Le mécanisme supplémentaire n'affecte que les mises directes qui atterrissent sur les Numéros Chanceux sélectionnés.",
+      howToPlayBullets: [
+        "Choisissez les valeurs des jetons et placez les mises sur la disposition de la roulette.",
+        "Attendez que le jeu attribue 1 à 5 Numéros Chanceux avec des multiplicateurs aléatoires.",
+        "Regardez le croupier faire tourner la roue et lâcher la balle.",
+        "Si votre mise directe frappe un Numéro Chanceux, le tour utilise le paiement du multiplicateur éclair.",
+        "Toutes les mises non multipliées sont réglées selon les règles standard de la roulette européenne."
+      ],
+    
+      payoutTitle: "Paiements de Lightning Roulette",
+      payoutIntro:
+        "Les paiements de la roulette éclair suivent la roulette standard pour la plupart des mises, tandis que la différence principale apparaît sur les numéros directs. Lorsqu'un Numéro Chanceux sélectionné gagne, le multiplicateur attribué remplace le paiement direct standard et peut atteindre jusqu'à 500x.",
+    
+      payoutColBet: "Type de Mise",
+      payoutColPayout: "Paiement",
+      payoutColNote: "Comment Cela Fonctionne",
+    
+      payoutBetStraightLucky: "Direct (Numéro Chanceux)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Appliqué lorsqu'une mise directe atterrit sur un Numéro Chanceux avec un multiplicateur attribué.",
+    
+      payoutBetStraight: "Direct (standard)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Gain direct standard sans multiplicateur éclair.",
+    
+      payoutBetSplit: "Cheval",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Mise sur 2 numéros adjacents.",
+    
+      payoutBetStreet: "Transversale",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Mise sur 3 numéros à la suite.",
+    
+      payoutBetCorner: "Carré",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Mise sur 4 numéros.",
+    
+      payoutBetDozen: "Douzaine / Colonne",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Couvre 12 numéros.",
+    
+      payoutBetEven: "Rouge/Noir, Impair/Pair, Haut/Bas",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Mises extérieures standard.",
+    
+      rtpTitle: "RTP et Volatilité de Lightning Roulette",
+      rtpText1:
+        "Le RTP de la roulette éclair dépend du type de mise. Les mises standard comme rouge/noir ou douzaines maintiennent un RTP d'environ 97,30%, tandis que les mises directes se situent autour de 97,10% car le jeu réalloue une partie de la structure de paiement pour financer la fonction de multiplicateur.",
+      rtpText2:
+        "En termes de variance, le jeu est plus volatil que la roulette classique lorsque l'accent est mis sur les numéros intérieurs. Les multiplicateurs de roulette éclair créent des moments de paiement moins fréquents mais plus importants, c'est pourquoi beaucoup de joueurs décrivent le jeu comme une volatilité moyenne à élevée plutôt qu'un profil de roulette standard.",
+    
+      strategyTitle: "Notes de Stratégie Lightning Roulette",
+      strategyText1:
+        "Une stratégie de roulette éclair ne change pas l'avantage de la maison, mais elle peut changer le profil de risque d'une session. Les joueurs qui préfèrent une variance plus faible restent généralement plus près des mises extérieures, tandis que ceux qui veulent une exposition aux multiplicateurs se concentrent davantage sur la couverture directe.",
+      strategyText2:
+        "D'un point de vue statistique, le jeu est mieux abordé comme la roulette européenne avec une couche de multiplicateur supplémentaire. Cela le rend utile pour suivre la fréquence des Numéros Chanceux, la distribution des multiplicateurs et les oscillations de paiement sur un échantillon plus grand plutôt que de juger le jeu sur une courte série.",
+    
+      trackerTitle: "Ce Que Vous Pouvez Suivre",
+      trackerIntro:
+        "Cette section du site est conçue pour les joueurs qui souhaitent examiner la roulette éclair en ligne à travers les résultats récents, les multiplicateurs et les métriques de synthèse plutôt que de se fier à des impressions à court terme.",
+    
+      trackLuckyNumbers: "Historique des Numéros Chanceux",
+      trackLuckyNumbersText:
+        "Suivez les numéros qui ont reçu des multiplicateurs et à quelle fréquence ils apparaissent dans les tours récents.",
+    
+      trackMultipliers: "Distribution des Multiplicateurs",
+      trackMultipliersText:
+        "Voyez à quelle fréquence les multiplicateurs 50x, 100x, 150x, 200x, 300x, 400x et 500x apparaissent.",
+    
+      trackSpinResults: "Résultats des Tours",
+      trackSpinResultsText:
+        "Examinez les résultats récents, y compris le numéro gagnant, les numéros éclair et les multiplicateurs touchés.",
+    
+      trackRtp: "Aperçu du RTP",
+      trackRtpText:
+        "Comparez les résultats observés avec le profil de rendement attendu du jeu.",
+    
+      trackPatterns: "Modèles de Résultats",
+      trackPatternsText:
+        "Utilisez l'historique récent et les données de distribution pour suivre les séries à court terme et la fréquence des numéros.",
+    
+      comparisonTitle: "Lightning Roulette en un Coup d'œil",
+      compColArea: "Domaine",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Pourquoi C'est Important",
+    
+      compAreaBase: "Format de Base",
+      compValueBase: "Roulette européenne avec croupier en direct",
+      compWhyBase:
+        "Les règles principales restent familières pour les joueurs qui connaissent déjà la roulette standard.",
+    
+      compAreaMultipliers: "Multiplicateurs Éclair",
+      compValueMultipliers: "1–5 Numéros Chanceux, 50x à 500x",
+      compWhyMultipliers:
+        "Ajoute un potentiel de gain plus important aux mises directes sans modifier les paiements des mises extérieures.",
+    
+      compAreaRtp: "Profil RTP",
+      compValueRtp: "97,30% standard / 97,10% direct",
+      compWhyRtp:
+        "Utile pour comprendre comment le financement du multiplicateur affecte différents types de mises.",
+    
+      compAreaVariance: "Volatilité",
+      compValueVariance: "Plus élevée que la roulette classique sur les mises intérieures",
+      compWhyVariance:
+        "Les paiements basés sur les multiplicateurs créent des oscillations plus larges à court terme.",
+    
+      compAreaUse: "Meilleur Cas d'Usage",
+      compValueUse: "Joueurs qui veulent une roulette avec variance supplémentaire",
+      compWhyUse:
+        "Conserve la structure standard de la roulette tout en ajoutant des paiements occasionnellement améliorés.",
+    
+      faqTitle: "Questions Fréquemment Posées",
+      faq: [
+        {
+          q: "Qu'est-ce que Lightning Roulette?",
+          a: "Lightning Roulette est une version en direct de la roulette européenne avec des multiplicateurs aléatoires sur les Numéros Chanceux sélectionnés."
+        },
+        {
+          q: "Comment fonctionnent les multiplicateurs de Lightning Roulette?",
+          a: "Avant chaque spin, le jeu sélectionne 1 à 5 Numéros Chanceux et attribue des multiplicateurs de 50x à 500x. Si une mise directe atterrit sur l'un de ces numéros, le paiement du multiplicateur s'applique."
+        },
+        {
+          q: "Quel est le RTP de Lightning Roulette?",
+          a: "Le RTP typique est d'environ 97,30% pour les mises standard et d'environ 97,10% pour les mises directes."
+        },
+        {
+          q: "Les paiements de Lightning Roulette sont-ils différents de la roulette standard?",
+          a: "La plupart des types de mises utilisent les paiements standard de la roulette européenne. La principale différence est le paiement basé sur le multiplicateur sur les numéros directs sélectionnés."
+        },
+        {
+          q: "Lightning Roulette est-il plus volatil que la roulette classique?",
+          a: "Oui. Le système de multiplicateur crée une variance plus large à court terme, surtout pour les joueurs se concentrant sur les mises intérieures."
+        }
+      ],
+    
+      conclusionTitle: "Impression Générale",
+      conclusionText:
+        "En tant qu'avis neutre de roulette éclair, le jeu peut être décrit comme une roulette européenne standard avec une couche de multiplicateur supplémentaire qui augmente la variance sans modifier le format principal. Pour les joueurs intéressés par les statistiques en direct de la roulette éclair, c'est un jeu utile à suivre car la fréquence des multiplicateurs, la sélection des Numéros Chanceux et les modèles de paiement peuvent tous être mesurés au fil du temps."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Historique des tours",
+      subtitle:    "Historique récent avec les numéros chanceux.",
+      occurredAt:  "Survenu à",
+      spinResult:  "Résultat",
+      multiplier:  "Multiplicateur",
+      firstLucky:  "1er numéro chanceux",
+      secondLucky: "2e numéro chanceux",
+      thirdLucky:  "3e numéro chanceux",
+      fourthLucky: "4e numéro chanceux",
+      fifthLucky:  "5e numéro chanceux",
+    },
     megaballReview: {
       title: "Tracker Mega Ball, RTP et Analyse du Jeu",
       intro: "Suivez les statistiques, les résultats et le RTP de Mega Ball en temps réel grâce à des outils de suivi en direct. Consultez l’historique des boules, les tours avec multiplicateurs, le nombre de gagnants et les tendances des paiements, le tout en un seul endroit.",
@@ -3382,6 +4584,10 @@ dreamcatcherStatsExtra: {
       biggestWinsGallery: "Galerie des plus gros gains"
     },
     seo: {
+      lightningroulette: {
+        title: "Lightning Roulette stats, RTP et résultats en direct",
+        description: "Consultez les statistiques Lightning Roulette : RTP, multiplicateurs, Lucky Numbers, historique des spins, paiements et résultats live."
+      },
       home: {
         title: "Casino Score Live 🔥 Live Stats et Real-Time Results [2026]",
         description: "Casino Score Live est votre hub ultime pour live stats et real-time results en 2026. Analysez le RTP, suivez les hot or cold streaks et prenez des décisions de mise sécurisées."
@@ -3618,6 +4824,204 @@ dreamcatcherStatsExtra: {
   },
 
   pt: {
+    lightningrouletteReview: {
+      title: "Análise de Lightning Roulette, RTP e Estatísticas ao Vivo",
+      intro:
+        "Lightning Roulette é uma variante de roleta com crupiê ao vivo baseada na roda europeia. O jogo segue as regras padrão de roleta, mas cada rodada pode atribuir multiplicadores aleatórios a números selecionados como Números da Sorte, criando uma versão de maior variância do roleta ao vivo tradicional.",
+    
+      quickOverviewTitle: "Visão Geral Rápida do Jogo",
+      tableParameter: "Parâmetro",
+      tableDetails: "Detalhes",
+    
+      specProvider: "Provedor",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "Nome do Jogo",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "Ano de Lançamento",
+      specReleaseYearValue: "2018",
+      specGameType: "Tipo de Jogo",
+      specGameTypeValue: "Roleta com Crupiê ao Vivo",
+      specWheel: "Formato da Roda",
+      specWheelValue: "Roleta Europeia (zero único)",
+      specRtp: "RTP",
+      specRtpValue: "97,30% em apostas padrão; 97,10% em apostas diretas",
+      specMinBet: "Aposta Mínima",
+      specMinBetValue: "$0,20",
+      specMaxBet: "Aposta Máxima",
+      specMaxBetValue: "$10.000",
+      specMaxWin: "Multiplicador Máximo",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "Números da Sorte",
+      specLuckyNumbersValue: "1 a 5 por rodada",
+      specVolatility: "Volatilidade",
+      specVolatilityValue: "Média a alta",
+      specMobile: "Jogo Móvel",
+      specMobileValue: "Suportado",
+    
+      aboutTitle: "O que é Lightning Roulette?",
+      aboutText1:
+        "Lightning Roulette é um jogo de roleta ao vivo que mantém a roda europeia de zero único e o layout de apostas padrão, enquanto adiciona eventos de multiplicadores aleatórios antes de cada giro. Este formato é frequentemente descrito como roleta relâmpago ao vivo ou roleta relâmpago online porque o jogo combina um crupiê de estúdio real com uma mecânica de multiplicador gerada antes que a bola caia.",
+      aboutText2:
+        "Em termos práticos, a diferença em relação à roleta clássica é simples: um a cinco números se tornam Números da Sorte a cada rodada, e se uma aposta direta cair em um deles, o pagamento utiliza o multiplicador atribuído em vez do pagamento direto regular. Esta é a ideia central por trás da maioria das páginas de análise de roleta relâmpago e rastreadores de estatísticas.",
+    
+      howToPlayTitle: "Como Jogar Lightning Roulette",
+      howToPlayText1:
+        "Como jogar Lightning Roulette é simples para qualquer pessoa familiarizada com roleta. Os jogadores fazem apostas durante a fase de aposta, então o jogo revela os Números da Sorte e seus multiplicadores antes do giro ao vivo começar.",
+      howToPlayText2:
+        "As regras da roleta relâmpago são baseadas em roleta europeia, portanto apostas externas, dúzias, colunas e apostas internas funcionam conforme esperado. O mecanismo adicional afeta apenas apostas diretas que caem em Números da Sorte selecionados.",
+      howToPlayBullets: [
+        "Escolha valores de fichas e faça apostas no layout da roleta.",
+        "Aguarde o jogo atribuir 1 a 5 Números da Sorte com multiplicadores aleatórios.",
+        "Observe o crupiê girar a roda e soltar a bola.",
+        "Se sua aposta direta acertar um Número da Sorte, a rodada usa o pagamento do multiplicador relâmpago.",
+        "Todas as apostas não multiplicadas são resolvidas de acordo com as regras padrão de roleta europeia."
+      ],
+    
+      payoutTitle: "Pagamentos de Lightning Roulette",
+      payoutIntro:
+        "Os pagamentos de roleta relâmpago seguem roleta padrão para a maioria das apostas, enquanto a principal diferença aparece em números diretos. Quando um Número da Sorte selecionado vence, o multiplicador atribuído substitui o pagamento direto regular e pode chegar a 500x.",
+    
+      payoutColBet: "Tipo de Aposta",
+      payoutColPayout: "Pagamento",
+      payoutColNote: "Como Funciona",
+    
+      payoutBetStraightLucky: "Direto (Número da Sorte)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "Aplicado quando uma aposta direta cai em um Número da Sorte com um multiplicador atribuído.",
+    
+      payoutBetStraight: "Direto (padrão)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "Ganho direto padrão sem multiplicador relâmpago.",
+    
+      payoutBetSplit: "Divisão",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "Aposta em 2 números adjacentes.",
+    
+      payoutBetStreet: "Rua",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "Aposta em 3 números em fila.",
+    
+      payoutBetCorner: "Canto",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "Aposta em 4 números.",
+    
+      payoutBetDozen: "Dúzia / Coluna",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "Cobre 12 números.",
+    
+      payoutBetEven: "Vermelho/Preto, Ímpar/Par, Alto/Baixo",
+      payoutValEven: "1:1",
+      payoutNoteEven: "Apostas externas padrão.",
+    
+      rtpTitle: "RTP e Volatilidade de Lightning Roulette",
+      rtpText1:
+        "O RTP de roleta relâmpago depende do tipo de aposta. Apostas padrão como vermelho/preto ou dúzias mantêm um RTP de aproximadamente 97,30%, enquanto apostas diretas ficam em torno de 97,10% porque o jogo realoca parte da estrutura de pagamento para financiar o recurso multiplicador.",
+      rtpText2:
+        "Em termos de variância, o jogo é mais volátil que a roleta clássica quando o foco está em números internos. Os multiplicadores de roleta relâmpago criam momentos de pagamento menos frequentes mas maiores, razão pela qual muitos jogadores descrevem o jogo como volatilidade média a alta em vez de um perfil de roleta padrão.",
+    
+      strategyTitle: "Notas de Estratégia de Lightning Roulette",
+      strategyText1:
+        "Uma estratégia de roleta relâmpago não muda a vantagem da casa, mas pode alterar o perfil de risco de uma sessão. Jogadores que preferem variância menor geralmente ficam mais próximos de apostas externas, enquanto aqueles que desejam exposição a multiplicadores focam mais em cobertura direta.",
+      strategyText2:
+        "De uma perspectiva estatística, o jogo é melhor abordado como roleta europeia com uma camada de multiplicador adicional. Isso o torna útil para rastrear frequência de Números da Sorte, distribuição de multiplicadores e oscilações de pagamento em uma amostra maior em vez de julgar o jogo por uma série curta.",
+    
+      trackerTitle: "O Que Você Pode Rastrear",
+      trackerIntro:
+        "Esta seção do site é construída para jogadores que desejam revisar roleta relâmpago online através de resultados recentes, multiplicadores e métricas de resumo em vez de confiar em impressões de curto prazo.",
+    
+      trackLuckyNumbers: "Histórico de Números da Sorte",
+      trackLuckyNumbersText:
+        "Rastreie quais números receberam multiplicadores e com que frequência aparecem em rodadas recentes.",
+    
+      trackMultipliers: "Distribuição de Multiplicadores",
+      trackMultipliersText:
+        "Veja com que frequência os multiplicadores 50x, 100x, 150x, 200x, 300x, 400x e 500x aparecem.",
+    
+      trackSpinResults: "Resultados dos Giros",
+      trackSpinResultsText:
+        "Revise resultados recentes, incluindo número vencedor, números relâmpago e multiplicadores acertados.",
+    
+      trackRtp: "Snapshot de RTP",
+      trackRtpText:
+        "Compare os resultados observados com o perfil de retorno esperado do jogo.",
+    
+      trackPatterns: "Padrões de Resultados",
+      trackPatternsText:
+        "Use o histórico recente e dados de distribuição para seguir séries de curto prazo e frequência de números.",
+    
+      comparisonTitle: "Lightning Roulette em um Relance",
+      compColArea: "Área",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "Por Que Importa",
+    
+      compAreaBase: "Formato Base",
+      compValueBase: "Roleta europeia com crupiê ao vivo",
+      compWhyBase:
+        "As regras principais permanecem familiares para jogadores que já conhecem roleta padrão.",
+    
+      compAreaMultipliers: "Multiplicadores Relâmpago",
+      compValueMultipliers: "1–5 Números da Sorte, 50x a 500x",
+      compWhyMultipliers:
+        "Adiciona maior potencial de ganho a apostas diretas sem alterar pagamentos de apostas externas.",
+    
+      compAreaRtp: "Perfil RTP",
+      compValueRtp: "97,30% padrão / 97,10% direto",
+      compWhyRtp:
+        "Útil para entender como o financiamento do multiplicador afeta diferentes tipos de apostas.",
+    
+      compAreaVariance: "Volatilidade",
+      compValueVariance: "Maior que roleta clássica em apostas internas",
+      compWhyVariance:
+        "Pagamentos baseados em multiplicadores criam oscilações mais amplas de curto prazo.",
+    
+      compAreaUse: "Melhor Caso de Uso",
+      compValueUse: "Jogadores que desejam roleta com variância adicional",
+      compWhyUse:
+        "Mantém a estrutura de roleta padrão enquanto adiciona pagamentos ocasionalmente aprimorados.",
+    
+      faqTitle: "Perguntas Frequentes",
+      faq: [
+        {
+          q: "O que é Lightning Roulette?",
+          a: "Lightning Roulette é uma versão com crupiê ao vivo de roleta europeia com multiplicadores aleatórios em Números da Sorte selecionados."
+        },
+        {
+          q: "Como funcionam os multiplicadores de Lightning Roulette?",
+          a: "Antes de cada giro, o jogo seleciona 1 a 5 Números da Sorte e atribui multiplicadores de 50x a 500x. Se uma aposta direta cair em um desses números, o pagamento do multiplicador se aplica."
+        },
+        {
+          q: "Qual é o RTP de Lightning Roulette?",
+          a: "O RTP típico é de aproximadamente 97,30% para apostas padrão e cerca de 97,10% para apostas diretas."
+        },
+        {
+          q: "Os pagamentos de Lightning Roulette são diferentes da roleta padrão?",
+          a: "A maioria dos tipos de apostas utiliza pagamentos padrão de roleta europeia. A principal diferença é o pagamento baseado em multiplicador em números diretos selecionados."
+        },
+        {
+          q: "Lightning Roulette é mais volátil que a roleta clássica?",
+          a: "Sim. O sistema de multiplicador cria variância mais ampla de curto prazo, especialmente para jogadores focando em apostas internas."
+        }
+      ],
+    
+      conclusionTitle: "Impressão Geral",
+      conclusionText:
+        "Como uma análise neutra de roleta relâmpago, o jogo pode ser descrito como roleta europeia padrão com uma camada de multiplicador adicionada que aumenta a variância sem alterar o formato principal. Para jogadores interessados em estatísticas ao vivo de roleta relâmpago, é um jogo útil para rastrear porque a frequência do multiplicador, seleção de Números da Sorte e padrões de pagamento podem todos ser medidos ao longo do tempo."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "Histórico de giros",
+      subtitle:    "Histórico recente com resultados de números sortudos.",
+      occurredAt:  "Ocorreu em",
+      spinResult:  "Resultado",
+      multiplier:  "Multiplicador",
+      firstLucky:  "Primeiro sortudo",
+      secondLucky: "Segundo sortudo",
+      thirdLucky:  "Terceiro sortudo",
+      fourthLucky: "Quarto sortudo",
+      fifthLucky:  "Quinto sortudo",
+    },
+    
     megaballReview: {
       title: "Tracker Mega Ball, RTP e Análise do Jogo",
       intro: "Acompanhe estatísticas, resultados e RTP do Mega Ball em tempo real com ferramentas de tracking ao vivo. Veja o histórico de bolas, rondas com multiplicadores, número de vencedores e tendências de pagamento num só lugar.",
@@ -3997,6 +5401,10 @@ dreamcatcherStatsExtra: {
       biggestWinsGallery: "Galeria das maiores vitórias"
     },
     seo: {
+      lightningroulette: {
+        title: "Lightning Roulette estatísticas, RTP e resultados ao vivo",
+        description: "Acompanhe Lightning Roulette com RTP, multiplicadores, Lucky Numbers, histórico de giros, pagamentos e resultados ao vivo online."
+      },
       home: {
         title: "Casino Score Live 🔥 Live Stats e Real-Time Results [2026]",
         description: "Casino Score Live é o seu hub definitivo para live stats e real-time results em 2026. Analise RTP, acompanhe hot or cold streaks e faça escolhas de aposta seguras."
@@ -4235,6 +5643,203 @@ dreamcatcherStatsExtra: {
   },
 
   ar: {
+    lightningrouletteReview: {
+      title: "استعراض Lightning Roulette وRTP والإحصائيات المباشرة",
+      intro:
+        "Lightning Roulette هي نسخة من الروليت مباشرة مع موزع مباشر بناءً على العجلة الأوروبية. تتبع اللعبة قواعد الروليت القياسية، لكن يمكن لكل جولة أن تعين مضاعفات عشوائية للأرقام المحددة كأرقام الحظ، مما يخلق نسخة أعلى تقلباً من الروليت المباشر التقليدي.",
+    
+      quickOverviewTitle: "نظرة عامة سريعة على اللعبة",
+      tableParameter: "المعامل",
+      tableDetails: "التفاصيل",
+    
+      specProvider: "المزود",
+      specProviderValue: "Evolution Gaming",
+      specGameName: "اسم اللعبة",
+      specGameNameValue: "Lightning Roulette",
+      specReleaseYear: "سنة الإصدار",
+      specReleaseYearValue: "2018",
+      specGameType: "نوع اللعبة",
+      specGameTypeValue: "روليت مع موزع مباشر",
+      specWheel: "صيغة العجلة",
+      specWheelValue: "الروليت الأوروبية (صفر واحد)",
+      specRtp: "RTP",
+      specRtpValue: "97.30% على الرهانات القياسية؛ 97.10% على الرهانات المباشرة",
+      specMinBet: "الحد الأدنى للرهان",
+      specMinBetValue: "$0.20",
+      specMaxBet: "الحد الأقصى للرهان",
+      specMaxBetValue: "$10,000",
+      specMaxWin: "المضاعف الأقصى",
+      specMaxWinValue: "500x",
+      specLuckyNumbers: "أرقام الحظ",
+      specLuckyNumbersValue: "1 إلى 5 في كل جولة",
+      specVolatility: "التقلب",
+      specVolatilityValue: "متوسط إلى عالي",
+      specMobile: "اللعب على الهاتف المحمول",
+      specMobileValue: "مدعوم",
+    
+      aboutTitle: "ما هي Lightning Roulette؟",
+      aboutText1:
+        "Lightning Roulette هي لعبة روليت مباشرة تحافظ على عجلة أوروبية بصفر واحد وتخطيط الرهان القياسي، بينما تضيف أحداث مضاعفات عشوائية قبل كل دوران. يتم وصف هذا الصيغة غالباً بأنه روليت البرق المباشرة أو روليت البرق عبر الإنترنت لأن اللعبة تجمع بين موزع استوديو حقيقي مع آلية مضاعفة يتم إنشاؤها قبل هبوط الكرة.",
+      aboutText2:
+        "من الناحية العملية، الفرق عن الروليت الكلاسيكية بسيط: يصبح من رقم واحد إلى خمسة أرقام أرقام حظ في كل جولة، وإذا هبطت رهان مباشر على أحدها، تستخدم العائد المضاعف المعين بدلاً من العائد المباشر العادي. هذه هي الفكرة الأساسية وراء معظم صفحات استعراض روليت البرق وتتبعات الإحصائيات.",
+    
+      howToPlayTitle: "كيفية لعب Lightning Roulette",
+      howToPlayText1:
+        "كيفية لعب Lightning Roulette بسيط لأي شخص مألوف مع الروليت. يضع اللاعبون رهانات خلال مرحلة الرهان، ثم تكشف اللعبة عن أرقام الحظ ومضاعفاتها قبل بدء الدوران المباشر.",
+      howToPlayText2:
+        "قواعد روليت البرق تعتمد على الروليت الأوروبية، لذا فإن الرهانات الخارجية والعشرات والأعمدة والرهانات الداخلية تعمل كما هو متوقع. تؤثر الآلية الإضافية فقط على الرهانات المباشرة التي تهبط على أرقام الحظ المحددة.",
+      howToPlayBullets: [
+        "اختر قيم الرقائق وضع الرهانات على تخطيط الروليت.",
+        "انتظر اللعبة لتعيين 1 إلى 5 أرقام حظ مع مضاعفات عشوائية.",
+        "شاهد الموزع يدير العجلة ويطلق الكرة.",
+        "إذا كان رهانك المباشر يصل إلى رقم حظ، فإن الجولة تستخدم عائد مضاعف البرق.",
+        "يتم تسوية جميع الرهانات غير المضاعفة وفقاً لقواعد الروليت الأوروبية القياسية."
+      ],
+    
+      payoutTitle: "عوائد Lightning Roulette",
+      payoutIntro:
+        "عوائد روليت البرق تتبع الروليت القياسية لمعظم الرهانات، بينما يظهر الفرق الرئيسي على الأرقام المباشرة. عندما يفوز رقم حظ محدد، يحل المضاعف المعين محل العائد المباشر العادي ويمكن أن يصل إلى 500x.",
+    
+      payoutColBet: "نوع الرهان",
+      payoutColPayout: "العائد",
+      payoutColNote: "كيف يعمل",
+    
+      payoutBetStraightLucky: "مباشر (رقم الحظ)",
+      payoutValStraightLucky: "50x–500x",
+      payoutNoteStraightLucky:
+        "يطبق عندما يهبط رهان مباشر على رقم حظ مع مضاعف معين.",
+    
+      payoutBetStraight: "مباشر (قياسي)",
+      payoutValStraight: "29:1",
+      payoutNoteStraight:
+        "فوز مباشر قياسي بدون مضاعف البرق.",
+    
+      payoutBetSplit: "انقسام",
+      payoutValSplit: "17:1",
+      payoutNoteSplit: "رهان على رقمين متجاورين.",
+    
+      payoutBetStreet: "شارع",
+      payoutValStreet: "11:1",
+      payoutNoteStreet: "رهان على 3 أرقام متتالية.",
+    
+      payoutBetCorner: "الزاوية",
+      payoutValCorner: "8:1",
+      payoutNoteCorner: "رهان على 4 أرقام.",
+    
+      payoutBetDozen: "عشرة / عمود",
+      payoutValDozen: "2:1",
+      payoutNoteDozen: "يغطي 12 رقماً.",
+    
+      payoutBetEven: "أحمر/أسود، فردي/زوجي، أعلى/أسفل",
+      payoutValEven: "1:1",
+      payoutNoteEven: "الرهانات الخارجية القياسية.",
+    
+      rtpTitle: "RTP والتقلب في Lightning Roulette",
+      rtpText1:
+        "RTP روليت البرق يعتمد على نوع الرهان. الرهانات القياسية مثل أحمر/أسود أو العشرات تحافظ على RTP بحوالي 97.30%، بينما تتراوح الرهانات المباشرة حول 97.10% لأن اللعبة تعيد تخصيص جزء من هيكل العائد لتمويل ميزة المضاعفة.",
+      rtpText2:
+        "من حيث الفرق، اللعبة أكثر تقلباً من الروليت الكلاسيكية عندما يكون التركيز على الأرقام الداخلية. مضاعفات روليت البرق تخلق لحظات عائد أقل تكراراً لكن أكبر، ولهذا السبب يصف العديد من اللاعبين اللعبة بأنها متوسطة إلى عالية التقلب بدلاً من ملف روليت قياسي.",
+    
+      strategyTitle: "ملاحظات استراتيجية Lightning Roulette",
+      strategyText1:
+        "إستراتيجية روليت البرق لا تغير ميزة الموزع، لكنها يمكن أن تغير ملف المخاطر للجلسة. اللاعبون الذين يفضلون تقلباً أقل عادة يبقون أقرب إلى الرهانات الخارجية، بينما أولئك الذين يريدون التعرض للمضاعفات يركزون أكثر على التغطية المباشرة.",
+      strategyText2:
+        "من منظور إحصائي، يتم التعامل مع اللعبة بشكل أفضل كروليت أوروبية مع طبقة مضاعفة إضافية. هذا يجعلها مفيدة لتتبع تكرار أرقام الحظ، توزيع المضاعفات وتذبذبات العائد على عينة أكبر بدلاً من الحكم على اللعبة من سلسلة قصيرة.",
+    
+      trackerTitle: "ما يمكنك تتبعه",
+      trackerIntro:
+        "هذا القسم من الموقع مبني للاعبين الذين يريدون مراجعة روليت البرق عبر الإنترنت من خلال النتائج الأخيرة والمضاعفات والمقاييس الملخصة بدلاً من الاعتماد على الانطباعات قصيرة الأجل.",
+    
+      trackLuckyNumbers: "سجل أرقام الحظ",
+      trackLuckyNumbersText:
+        "تتبع الأرقام التي تلقت مضاعفات وعدد مرات ظهورها في الجولات الأخيرة.",
+    
+      trackMultipliers: "توزيع المضاعفات",
+      trackMultipliersText:
+        "انظر عدد مرات ظهور المضاعفات 50x و 100x و 150x و 200x و 300x و 400x و 500x.",
+    
+      trackSpinResults: "نتائج الدورات",
+      trackSpinResultsText:
+        "راجع النتائج الأخيرة، بما في ذلك الرقم الفائز وأرقام البرق والمضاعفات المصيبة.",
+    
+      trackRtp: "لقطة RTP",
+      trackRtpText:
+        "قارن النتائج المرصودة مع ملف العائد المتوقع للعبة.",
+    
+      trackPatterns: "أنماط النتائج",
+      trackPatternsText:
+        "استخدم السجل الأخير وبيانات التوزيع لمتابعة السلاسل قصيرة الأجل وتكرار الأرقام.",
+    
+      comparisonTitle: "Lightning Roulette في لمحة",
+      compColArea: "المنطقة",
+      compColValue: "Lightning Roulette",
+      compColMeaning: "لماذا أهمية",
+    
+      compAreaBase: "الصيغة الأساسية",
+      compValueBase: "روليت أوروبية مع موزع مباشر",
+      compWhyBase:
+        "تبقى القواعد الأساسية مألوفة للاعبين الذين يعرفون بالفعل الروليت القياسية.",
+    
+      compAreaMultipliers: "مضاعفات البرق",
+      compValueMultipliers: "1–5 أرقام حظ، 50x إلى 500x",
+      compWhyMultipliers:
+        "يضيف إمكانية أعلى للرهانات المباشرة دون تغيير عوائد الرهانات الخارجية.",
+    
+      compAreaRtp: "ملف RTP",
+      compValueRtp: "97.30% قياسي / 97.10% مباشر",
+      compWhyRtp:
+        "مفيد لفهم كيف يؤثر تمويل المضاعفة على أنواع الرهانات المختلفة.",
+    
+      compAreaVariance: "التقلب",
+      compValueVariance: "أعلى من الروليت الكلاسيكية على الرهانات الداخلية",
+      compWhyVariance:
+        "عوائد القائمة على المضاعفة تخلق تقلبات أوسع قصيرة الأجل.",
+    
+      compAreaUse: "أفضل حالة استخدام",
+      compValueUse: "اللاعبون الذين يريدون روليت مع تقلب إضافي",
+      compWhyUse:
+        "يحافظ على هيكل الروليت القياسي بينما يضيف عوائد معززة عرضية.",
+    
+      faqTitle: "الأسئلة المتكررة",
+      faq: [
+        {
+          q: "ما هي Lightning Roulette؟",
+          a: "Lightning Roulette هي نسخة موزع مباشر من الروليت الأوروبية مع مضاعفات عشوائية على أرقام الحظ المحددة."
+        },
+        {
+          q: "كيف تعمل مضاعفات Lightning Roulette؟",
+          a: "قبل كل دوران، تختار اللعبة 1 إلى 5 أرقام حظ وتعين مضاعفات من 50x إلى 500x. إذا هبط رهان مباشر على أحد هذه الأرقام، يتم تطبيق عائد المضاعفة."
+        },
+        {
+          q: "ما هو RTP Lightning Roulette؟",
+          a: "RTP النموذجي حول 97.30% للرهانات القياسية وحوالي 97.10% للرهانات المباشرة."
+        },
+        {
+          q: "هل عوائد Lightning Roulette مختلفة عن الروليت القياسية؟",
+          a: "تستخدم معظم أنواع الرهانات عوائد الروليت الأوروبية القياسية. الفرق الرئيسي هو عائد قائم على المضاعفة على الأرقام المباشرة المحددة."
+        },
+        {
+          q: "هل Lightning Roulette أكثر تقلباً من الروليت الكلاسيكية؟",
+          a: "نعم. يخلق نظام المضاعفة تقلباً أوسع قصير الأجل، خاصة للاعبين الذين يركزون على الرهانات الداخلية."
+        }
+      ],
+    
+      conclusionTitle: "الانطباع العام",
+      conclusionText:
+        "كمراجعة محايدة لروليت البرق، يمكن وصف اللعبة بأنها روليت أوروبية قياسية مع طبقة مضاعفة مضافة تزيد من التقلب دون تغيير الصيغة الأساسية. بالنسبة للاعبين المهتمين بإحصائيات روليت البرق المباشرة، فهي لعبة مفيدة للتتبع لأن تكرار المضاعفات واختيار أرقام الحظ وأنماط العائد يمكن قياسها جميعاً بمرور الوقت."
+    },
+    lightningrouletteHistory: {
+      panelTitle:  "سجل الدورات",
+      subtitle:    "سجل الدورات الأخيرة مع نتائج الأرقام المحظوظة.",
+      occurredAt:  "حدث في",
+      spinResult:  "نتيجة الدوران",
+      multiplier:  "المضاعف",
+      firstLucky:  "الأول المحظوظ",
+      secondLucky: "الثاني المحظوظ",
+      thirdLucky:  "الثالث المحظوظ",
+      fourthLucky: "الرابع المحظوظ",
+      fifthLucky:  "الخامس المحظوظ",
+    },
     megaballReview: {
       title: "متتبع Mega Ball، معدل العائد RTP وتحليل اللعبة",
       intro: "تابع إحصائيات ونتائج ومعدل العائد RTP للعبة Mega Ball في الوقت الفعلي باستخدام أدوات التتبع المباشر. اطّلع على سجل الكرات، جولات المضاعفات، عدد الفائزين واتجاهات المدفوعات في مكان واحد.",
@@ -4614,6 +6219,10 @@ dreamcatcherStatsExtra: {
     biggestWinsGallery: "معرض أكبر الأرباح"
     },
     seo: {
+      lightningroulette: {
+        title: "إحصائيات Lightning Roulette وRTP والنتائج المباشرة",
+        description: "تابع إحصائيات Lightning Roulette مع RTP والمضاعفات وLucky Numbers وسجل اللفات والدفعات والنتائج المباشرة أونلاين."
+      }, 
     home: {
     title: "Casino Score Live 🔥 إحصائيات مباشرة ونتائج فورية [2026]",
     description: "Casino Score Live — منصتك الأمثل لإحصائيات الكازينو المباشر والنتائج الفورية في 2026. حلّل نسبة RTP، وتابع الأرقام الساخنة والباردة، واتخذ قرارات رهان مبنية على البيانات."

@@ -33,14 +33,14 @@ function renderLayout({
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="/global.css" />
   <link rel="canonical" href="${canonical}" />
   ${hreflangs.join("\n")}
   ${schema}
 </head>
 <body>
   ${body}
-  <script src="/main-script.js"></script>
+  <script src="/client.js"></script>
 </body>
 </html>`;
 }
